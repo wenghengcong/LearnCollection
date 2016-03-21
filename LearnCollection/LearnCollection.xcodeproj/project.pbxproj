@@ -62,6 +62,13 @@
 			remoteGlobalIDString = FE03D9201AB85CA700914B3E;
 			remoteInfo = FacadePattern_OCTests;
 		};
+		5E1407081C9F8BB200E18B00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E1407001C9F8BB200E18B00 /* LifeCycle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5EF6E3A71C887429004F6473;
+			remoteInfo = LifeCycle;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +93,7 @@
 		5E1406981C9F780B00E18B00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E1406EA1C9F7F6500E18B00 /* KVO.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KVO.xcodeproj; path = ../KVOLearnDemo/KVO.xcodeproj; sourceTree = "<group>"; };
 		5E1406F31C9F806A00E18B00 /* FacadePattern_OC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FacadePattern_OC.xcodeproj; path = ../FacadePatter_OC/FacadePattern_OC.xcodeproj; sourceTree = "<group>"; };
+		5E1407001C9F8BB200E18B00 /* LifeCycle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LifeCycle.xcodeproj; path = ../LifeCycle/LifeCycle.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,7 @@
 		5E14065F1C9F780B00E18B00 = {
 			isa = PBXGroup;
 			children = (
+				5E1407001C9F8BB200E18B00 /* LifeCycle.xcodeproj */,
 				5E1406F31C9F806A00E18B00 /* FacadePattern_OC.xcodeproj */,
 				5E1406EA1C9F7F6500E18B00 /* KVO.xcodeproj */,
 				5E14066A1C9F780B00E18B00 /* LearnCollection */,
@@ -194,6 +203,14 @@
 			children = (
 				5E1406F91C9F806A00E18B00 /* FacadePattern_OC.app */,
 				5E1406FB1C9F806A00E18B00 /* FacadePattern_OCTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E1407011C9F8BB200E18B00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E1407091C9F8BB200E18B00 /* LifeCycle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -296,6 +313,10 @@
 					ProductGroup = 5E1406EB1C9F7F6500E18B00 /* Products */;
 					ProjectRef = 5E1406EA1C9F7F6500E18B00 /* KVO.xcodeproj */;
 				},
+				{
+					ProductGroup = 5E1407011C9F8BB200E18B00 /* Products */;
+					ProjectRef = 5E1407001C9F8BB200E18B00 /* LifeCycle.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -333,6 +354,13 @@
 			fileType = wrapper.cfbundle;
 			path = FacadePattern_OCTests.xctest;
 			remoteRef = 5E1406FA1C9F806A00E18B00 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E1407091C9F8BB200E18B00 /* LifeCycle.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = LifeCycle.app;
+			remoteRef = 5E1407081C9F8BB200E18B00 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
