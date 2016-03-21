@@ -69,6 +69,20 @@
 			remoteGlobalIDString = 5EF6E3A71C887429004F6473;
 			remoteInfo = LifeCycle;
 		};
+		5E14071A1C9F8F3E00E18B00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E1407101C9F8F3E00E18B00 /* MedalWall.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FE59EA131A29551700A065B3;
+			remoteInfo = MedalWall;
+		};
+		5E14071C1C9F8F3E00E18B00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E1407101C9F8F3E00E18B00 /* MedalWall.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FE59EA2C1A29551700A065B3;
+			remoteInfo = MedalWallTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +108,7 @@
 		5E1406EA1C9F7F6500E18B00 /* KVO.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KVO.xcodeproj; path = ../KVOLearnDemo/KVO.xcodeproj; sourceTree = "<group>"; };
 		5E1406F31C9F806A00E18B00 /* FacadePattern_OC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FacadePattern_OC.xcodeproj; path = ../FacadePatter_OC/FacadePattern_OC.xcodeproj; sourceTree = "<group>"; };
 		5E1407001C9F8BB200E18B00 /* LifeCycle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LifeCycle.xcodeproj; path = ../LifeCycle/LifeCycle.xcodeproj; sourceTree = "<group>"; };
+		5E1407101C9F8F3E00E18B00 /* MedalWall.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MedalWall.xcodeproj; path = ../AppleWatch_Collection/MedalWall.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +139,7 @@
 		5E14065F1C9F780B00E18B00 = {
 			isa = PBXGroup;
 			children = (
+				5E1407101C9F8F3E00E18B00 /* MedalWall.xcodeproj */,
 				5E1407001C9F8BB200E18B00 /* LifeCycle.xcodeproj */,
 				5E1406F31C9F806A00E18B00 /* FacadePattern_OC.xcodeproj */,
 				5E1406EA1C9F7F6500E18B00 /* KVO.xcodeproj */,
@@ -211,6 +227,15 @@
 			isa = PBXGroup;
 			children = (
 				5E1407091C9F8BB200E18B00 /* LifeCycle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E1407111C9F8F3E00E18B00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E14071B1C9F8F3E00E18B00 /* MedalWall.app */,
+				5E14071D1C9F8F3E00E18B00 /* MedalWallTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -317,6 +342,10 @@
 					ProductGroup = 5E1407011C9F8BB200E18B00 /* Products */;
 					ProjectRef = 5E1407001C9F8BB200E18B00 /* LifeCycle.xcodeproj */;
 				},
+				{
+					ProductGroup = 5E1407111C9F8F3E00E18B00 /* Products */;
+					ProjectRef = 5E1407101C9F8F3E00E18B00 /* MedalWall.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -361,6 +390,20 @@
 			fileType = wrapper.application;
 			path = LifeCycle.app;
 			remoteRef = 5E1407081C9F8BB200E18B00 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E14071B1C9F8F3E00E18B00 /* MedalWall.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = MedalWall.app;
+			remoteRef = 5E14071A1C9F8F3E00E18B00 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E14071D1C9F8F3E00E18B00 /* MedalWallTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MedalWallTests.xctest;
+			remoteRef = 5E14071C1C9F8F3E00E18B00 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
