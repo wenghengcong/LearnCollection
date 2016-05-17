@@ -1,2 +1,0 @@
-# KVOLearnDemo
-KVO demo
