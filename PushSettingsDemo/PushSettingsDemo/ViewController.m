@@ -87,7 +87,7 @@
         UIAlertView *alert_push = [[UIAlertView alloc] initWithTitle:@"Service On,Receive On" message:pushOptionSwitchOn delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Setting", nil];
         alert_push.tag = 1;
         [alert_push show];
-
+        [alert_push dismissWithClickedButtonIndex:0 animated:YES];
         NSLog(@" Push Notification ON");
     }else{
         //“允许通知”关闭

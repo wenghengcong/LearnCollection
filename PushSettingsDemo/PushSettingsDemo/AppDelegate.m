@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "JPUSHService.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
+    //极光推送
+    [JPUSHService setupWithOption:launchOptions appKey:@"0d16cdd32fbdf6849b0a5214" channel:nil apsForProduction:NO];
+    [JPUSHService registerForRemoteNotificationTypes:7 categories:nil];
+    [JPUSHService setDebugMode];
+    
+    // Override point for customization after application launch.
+    /*
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
     {
         [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound |UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
@@ -26,7 +33,7 @@
     {
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound |UIRemoteNotificationTypeAlert)];
     }
-    
+    */
     
     //在app没有被启动的时候，接收到了消息通知。这时候操作系统会按照默认的方式来展现一个alert消息，在app icon上标记一个数字，甚至播放一段声音。
     
@@ -100,10 +107,10 @@
     newToken = [newToken stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
     newToken = [newToken stringByReplacingOccurrencesOfString:@" " withString:@""];
     
-    NSLog(@"My token is: %@", newToken);
+    NSLog(@"device token is: %@", newToken);
     
     //向服务器注册设备
-    
+    [JPUSHService registerDeviceToken:deviceToken];
 }
 /**
  *  registerForRemoteNotifications的回调
@@ -152,14 +159,17 @@
 
 #pragma mark - local/remote handle
 
-// 消息推送: 消息推送时应用正在运行，会进入到这里，
+/**
+ *  收到远程推送都会进入到这里
+ */
 - (void)application:(UIApplication*)application didReceiveRemoteNotification:(NSDictionary*)userInfo
 {
-    NSLog(@"*** push");
-    //[[MessageManager sharedMessageManager] alertRemoteNotification:userInfo];
-    //4.0需求，要求app在后台时，点push消息直接进行跳转,app在前台时不做处理
-    if (application.applicationState == UIApplicationStateInactive)
-    {
+    NSLog(@"***push ***\n%@",userInfo);
+    if (application.applicationState == UIApplicationStateInactive) {
+        NSLog(@"App Background");
+
+    }else {
+        NSLog(@"App Foreground");
 
     }
 }
