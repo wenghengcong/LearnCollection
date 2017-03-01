@@ -25,6 +25,15 @@
     
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        NSLog(@"MasterVC init");
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -53,14 +62,14 @@
 - (void)viewWillLayoutSubviews {
     
     [super viewWillLayoutSubviews];
-//    NSLog(@"MasterVC viewWillLayoutSubviews");
+    NSLog(@"MasterVC viewWillLayoutSubviews");
     
 }
 
 - (void)viewDidLayoutSubviews {
     
     [super viewDidLayoutSubviews];
-//    NSLog(@"MasterVC viewDidLayoutSubviews");
+    NSLog(@"MasterVC viewDidLayoutSubviews");
     
 }
 
@@ -153,6 +162,32 @@
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
+}
+
++ (void)wirteLogWithString:(NSString *)loginput
+{
+    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docPath = [path objectAtIndex:0];
+    
+    NSFileManager * fm = [NSFileManager defaultManager];
+    NSString *fileName = [docPath stringByAppendingPathComponent:@"MessageLog.txt"];
+    
+    if (![fm fileExistsAtPath:fileName]) {
+        NSString *str = @"消息中心打点测试\n";
+        [str writeToFile:fileName atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    }
+    
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:fileName];
+    [fileHandle seekToEndOfFile];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss:SSS"];
+    
+    NSString *logDate = [dateFormatter stringFromDate:[NSDate date]];
+    NSString *logLine = [NSString stringWithFormat:@"\n%@-%@",loginput,logDate];
+    
+    NSData *logData = [logLine dataUsingEncoding:NSUTF8StringEncoding];
+    [fileHandle writeData:logData];
 }
 
 @end
