@@ -1,0 +1,15 @@
+PODS:
+  - SSKeychain (1.4.0)
+  - UICKeyChainStore (2.1.0)
+
+DEPENDENCIES:
+  - SSKeychain
+  - UICKeyChainStore
+
+SPEC CHECKSUMS:
+  SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
+  UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
+
+PODFILE CHECKSUM: 25c6c2bc68d7c7cef57f01f9b24df62af8ea3598
+
+COCOAPODS: 1.2.0.beta.1
