@@ -1,3 +1,3 @@
 # LearnCollection
 
-Some Deme for Learnning iOS.
+Some Demos for Learnning iOS.
