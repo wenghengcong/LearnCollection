@@ -564,8 +564,8 @@ static struct __main_block_desc_0 {
 } __main_block_desc_0_DATA = { 0, sizeof(struct __main_block_impl_0)};
 int main()
 {
- void (*blk)(void) = ((void (*)())&__main_block_impl_0( (void *)__main_block_func_0, &__main_block_desc_0_DATA));
- ((void (*)(__block_impl *))((__block_impl *)blk)->FuncPtr)(   (__block_impl *)blk  );
+ void (*blk)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA));
+ ((void (*)(__block_impl *))((__block_impl *)blk)->FuncPtr)((__block_impl *)blk);
  return 0;
 }
 static struct IMAGE_INFO { unsigned version; unsigned flag; } _OBJC_IMAGE_INFO = { 0, 2 };

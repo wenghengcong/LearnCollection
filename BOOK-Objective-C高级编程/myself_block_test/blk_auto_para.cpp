@@ -106,19 +106,22 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-struct __Block_byref_val_0 {
+int global_val = 1;
+static int static_global_val = 2;
+struct __Block_byref_auto_val_0 {
   void *__isa;
-__Block_byref_val_0 *__forwarding;
+__Block_byref_auto_val_0 *__forwarding;
  int __flags;
  int __size;
- int val;
+ int auto_val;
 };
 
 struct __main_block_impl_0 {
   struct __block_impl impl;
   struct __main_block_desc_0* Desc;
-  __Block_byref_val_0 *val; // by ref
-  __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, __Block_byref_val_0 *_val, int flags=0) : val(_val->__forwarding) {
+  int *static_val;
+  __Block_byref_auto_val_0 *auto_val; // by ref
+  __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int *_static_val, __Block_byref_auto_val_0 *_auto_val, int flags=0) : static_val(_static_val), auto_val(_auto_val->__forwarding) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
     impl.FuncPtr = fp;
@@ -126,13 +129,16 @@ struct __main_block_impl_0 {
   }
 };
 static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
-  __Block_byref_val_0 *val = __cself->val; // bound by ref
+    __Block_byref_auto_val_0 *auto_val = __cself->auto_val; // bound by ref
+    int *static_val = __cself->static_val; // bound by copy
+    global_val *= 4;
+    static_global_val *= 5;
+    (*static_val) *= 6;
+    (auto_val->__forwarding->auto_val) *= 7;
+}
+static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {_Block_object_assign((void*)&dst->auto_val, (void*)src->auto_val, 8/*BLOCK_FIELD_IS_BYREF*/);}
 
-  (val->__forwarding->val) = 2;
- }
-static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {_Block_object_assign((void*)&dst->val, (void*)src->val, 8/*BLOCK_FIELD_IS_BYREF*/);}
-
-static void __main_block_dispose_0(struct __main_block_impl_0*src) {_Block_object_dispose((void*)src->val, 8/*BLOCK_FIELD_IS_BYREF*/);}
+static void __main_block_dispose_0(struct __main_block_impl_0*src) {_Block_object_dispose((void*)src->auto_val, 8/*BLOCK_FIELD_IS_BYREF*/);}
 
 static struct __main_block_desc_0 {
   size_t reserved;
@@ -141,11 +147,47 @@ static struct __main_block_desc_0 {
   void (*dispose)(struct __main_block_impl_0*);
 } __main_block_desc_0_DATA = { 0, sizeof(struct __main_block_impl_0), __main_block_copy_0, __main_block_dispose_0};
 
-int main(int argc, char const *argv[])
+struct __main_block_impl_1 {
+  struct __block_impl impl;
+  struct __main_block_desc_1* Desc;
+  int *static_val;
+  __Block_byref_auto_val_0 *auto_val; // by ref
+  __main_block_impl_1(void *fp, struct __main_block_desc_1 *desc, int *_static_val, __Block_byref_auto_val_0 *_auto_val, int flags=0) : static_val(_static_val), auto_val(_auto_val->__forwarding) {
+    impl.isa = &_NSConcreteStackBlock;
+    impl.Flags = flags;
+    impl.FuncPtr = fp;
+    Desc = desc;
+  }
+};
+
+static void __main_block_func_1(struct __main_block_impl_1 *__cself) {
+  __Block_byref_auto_val_0 *auto_val = __cself->auto_val; // bound by ref
+  int *static_val = __cself->static_val; // bound by copy
+
+        global_val *= 8;
+        static_global_val *= 9;
+        (*static_val) *= 10;
+        (auto_val->__forwarding->auto_val) *= 11;
+    }
+static void __main_block_copy_1(struct __main_block_impl_1*dst, struct __main_block_impl_1*src) {_Block_object_assign((void*)&dst->auto_val, (void*)src->auto_val, 8/*BLOCK_FIELD_IS_BYREF*/);}
+
+static void __main_block_dispose_1(struct __main_block_impl_1*src) {_Block_object_dispose((void*)src->auto_val, 8/*BLOCK_FIELD_IS_BYREF*/);}
+
+static struct __main_block_desc_1 {
+  size_t reserved;
+  size_t Block_size;
+  void (*copy)(struct __main_block_impl_1*, struct __main_block_impl_1*);
+  void (*dispose)(struct __main_block_impl_1*);
+} __main_block_desc_1_DATA = { 0, sizeof(struct __main_block_impl_1), __main_block_copy_1, __main_block_dispose_1};
+
+int main()
 {
- __attribute__((__blocks__(byref))) __Block_byref_val_0 val = {(void*)0,(__Block_byref_val_0 *)&val, 0, sizeof(__Block_byref_val_0), 10};
- void (*blk)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, (__Block_byref_val_0 *)&val, 570425344));
- ((void (*)(__block_impl *))((__block_impl *)blk)->FuncPtr)((__block_impl *)blk);
- return 0;
+    static int static_val = 3;
+    __attribute__((__blocks__(byref))) __Block_byref_auto_val_0 auto_val = {(void*)0,(__Block_byref_auto_val_0 *)&auto_val, 0, sizeof(__Block_byref_auto_val_0), 4};
+
+    void (*blk)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, &static_val, (__Block_byref_auto_val_0 *)&auto_val, 570425344));
+
+    void (*blk_1)(void) = ((void (*)())&__main_block_impl_1((void *)__main_block_func_1, &__main_block_desc_1_DATA, &static_val, (__Block_byref_auto_val_0 *)&auto_val, 570425344));
+    return 0;
 }
 static struct IMAGE_INFO { unsigned version; unsigned flag; } _OBJC_IMAGE_INFO = { 0, 2 };
