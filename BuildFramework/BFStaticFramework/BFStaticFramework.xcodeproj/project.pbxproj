@@ -26,8 +26,6 @@
 		5E16946D217717310086148C /* BFStaticFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E16945F217717310086148C /* BFStaticFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E169478217717530086148C /* BFDeviceUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E169476217717530086148C /* BFDeviceUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E169479217717530086148C /* BFDeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E169477217717530086148C /* BFDeviceUtils.m */; };
-		5E1694F02177247F0086148C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E1694EF2177247F0086148C /* Images.xcassets */; };
-		5E1694F1217724AA0086148C /* Images.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 5E1694EF2177247F0086148C /* Images.xcassets */; };
 		5E16950C21772AB60086148C /* UIView+Frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E16950A21772AB60086148C /* UIView+Frame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E16950D21772AB60086148C /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E16950B21772AB60086148C /* UIView+Frame.m */; };
 /* End PBXBuildFile section */
@@ -51,7 +49,6 @@
 		5E16946C217717310086148C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E169476217717530086148C /* BFDeviceUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFDeviceUtils.h; sourceTree = "<group>"; };
 		5E169477217717530086148C /* BFDeviceUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFDeviceUtils.m; sourceTree = "<group>"; };
-		5E1694EF2177247F0086148C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5E16950A21772AB60086148C /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		5E16950B21772AB60086148C /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,7 +99,6 @@
 				5E16950A21772AB60086148C /* UIView+Frame.h */,
 				5E16950B21772AB60086148C /* UIView+Frame.m */,
 				5E169460217717310086148C /* Info.plist */,
-				5E1694EF2177247F0086148C /* Images.xcassets */,
 			);
 			path = BFStaticFramework;
 			sourceTree = "<group>";
@@ -216,7 +212,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E1694F02177247F0086148C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +250,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"";
+			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -265,7 +260,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E16950D21772AB60086148C /* UIView+Frame.m in Sources */,
-				5E1694F1217724AA0086148C /* Images.xcassets in Sources */,
 				5E169479217717530086148C /* BFDeviceUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
