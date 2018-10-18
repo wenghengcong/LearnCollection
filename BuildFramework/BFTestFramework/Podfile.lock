@@ -1,0 +1,16 @@
+PODS:
+  - BFDynamicFramework (0.0.2)
+
+DEPENDENCIES:
+  - BFDynamicFramework
+
+SPEC REPOS:
+  https://github.com/wenghengcong/BFSpecs.git:
+    - BFDynamicFramework
+
+SPEC CHECKSUMS:
+  BFDynamicFramework: 2ae922e9891ed50536a64c0eca9b18c7a07499b1
+
+PODFILE CHECKSUM: 442e843460e236c8c7676244453c86b94c504e05
+
+COCOAPODS: 1.5.3

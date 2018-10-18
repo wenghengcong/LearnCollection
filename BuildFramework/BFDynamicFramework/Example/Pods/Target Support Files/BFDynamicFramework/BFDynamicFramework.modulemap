@@ -1,0 +1,6 @@
+framework module BFDynamicFramework {
+  umbrella header "BFDynamicFramework-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-#import <BFStaticFramework/UIView+Frame.h>
-#import <BFStaticFramework/BFDeviceUtils.h>
+#import <BFDynamicFramework/UIView+Frame.h>
+#import <BFDynamicFramework/BFDeviceUtils.h>
 
 @interface ViewController ()
 

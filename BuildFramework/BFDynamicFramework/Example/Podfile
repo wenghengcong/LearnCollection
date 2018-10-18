@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BFDynamicFramework_Example' do
+  pod 'BFDynamicFramework', :path => '../'
+
+  target 'BFDynamicFramework_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

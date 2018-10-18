@@ -1,0 +1,16 @@
+PODS:
+  - BFDynamicFramework (0.1.0)
+
+DEPENDENCIES:
+  - BFDynamicFramework (from `../`)
+
+EXTERNAL SOURCES:
+  BFDynamicFramework:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BFDynamicFramework: 6cb0b0f7ca22e439c57a2d4bde63401c969a4976
+
+PODFILE CHECKSUM: 29b355969a6d809fcaaf9f6d84e4cf3ff87edd41
+
+COCOAPODS: 1.5.3

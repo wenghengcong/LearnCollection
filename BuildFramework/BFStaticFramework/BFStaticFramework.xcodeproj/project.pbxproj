@@ -14,6 +14,7 @@
 				5E16947E217717F40086148C /* ShellScript */,
 			);
 			dependencies = (
+				5ED76E0721789EF100F5061F /* PBXTargetDependency */,
 			);
 			name = OutputFramework;
 			productName = OutputFramework;
@@ -28,6 +29,10 @@
 		5E169479217717530086148C /* BFDeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E169477217717530086148C /* BFDeviceUtils.m */; };
 		5E16950C21772AB60086148C /* UIView+Frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E16950A21772AB60086148C /* UIView+Frame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E16950D21772AB60086148C /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E16950B21772AB60086148C /* UIView+Frame.m */; };
+		5ED76DFF217897D000F5061F /* qq@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ED76DFC217897D000F5061F /* qq@3x.png */; };
+		5ED76E00217897D000F5061F /* qq.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ED76DFD217897D000F5061F /* qq.png */; };
+		5ED76E01217897D000F5061F /* qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ED76DFE217897D000F5061F /* qq@2x.png */; };
+		5ED76E0B2178A11600F5061F /* BFStaticFramework.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5ED76E0A2178A11600F5061F /* BFStaticFramework.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5E16945B217717300086148C;
 			remoteInfo = BFStaticFramework;
+		};
+		5ED76E0621789EF100F5061F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E169453217717300086148C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ED76DF42178949D00F5061F;
+			remoteInfo = IconImage;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,6 +63,12 @@
 		5E169477217717530086148C /* BFDeviceUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFDeviceUtils.m; sourceTree = "<group>"; };
 		5E16950A21772AB60086148C /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		5E16950B21772AB60086148C /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		5ED76DF52178949D00F5061F /* BFStaticFramework.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BFStaticFramework.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ED76DF72178949D00F5061F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ED76DFC217897D000F5061F /* qq@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq@3x.png"; sourceTree = "<group>"; };
+		5ED76DFD217897D000F5061F /* qq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq.png; sourceTree = "<group>"; };
+		5ED76DFE217897D000F5061F /* qq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq@2x.png"; sourceTree = "<group>"; };
+		5ED76E0A2178A11600F5061F /* BFStaticFramework.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = BFStaticFramework.bundle; path = Products/BFStaticFramework.bundle; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +87,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5ED76DF22178949D00F5061F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +102,7 @@
 			children = (
 				5E16945E217717300086148C /* BFStaticFramework */,
 				5E169469217717310086148C /* BFStaticFrameworkTests */,
+				5ED76DF62178949D00F5061F /* IconImage */,
 				5E16945D217717300086148C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,6 +112,7 @@
 			children = (
 				5E16945C217717300086148C /* BFStaticFramework.framework */,
 				5E169465217717310086148C /* BFStaticFrameworkTests.xctest */,
+				5ED76DF52178949D00F5061F /* BFStaticFramework.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +125,7 @@
 				5E16945F217717310086148C /* BFStaticFramework.h */,
 				5E16950A21772AB60086148C /* UIView+Frame.h */,
 				5E16950B21772AB60086148C /* UIView+Frame.m */,
+				5ED76E0A2178A11600F5061F /* BFStaticFramework.bundle */,
 				5E169460217717310086148C /* Info.plist */,
 			);
 			path = BFStaticFramework;
@@ -110,6 +138,25 @@
 				5E16946C217717310086148C /* Info.plist */,
 			);
 			path = BFStaticFrameworkTests;
+			sourceTree = "<group>";
+		};
+		5ED76DF62178949D00F5061F /* IconImage */ = {
+			isa = PBXGroup;
+			children = (
+				5ED76DFB217897BA00F5061F /* resouce */,
+				5ED76DF72178949D00F5061F /* Info.plist */,
+			);
+			path = IconImage;
+			sourceTree = "<group>";
+		};
+		5ED76DFB217897BA00F5061F /* resouce */ = {
+			isa = PBXGroup;
+			children = (
+				5ED76DFD217897D000F5061F /* qq.png */,
+				5ED76DFE217897D000F5061F /* qq@2x.png */,
+				5ED76DFC217897D000F5061F /* qq@3x.png */,
+			);
+			path = resouce;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +212,23 @@
 			productReference = 5E169465217717310086148C /* BFStaticFrameworkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		5ED76DF42178949D00F5061F /* IconImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ED76DF82178949D00F5061F /* Build configuration list for PBXNativeTarget "IconImage" */;
+			buildPhases = (
+				5ED76DF12178949D00F5061F /* Sources */,
+				5ED76DF22178949D00F5061F /* Frameworks */,
+				5ED76DF32178949D00F5061F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IconImage;
+			productName = IconImage;
+			productReference = 5ED76DF52178949D00F5061F /* BFStaticFramework.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -186,6 +250,10 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					5ED76DF42178949D00F5061F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 5E169456217717300086148C /* Build configuration list for PBXProject "BFStaticFramework" */;
@@ -203,6 +271,7 @@
 				5E16945B217717300086148C /* BFStaticFramework */,
 				5E169464217717310086148C /* BFStaticFrameworkTests */,
 				5E16947A217717ED0086148C /* OutputFramework */,
+				5ED76DF42178949D00F5061F /* IconImage */,
 			);
 		};
 /* End PBXProject section */
@@ -212,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ED76E0B2178A11600F5061F /* BFStaticFramework.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +289,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ED76DF32178949D00F5061F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ED76DFF217897D000F5061F /* qq@3x.png in Resources */,
+				5ED76E00217897D000F5061F /* qq.png in Resources */,
+				5ED76E01217897D000F5061F /* qq@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +316,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=${PROJECT_NAME}\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n# Working dir will be deleted after theframework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\nmkdir -p \"${INSTALL_DIR}\"\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\nrm -r \"${WRK_DIR}\"\nopen \"${INSTALL_DIR}\"";
+			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=${PROJECT_NAME}\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n# Working dir will be deleted after theframework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\nmkdir -p \"${INSTALL_DIR}\"\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\nrm -r \"${WRK_DIR}\"\n\n# Copy the resources bundle\nditto \"${BUILT_PRODUCTS_DIR}/${FMK_NAME}.bundle\" \\\n\"${SRCROOT}/Products/${FMK_NAME}.bundle\"\n\nopen \"${INSTALL_DIR}\"";
 		};
 		5E16953C217743580086148C /* Build Framework */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -250,7 +330,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n";
+			shellScript = "set -e\n\n\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n\n\n# Create the path to the real Headers die\n\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n\n\n# Create the required symlinks\n\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n\n\n# Copy the public headers into the framework\n\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -272,6 +352,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5ED76DF12178949D00F5061F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -279,6 +366,11 @@
 			isa = PBXTargetDependency;
 			target = 5E16945B217717300086148C /* BFStaticFramework */;
 			targetProxy = 5E169467217717310086148C /* PBXContainerItemProxy */;
+		};
+		5ED76E0721789EF100F5061F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ED76DF42178949D00F5061F /* IconImage */;
+			targetProxy = 5ED76E0621789EF100F5061F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -487,6 +579,42 @@
 			};
 			name = Release;
 		};
+		5ED76DF92178949D00F5061F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69XHTLCF36;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = IconImage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luci.beefun.IconImage;
+				PRODUCT_NAME = BFStaticFramework;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		5ED76DFA2178949D00F5061F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69XHTLCF36;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = IconImage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luci.beefun.IconImage;
+				PRODUCT_NAME = BFStaticFramework;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -522,6 +650,15 @@
 			buildConfigurations = (
 				5E16947C217717ED0086148C /* Debug */,
 				5E16947D217717ED0086148C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ED76DF82178949D00F5061F /* Build configuration list for PBXNativeTarget "IconImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ED76DF92178949D00F5061F /* Debug */,
+				5ED76DFA2178949D00F5061F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

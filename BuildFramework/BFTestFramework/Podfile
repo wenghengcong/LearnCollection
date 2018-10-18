@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+source 'https://github.com/wenghengcong/BFSpecs.git'
+
+target 'BFTestFramework' do
+  use_frameworks!
+
+  #pod 'BFDynamicFramework', '~> 0.0.2'
+  pod 'BFDynamicFramework'
+
+end
+
+# Workaround for Cocoapods issue #7606
+post_install do |installer|
+    installer.pods_project.build_configurations.each do |config|
+        config.build_settings.delete('CODE_SIGNING_ALLOWED')
+        config.build_settings.delete('CODE_SIGNING_REQUIRED')
+    end
+end
