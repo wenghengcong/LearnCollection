@@ -206,6 +206,12 @@ NS_ASSUME_NONNULL_BEGIN
  specified value.
  @param age  The maximum age (in seconds) of objects.
  */
+
+/**
+ 删减过期的对象
+
+ @param age  过期时间，比如一天，那么一天以上的对象就要进行删减
+ */
 - (void)trimToAge:(NSTimeInterval)age;
 
 @end

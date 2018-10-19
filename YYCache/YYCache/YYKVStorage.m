@@ -808,7 +808,7 @@ static UIApplication *_YYSharedApplication() {
         }
         return YES;
     } else {
-        //文件名为空时，默认按sqlite方式存储
+        //文件名为空时，默认按sqlite方式存储，并且检查当前如果不是仅仅以sqlite存储（文件存储）时，需要删除该key对应的文件名
         if (_type != YYKVStorageTypeSQLite) {
             //如果当前存储方式，不是sqlite，那么需要找出文件名，并且如果找到文件名，删除文件之后存储到sqlite
             NSString *filename = [self _dbGetFilenameWithKey:key];

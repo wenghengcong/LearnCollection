@@ -135,7 +135,7 @@ static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
 }
 
 /**
- 移除链表节点
+ 移除链表节点：在移除某个缓存对象时，移除该节点
  */
 - (void)removeNode:(_YYLinkedMapNode *)node {
     CFDictionaryRemoveValue(_dic, (__bridge const void *)(node->_key));
@@ -185,6 +185,7 @@ static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
             });
         } else if (_releaseOnMainThread && !pthread_main_np()) {
             //pthread_main_np 判断是不是主线程
+            //需要在主线程释放，但是目前不在主线程
             dispatch_async(dispatch_get_main_queue(), ^{
                 CFRelease(holder); // hold and release in specified queue
             });
@@ -199,13 +200,13 @@ static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
 
 
 @implementation YYMemoryCache {
-    pthread_mutex_t _lock;
-    _YYLinkedMap *_lru;
-    dispatch_queue_t _queue;
+    pthread_mutex_t _lock;  //互斥锁，保证线程安全，对于所有的属性和方法
+    _YYLinkedMap *_lru;     //处理层类。处理链表操
+    dispatch_queue_t _queue;    //串行队列，用于清除缓存
 }
 
 /**
- 定时清楚
+ 定时清除
  */
 - (void)_trimRecursively {
     __weak typeof(self) _self = self;
@@ -298,6 +299,7 @@ static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
 }
 
 - (void)_trimToAge:(NSTimeInterval)ageLimit {
+    //是否完成缓存删减
     BOOL finish = NO;
     NSTimeInterval now = CACurrentMediaTime();
     pthread_mutex_lock(&_lock);
@@ -331,7 +333,9 @@ static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
         });
     }
 }
-
+/**
+ 收到内存警告时，如何处理
+ */
 - (void)_appDidReceiveMemoryWarningNotification {
     if (self.didReceiveMemoryWarningBlock) {
         self.didReceiveMemoryWarningBlock(self);
@@ -480,6 +484,7 @@ static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
         if (_lru->_releaseAsynchronously) {
             dispatch_queue_t queue = _lru->_releaseOnMainThread ? dispatch_get_main_queue() : YYMemoryCacheGetReleaseQueue();
             dispatch_async(queue, ^{
+                //持有node，等待在该队列上释放
                 [node class]; //hold and release in queue
             });
         } else if (_lru->_releaseOnMainThread && !pthread_main_np()) {
