@@ -201,8 +201,8 @@ static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
 
 @implementation YYMemoryCache {
     pthread_mutex_t _lock;  //互斥锁，保证线程安全，对于所有的属性和方法
-    _YYLinkedMap *_lru;     //处理层类。处理链表操
-    dispatch_queue_t _queue;    //串行队列，用于清除缓存
+    _YYLinkedMap *_lru;     //_YYLinkedMap 处理层类。处理链表操作，操作缓存对象
+    dispatch_queue_t _queue;    //串行队列，用于用于 YYMemoryCache 的 trim 操作
 }
 
 /**
@@ -253,6 +253,8 @@ static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
             }
             pthread_mutex_unlock(&_lock);
         } else {
+            // 使用 usleep 以微秒为单位挂起线程，在短时间间隔挂起线程
+            // 对比 sleep 用 usleep 能更好的利用 CPU 时间
             usleep(10 * 1000); //10 ms
         }
     }
