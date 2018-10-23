@@ -788,7 +788,7 @@ static UIApplication *_YYSharedApplication() {
  @param key key
  @param value 值
  @param filename 存储的文件名
- @param extendedData 附加数据
+ @param extendedData 扩展数据
  */
 - (BOOL)saveItemWithKey:(NSString *)key value:(NSData *)value filename:(NSString *)filename extendedData:(NSData *)extendedData {
     if (key.length == 0 || value.length == 0) return NO;
@@ -1033,7 +1033,7 @@ static UIApplication *_YYSharedApplication() {
 }
 
 /**
- 刚方法能获取到key对应的所有数据
+ 该方法能获取到key对应的所有数据
  包括value(来源于sqlite，当存在文件时，从文件读取)
  */
 - (YYKVStorageItem *)getItemForKey:(NSString *)key {
@@ -1046,7 +1046,7 @@ static UIApplication *_YYSharedApplication() {
         [self _dbUpdateAccessTimeWithKey:key];
         
         if (item.filename) {
-            //如果也有文件存储了，那么僵value读取为文件存储
+            //如果也有文件存储了，那么从文件系统读取value
             item.value = [self _fileReadWithName:item.filename];
             
             if (!item.value) {

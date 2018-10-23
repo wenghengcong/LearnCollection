@@ -288,6 +288,7 @@ static void _YYDiskCacheSetGlobal(YYDiskCache *cache) {
 - (id<NSCoding>)objectForKey:(NSString *)key {
     if (!key) return nil;
     Lock();
+    //访问数据，更新数据的访问时间
     YYKVStorageItem *item = [_kv getItemForKey:key];
     Unlock();
     if (!item.value) return nil;
