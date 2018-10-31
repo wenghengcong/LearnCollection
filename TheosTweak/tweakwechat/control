@@ -1,0 +1,9 @@
+Package: com.luci.tweakwechat
+Name: tweakwechat
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: WengHengcong
+Author: WengHengcong
+Section: Tweaks
