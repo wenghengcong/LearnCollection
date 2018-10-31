@@ -20,22 +20,20 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)touchAction:(id)sender {
+    
     //匹配/user/view/:userID"
     NSURL *viewUserURL = [NSURL URLWithString:@"myapp://user/view/joeldev"];
     [JLRoutes routeURL:viewUserURL];
+    
     //匹配/user/view/:userID"
     NSURL *viewUserURL1 = [NSURL URLWithString:@"abtest://user/view/joeldev"];
     [JLRoutes routeURL:viewUserURL1];
+    
     //匹配/user/view/:userID"
     NSURL *viewUserURL2 = [NSURL URLWithString:@"/user/view/joeldev"];
     [JLRoutes routeURL:viewUserURL2];
+    
     //不匹配/user/view/:userID"
     NSURL *viewUserURL3 = [NSURL URLWithString:@"myapp://user/good/joeldev"];
     [JLRoutes routeURL:viewUserURL3];
