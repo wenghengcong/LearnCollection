@@ -1,0 +1,19 @@
+
+附上该项目中，使用到的第三方库的名字和相关网址
+
+
+1.YTKNetwork
+github:                  https://github.com/yuantiku/YTKNetwork
+基础使用教程：             https://github.com/yuantiku/YTKNetwork/blob/master/BasicGuide.md
+高级使用教程：             https://github.com/yuantiku/YTKNetwork/blob/master/ProGuide.md
+
+2.MJExtension
+github:                 https://github.com/CoderMJLee/MJExtension
+
+
+3.Colours
+github:                 https://github.com/bennyguitar/Colours
+
+
+4.FCFileManager
+github:                https://github.com/fabiocaccamo/FCFileManager 

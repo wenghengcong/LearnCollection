@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  JSBProjectBase
+
+  Created by wenghengcong on 16/1/2.
+  Copyright © 2016年 JungleSong. All rights reserved.
+*/
+
+/**
+ *  如何添加Localizable.string
+ *  1.点击文件导航中的项目
+ *  2.选中Project（不是target），在info下，添加本地化
+ */
+
+
+"Sign in" = "Sign in";

@@ -1,0 +1,50 @@
+//
+//  JSBProjectBase.pch
+//  JSBProjectBase
+//
+//  Created by wenghengcong on 15/9/20.
+//  Copyright © 2015年 JungleSong. All rights reserved.
+//
+
+#ifndef JSBProjectBase_pch
+#define JSBProjectBase_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#endif
+
+/**
+ *  导入文件
+ */
+#import "ImportFiles.h"
+
+
+//当前版本类型
+
+#define PROGRESS_PRODUCTION
+
+#if defined(PROGRESS_DEVELOPMENT)                    // 本地开发环境(局域网环境)
+/*****/
+static const int ddLogLevel = DDLogLevelOff;
+#define NULLSAFE_ENABLED 0
+/*****/
+#elif defined(PROGRESS_TEST)                         // 测试环境（外网测试服务器）
+/*****/
+static const int ddLogLevel = DDLogLevelInfo;
+
+#elif defined(PROGRESS_PRODUCTION)                   // 生产环境 （外网生产服务器)
+/*****/
+//static const int ddLogLevel = DDLogLevelInfo;
+/*****/
+#else
+#error "can't detemted mode"
+#endif
+
+
+
+
+#endif /* JSBProjectBase_pch */
