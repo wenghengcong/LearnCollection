@@ -7,12 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "BFPerson.h"
 
 @interface ViewController ()
 {
-    int age;
+    int _source;
 }
-@property (nonatomic, strong) NSMutableArray *names;
+@property (nonatomic, strong) NSMutableArray *data;
 @end
 
 @implementation ViewController
@@ -20,15 +21,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    age = 3;
-    _names = [NSMutableArray arrayWithObjects:@"weng", nil];
+    _source = 3;
+    _data = [NSMutableArray arrayWithObjects:@"data_1", nil];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     NSLog(@"touch");
-    NSLog(@"names : %@", _names);
-    NSLog(@"age is %d", age);
+    NSLog(@"data : %@", _data);
+    NSLog(@"source is %d", _source);
+    
+    BFPerson *person = [[BFPerson alloc] init];
+    person.name = @"weng";
+    person.age = 28;
+    NSLog(@"name is %@, age is %lu", person.name, person.age);
 }
 
 

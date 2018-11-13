@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E4CC0DD219ABB1A000D2D44 /* BFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4CC0DC219ABB1A000D2D44 /* BFPerson.m */; };
 		5E54A911218A910600142287 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E54A910218A910600142287 /* AppDelegate.m */; };
 		5E54A914218A910600142287 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E54A913218A910600142287 /* ViewController.m */; };
 		5E54A917218A910600142287 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E54A915218A910600142287 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E4CC0DB219ABB1A000D2D44 /* BFPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFPerson.h; sourceTree = "<group>"; };
+		5E4CC0DC219ABB1A000D2D44 /* BFPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFPerson.m; sourceTree = "<group>"; };
 		5E54A90C218A910600142287 /* LLDBLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLDBLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E54A90F218A910600142287 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E54A910218A910600142287 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				5E54A91A218A910700142287 /* LaunchScreen.storyboard */,
 				5E54A91D218A910700142287 /* Info.plist */,
 				5E54A91E218A910700142287 /* main.m */,
+				5E4CC0DB219ABB1A000D2D44 /* BFPerson.h */,
+				5E4CC0DC219ABB1A000D2D44 /* BFPerson.m */,
 			);
 			path = LLDBLearn;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E4CC0DD219ABB1A000D2D44 /* BFPerson.m in Sources */,
 				5E54A914218A910600142287 /* ViewController.m in Sources */,
 				5E54A91F218A910700142287 /* main.m in Sources */,
 				5E54A911218A910600142287 /* AppDelegate.m in Sources */,
