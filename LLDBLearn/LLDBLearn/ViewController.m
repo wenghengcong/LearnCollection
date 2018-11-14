@@ -34,6 +34,7 @@
     BFPerson *person = [[BFPerson alloc] init];
     person.name = @"weng";
     person.age = 28;
+    [person eat:@"apple"];
     NSLog(@"name is %@, age is %lu", person.name, person.age);
 }
 
