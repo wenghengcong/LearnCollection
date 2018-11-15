@@ -10,7 +10,6 @@
 
 @interface BFPerson : NSObject
 
-
 @property (nonatomic, copy) NSString*     name;
 
 @property (nonatomic, assign) NSInteger     age;

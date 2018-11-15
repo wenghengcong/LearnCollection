@@ -10,6 +10,18 @@
 
 @implementation BFPerson
 
+@synthesize age = _age;
+
+- (void)setAge:(NSInteger)age
+{
+    _age = age;
+}
+
+- (NSInteger)age
+{
+    return _age;
+}
+
 - (void)test
 {
     NSLog(@"%@ ",NSStringFromSelector(_cmd));

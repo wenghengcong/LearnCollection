@@ -31,11 +31,16 @@
     NSLog(@"data : %@", _data);
     NSLog(@"source is %d", _source);
     
+//    NSArray *arr=[[NSArray alloc] initWithObjects:@"1",@"2", nil];
+//    NSLog(@"%@",arr[2]);
+    
     BFPerson *person = [[BFPerson alloc] init];
     person.name = @"weng";
     person.age = 28;
     [person eat:@"apple"];
-    NSLog(@"name is %@, age is %lu", person.name, person.age);
+    person.age = 29;
+    NSInteger currentAge = person.age;
+    NSLog(@"name is %@, age is %ld", person.name, (long)currentAge);
 }
 
 
