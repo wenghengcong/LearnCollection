@@ -40,6 +40,7 @@
     [person eat:@"apple"];
     person.age = 29;
     NSInteger currentAge = person.age;
+    
     NSLog(@"name is %@, age is %ld", person.name, (long)currentAge);
 }
 
