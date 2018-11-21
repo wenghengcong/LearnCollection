@@ -1,13 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <FileRef
-      location = "group:BFProgrammer/BFProgrammer.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:NSObject/NSObject.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:BFPerson/BFPerson.xcodeproj">
-   </FileRef>
+   <Group
+      location = "group:&#x5bf9;&#x8c61;&#x7684;&#x672c;&#x8d28;&#x53ca;&#x5206;&#x7c7b;"
+      name = "&#x5bf9;&#x8c61;&#x7684;&#x672c;&#x8d28;&#x53ca;&#x5206;&#x7c7b;">
+      <Group
+         location = "group:BFOCClass&#x5206;&#x7c7b;"
+         name = "BFOCClass&#x5206;&#x7c7b;">
+         <FileRef
+            location = "group:BFOCClass&#x5206;&#x7c7b;.xcodeproj">
+         </FileRef>
+         <Group
+            location = "group:BFOCClass&#x5206;&#x7c7b;"
+            name = "BFOCClass&#x5206;&#x7c7b;">
+            <FileRef
+               location = "group:AppDelegate.h">
+            </FileRef>
+            <FileRef
+               location = "group:BFBoy.m">
+            </FileRef>
+            <FileRef
+               location = "group:BFGirl.h">
+            </FileRef>
+            <FileRef
+               location = "group:BFPerson.h">
+            </FileRef>
+            <Group
+               location = "group:Assets.xcassets"
+               name = "Assets.xcassets">
+               <Group
+                  location = "group:AppIcon.appiconset"
+                  name = "AppIcon.appiconset">
+                  <FileRef
+                     location = "group:Contents.json">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:ViewController.m">
+            </FileRef>
+            <Group
+               location = "group:Base.lproj"
+               name = "Base.lproj">
+               <FileRef
+                  location = "group:LaunchScreen.storyboard">
+               </FileRef>
+               <FileRef
+                  location = "group:Main.storyboard">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:main.m">
+            </FileRef>
+            <FileRef
+               location = "group:BFBoy.h">
+            </FileRef>
+            <FileRef
+               location = "group:AppDelegate.m">
+            </FileRef>
+            <FileRef
+               location = "group:BFPerson.m">
+            </FileRef>
+            <FileRef
+               location = "group:BFGirl.m">
+            </FileRef>
+            <FileRef
+               location = "group:Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:ViewController.h">
+            </FileRef>
+         </Group>
+      </Group>
+   </Group>
+   <Group
+      location = "group:&#x5bf9;&#x8c61;&#x5185;&#x5b58;&#x5206;&#x6790;"
+      name = "&#x5bf9;&#x8c61;&#x5185;&#x5b58;&#x5206;&#x6790;">
+      <Group
+         location = "group:BFProgrammer"
+         name = "BFProgrammer">
+         <FileRef
+            location = "group:BFProgrammer.xcodeproj">
+         </FileRef>
+         <Group
+            location = "group:BFProgrammer"
+            name = "BFProgrammer">
+            <FileRef
+               location = "group:main.m">
+            </FileRef>
+            <FileRef
+               location = "group:main.cpp">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:NSObject"
+         name = "NSObject">
+         <FileRef
+            location = "group:NSObject.xcodeproj">
+         </FileRef>
+         <Group
+            location = "group:NSObject"
+            name = "NSObject">
+            <FileRef
+               location = "group:main.m">
+            </FileRef>
+            <FileRef
+               location = "group:main.cpp">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:BFPerson"
+         name = "BFPerson">
+         <FileRef
+            location = "group:BFPerson.xcodeproj">
+         </FileRef>
+         <Group
+            location = "group:BFPerson"
+            name = "BFPerson">
+            <FileRef
+               location = "group:main.m">
+            </FileRef>
+            <FileRef
+               location = "group:main.cpp">
+            </FileRef>
+         </Group>
+      </Group>
+   </Group>
 </Workspace>
