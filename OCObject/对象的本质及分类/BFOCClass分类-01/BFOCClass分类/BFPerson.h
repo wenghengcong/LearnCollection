@@ -13,7 +13,7 @@
 @property (nonatomic, assign) int     age;
 @property (nonatomic, copy) NSString *name;
 
-+ (void)test;
+//+ (void)test;
 
 //- (void)test;
 

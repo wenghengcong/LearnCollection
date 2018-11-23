@@ -10,10 +10,10 @@
 
 @implementation BFPerson
 
-+ (void)test
-{
-    NSLog(@"+[BFPerson test]");
-}
+//+ (void)test
+//{
+//    NSLog(@"+[BFPerson test]");
+//}
 
 //- (void)test
 //{

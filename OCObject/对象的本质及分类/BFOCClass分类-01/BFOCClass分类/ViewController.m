@@ -37,14 +37,16 @@
  */
 - (void)testMethod
 {
-    BFPerson *person = [[BFPerson alloc] init];
+//    BFPerson *person = [[BFPerson alloc] init];
 //    [person test];
     
     BFStudent *stu = [[BFStudent alloc] init];
-    ((void (*)(id, SEL))objc_msgSend)(stu, @selector(test));
 //    [stu test];
-    
-    
+//    ((void (*)(id, SEL))objc_msgSend)(stu, @selector(test));
+
+//    [BFStudent test];
+    Class stuClass = [BFStudent class];
+    ((void (*)(id, SEL))objc_msgSend)(stuClass, @selector(test));
 //    [BFPerson load];
 //    [BFStudent load];
 }
