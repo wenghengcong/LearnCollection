@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) double score;
 @property (nonatomic, copy) NSString *no;
 
+
 - (void)stuendtIntanceMethod;
 
 + (void)studentClassMethod;

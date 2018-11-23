@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E27549621A693A3005C67B6 /* BFStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E27549521A693A3005C67B6 /* BFStudent.m */; };
-		5E27549921A693AC005C67B6 /* BFTeacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E27549821A693AC005C67B6 /* BFTeacher.m */; };
+		5E2754FE21A7DC93005C67B6 /* NSObject+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2754FD21A7DC93005C67B6 /* NSObject+Test.m */; };
 		5EC3B9FB21A53D37000BF973 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC3B9FA21A53D37000BF973 /* AppDelegate.m */; };
 		5EC3B9FE21A53D37000BF973 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC3B9FD21A53D37000BF973 /* ViewController.m */; };
 		5EC3BA0121A53D37000BF973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC3B9FF21A53D37000BF973 /* Main.storyboard */; };
@@ -21,8 +21,8 @@
 /* Begin PBXFileReference section */
 		5E27549421A693A3005C67B6 /* BFStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFStudent.h; sourceTree = "<group>"; };
 		5E27549521A693A3005C67B6 /* BFStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFStudent.m; sourceTree = "<group>"; };
-		5E27549721A693AC005C67B6 /* BFTeacher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFTeacher.h; sourceTree = "<group>"; };
-		5E27549821A693AC005C67B6 /* BFTeacher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFTeacher.m; sourceTree = "<group>"; };
+		5E2754FC21A7DC93005C67B6 /* NSObject+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Test.h"; sourceTree = "<group>"; };
+		5E2754FD21A7DC93005C67B6 /* NSObject+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Test.m"; sourceTree = "<group>"; };
 		5EC3B9F621A53D37000BF973 /* BFOCClass分类.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BFOCClass分类.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC3B9F921A53D37000BF973 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EC3B9FA21A53D37000BF973 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,8 +80,8 @@
 				5EC3BA1021A53D4B000BF973 /* BFPerson.m */,
 				5E27549421A693A3005C67B6 /* BFStudent.h */,
 				5E27549521A693A3005C67B6 /* BFStudent.m */,
-				5E27549721A693AC005C67B6 /* BFTeacher.h */,
-				5E27549821A693AC005C67B6 /* BFTeacher.m */,
+				5E2754FC21A7DC93005C67B6 /* NSObject+Test.h */,
+				5E2754FD21A7DC93005C67B6 /* NSObject+Test.m */,
 			);
 			path = "BFOCClass分类";
 			sourceTree = "<group>";
@@ -158,10 +158,10 @@
 			files = (
 				5EC3BA1121A53D4B000BF973 /* BFPerson.m in Sources */,
 				5EC3B9FE21A53D37000BF973 /* ViewController.m in Sources */,
-				5E27549921A693AC005C67B6 /* BFTeacher.m in Sources */,
 				5EC3BA0921A53D39000BF973 /* main.m in Sources */,
 				5E27549621A693A3005C67B6 /* BFStudent.m in Sources */,
 				5EC3B9FB21A53D37000BF973 /* AppDelegate.m in Sources */,
+				5E2754FE21A7DC93005C67B6 /* NSObject+Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69XHTLCF36;
 				INFOPLIST_FILE = "BFOCClass分类/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,6 +322,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69XHTLCF36;
 				INFOPLIST_FILE = "BFOCClass分类/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -9,7 +9,6 @@
 #import "BFTeacher.h"
 
 @implementation BFTeacher
-
 - (void)teacherIntanceMethod
 {
     

@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E2754A821A6BC0C005C67B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2754A721A6BC0C005C67B6 /* main.m */; };
-		5E2754BC21A6BC53005C67B6 /* BFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2754B621A6BC53005C67B6 /* BFPerson.m */; };
-		5E2754BD21A6BC53005C67B6 /* BFTeacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2754B921A6BC53005C67B6 /* BFTeacher.m */; };
-		5E2754BE21A6BC53005C67B6 /* BFStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2754BB21A6BC53005C67B6 /* BFStudent.m */; };
+		5E2754EC21A72C66005C67B6 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5E2754EB21A72C66005C67B6 /* main.mm */; };
+		5E2754F921A72C7F005C67B6 /* BFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2754F321A72C7F005C67B6 /* BFPerson.m */; };
+		5E2754FA21A72C7F005C67B6 /* BFStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2754F521A72C7F005C67B6 /* BFStudent.m */; };
+		5E2754FB21A72C7F005C67B6 /* BFTeacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2754F821A72C7F005C67B6 /* BFTeacher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5E2754A221A6BC0C005C67B6 /* CopyFiles */ = {
+		5E2754E621A72C66005C67B6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -26,19 +26,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5E2754A421A6BC0C005C67B6 /* OCObjectInfo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OCObjectInfo; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E2754A721A6BC0C005C67B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5E2754B521A6BC53005C67B6 /* BFStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFStudent.h; sourceTree = "<group>"; };
-		5E2754B621A6BC53005C67B6 /* BFPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPerson.m; sourceTree = "<group>"; };
-		5E2754B721A6BC53005C67B6 /* BFClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFClassInfo.h; sourceTree = "<group>"; };
-		5E2754B821A6BC53005C67B6 /* BFPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPerson.h; sourceTree = "<group>"; };
-		5E2754B921A6BC53005C67B6 /* BFTeacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTeacher.m; sourceTree = "<group>"; };
-		5E2754BA21A6BC53005C67B6 /* BFTeacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFTeacher.h; sourceTree = "<group>"; };
-		5E2754BB21A6BC53005C67B6 /* BFStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFStudent.m; sourceTree = "<group>"; };
+		5E2754E821A72C66005C67B6 /* OCClassInfo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OCClassInfo; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E2754EB21A72C66005C67B6 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		5E2754F221A72C7F005C67B6 /* BFPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPerson.h; sourceTree = "<group>"; };
+		5E2754F321A72C7F005C67B6 /* BFPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPerson.m; sourceTree = "<group>"; };
+		5E2754F421A72C7F005C67B6 /* BFClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFClassInfo.h; sourceTree = "<group>"; };
+		5E2754F521A72C7F005C67B6 /* BFStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFStudent.m; sourceTree = "<group>"; };
+		5E2754F621A72C7F005C67B6 /* BFStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFStudent.h; sourceTree = "<group>"; };
+		5E2754F721A72C7F005C67B6 /* BFTeacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFTeacher.h; sourceTree = "<group>"; };
+		5E2754F821A72C7F005C67B6 /* BFTeacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFTeacher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5E2754A121A6BC0C005C67B6 /* Frameworks */ = {
+		5E2754E521A72C66005C67B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,104 +48,104 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E27549B21A6BC0C005C67B6 = {
+		5E2754DF21A72C66005C67B6 = {
 			isa = PBXGroup;
 			children = (
-				5E2754A621A6BC0C005C67B6 /* OCObjectInfo */,
-				5E2754A521A6BC0C005C67B6 /* Products */,
+				5E2754EA21A72C66005C67B6 /* OCClassInfo */,
+				5E2754E921A72C66005C67B6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5E2754A521A6BC0C005C67B6 /* Products */ = {
+		5E2754E921A72C66005C67B6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5E2754A421A6BC0C005C67B6 /* OCObjectInfo */,
+				5E2754E821A72C66005C67B6 /* OCClassInfo */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5E2754A621A6BC0C005C67B6 /* OCObjectInfo */ = {
+		5E2754EA21A72C66005C67B6 /* OCClassInfo */ = {
 			isa = PBXGroup;
 			children = (
-				5E2754B721A6BC53005C67B6 /* BFClassInfo.h */,
-				5E2754B821A6BC53005C67B6 /* BFPerson.h */,
-				5E2754B621A6BC53005C67B6 /* BFPerson.m */,
-				5E2754B521A6BC53005C67B6 /* BFStudent.h */,
-				5E2754BB21A6BC53005C67B6 /* BFStudent.m */,
-				5E2754BA21A6BC53005C67B6 /* BFTeacher.h */,
-				5E2754B921A6BC53005C67B6 /* BFTeacher.m */,
-				5E2754A721A6BC0C005C67B6 /* main.m */,
+				5E2754F421A72C7F005C67B6 /* BFClassInfo.h */,
+				5E2754F221A72C7F005C67B6 /* BFPerson.h */,
+				5E2754F321A72C7F005C67B6 /* BFPerson.m */,
+				5E2754F621A72C7F005C67B6 /* BFStudent.h */,
+				5E2754F521A72C7F005C67B6 /* BFStudent.m */,
+				5E2754F721A72C7F005C67B6 /* BFTeacher.h */,
+				5E2754F821A72C7F005C67B6 /* BFTeacher.m */,
+				5E2754EB21A72C66005C67B6 /* main.mm */,
 			);
-			path = OCObjectInfo;
+			path = OCClassInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5E2754A321A6BC0C005C67B6 /* OCObjectInfo */ = {
+		5E2754E721A72C66005C67B6 /* OCClassInfo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E2754AB21A6BC0C005C67B6 /* Build configuration list for PBXNativeTarget "OCObjectInfo" */;
+			buildConfigurationList = 5E2754EF21A72C66005C67B6 /* Build configuration list for PBXNativeTarget "OCClassInfo" */;
 			buildPhases = (
-				5E2754A021A6BC0C005C67B6 /* Sources */,
-				5E2754A121A6BC0C005C67B6 /* Frameworks */,
-				5E2754A221A6BC0C005C67B6 /* CopyFiles */,
+				5E2754E421A72C66005C67B6 /* Sources */,
+				5E2754E521A72C66005C67B6 /* Frameworks */,
+				5E2754E621A72C66005C67B6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = OCObjectInfo;
-			productName = OCObjectInfo;
-			productReference = 5E2754A421A6BC0C005C67B6 /* OCObjectInfo */;
+			name = OCClassInfo;
+			productName = OCClassInfo;
+			productReference = 5E2754E821A72C66005C67B6 /* OCClassInfo */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5E27549C21A6BC0C005C67B6 /* Project object */ = {
+		5E2754E021A72C66005C67B6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = WengHengcong;
 				TargetAttributes = {
-					5E2754A321A6BC0C005C67B6 = {
+					5E2754E721A72C66005C67B6 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 5E27549F21A6BC0C005C67B6 /* Build configuration list for PBXProject "OCObjectInfo" */;
+			buildConfigurationList = 5E2754E321A72C66005C67B6 /* Build configuration list for PBXProject "OCClassInfo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 5E27549B21A6BC0C005C67B6;
-			productRefGroup = 5E2754A521A6BC0C005C67B6 /* Products */;
+			mainGroup = 5E2754DF21A72C66005C67B6;
+			productRefGroup = 5E2754E921A72C66005C67B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5E2754A321A6BC0C005C67B6 /* OCObjectInfo */,
+				5E2754E721A72C66005C67B6 /* OCClassInfo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5E2754A021A6BC0C005C67B6 /* Sources */ = {
+		5E2754E421A72C66005C67B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E2754BC21A6BC53005C67B6 /* BFPerson.m in Sources */,
-				5E2754BE21A6BC53005C67B6 /* BFStudent.m in Sources */,
-				5E2754A821A6BC0C005C67B6 /* main.m in Sources */,
-				5E2754BD21A6BC53005C67B6 /* BFTeacher.m in Sources */,
+				5E2754FA21A72C7F005C67B6 /* BFStudent.m in Sources */,
+				5E2754F921A72C7F005C67B6 /* BFPerson.m in Sources */,
+				5E2754FB21A72C7F005C67B6 /* BFTeacher.m in Sources */,
+				5E2754EC21A72C66005C67B6 /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		5E2754A921A6BC0C005C67B6 /* Debug */ = {
+		5E2754ED21A72C66005C67B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -204,7 +204,7 @@
 			};
 			name = Debug;
 		};
-		5E2754AA21A6BC0C005C67B6 /* Release */ = {
+		5E2754EE21A72C66005C67B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -256,7 +256,7 @@
 			};
 			name = Release;
 		};
-		5E2754AC21A6BC0C005C67B6 /* Debug */ = {
+		5E2754F021A72C66005C67B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -265,7 +265,7 @@
 			};
 			name = Debug;
 		};
-		5E2754AD21A6BC0C005C67B6 /* Release */ = {
+		5E2754F121A72C66005C67B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -277,25 +277,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5E27549F21A6BC0C005C67B6 /* Build configuration list for PBXProject "OCObjectInfo" */ = {
+		5E2754E321A72C66005C67B6 /* Build configuration list for PBXProject "OCClassInfo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E2754A921A6BC0C005C67B6 /* Debug */,
-				5E2754AA21A6BC0C005C67B6 /* Release */,
+				5E2754ED21A72C66005C67B6 /* Debug */,
+				5E2754EE21A72C66005C67B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E2754AB21A6BC0C005C67B6 /* Build configuration list for PBXNativeTarget "OCObjectInfo" */ = {
+		5E2754EF21A72C66005C67B6 /* Build configuration list for PBXNativeTarget "OCClassInfo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E2754AC21A6BC0C005C67B6 /* Debug */,
-				5E2754AD21A6BC0C005C67B6 /* Release */,
+				5E2754F021A72C66005C67B6 /* Debug */,
+				5E2754F121A72C66005C67B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5E27549C21A6BC0C005C67B6 /* Project object */;
+	rootObject = 5E2754E021A72C66005C67B6 /* Project object */;
 }

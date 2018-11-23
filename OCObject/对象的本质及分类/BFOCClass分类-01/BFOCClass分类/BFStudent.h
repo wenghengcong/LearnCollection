@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) double score;
 @property (nonatomic, copy) NSString *no;
 
++ (void)test;
+
+//- (void)test;
+
 @end
 
 NS_ASSUME_NONNULL_END

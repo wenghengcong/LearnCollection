@@ -16,5 +16,4 @@
 - (void)personIntanceMethod;
 
 + (void)personClassMethod;
-
 @end

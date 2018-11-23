@@ -8,9 +8,9 @@
 
 #import "ViewController.h"
 #import <objc/runtime.h>
+#import <objc/message.h>
 #import "BFPerson.h"
 #import "BFStudent.h"
-#import "BFTeacher.h"
 
 @interface ViewController ()<UITableViewDelegate>
 
@@ -28,6 +28,25 @@
 //    [self testNSObject];
 //    NSLog(@"----------------------");
 //    [self testBFPerson];
+    [self testMethod];
+}
+
+
+/**
+ 测试方法调用
+ */
+- (void)testMethod
+{
+    BFPerson *person = [[BFPerson alloc] init];
+//    [person test];
+    
+    BFStudent *stu = [[BFStudent alloc] init];
+    ((void (*)(id, SEL))objc_msgSend)(stu, @selector(test));
+//    [stu test];
+    
+    
+//    [BFPerson load];
+//    [BFStudent load];
 }
 
 /*
@@ -95,7 +114,15 @@
 {
     // instance对象，实例对象
     BFPerson *person1 = [[BFPerson alloc] init];
+    person1.age = 20;
+    person1.name = @"xu";
+    
     BFPerson *person2 = [[BFPerson alloc] init];
+    person2.age = 25;
+    person2.name = @"weng";
+    NSLog(@"BFPerson instance - %p %p",
+          person1,
+          person2);
     
     // class对象，类对象
     // class方法返回的一直是class对象，类对象
@@ -104,16 +131,6 @@
     Class personClass3 = object_getClass(person1);
     Class personClass4 = object_getClass(person2);
     Class personClass5 = [BFPerson class];
-    
-    // meta-class对象，元类对象
-    // 将类对象当做参数传入，获得元类对象
-    Class personMetaClass1 = object_getClass(personClass5);
-    Class personMetaClass2 = [[[BFPerson class] class] class];
-    
-    NSLog(@"BFPerson instance - %p %p",
-          person1,
-          person2);
-    
     NSLog(@"BFPerson class - %p %p %p %p %p %d",
           personClass1,
           personClass2,
@@ -122,11 +139,19 @@
           personClass5,
           class_isMetaClass(personClass3));
     
-    NSLog(@"BFPerson meta class - %p %d \n %p %d",
+    // meta-class对象，元类对象
+    // 将类对象当做参数传入，获得元类对象
+    Class personMetaClass1 = object_getClass(personClass5);
+    Class personMetaClass2 = [[[BFPerson class] class] class];
+    NSLog(@"BFPerson meta class - %p %d %p %d",
           personMetaClass1,
           class_isMetaClass(personMetaClass1),
           personMetaClass2,
           class_isMetaClass(personMetaClass2));
+
+
+    
+    NSLog(@"================================");
 }
 
 

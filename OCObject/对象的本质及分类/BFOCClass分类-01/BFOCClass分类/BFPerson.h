@@ -13,8 +13,10 @@
 @property (nonatomic, assign) int     age;
 @property (nonatomic, copy) NSString *name;
 
-- (NSString *)personInstanceMethod;
++ (void)test;
 
-+ (void)personClassMethod;
+//- (void)test;
 
 @end
+
+

@@ -1,11 +1,10 @@
 //
 //  BFClassInfo.h
-//  BFOCClass分类
+//  OCObjectInfo
 //
 //  Created by WengHengcong on 2018/11/22.
-//  Copyright © 2018 LuCI. All rights reserved.
+//  Copyright © 2018 WengHengcong. All rights reserved.
 //
-#import <Foundation/Foundation.h>
 
 #ifndef BFClassInfo_h
 #define BFClassInfo_h
@@ -29,7 +28,7 @@ struct bucket_t {
 };
 
 struct cache_t {
-    struct bucket_t *_buckets;
+    bucket_t *_buckets;
     mask_t _mask;
     mask_t _occupied;
 };
@@ -71,9 +70,9 @@ struct property_list_t : entsize_list_tt {
 };
 
 struct chained_property_list {
-    struct chained_property_list *next;
+    chained_property_list *next;
     uint32_t count;
-    struct property_t list[0];
+    property_t list[0];
 };
 
 typedef uintptr_t protocol_ref_t;
@@ -91,20 +90,20 @@ struct class_ro_t {
 #endif
     const uint8_t * ivarLayout;
     const char * name;  // 类名
-    struct method_list_t * baseMethodList;
-    struct protocol_list_t * baseProtocols;
-    const struct ivar_list_t * ivars;  // 成员变量列表
+    method_list_t * baseMethodList;
+    protocol_list_t * baseProtocols;
+    const ivar_list_t * ivars;  // 成员变量列表
     const uint8_t * weakIvarLayout;
-    struct property_list_t *baseProperties;
+    property_list_t *baseProperties;
 };
 
 struct class_rw_t {
     uint32_t flags;
     uint32_t version;
-    const struct class_ro_t *ro;
-    struct method_list_t * methods;    // 方法列表
-    struct property_list_t *properties;    // 属性列表
-    const struct protocol_list_t * protocols;  // 协议列表
+    const class_ro_t *ro;
+    method_list_t * methods;    // 方法列表
+    property_list_t *properties;    // 属性列表
+    const protocol_list_t * protocols;  // 协议列表
     Class firstSubclass;
     Class nextSiblingClass;
     char *demangledName;
@@ -120,12 +119,12 @@ public:
 };
 
 /* OC对象 */
-struct mj_objc_object {
+struct bf_objc_object {
     void *isa;
 };
 
 /* 类对象 */
-struct mj_objc_class : mj_objc_object {
+struct bf_objc_class : bf_objc_object {
     Class superclass;
     cache_t cache;
     class_data_bits_t bits;
@@ -134,8 +133,8 @@ public:
         return bits.data();
     }
     
-    mj_objc_class* metaClass() {
-        return (mj_objc_class *)((long long)isa & ISA_MASK);
+    bf_objc_class* metaClass() {
+        return (bf_objc_class *)((long long)isa & ISA_MASK);
     }
 };
 

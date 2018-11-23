@@ -10,4 +10,14 @@
 
 @implementation BFStudent
 
++ (void)test
+{
+    NSLog(@"+[BFStudent test]");
+}
+
+//- (void)test
+//{
+//    NSLog(@"-[BFStudent test]");
+//}
+
 @end

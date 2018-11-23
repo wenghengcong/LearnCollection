@@ -10,14 +10,13 @@
 
 @implementation BFPerson
 
-- (NSString *)personInstanceMethod
++ (void)test
 {
-    return @"test";
+    NSLog(@"+[BFPerson test]");
 }
 
-+ (void)personClassMethod
-{
-    NSLog(@"%s", __func__);
-}
-
+//- (void)test
+//{
+//    NSLog(@"-[BFPerson test]");
+//}
 @end
