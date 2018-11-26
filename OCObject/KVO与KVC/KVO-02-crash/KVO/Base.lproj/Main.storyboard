@@ -26,6 +26,14 @@
                                     <action selector="clearObserverPersonChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7c4-4o-Gog"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Iv-Da-0LJ">
+                                <rect key="frame" x="114" y="293" width="148" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clear Mutiple times"/>
+                                <connections>
+                                    <action selector="clearMutipleTimes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hrz-YO-az9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

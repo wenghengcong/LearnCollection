@@ -31,8 +31,6 @@
     self.person2.age = 26;
     self.person2.name = @"xu";
     
-    self.observerPersonChange = [[ObserverPersonChage alloc] init];
-
     [self addObserver];
 }
 
@@ -46,8 +44,10 @@
     [self.person1 addObserver:self forKeyPath:@"age" options:option context:@"age chage"];
     [self.person1 addObserver:self forKeyPath:@"name" options:option context:@"name change"];
 
-//    [self.person1 addObserver:self.observerPersonChange forKeyPath:@"age" options:option context:@"age chage"];
-//    [self.person1 addObserver:self.observerPersonChange forKeyPath:@"name" options:option context:@"name change"];
+    //2.验证观察者被销毁后，被观察者仍然被监听，没有移除，导致的Crash
+    self.observerPersonChange = [[ObserverPersonChage alloc] init];
+    [self.person1 addObserver:self.observerPersonChange forKeyPath:@"age" options:option context:@"age chage"];
+    [self.person1 addObserver:self.observerPersonChange forKeyPath:@"name" options:option context:@"name change"];
 }
 
 /**
@@ -80,11 +80,27 @@
  */
 - (void)dealloc
 {
-//    [self removeObserver];
+    [self removeObserver];
 }
 
+
+/**
+ 2.验证观察者被销毁后，被观察者仍然被监听，没有移除，导致的Crash
+ */
 - (IBAction)clearObserverPersonChange:(id)sender {
     self.observerPersonChange = nil;
+}
+
+
+/**
+ 3.多次移除观察者，会导致crash
+ */
+- (IBAction)clearMutipleTimes:(id)sender {
+    [self.person1 removeObserver:self forKeyPath:@"age"];
+    [self.person1 removeObserver:self forKeyPath:@"name"];
+    
+    [self.person1 removeObserver:self forKeyPath:@"age"];
+    [self.person1 removeObserver:self forKeyPath:@"name"];
 }
 
 /**

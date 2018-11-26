@@ -8,14 +8,13 @@
 
 #import "ViewController.h"
 #import "BFPerson.h"
-#import "ObserverPersonChage.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()
 
 @property (nonatomic, strong) BFPerson *person1;
 @property (nonatomic, strong) BFPerson *person2;
 
-@property (nonatomic, strong) ObserverPersonChage *observerPersonChange;
 @end
 
 @implementation ViewController
@@ -31,8 +30,6 @@
     self.person2.age = 26;
     self.person2.name = @"xu";
     
-    self.observerPersonChange = [[ObserverPersonChage alloc] init];
-
     [self addObserver];
 }
 
@@ -42,12 +39,21 @@
 - (void)addObserver
 {
     NSKeyValueObservingOptions option = NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew;
-    
+    NSLog(@"-----------------person1添加KVO监听之前----------------------");
+    NSLog(@"-----------------person1----------------------");
+    NSLog(@"%@",self.person1);
+    NSLog(@"-----------------person2----------------------");
+    NSLog(@"%@",self.person2);
+
     [self.person1 addObserver:self forKeyPath:@"age" options:option context:@"age chage"];
     [self.person1 addObserver:self forKeyPath:@"name" options:option context:@"name change"];
-
-//    [self.person1 addObserver:self.observerPersonChange forKeyPath:@"age" options:option context:@"age chage"];
-//    [self.person1 addObserver:self.observerPersonChange forKeyPath:@"name" options:option context:@"name change"];
+    
+    NSLog(@"-----------------person1添加KVO监听之后----------------------");
+    NSLog(@"-----------------person1----------------------");
+    NSLog(@"%@",self.person1);
+    NSLog(@"-----------------person2----------------------");
+    NSLog(@"%@",self.person2);
+    NSLog(@"---------------------------------------");
 }
 
 /**
@@ -56,10 +62,10 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     self.person1.age = 29;
-    self.person1.name = @"hengcong";
-    
-    self.person2.age = 27;
-    self.person2.name = @"qiuqiu";
+//    self.person1.name = @"hengcong";
+//
+//    self.person2.age = 27;
+//    self.person2.name = @"qiuqiu";
 }
 
 /**
@@ -72,7 +78,7 @@
  */
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    NSLog(@"%s---监听到%@的%@属性值改变了 - %@ - %@", __func__, object, keyPath, change, context);
+    NSLog(@"%s---监听到%@的%@属性值改变了 - %@ - %@", __func__, NSStringFromClass([object class]), keyPath, change, context);
 }
 
 /**
@@ -81,10 +87,6 @@
 - (void)dealloc
 {
 //    [self removeObserver];
-}
-
-- (IBAction)clearObserverPersonChange:(id)sender {
-    self.observerPersonChange = nil;
 }
 
 /**

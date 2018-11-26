@@ -39,6 +39,7 @@
 {
     NSKeyValueObservingOptions option = NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew;
     
+//    [self.person1 addObserver:self forKeyPath:NSStringFromSelector(@selector(age)) options:option context:@"age change"];
     [self.person1 addObserver:self forKeyPath:@"age" options:option context:@"age chage"];
     [self.person1 addObserver:self forKeyPath:@"name" options:option context:@"name change"];
 }
@@ -48,6 +49,12 @@
  */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    //以下调用方式均会触发KVO
+//    self.person1.age = 29;
+//    [self.person1 setAge:29];
+//    [self.person1 setValue:@(29) forKey:@"age"];
+//    [self.person1 setValue:@(29) forKeyPath:@"age"];
+    
     self.person1.age = 29;
     self.person1.name = @"hengcong";
     

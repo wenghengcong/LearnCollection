@@ -14,7 +14,6 @@
 		5E27551821AAE0D1005C67B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E27551621AAE0D1005C67B6 /* LaunchScreen.storyboard */; };
 		5E27551B21AAE0D1005C67B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E27551A21AAE0D1005C67B6 /* main.m */; };
 		5E7AA8E021AB84F700025CF9 /* BFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7AA8DF21AB84F700025CF9 /* BFPerson.m */; };
-		5ED0560521ABA4D000B65B42 /* ObserverPersonChage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0560421ABA4D000B65B42 /* ObserverPersonChage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +29,6 @@
 		5E27551A21AAE0D1005C67B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5E7AA8DE21AB84F700025CF9 /* BFPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFPerson.h; sourceTree = "<group>"; };
 		5E7AA8DF21AB84F700025CF9 /* BFPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFPerson.m; sourceTree = "<group>"; };
-		5ED0560321ABA4D000B65B42 /* ObserverPersonChage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObserverPersonChage.h; sourceTree = "<group>"; };
-		5ED0560421ABA4D000B65B42 /* ObserverPersonChage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObserverPersonChage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +72,6 @@
 				5E27551A21AAE0D1005C67B6 /* main.m */,
 				5E7AA8DE21AB84F700025CF9 /* BFPerson.h */,
 				5E7AA8DF21AB84F700025CF9 /* BFPerson.m */,
-				5ED0560321ABA4D000B65B42 /* ObserverPersonChage.h */,
-				5ED0560421ABA4D000B65B42 /* ObserverPersonChage.m */,
 			);
 			path = KVO;
 			sourceTree = "<group>";
@@ -153,7 +148,6 @@
 			files = (
 				5E7AA8E021AB84F700025CF9 /* BFPerson.m in Sources */,
 				5E27551021AAE0D0005C67B6 /* ViewController.m in Sources */,
-				5ED0560521ABA4D000B65B42 /* ObserverPersonChage.m in Sources */,
 				5E27551B21AAE0D1005C67B6 /* main.m in Sources */,
 				5E27550D21AAE0D0005C67B6 /* AppDelegate.m in Sources */,
 			);
