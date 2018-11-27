@@ -11,12 +11,18 @@
 
 @implementation BFPerson
 
+- (void)test
+{
+    
+}
+
 - (void)setAge:(NSInteger)age
 {
     NSLog(@"BFPerson setAge: begin");
     _age = age;
     NSLog(@"BFPerson setAge: end");
 }
+
 
 - (void)willChangeValueForKey:(NSString *)key {
     NSLog(@"BFPerson willChangeValueForKey: - begin");

@@ -17,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E0151D321ACBBBE00A16620 /* NSKVONotifying_BFPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSKVONotifying_BFPerson.h; sourceTree = "<group>"; };
+		5E0151D421ACBBBE00A16620 /* NSKVONotifying_BFPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSKVONotifying_BFPerson.m; sourceTree = "<group>"; };
 		5E27550821AAE0D0005C67B6 /* KVO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E27550B21AAE0D0005C67B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E27550C21AAE0D0005C67B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,6 +74,8 @@
 				5E27551A21AAE0D1005C67B6 /* main.m */,
 				5E7AA8DE21AB84F700025CF9 /* BFPerson.h */,
 				5E7AA8DF21AB84F700025CF9 /* BFPerson.m */,
+				5E0151D321ACBBBE00A16620 /* NSKVONotifying_BFPerson.h */,
+				5E0151D421ACBBBE00A16620 /* NSKVONotifying_BFPerson.m */,
 			);
 			path = KVO;
 			sourceTree = "<group>";
