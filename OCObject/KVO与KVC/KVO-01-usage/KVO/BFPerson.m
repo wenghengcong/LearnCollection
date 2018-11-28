@@ -36,6 +36,17 @@
     return automatic;
 }
 
+
+/**
+ 如果age改变
+ 观察者也会收到name改变的通知
+ */
++ (NSSet<NSString *> *)keyPathsForValuesAffectingAge
+{
+    NSSet *set = [NSSet setWithObjects:@"name", nil];
+    return set;
+}
+
 - (void)setAge:(NSInteger)age
 {
     if (_age != age) {
