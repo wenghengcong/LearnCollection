@@ -2586,7 +2586,6 @@ void _read_images(header_info **hList, uint32_t hCount, int totalClasses, int un
          []
          ]
          */
-
         category_t **catlist =
             //根据头信息获取某个类下的所有分类列表
             _getObjc2CategoryList(hi, &count);
@@ -2596,6 +2595,10 @@ void _read_images(header_info **hList, uint32_t hCount, int totalClasses, int un
             //某个类，获取某个分类
             category_t *cat = catlist[i];
             Class cls = remapClass(cat->cls);
+            const char *clsName = object_getClassName(cls);
+//            printf("%s\n", clsName);
+//            printf("------------");
+//            printf("%s\n", cat->name);
 
             if (!cls) {
                 // Category's target class is missing (probably weak-linked).

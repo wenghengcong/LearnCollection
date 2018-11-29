@@ -7,11 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BFPerson.h"
+#import "BFPerson+Study.h"
+#import "BFPerson+Work.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSLog(@"Hello, Begin explore objc!");
+        BFPerson *person = [[BFPerson alloc] init];
+        [person test];
+        [person study];
     }
     return 0;
 }
