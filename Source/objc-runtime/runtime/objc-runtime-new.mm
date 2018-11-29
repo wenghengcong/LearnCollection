@@ -618,6 +618,8 @@ prepareMethodLists(Class cls, method_list_t **addedLists, int addedCount,
 // Attach method lists and properties and protocols from categories to a class.
 // Assumes the categories in cats are all loaded and sorted by load order, 
 // oldest categories first.
+// cls - BFPerson
+// *cats = [category_t (BFPerson-Study_, category_t (BFPerson-Work) ]
 static void 
 attachCategories(Class cls, category_list *cats, bool flush_caches)
 {
@@ -627,6 +629,10 @@ attachCategories(Class cls, category_list *cats, bool flush_caches)
     bool isMeta = cls->isMetaClass();
 
     // fixme rearrange to remove these intermediate allocations
+    // 分配内存：针对未进行重布局的分类列表
+    /*
+     mlists 方法二维数组
+     */
     method_list_t **mlists = (method_list_t **)
         malloc(cats->count * sizeof(*mlists));
     property_list_t **proplists = (property_list_t **)
@@ -640,11 +646,25 @@ attachCategories(Class cls, category_list *cats, bool flush_caches)
     int protocount = 0;
     int i = cats->count;
     bool fromBundle = NO;
+    
     while (i--) {
+        // i-- 在Category list最后面的，先添加
+        // 取出分类列表中的分类
+        // 最后参与编译的，先取出category_t BFPerson-Work
+        // 编译顺序：在编译log中查看，在Compile Source中更改
         auto& entry = cats->list[i];
-
+        // 取出分类的对象方法列表
         method_list_t *mlist = entry.cat->methodsForMeta(isMeta);
         if (mlist) {
+            // 将对应分类的方法列表添加到mlists
+            /*
+             以 *cats = [category_t (BFPerson-Study_, category_t (BFPerson-Work) ]
+             执行完while 循环后，mlists为
+             [
+                [method_t work, method_t test],
+                [method_t study, method_t test],
+             ]
+             */
             mlists[mcount++] = mlist;
             fromBundle |= entry.hi->isBundle();
         }
@@ -664,8 +684,12 @@ attachCategories(Class cls, category_list *cats, bool flush_caches)
     auto rw = cls->data();
 
     prepareMethodLists(cls, mlists, mcount, NO, fromBundle);
+    
+    // 将重新布局的Category list添加到 rw中
+    // 将所有分类的对象方法，附加到类对象的方法列表中
     rw->methods.attachLists(mlists, mcount);
     free(mlists);
+    // 刷新方法缓存列表
     if (flush_caches  &&  mcount > 0) flushCaches(cls);
 
     rw->properties.attachLists(proplists, propcount);
@@ -762,10 +786,11 @@ static void remethodizeClass(Class cls)
     bool isMeta;
 
     runtimeLock.assertWriting();
-
+    
     isMeta = cls->isMetaClass();
 
     // Re-methodizing: check for more categories
+    // 获取未进行重布局的分类列表
     if ((cats = unattachedCategoriesForClass(cls, false/*not realizing*/))) {
         if (PrintConnecting) {
             _objc_inform("CLASS: attaching categories to class '%s' %s", 
@@ -2551,13 +2576,24 @@ void _read_images(header_info **hList, uint32_t hCount, int totalClasses, int un
 
     ts.log("IMAGE TIMES: realize future classes");
 
-    // Discover categories. 
+    // Discover categories.
+    // 处理Categories
     for (EACH_HEADER) {
-        category_t **catlist = 
+        // 从类头信息中获取到对应的category列表
+        /*
+         //catlist
+         [
+         []
+         ]
+         */
+
+        category_t **catlist =
+            //根据头信息获取某个类下的所有分类列表
             _getObjc2CategoryList(hi, &count);
         bool hasClassProperties = hi->info()->hasCategoryClassProperties();
-
+        
         for (i = 0; i < count; i++) {
+            //某个类，获取某个分类
             category_t *cat = catlist[i];
             Class cls = remapClass(cat->cls);
 
@@ -2583,6 +2619,7 @@ void _read_images(header_info **hList, uint32_t hCount, int totalClasses, int un
             {
                 addUnattachedCategoryForClass(cat, cls, hi);
                 if (cls->isRealized()) {
+                    //重新布局类的实例方法
                     remethodizeClass(cls);
                     classExists = YES;
                 }

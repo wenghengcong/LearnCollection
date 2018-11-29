@@ -692,6 +692,11 @@ class list_array_tt {
         }
     }
 
+    
+    /**
+     @param addedLists 分类方法列表————二维数组
+     @param addedCount 分类列表长度————即分类的数目
+     */
     void attachLists(List* const * addedLists, uint32_t addedCount) {
         if (addedCount == 0) return;
 
@@ -699,10 +704,20 @@ class list_array_tt {
             // many lists -> many lists
             uint32_t oldCount = array()->count;
             uint32_t newCount = oldCount + addedCount;
+            //重新分配实例对象数组列表内存
             setArray((array_t *)realloc(array(), array_t::byteSize(newCount)));
             array()->count = newCount;
+            
+            // array()->lists 原来的方法列表
+            // *memmove(void *__dst, const void *__src, size_t __len);
+            // 将原方法列表array()->lists开始，移动oldCount长度，移动到array()->lists + addedCount（分类个数）
+            // 此处，假如原单位占用1个，分类此处有连个（Study、Work）
+            // 【1】【】【】-> 【】【】【1】
             memmove(array()->lists + addedCount, array()->lists, 
                     oldCount * sizeof(array()->lists[0]));
+            // *memcpy(void *__dst, const void *__src, size_t __n);
+            // 将addedLists开始的addedCount长度，拷贝到array()->lists位置
+            // 【1】【】【】-> 【】【】【1】-> 【2-Work】【3-Study】【1】
             memcpy(array()->lists, addedLists, 
                    addedCount * sizeof(array()->lists[0]));
         }

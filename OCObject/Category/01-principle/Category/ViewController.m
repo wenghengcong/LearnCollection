@@ -28,7 +28,9 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    
+    [self.person test];
+    [self.person study];
+    [self.person work];
 }
 
 @end
