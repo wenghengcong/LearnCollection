@@ -10,6 +10,17 @@
 
 @implementation BFPerson (Work)
 
++ (void)load
+{
+    NSLog(@"+[BFPerson load]--Wrok Cat");
+}
+//
+//+ (void)initialize
+//{
+//    NSLog(@"+[BFPerson initialize]--Wrok Cat");
+//}
+
+
 - (void)work
 {
     NSLog(@"-[BFPerson work]--Wrok Cat");

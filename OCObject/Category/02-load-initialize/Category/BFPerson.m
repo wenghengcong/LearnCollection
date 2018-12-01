@@ -10,8 +10,18 @@
 
 @implementation BFPerson
 
-- (void)test
++ (void)load
 {
-    NSLog(@"-[BFPerson test]");
+    NSLog(@"+[BFPerson load]");
 }
+
+//+ (void)initialize
+//{
+//    NSLog(@"+[BFPerson initialize]");
+//}
+//
+//- (void)test
+//{
+//    NSLog(@"-[BFPerson test]");
+//}
 @end

@@ -10,6 +10,16 @@
 
 @implementation BFPerson (Study)
 
+//+ (void)load
+//{
+//    NSLog(@"+[BFPerson load]--Study Cat");
+//}
+//
+//+ (void)initialize
+//{
+//    NSLog(@"+[BFPerson initialize]--Study Cat");
+//}
+
 - (void)study
 {
     NSLog(@"-[BFPerson study]--Study Cat");

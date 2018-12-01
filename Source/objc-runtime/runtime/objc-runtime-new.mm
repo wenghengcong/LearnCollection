@@ -618,8 +618,9 @@ prepareMethodLists(Class cls, method_list_t **addedLists, int addedCount,
 // Attach method lists and properties and protocols from categories to a class.
 // Assumes the categories in cats are all loaded and sorted by load order, 
 // oldest categories first.
+
 // cls - BFPerson
-// *cats = [category_t (BFPerson-Study_, category_t (BFPerson-Work) ]
+// *cats = [category_t (BFPerson+Study), category_t (BFPerson+Work) ]
 static void 
 attachCategories(Class cls, category_list *cats, bool flush_caches)
 {
@@ -630,9 +631,7 @@ attachCategories(Class cls, category_list *cats, bool flush_caches)
 
     // fixme rearrange to remove these intermediate allocations
     // 分配内存：针对未进行重布局的分类列表
-    /*
-     mlists 方法二维数组
-     */
+    /*mlists 方法二维数组*/
     method_list_t **mlists = (method_list_t **)
         malloc(cats->count * sizeof(*mlists));
     property_list_t **proplists = (property_list_t **)
@@ -648,21 +647,21 @@ attachCategories(Class cls, category_list *cats, bool flush_caches)
     bool fromBundle = NO;
     
     while (i--) {
-        // i-- 在Category list最后面的，先添加
+        // i-- 在Category list最后面的，先添加到mlists
         // 取出分类列表中的分类
         // 最后参与编译的，先取出category_t BFPerson-Work
-        // 编译顺序：在编译log中查看，在Compile Source中更改
+        // 编译顺序：在编译log中查看，在Compile Sources中更改
         auto& entry = cats->list[i];
         // 取出分类的对象方法列表
         method_list_t *mlist = entry.cat->methodsForMeta(isMeta);
         if (mlist) {
             // 将对应分类的方法列表添加到mlists
             /*
-             以 *cats = [category_t (BFPerson-Study_, category_t (BFPerson-Work) ]
+             以 *cats = [category_t (BFPerson+Study), category_t (BFPerson+Work) ]
              执行完while 循环后，mlists为
              [
-                [method_t work, method_t test],
-                [method_t study, method_t test],
+                [method_t work, method_t test],         <-->BFPerson+Study
+                [method_t study, method_t test],        <-->BFPerson+Work
              ]
              */
             mlists[mcount++] = mlist;
@@ -2067,10 +2066,20 @@ load_images(const char *path __unused, const struct mach_header *mh)
     // Discover load methods
     {
         rwlock_writer_t lock2(runtimeLock);
+        /*
+         1. 准备load方法
+            1.1 先将类及其父类的load ---> loadable_classes
+            1.2 将分类的load ---> loadable_categories
+        */
         prepare_load_methods((const headerType *)mh);
     }
 
     // Call +load methods (without runtimeLock - re-entrant)
+    /*
+        2. 调用load方法
+            2.1 先从类load方法列表loadable_classes取出，依次调用
+            2.2 将分类的loadload方法列表loadable_categories取出，依次调用
+     */
     call_load_methods();
 }
 
@@ -2739,8 +2748,10 @@ static void schedule_class_load(Class cls)
     if (cls->data()->flags & RW_LOADED) return;
 
     // Ensure superclass-first ordering
+    //1. 先将类的父类load方法添加到 loadable_classes
     schedule_class_load(cls->superclass);
 
+    //2. 类的load方法添加到 loadable_classes
     add_class_to_loadable_list(cls);
     cls->setInfo(RW_LOADED); 
 }
@@ -2760,12 +2771,15 @@ void prepare_load_methods(const headerType *mhdr)
 
     runtimeLock.assertWriting();
 
-    classref_t *classlist = 
+    classref_t *classlist =
+        //获取非懒加载的类列表
         _getObjc2NonlazyClassList(mhdr, &count);
     for (i = 0; i < count; i++) {
+        //1. 先将类及其父类的load ---> loadable_classes
         schedule_class_load(remapClass(classlist[i]));
     }
 
+    //获取分类列表
     category_t **categorylist = _getObjc2NonlazyCategoryList(mhdr, &count);
     for (i = 0; i < count; i++) {
         category_t *cat = categorylist[i];
@@ -2773,6 +2787,8 @@ void prepare_load_methods(const headerType *mhdr)
         if (!cls) continue;  // category for ignored weak-linked class
         realizeClass(cls);
         assert(cls->ISA()->isRealized());
+        
+        // 2. 将分类的load ---> loadable_categories
         add_category_to_loadable_list(cat);
     }
 }
@@ -4664,9 +4680,11 @@ IMP lookUpImpOrForward(Class cls, SEL sel, id inst,
         runtimeLock.unlockWrite();
         runtimeLock.read();
     }
-
+    
+    //需要初始化，且类未进行初始化
     if (initialize  &&  !cls->isInitialized()) {
         runtimeLock.unlockRead();
+        //initialize
         _class_initialize (_class_getNonMetaClass(cls, inst));
         runtimeLock.read();
         // If sel == initialize, _class_initialize will send +initialize and 

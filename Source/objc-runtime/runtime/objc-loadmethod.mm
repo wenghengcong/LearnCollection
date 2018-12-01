@@ -65,7 +65,7 @@ void add_class_to_loadable_list(Class cls)
 
     loadMethodLock.assertLocked();
 
-    method = cls->getLoadMethod();
+    method = cls->getLoadMethod();  //获取类中load的IMP
     if (!method) return;  // Don't bother if cls has no +load method
     
     if (PrintLoading) {
@@ -73,6 +73,20 @@ void add_class_to_loadable_list(Class cls)
                      cls->nameForLogging());
     }
     
+    /*
+      1. loadable_class ：Class load方法的结构体
+            1.1 class与load一一对应
+            1.2 struct loadable_class {
+                    Class cls;  // may be nil
+                    IMP method;
+                };
+      2. loadable_classes 存放loadable_class列表
+      3. loadable_classes_used 当前load存放在loadable_class序号
+      4. loadable_classes 每次分配的内存为 loadable_classes_allocated*2 + 16;
+          4.1 realloc void *realloc(void *ptr, size_t size)
+              重新调整之前调用 malloc 或 calloc 所分配的 ptr 所指向的内存块的大小。
+     */
+
     if (loadable_classes_used == loadable_classes_allocated) {
         loadable_classes_allocated = loadable_classes_allocated*2 + 16;
         loadable_classes = (struct loadable_class *)
@@ -108,7 +122,22 @@ void add_category_to_loadable_list(Category cat)
         _objc_inform("LOAD: category '%s(%s)' scheduled for +load", 
                      _category_getClassName(cat), _category_getName(cat));
     }
-    
+    /*
+        1. loadable_category ：存放Category load方法的结构体
+            1.1 class与load一一对应
+            1.2. struct loadable_category {
+                    Category cat;  // may be nil
+                    IMP method;
+              };
+        2. loadable_categories 存放loadable_category列表
+        3. loadable_categories_used 当前load存放在loadable_category序号
+        4. loadable_categories 分配的内存
+            4.1 realloc void *realloc(void *ptr, size_t size)
+                重新调整之前调用 malloc 或 calloc 所分配的 ptr 所指向的内存块的大小。
+            4.2 每次分配为 loadable_categories_allocated*2 + 16;
+                即上次分配后，一直能使用到（上次的2倍+16）次，才会再次分配
+
+     */
     if (loadable_categories_used == loadable_categories_allocated) {
         loadable_categories_allocated = loadable_categories_allocated*2 + 16;
         loadable_categories = (struct loadable_category *)
@@ -193,6 +222,8 @@ static void call_class_loads(void)
     loadable_classes_used = 0;
     
     // Call all +loads for the detached list.
+    // 1. 依次取出 loadable_classes 列表中添加的 loadable_class
+    // 2. 直接调用loadable_class中的load的IMP
     for (i = 0; i < used; i++) {
         Class cls = classes[i].cls;
         load_method_t load_method = (load_method_t)classes[i].method;
@@ -201,6 +232,7 @@ static void call_class_loads(void)
         if (PrintLoading) {
             _objc_inform("LOAD: +[%s load]\n", cls->nameForLogging());
         }
+        //注意此处直接调用函数实现，而不是通过obj_msgSend(cls, cmd)
         (*load_method)(cls, SEL_load);
     }
     
@@ -349,11 +381,13 @@ void call_load_methods(void)
 
     do {
         // 1. Repeatedly call class +loads until there aren't any more
+        // 1. 会先迭代调用完所有的类的load方法
         while (loadable_classes_used > 0) {
             call_class_loads();
         }
 
         // 2. Call category +loads ONCE
+        // 2. 依次调用所有分类的load方法
         more_categories = call_category_loads();
 
         // 3. Run more +loads if there are classes OR more untried categories

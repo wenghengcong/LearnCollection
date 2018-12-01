@@ -10,6 +10,12 @@
 #import "BFPerson.h"
 #import "BFPerson+Study.h"
 #import "BFPerson+Work.h"
+#import "BFBoy.h"
+#import "BFBoy+Tall.h"
+#import "BFBoy+Handsome.h"
+#import "BFGirl.h"
+#import "BFGirl+Rich.h"
+#import "BFGirl+Beauty.h"
 
 @interface ViewController ()
 
@@ -22,8 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.person = [[BFPerson alloc] init];
-    self.person.age = 28;
+    [BFBoy alloc];
+    [BFGirl alloc];
+//    [BFPerson alloc];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

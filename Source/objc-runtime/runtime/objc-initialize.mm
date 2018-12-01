@@ -491,6 +491,7 @@ void _class_initialize(Class cls)
     // Make sure super is done initializing BEFORE beginning to initialize cls.
     // See note about deadlock above.
     supercls = cls->superclass;
+    // 1. 先调用父类 initialization
     if (supercls  &&  !supercls->isInitialized()) {
         _class_initialize(supercls);
     }
@@ -503,7 +504,7 @@ void _class_initialize(Class cls)
             reallyInitialize = YES;
         }
     }
-    
+    //类不是已经或正在初始化，第一次给类发送消息，会进入这里
     if (reallyInitialize) {
         // We successfully set the CLS_INITIALIZING bit. Initialize the class.
         
@@ -534,6 +535,7 @@ void _class_initialize(Class cls)
         @try
 #endif
         {
+            //2. 给类发送initialize消息
             callInitialize(cls);
 
             if (PrintInitializing) {
@@ -558,7 +560,7 @@ void _class_initialize(Class cls)
         }
         return;
     }
-    
+    // 类正在初始化
     else if (cls->isInitializing()) {
         // We couldn't set INITIALIZING because INITIALIZING was already set.
         // If this thread set it earlier, continue normally.
@@ -578,7 +580,7 @@ void _class_initialize(Class cls)
             performForkChildInitialize(cls, supercls);
         }
     }
-    
+    // 类已经初始化
     else if (cls->isInitialized()) {
         // Set CLS_INITIALIZING failed because someone else already 
         //   initialized the class. Continue normally.

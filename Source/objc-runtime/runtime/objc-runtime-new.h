@@ -695,6 +695,10 @@ class list_array_tt {
     
     /**
      @param addedLists 分类方法列表————二维数组
+     [
+        [method_t work, method_t test],
+        [method_t study, method_t test]
+     ]
      @param addedCount 分类列表长度————即分类的数目
      */
     void attachLists(List* const * addedLists, uint32_t addedCount) {

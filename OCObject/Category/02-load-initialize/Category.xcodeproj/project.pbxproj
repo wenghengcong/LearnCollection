@@ -16,6 +16,12 @@
 		5E01522221AD660F00A16620 /* BFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01522121AD660F00A16620 /* BFPerson.m */; };
 		5E01522521AD665D00A16620 /* BFPerson+Work.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01522421AD665D00A16620 /* BFPerson+Work.m */; };
 		5E01522821AD666500A16620 /* BFPerson+Study.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E01522721AD666500A16620 /* BFPerson+Study.m */; };
+		5ED835C421B126A700456059 /* BFBoy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED835C321B126A700456059 /* BFBoy.m */; };
+		5ED835C721B126AD00456059 /* BFGirl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED835C621B126AD00456059 /* BFGirl.m */; };
+		5ED835CA21B126E600456059 /* BFBoy+Tall.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED835C921B126E600456059 /* BFBoy+Tall.m */; };
+		5ED835CD21B126F200456059 /* BFBoy+Handsome.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED835CC21B126F200456059 /* BFBoy+Handsome.m */; };
+		5ED835D021B1277E00456059 /* BFGirl+Beauty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED835CF21B1277E00456059 /* BFGirl+Beauty.m */; };
+		5ED835D321B1278A00456059 /* BFGirl+Rich.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED835D221B1278A00456059 /* BFGirl+Rich.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +41,18 @@
 		5E01522421AD665D00A16620 /* BFPerson+Work.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BFPerson+Work.m"; sourceTree = "<group>"; };
 		5E01522621AD666500A16620 /* BFPerson+Study.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BFPerson+Study.h"; sourceTree = "<group>"; };
 		5E01522721AD666500A16620 /* BFPerson+Study.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BFPerson+Study.m"; sourceTree = "<group>"; };
-		5ED835A221AD6A7700456059 /* BFPerson+Study.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "BFPerson+Study.cpp"; sourceTree = "<group>"; };
-		5ED835A321AD6A7700456059 /* BFPerson+Work.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "BFPerson+Work.cpp"; sourceTree = "<group>"; };
+		5ED835C221B126A700456059 /* BFBoy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFBoy.h; sourceTree = "<group>"; };
+		5ED835C321B126A700456059 /* BFBoy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFBoy.m; sourceTree = "<group>"; };
+		5ED835C521B126AD00456059 /* BFGirl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFGirl.h; sourceTree = "<group>"; };
+		5ED835C621B126AD00456059 /* BFGirl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFGirl.m; sourceTree = "<group>"; };
+		5ED835C821B126E600456059 /* BFBoy+Tall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BFBoy+Tall.h"; sourceTree = "<group>"; };
+		5ED835C921B126E600456059 /* BFBoy+Tall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BFBoy+Tall.m"; sourceTree = "<group>"; };
+		5ED835CB21B126F200456059 /* BFBoy+Handsome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BFBoy+Handsome.h"; sourceTree = "<group>"; };
+		5ED835CC21B126F200456059 /* BFBoy+Handsome.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BFBoy+Handsome.m"; sourceTree = "<group>"; };
+		5ED835CE21B1277E00456059 /* BFGirl+Beauty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BFGirl+Beauty.h"; sourceTree = "<group>"; };
+		5ED835CF21B1277E00456059 /* BFGirl+Beauty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BFGirl+Beauty.m"; sourceTree = "<group>"; };
+		5ED835D121B1278A00456059 /* BFGirl+Rich.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BFGirl+Rich.h"; sourceTree = "<group>"; };
+		5ED835D221B1278A00456059 /* BFGirl+Rich.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BFGirl+Rich.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +100,18 @@
 				5E01522421AD665D00A16620 /* BFPerson+Work.m */,
 				5E01522621AD666500A16620 /* BFPerson+Study.h */,
 				5E01522721AD666500A16620 /* BFPerson+Study.m */,
-				5ED835A221AD6A7700456059 /* BFPerson+Study.cpp */,
-				5ED835A321AD6A7700456059 /* BFPerson+Work.cpp */,
+				5ED835C221B126A700456059 /* BFBoy.h */,
+				5ED835C321B126A700456059 /* BFBoy.m */,
+				5ED835C821B126E600456059 /* BFBoy+Tall.h */,
+				5ED835C921B126E600456059 /* BFBoy+Tall.m */,
+				5ED835CB21B126F200456059 /* BFBoy+Handsome.h */,
+				5ED835CC21B126F200456059 /* BFBoy+Handsome.m */,
+				5ED835C521B126AD00456059 /* BFGirl.h */,
+				5ED835C621B126AD00456059 /* BFGirl.m */,
+				5ED835D121B1278A00456059 /* BFGirl+Rich.h */,
+				5ED835D221B1278A00456059 /* BFGirl+Rich.m */,
+				5ED835CE21B1277E00456059 /* BFGirl+Beauty.h */,
+				5ED835CF21B1277E00456059 /* BFGirl+Beauty.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -160,12 +186,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E01522221AD660F00A16620 /* BFPerson.m in Sources */,
+				5E01522521AD665D00A16620 /* BFPerson+Work.m in Sources */,
+				5ED835CA21B126E600456059 /* BFBoy+Tall.m in Sources */,
+				5ED835C421B126A700456059 /* BFBoy.m in Sources */,
+				5ED835C721B126AD00456059 /* BFGirl.m in Sources */,
+				5ED835CD21B126F200456059 /* BFBoy+Handsome.m in Sources */,
 				5E01520F21AD65EA00A16620 /* ViewController.m in Sources */,
 				5E01521A21AD65EB00A16620 /* main.m in Sources */,
+				5ED835D321B1278A00456059 /* BFGirl+Rich.m in Sources */,
+				5E01522221AD660F00A16620 /* BFPerson.m in Sources */,
 				5E01520C21AD65EA00A16620 /* AppDelegate.m in Sources */,
+				5ED835D021B1277E00456059 /* BFGirl+Beauty.m in Sources */,
 				5E01522821AD666500A16620 /* BFPerson+Study.m in Sources */,
-				5E01522521AD665D00A16620 /* BFPerson+Work.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
