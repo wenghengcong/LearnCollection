@@ -278,19 +278,27 @@ void _object_set_associative_reference(id object, void *key, id value, uintptr_t
         disguised_ptr_t disguised_object = DISGUISE(object);
         if (new_value) {
             // break any existing association.
+            // 1.value有值
             AssociationsHashMap::iterator i = associations.find(disguised_object);
             if (i != associations.end()) {
                 // secondary table exists
+                // 1.1.1 找到该object对应的ObjectAssociationMap
                 ObjectAssociationMap *refs = i->second;
+                // 1.1.2 在ObjectAssociationMap寻找key对应的ObjcAssociation
                 ObjectAssociationMap::iterator j = refs->find(key);
                 if (j != refs->end()) {
+                    // 1.1.2.1 找到ObjcAssociation，将旧值保存在old_association
+                    // 1.1.2.2 重新设新值
                     old_association = j->second;
                     j->second = ObjcAssociation(policy, new_value);
                 } else {
+                    // 1.1.2.3 未找到对应ObjcAssociation，直接设新值
                     (*refs)[key] = ObjcAssociation(policy, new_value);
                 }
             } else {
                 // create the new association (first time).
+                // 1.2.1 未找到ObjectAssociationMap，即之前object未设置过关联对象
+                // ObjectAssociationMap新增，ObjcAssociation新增
                 ObjectAssociationMap *refs = new ObjectAssociationMap;
                 associations[disguised_object] = refs;
                 (*refs)[key] = ObjcAssociation(policy, new_value);
@@ -298,11 +306,16 @@ void _object_set_associative_reference(id object, void *key, id value, uintptr_t
             }
         } else {
             // setting the association to nil breaks the association.
+            // 2. value为空
+            // 2.1 寻找object对应的ObjectAssociationMap
             AssociationsHashMap::iterator i = associations.find(disguised_object);
             if (i !=  associations.end()) {
                 ObjectAssociationMap *refs = i->second;
+                // 2.1.1 寻找key对应的ObjcAssociation
                 ObjectAssociationMap::iterator j = refs->find(key);
                 if (j != refs->end()) {
+                    // 2.2.1.1 找到ObjcAssociation，将旧值保存在old_association
+                    // 2.2.1.2 重新设新值
                     old_association = j->second;
                     refs->erase(j);
                 }
