@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5EE65ECA21B4DE3C006C7937 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65EC921B4DE3C006C7937 /* AppDelegate.m */; };
+		5EE65ECD21B4DE3C006C7937 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65ECC21B4DE3C006C7937 /* ViewController.m */; };
+		5EE65ED021B4DE3C006C7937 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE65ECE21B4DE3C006C7937 /* Main.storyboard */; };
+		5EE65ED221B4DE3D006C7937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE65ED121B4DE3D006C7937 /* Assets.xcassets */; };
+		5EE65ED521B4DE3D006C7937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE65ED321B4DE3D006C7937 /* LaunchScreen.storyboard */; };
+		5EE65ED821B4DE3D006C7937 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65ED721B4DE3D006C7937 /* main.m */; };
+		5EE65EE021B4DF2E006C7937 /* CaptureAutoBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65EDF21B4DF2E006C7937 /* CaptureAutoBlock.m */; };
+		5EE65EE321B4DF3E006C7937 /* CaptureStaticBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65EE221B4DF3E006C7937 /* CaptureStaticBlock.m */; };
+		5EE65EE621B4DF4D006C7937 /* CaptureSelfBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65EE521B4DF4D006C7937 /* CaptureSelfBlock.m */; };
+		5EE65EE921B4DF61006C7937 /* CaptureGlobalBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65EE821B4DF61006C7937 /* CaptureGlobalBlock.m */; };
+		5EE65EF421B61765006C7937 /* CaptureVariableBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65EF321B61765006C7937 /* CaptureVariableBlock.m */; };
+		5EE65EF921B61807006C7937 /* BlockStruct.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65EF821B61807006C7937 /* BlockStruct.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5EE65EC521B4DE3C006C7937 /* Block本质与变量截获.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Block本质与变量截获.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EE65EC821B4DE3C006C7937 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5EE65EC921B4DE3C006C7937 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5EE65ECB21B4DE3C006C7937 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5EE65ECC21B4DE3C006C7937 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5EE65ECF21B4DE3C006C7937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5EE65ED121B4DE3D006C7937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5EE65ED421B4DE3D006C7937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5EE65ED621B4DE3D006C7937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EE65ED721B4DE3D006C7937 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5EE65EDE21B4DF2E006C7937 /* CaptureAutoBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptureAutoBlock.h; sourceTree = "<group>"; };
+		5EE65EDF21B4DF2E006C7937 /* CaptureAutoBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptureAutoBlock.m; sourceTree = "<group>"; };
+		5EE65EE121B4DF3E006C7937 /* CaptureStaticBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptureStaticBlock.h; sourceTree = "<group>"; };
+		5EE65EE221B4DF3E006C7937 /* CaptureStaticBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptureStaticBlock.m; sourceTree = "<group>"; };
+		5EE65EE421B4DF4C006C7937 /* CaptureSelfBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptureSelfBlock.h; sourceTree = "<group>"; };
+		5EE65EE521B4DF4D006C7937 /* CaptureSelfBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptureSelfBlock.m; sourceTree = "<group>"; };
+		5EE65EE721B4DF61006C7937 /* CaptureGlobalBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptureGlobalBlock.h; sourceTree = "<group>"; };
+		5EE65EE821B4DF61006C7937 /* CaptureGlobalBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptureGlobalBlock.m; sourceTree = "<group>"; };
+		5EE65EEA21B51B75006C7937 /* CaptureAutoBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CaptureAutoBlock.cpp; sourceTree = "<group>"; };
+		5EE65EEB21B51B75006C7937 /* CaptureGlobalBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CaptureGlobalBlock.cpp; sourceTree = "<group>"; };
+		5EE65EEC21B51B75006C7937 /* CaptureStaticBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CaptureStaticBlock.cpp; sourceTree = "<group>"; };
+		5EE65EED21B51B75006C7937 /* CaptureSelfBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CaptureSelfBlock.cpp; sourceTree = "<group>"; };
+		5EE65EF221B61765006C7937 /* CaptureVariableBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptureVariableBlock.h; sourceTree = "<group>"; };
+		5EE65EF321B61765006C7937 /* CaptureVariableBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptureVariableBlock.m; sourceTree = "<group>"; };
+		5EE65EF721B61807006C7937 /* BlockStruct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockStruct.h; sourceTree = "<group>"; };
+		5EE65EF821B61807006C7937 /* BlockStruct.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockStruct.m; sourceTree = "<group>"; };
+		5EE65EFA21B66630006C7937 /* CaptureVariableBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CaptureVariableBlock.cpp; sourceTree = "<group>"; };
+		5EE65EFC21B66637006C7937 /* BlockStruct.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlockStruct.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EE65EC221B4DE3C006C7937 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EE65EBC21B4DE3C006C7937 = {
+			isa = PBXGroup;
+			children = (
+				5EE65EC721B4DE3C006C7937 /* Block本质与变量截获 */,
+				5EE65EC621B4DE3C006C7937 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5EE65EC621B4DE3C006C7937 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EE65EC521B4DE3C006C7937 /* Block本质与变量截获.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EE65EC721B4DE3C006C7937 /* Block本质与变量截获 */ = {
+			isa = PBXGroup;
+			children = (
+				5EE65EC821B4DE3C006C7937 /* AppDelegate.h */,
+				5EE65EC921B4DE3C006C7937 /* AppDelegate.m */,
+				5EE65ECB21B4DE3C006C7937 /* ViewController.h */,
+				5EE65ECC21B4DE3C006C7937 /* ViewController.m */,
+				5EE65ECE21B4DE3C006C7937 /* Main.storyboard */,
+				5EE65ED121B4DE3D006C7937 /* Assets.xcassets */,
+				5EE65ED321B4DE3D006C7937 /* LaunchScreen.storyboard */,
+				5EE65ED621B4DE3D006C7937 /* Info.plist */,
+				5EE65ED721B4DE3D006C7937 /* main.m */,
+				5EE65EF221B61765006C7937 /* CaptureVariableBlock.h */,
+				5EE65EF321B61765006C7937 /* CaptureVariableBlock.m */,
+				5EE65EFA21B66630006C7937 /* CaptureVariableBlock.cpp */,
+				5EE65EF721B61807006C7937 /* BlockStruct.h */,
+				5EE65EF821B61807006C7937 /* BlockStruct.m */,
+				5EE65EFC21B66637006C7937 /* BlockStruct.cpp */,
+				5EE65EF621B6177B006C7937 /* CaptrueVariable */,
+			);
+			path = "Block本质与变量截获";
+			sourceTree = "<group>";
+		};
+		5EE65EF621B6177B006C7937 /* CaptrueVariable */ = {
+			isa = PBXGroup;
+			children = (
+				5EE65EDE21B4DF2E006C7937 /* CaptureAutoBlock.h */,
+				5EE65EDF21B4DF2E006C7937 /* CaptureAutoBlock.m */,
+				5EE65EEA21B51B75006C7937 /* CaptureAutoBlock.cpp */,
+				5EE65EE121B4DF3E006C7937 /* CaptureStaticBlock.h */,
+				5EE65EE221B4DF3E006C7937 /* CaptureStaticBlock.m */,
+				5EE65EEC21B51B75006C7937 /* CaptureStaticBlock.cpp */,
+				5EE65EE421B4DF4C006C7937 /* CaptureSelfBlock.h */,
+				5EE65EE521B4DF4D006C7937 /* CaptureSelfBlock.m */,
+				5EE65EED21B51B75006C7937 /* CaptureSelfBlock.cpp */,
+				5EE65EE721B4DF61006C7937 /* CaptureGlobalBlock.h */,
+				5EE65EE821B4DF61006C7937 /* CaptureGlobalBlock.m */,
+				5EE65EEB21B51B75006C7937 /* CaptureGlobalBlock.cpp */,
+			);
+			path = CaptrueVariable;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EE65EC421B4DE3C006C7937 /* Block本质与变量截获 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EE65EDB21B4DE3D006C7937 /* Build configuration list for PBXNativeTarget "Block本质与变量截获" */;
+			buildPhases = (
+				5EE65EC121B4DE3C006C7937 /* Sources */,
+				5EE65EC221B4DE3C006C7937 /* Frameworks */,
+				5EE65EC321B4DE3C006C7937 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Block本质与变量截获";
+			productName = "Block本质与变量截获";
+			productReference = 5EE65EC521B4DE3C006C7937 /* Block本质与变量截获.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EE65EBD21B4DE3C006C7937 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = WengHengcong;
+				TargetAttributes = {
+					5EE65EC421B4DE3C006C7937 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 5EE65EC021B4DE3C006C7937 /* Build configuration list for PBXProject "Block本质与变量截获" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5EE65EBC21B4DE3C006C7937;
+			productRefGroup = 5EE65EC621B4DE3C006C7937 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EE65EC421B4DE3C006C7937 /* Block本质与变量截获 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EE65EC321B4DE3C006C7937 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EE65ED521B4DE3D006C7937 /* LaunchScreen.storyboard in Resources */,
+				5EE65ED221B4DE3D006C7937 /* Assets.xcassets in Resources */,
+				5EE65ED021B4DE3C006C7937 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EE65EC121B4DE3C006C7937 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EE65EE621B4DF4D006C7937 /* CaptureSelfBlock.m in Sources */,
+				5EE65EE921B4DF61006C7937 /* CaptureGlobalBlock.m in Sources */,
+				5EE65ECD21B4DE3C006C7937 /* ViewController.m in Sources */,
+				5EE65EE021B4DF2E006C7937 /* CaptureAutoBlock.m in Sources */,
+				5EE65EF921B61807006C7937 /* BlockStruct.m in Sources */,
+				5EE65EE321B4DF3E006C7937 /* CaptureStaticBlock.m in Sources */,
+				5EE65ED821B4DE3D006C7937 /* main.m in Sources */,
+				5EE65EF421B61765006C7937 /* CaptureVariableBlock.m in Sources */,
+				5EE65ECA21B4DE3C006C7937 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5EE65ECE21B4DE3C006C7937 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EE65ECF21B4DE3C006C7937 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5EE65ED321B4DE3D006C7937 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EE65ED421B4DE3D006C7937 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5EE65ED921B4DE3D006C7937 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5EE65EDA21B4DE3D006C7937 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EE65EDC21B4DE3D006C7937 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69XHTLCF36;
+				INFOPLIST_FILE = "Block本质与变量截获/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luci.Block-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5EE65EDD21B4DE3D006C7937 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69XHTLCF36;
+				INFOPLIST_FILE = "Block本质与变量截获/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luci.Block-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EE65EC021B4DE3C006C7937 /* Build configuration list for PBXProject "Block本质与变量截获" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EE65ED921B4DE3D006C7937 /* Debug */,
+				5EE65EDA21B4DE3D006C7937 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EE65EDB21B4DE3D006C7937 /* Build configuration list for PBXNativeTarget "Block本质与变量截获" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EE65EDC21B4DE3D006C7937 /* Debug */,
+				5EE65EDD21B4DE3D006C7937 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5EE65EBD21B4DE3C006C7937 /* Project object */;
+}
