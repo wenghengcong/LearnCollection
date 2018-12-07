@@ -106,8 +106,8 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureStaticBlock_432f03_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"captrue static variable in block",32};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureStaticBlock_432f03_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d",12};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureStaticBlock_4f7cf7_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"captrue static variable in block",32};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureStaticBlock_4f7cf7_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"vision is %d, height is %d, weight is %d",40};
 
 
 
@@ -32664,12 +32664,14 @@ struct CaptureStaticBlock_IMPL {
 
 // @implementation CaptureStaticBlock
 
+static int vision = 5;
 
 struct __CaptureStaticBlock__test_block_impl_0 {
   struct __block_impl impl;
   struct __CaptureStaticBlock__test_block_desc_0* Desc;
-  int *height;
-  __CaptureStaticBlock__test_block_impl_0(void *fp, struct __CaptureStaticBlock__test_block_desc_0 *desc, int *_height, int flags=0) : height(_height) {
+  int *weight;
+  const int *height;
+  __CaptureStaticBlock__test_block_impl_0(void *fp, struct __CaptureStaticBlock__test_block_desc_0 *desc, int *_weight, const int *_height, int flags=0) : weight(_weight), height(_height) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
     impl.FuncPtr = fp;
@@ -32677,9 +32679,12 @@ struct __CaptureStaticBlock__test_block_impl_0 {
   }
 };
 static void __CaptureStaticBlock__test_block_func_0(struct __CaptureStaticBlock__test_block_impl_0 *__cself) {
-  int *height = __cself->height; // bound by copy
+  int *weight = __cself->weight; // bound by copy
+  const int *height = __cself->height; // bound by copy
 
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureStaticBlock_432f03_mi_1, (*height));
+        (*weight) = 70;
+        vision = 4;
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureStaticBlock_4f7cf7_mi_1, vision, (*height), (*weight));
     }
 
 static struct __CaptureStaticBlock__test_block_desc_0 {
@@ -32688,12 +32693,13 @@ static struct __CaptureStaticBlock__test_block_desc_0 {
 } __CaptureStaticBlock__test_block_desc_0_DATA = { 0, sizeof(struct __CaptureStaticBlock__test_block_impl_0)};
 
 static void _I_CaptureStaticBlock_test(CaptureStaticBlock * self, SEL _cmd) {
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureStaticBlock_432f03_mi_0);
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureStaticBlock_4f7cf7_mi_0);
+    static const int height = 170;
+    static int weight = 60;
+    void (*personInfoBlock)(void) = ((void (*)())&__CaptureStaticBlock__test_block_impl_0((void *)__CaptureStaticBlock__test_block_func_0, &__CaptureStaticBlock__test_block_desc_0_DATA, &weight, &height));
 
-    static int height = 170;
-    void (*personInfoBlock)(void) = ((void (*)())&__CaptureStaticBlock__test_block_impl_0((void *)__CaptureStaticBlock__test_block_func_0, &__CaptureStaticBlock__test_block_desc_0_DATA, &height));
-
-    height = 180;
+    weight = 80;
+    vision = 3;
     ((void (*)(__block_impl *))((__block_impl *)personInfoBlock)->FuncPtr)((__block_impl *)personInfoBlock);
 }
 

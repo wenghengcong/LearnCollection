@@ -10,14 +10,14 @@
 #import "CaptureAutoBlock.h"
 #import "CaptureSelfBlock.h"
 #import "CaptureStaticBlock.h"
-#import "CaptureGlobalBlock.h"
+#import "CaptureConstBlcok.h"
 
 @interface ViewController ()
 
 @property (nonatomic, strong) CaptureAutoBlock *autoBlock;
 @property (nonatomic, strong) CaptureSelfBlock *selfBlock;
 @property (nonatomic, strong) CaptureStaticBlock *staticBlock;
-@property (nonatomic, strong) CaptureGlobalBlock *globalBlock;
+@property (nonatomic, strong) CaptureConstBlcok *constBlock;
 
 @end
 
@@ -28,15 +28,16 @@
     self.autoBlock = [[CaptureAutoBlock alloc] init];
     self.selfBlock = [[CaptureSelfBlock alloc] init];
     self.staticBlock = [[CaptureStaticBlock alloc] init];
-    self.globalBlock = [[CaptureGlobalBlock alloc] init];
+    self.constBlock = [[CaptureConstBlcok alloc] init];
 
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self.autoBlock test];
+//    [self.autoBlock test];
 //    [self.selfBlock test];
-//    [self.staticBlock test];
+    [self.staticBlock test];
+//    [self.constBlock test];
 //    [self.globalBlock test];
 }
 

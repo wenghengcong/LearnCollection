@@ -106,8 +106,8 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureGlobalBlock_07d081_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"captrue global variable in block",32};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureGlobalBlock_07d081_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d",12};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureConstBlcok_b33b47_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"captrue const variable in block",31};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureConstBlcok_b33b47_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d, vision is %d",26};
 
 
 
@@ -32647,52 +32647,53 @@ struct NSUUID_IMPL {
 #pragma clang assume_nonnull begin
 
 
-#ifndef _REWRITER_typedef_CaptureGlobalBlock
-#define _REWRITER_typedef_CaptureGlobalBlock
-typedef struct objc_object CaptureGlobalBlock;
-typedef struct {} _objc_exc_CaptureGlobalBlock;
+#ifndef _REWRITER_typedef_CaptureConstBlcok
+#define _REWRITER_typedef_CaptureConstBlcok
+typedef struct objc_object CaptureConstBlcok;
+typedef struct {} _objc_exc_CaptureConstBlcok;
 #endif
 
-struct CaptureGlobalBlock_IMPL {
+struct CaptureConstBlcok_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
 };
+
 
 // - (void)test;
 /* @end */
 
 #pragma clang assume_nonnull end
 
-// @implementation CaptureGlobalBlock
+// @implementation CaptureConstBlcok
 
-int height = 170;
+const int vision = 5;
 
-
-struct __CaptureGlobalBlock__test_block_impl_0 {
+struct __CaptureConstBlcok__test_block_impl_0 {
   struct __block_impl impl;
-  struct __CaptureGlobalBlock__test_block_desc_0* Desc;
-  __CaptureGlobalBlock__test_block_impl_0(void *fp, struct __CaptureGlobalBlock__test_block_desc_0 *desc, int flags=0) {
+  struct __CaptureConstBlcok__test_block_desc_0* Desc;
+  const int height;
+  __CaptureConstBlcok__test_block_impl_0(void *fp, struct __CaptureConstBlcok__test_block_desc_0 *desc, const int _height, int flags=0) : height(_height) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
     impl.FuncPtr = fp;
     Desc = desc;
   }
 };
-static void __CaptureGlobalBlock__test_block_func_0(struct __CaptureGlobalBlock__test_block_impl_0 *__cself) {
+static void __CaptureConstBlcok__test_block_func_0(struct __CaptureConstBlcok__test_block_impl_0 *__cself) {
+  const int height = __cself->height; // bound by copy
 
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureGlobalBlock_07d081_mi_1, height);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureConstBlcok_b33b47_mi_1, height, vision);
     }
 
-static struct __CaptureGlobalBlock__test_block_desc_0 {
+static struct __CaptureConstBlcok__test_block_desc_0 {
   size_t reserved;
   size_t Block_size;
-} __CaptureGlobalBlock__test_block_desc_0_DATA = { 0, sizeof(struct __CaptureGlobalBlock__test_block_impl_0)};
+} __CaptureConstBlcok__test_block_desc_0_DATA = { 0, sizeof(struct __CaptureConstBlcok__test_block_impl_0)};
 
-static void _I_CaptureGlobalBlock_test(CaptureGlobalBlock * self, SEL _cmd) {
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureGlobalBlock_07d081_mi_0);
+static void _I_CaptureConstBlcok_test(CaptureConstBlcok * self, SEL _cmd) {
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureConstBlcok_b33b47_mi_0);
+    const int height = 170;
+    void (*personInfoBlock)(void) = ((void (*)())&__CaptureConstBlcok__test_block_impl_0((void *)__CaptureConstBlcok__test_block_func_0, &__CaptureConstBlcok__test_block_desc_0_DATA, height));
 
-    void (*personInfoBlock)(void) = ((void (*)())&__CaptureGlobalBlock__test_block_impl_0((void *)__CaptureGlobalBlock__test_block_func_0, &__CaptureGlobalBlock__test_block_desc_0_DATA));
-
-    height = 180;
     ((void (*)(__block_impl *))((__block_impl *)personInfoBlock)->FuncPtr)((__block_impl *)personInfoBlock);
 }
 
@@ -32769,16 +32770,16 @@ static struct /*_method_list_t*/ {
 	unsigned int entsize;  // sizeof(struct _objc_method)
 	unsigned int method_count;
 	struct _objc_method method_list[1];
-} _OBJC_$_INSTANCE_METHODS_CaptureGlobalBlock __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+} _OBJC_$_INSTANCE_METHODS_CaptureConstBlcok __attribute__ ((used, section ("__DATA,__objc_const"))) = {
 	sizeof(_objc_method),
 	1,
-	{{(struct objc_selector *)"test", "v16@0:8", (void *)_I_CaptureGlobalBlock_test}}
+	{{(struct objc_selector *)"test", "v16@0:8", (void *)_I_CaptureConstBlcok_test}}
 };
 
-static struct _class_ro_t _OBJC_METACLASS_RO_$_CaptureGlobalBlock __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+static struct _class_ro_t _OBJC_METACLASS_RO_$_CaptureConstBlcok __attribute__ ((used, section ("__DATA,__objc_const"))) = {
 	1, sizeof(struct _class_t), sizeof(struct _class_t), 
 	0, 
-	"CaptureGlobalBlock",
+	"CaptureConstBlcok",
 	0, 
 	0, 
 	0, 
@@ -32786,11 +32787,11 @@ static struct _class_ro_t _OBJC_METACLASS_RO_$_CaptureGlobalBlock __attribute__ 
 	0, 
 };
 
-static struct _class_ro_t _OBJC_CLASS_RO_$_CaptureGlobalBlock __attribute__ ((used, section ("__DATA,__objc_const"))) = {
-	0, sizeof(struct CaptureGlobalBlock_IMPL), sizeof(struct CaptureGlobalBlock_IMPL), 
+static struct _class_ro_t _OBJC_CLASS_RO_$_CaptureConstBlcok __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	0, sizeof(struct CaptureConstBlcok_IMPL), sizeof(struct CaptureConstBlcok_IMPL), 
 	0, 
-	"CaptureGlobalBlock",
-	(const struct _method_list_t *)&_OBJC_$_INSTANCE_METHODS_CaptureGlobalBlock,
+	"CaptureConstBlcok",
+	(const struct _method_list_t *)&_OBJC_$_INSTANCE_METHODS_CaptureConstBlcok,
 	0, 
 	0, 
 	0, 
@@ -32799,36 +32800,36 @@ static struct _class_ro_t _OBJC_CLASS_RO_$_CaptureGlobalBlock __attribute__ ((us
 
 extern "C" __declspec(dllimport) struct _class_t OBJC_METACLASS_$_NSObject;
 
-extern "C" __declspec(dllexport) struct _class_t OBJC_METACLASS_$_CaptureGlobalBlock __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+extern "C" __declspec(dllexport) struct _class_t OBJC_METACLASS_$_CaptureConstBlcok __attribute__ ((used, section ("__DATA,__objc_data"))) = {
 	0, // &OBJC_METACLASS_$_NSObject,
 	0, // &OBJC_METACLASS_$_NSObject,
 	0, // (void *)&_objc_empty_cache,
 	0, // unused, was (void *)&_objc_empty_vtable,
-	&_OBJC_METACLASS_RO_$_CaptureGlobalBlock,
+	&_OBJC_METACLASS_RO_$_CaptureConstBlcok,
 };
 
 extern "C" __declspec(dllimport) struct _class_t OBJC_CLASS_$_NSObject;
 
-extern "C" __declspec(dllexport) struct _class_t OBJC_CLASS_$_CaptureGlobalBlock __attribute__ ((used, section ("__DATA,__objc_data"))) = {
-	0, // &OBJC_METACLASS_$_CaptureGlobalBlock,
+extern "C" __declspec(dllexport) struct _class_t OBJC_CLASS_$_CaptureConstBlcok __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+	0, // &OBJC_METACLASS_$_CaptureConstBlcok,
 	0, // &OBJC_CLASS_$_NSObject,
 	0, // (void *)&_objc_empty_cache,
 	0, // unused, was (void *)&_objc_empty_vtable,
-	&_OBJC_CLASS_RO_$_CaptureGlobalBlock,
+	&_OBJC_CLASS_RO_$_CaptureConstBlcok,
 };
-static void OBJC_CLASS_SETUP_$_CaptureGlobalBlock(void ) {
-	OBJC_METACLASS_$_CaptureGlobalBlock.isa = &OBJC_METACLASS_$_NSObject;
-	OBJC_METACLASS_$_CaptureGlobalBlock.superclass = &OBJC_METACLASS_$_NSObject;
-	OBJC_METACLASS_$_CaptureGlobalBlock.cache = &_objc_empty_cache;
-	OBJC_CLASS_$_CaptureGlobalBlock.isa = &OBJC_METACLASS_$_CaptureGlobalBlock;
-	OBJC_CLASS_$_CaptureGlobalBlock.superclass = &OBJC_CLASS_$_NSObject;
-	OBJC_CLASS_$_CaptureGlobalBlock.cache = &_objc_empty_cache;
+static void OBJC_CLASS_SETUP_$_CaptureConstBlcok(void ) {
+	OBJC_METACLASS_$_CaptureConstBlcok.isa = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_CaptureConstBlcok.superclass = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_CaptureConstBlcok.cache = &_objc_empty_cache;
+	OBJC_CLASS_$_CaptureConstBlcok.isa = &OBJC_METACLASS_$_CaptureConstBlcok;
+	OBJC_CLASS_$_CaptureConstBlcok.superclass = &OBJC_CLASS_$_NSObject;
+	OBJC_CLASS_$_CaptureConstBlcok.cache = &_objc_empty_cache;
 }
 #pragma section(".objc_inithooks$B", long, read, write)
 __declspec(allocate(".objc_inithooks$B")) static void *OBJC_CLASS_SETUP[] = {
-	(void *)&OBJC_CLASS_SETUP_$_CaptureGlobalBlock,
+	(void *)&OBJC_CLASS_SETUP_$_CaptureConstBlcok,
 };
 static struct _class_t *L_OBJC_LABEL_CLASS_$ [1] __attribute__((used, section ("__DATA, __objc_classlist,regular,no_dead_strip")))= {
-	&OBJC_CLASS_$_CaptureGlobalBlock,
+	&OBJC_CLASS_$_CaptureConstBlcok,
 };
 static struct IMAGE_INFO { unsigned version; unsigned flag; } _OBJC_IMAGE_INFO = { 0, 2 };

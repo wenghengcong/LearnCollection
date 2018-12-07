@@ -106,9 +106,9 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureAutoBlock_da0807_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"captrue auto variable in block",30};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureAutoBlock_da0807_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d, weight is %f",26};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureAutoBlock_da0807_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"bmi is %f",9};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureAutoBlock_2618d5_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"captrue auto variable in block",30};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureAutoBlock_2618d5_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d, weight is %d",26};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureAutoBlock_2618d5_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d, weight is %d",26};
 
 
 
@@ -32667,13 +32667,13 @@ struct CaptureAutoBlock_IMPL {
 
 // @implementation CaptureAutoBlock
 
+int height = 170;
 
 struct __CaptureAutoBlock__test_block_impl_0 {
   struct __block_impl impl;
   struct __CaptureAutoBlock__test_block_desc_0* Desc;
-  int height;
-  double weight;
-  __CaptureAutoBlock__test_block_impl_0(void *fp, struct __CaptureAutoBlock__test_block_desc_0 *desc, int _height, double _weight, int flags=0) : height(_height), weight(_weight) {
+  int weight;
+  __CaptureAutoBlock__test_block_impl_0(void *fp, struct __CaptureAutoBlock__test_block_desc_0 *desc, int _weight, int flags=0) : weight(_weight) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
     impl.FuncPtr = fp;
@@ -32681,10 +32681,9 @@ struct __CaptureAutoBlock__test_block_impl_0 {
   }
 };
 static void __CaptureAutoBlock__test_block_func_0(struct __CaptureAutoBlock__test_block_impl_0 *__cself) {
-  int height = __cself->height; // bound by copy
-  double weight = __cself->weight; // bound by copy
+  int weight = __cself->weight; // bound by copy
 
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureAutoBlock_da0807_mi_1, height, weight);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureAutoBlock_2618d5_mi_1, height, weight);
     }
 
 static struct __CaptureAutoBlock__test_block_desc_0 {
@@ -32702,11 +32701,9 @@ struct __CaptureAutoBlock__test_block_impl_1 {
     Desc = desc;
   }
 };
-static void __CaptureAutoBlock__test_block_func_1(struct __CaptureAutoBlock__test_block_impl_1 *__cself, int height, double weight) {
+static void __CaptureAutoBlock__test_block_func_1(struct __CaptureAutoBlock__test_block_impl_1 *__cself, int height, int weight) {
 
-        double heightByM = (double)height/100;
-        double bmi = weight/(heightByM * heightByM);
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureAutoBlock_da0807_mi_2, bmi);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureAutoBlock_2618d5_mi_2, height, weight);
     }
 
 static struct __CaptureAutoBlock__test_block_desc_1 {
@@ -32715,20 +32712,17 @@ static struct __CaptureAutoBlock__test_block_desc_1 {
 } __CaptureAutoBlock__test_block_desc_1_DATA = { 0, sizeof(struct __CaptureAutoBlock__test_block_impl_1)};
 
 static void _I_CaptureAutoBlock_test(CaptureAutoBlock * self, SEL _cmd) {
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureAutoBlock_da0807_mi_0);
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureAutoBlock_2618d5_mi_0);
+    auto int weight = 66;
+    void (*personInfoBlock)(void) = ((void (*)())&__CaptureAutoBlock__test_block_impl_0((void *)__CaptureAutoBlock__test_block_func_0, &__CaptureAutoBlock__test_block_desc_0_DATA, weight));
 
-    int height = 170;
-    auto double weight = 66;
-
-    void (*personInfoBlock)(void) = ((void (*)())&__CaptureAutoBlock__test_block_impl_0((void *)__CaptureAutoBlock__test_block_func_0, &__CaptureAutoBlock__test_block_desc_0_DATA, height, weight));
-
-    void (*bmiBlock)(int, double) = ((void (*)(int, double))&__CaptureAutoBlock__test_block_impl_1((void *)__CaptureAutoBlock__test_block_func_1, &__CaptureAutoBlock__test_block_desc_1_DATA));
+    void (*bmiBlock)(int, int) = ((void (*)(int, int))&__CaptureAutoBlock__test_block_impl_1((void *)__CaptureAutoBlock__test_block_func_1, &__CaptureAutoBlock__test_block_desc_1_DATA));
 
     height = 180;
     weight = 60;
 
     ((void (*)(__block_impl *))((__block_impl *)personInfoBlock)->FuncPtr)((__block_impl *)personInfoBlock);
-    ((void (*)(__block_impl *, int, double))((__block_impl *)bmiBlock)->FuncPtr)((__block_impl *)bmiBlock, height, weight);
+    ((void (*)(__block_impl *, int, int))((__block_impl *)bmiBlock)->FuncPtr)((__block_impl *)bmiBlock, height, weight);
 }
 
 // @end

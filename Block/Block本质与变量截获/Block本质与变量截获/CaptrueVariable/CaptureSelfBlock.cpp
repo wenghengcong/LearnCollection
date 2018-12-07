@@ -106,10 +106,11 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_1c26b6_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"captrue self in block",21};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_1c26b6_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %p",12};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_1c26b6_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d",12};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_1c26b6_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d",12};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_b04a3f_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"captrue self in block",21};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_b04a3f_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"self is %p",10};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_b04a3f_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"self is %p",10};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_b04a3f_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d",12};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_b04a3f_mi_4 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d",12};
 
 
 
@@ -32688,7 +32689,7 @@ struct __CaptureSelfBlock__test_block_impl_0 {
 static void __CaptureSelfBlock__test_block_func_0(struct __CaptureSelfBlock__test_block_impl_0 *__cself) {
   CaptureSelfBlock *self = __cself->self; // bound by copy
 
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_1c26b6_mi_1, self);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_b04a3f_mi_2, self);
     }
 static void __CaptureSelfBlock__test_block_copy_0(struct __CaptureSelfBlock__test_block_impl_0*dst, struct __CaptureSelfBlock__test_block_impl_0*src) {_Block_object_assign((void*)&dst->self, (void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
 
@@ -32715,7 +32716,7 @@ struct __CaptureSelfBlock__test_block_impl_1 {
 static void __CaptureSelfBlock__test_block_func_1(struct __CaptureSelfBlock__test_block_impl_1 *__cself) {
   CaptureSelfBlock *self = __cself->self; // bound by copy
 
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_1c26b6_mi_2, ((int (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("height")));
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_b04a3f_mi_3, ((int (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("height")));
     }
 static void __CaptureSelfBlock__test_block_copy_1(struct __CaptureSelfBlock__test_block_impl_1*dst, struct __CaptureSelfBlock__test_block_impl_1*src) {_Block_object_assign((void*)&dst->self, (void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
 
@@ -32742,7 +32743,7 @@ struct __CaptureSelfBlock__test_block_impl_2 {
 static void __CaptureSelfBlock__test_block_func_2(struct __CaptureSelfBlock__test_block_impl_2 *__cself) {
   CaptureSelfBlock *self = __cself->self; // bound by copy
 
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_1c26b6_mi_3, (*(int *)((char *)self + OBJC_IVAR_$_CaptureSelfBlock$_height)));
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_b04a3f_mi_4, (*(int *)((char *)self + OBJC_IVAR_$_CaptureSelfBlock$_height)));
     }
 static void __CaptureSelfBlock__test_block_copy_2(struct __CaptureSelfBlock__test_block_impl_2*dst, struct __CaptureSelfBlock__test_block_impl_2*src) {_Block_object_assign((void*)&dst->self, (void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
 
@@ -32756,9 +32757,11 @@ static struct __CaptureSelfBlock__test_block_desc_2 {
 } __CaptureSelfBlock__test_block_desc_2_DATA = { 0, sizeof(struct __CaptureSelfBlock__test_block_impl_2), __CaptureSelfBlock__test_block_copy_2, __CaptureSelfBlock__test_block_dispose_2};
 
 static void _I_CaptureSelfBlock_test(CaptureSelfBlock * self, SEL _cmd) {
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_1c26b6_mi_0);
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_b04a3f_mi_0);
+
     ((void (*)(id, SEL, int))(void *)objc_msgSend)((id)self, sel_registerName("setHeight:"), 170);
 
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureSelfBlock_b04a3f_mi_1, self);
     void (*personBlock)(void) = ((void (*)())&__CaptureSelfBlock__test_block_impl_0((void *)__CaptureSelfBlock__test_block_func_0, &__CaptureSelfBlock__test_block_desc_0_DATA, self, 570425344));
 
     void (*person1Block)(void) = ((void (*)())&__CaptureSelfBlock__test_block_impl_1((void *)__CaptureSelfBlock__test_block_func_1, &__CaptureSelfBlock__test_block_desc_1_DATA, self, 570425344));

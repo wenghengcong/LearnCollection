@@ -32688,8 +32688,19 @@ static struct __BlockStruct__test_block_desc_0 {
 
 static void _I_BlockStruct_test(BlockStruct * self, SEL _cmd) {
     void (*helloBlock)(void) = ((void (*)())&__BlockStruct__test_block_impl_0((void *)__BlockStruct__test_block_func_0, &__BlockStruct__test_block_desc_0_DATA));
-
-    ((void (*)(__block_impl *))((__block_impl *)helloBlock)->FuncPtr)((__block_impl *)helloBlock);
+    /*
+     struct __block_impl {
+         void *isa;
+         int Flags;
+         int Reserved;
+         void *FuncPtr;
+     };
+     */
+    // helloBlock结构的第一个成员变量为__block_impl，所以helloBlock首地址，就是__block_impl impl的首地址，即可以直接转换为__block_impl类型
+    // (void (*)(__block_impl *)) 是__block_impl中FuncPtr的类型
+    // ((__block_impl *)helloBlock)->FuncPtr() 调用函数
+    // ((__block_impl *)helloBlock) 函数参数
+    ( (void (*)(__block_impl *)) ((__block_impl *)helloBlock)->FuncPtr )  ((__block_impl *)helloBlock);
 }
 
 // @end

@@ -106,8 +106,9 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_dbaa80_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"lastname %s, age is %d,",23};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_dbaa80_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d, weight is %f",26};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_78255f_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"lastname %s, age is %d,",23};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_78255f_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d, weight is %f",26};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_78255f_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"foot is %d, vision is %f",24};
 
 
 
@@ -32653,8 +32654,10 @@ typedef struct objc_object CaptureVariableBlock;
 typedef struct {} _objc_exc_CaptureVariableBlock;
 #endif
 
+extern "C" unsigned long OBJC_IVAR_$_CaptureVariableBlock$_foot;
 struct CaptureVariableBlock_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
+	int _foot;
 };
 
 
@@ -32664,10 +32667,15 @@ struct CaptureVariableBlock_IMPL {
 
 #pragma clang assume_nonnull end
 
+// @interface CaptureVariableBlock()
+// @property (nonatomic, assign) int foot;
+/* @end */
+
+
 // @implementation CaptureVariableBlock
 
 int age = 28;
-
+static float vision = 4.8;
 
 struct __CaptureVariableBlock__test_block_impl_0 {
   struct __block_impl impl;
@@ -32675,38 +32683,43 @@ struct __CaptureVariableBlock__test_block_impl_0 {
   const char *lastname;
   int *height;
   double weight;
-  __CaptureVariableBlock__test_block_impl_0(void *fp, struct __CaptureVariableBlock__test_block_desc_0 *desc, const char *_lastname, int *_height, double _weight, int flags=0) : lastname(_lastname), height(_height), weight(_weight) {
-    impl.isa = &_NSConcreteStackBlock;
-    impl.Flags = flags;
-    impl.FuncPtr = fp;
-    Desc = desc;
-  }
+  CaptureVariableBlock *self;
 };
 static void __CaptureVariableBlock__test_block_func_0(struct __CaptureVariableBlock__test_block_impl_0 *__cself) {
   const char *lastname = __cself->lastname; // bound by copy
   int *height = __cself->height; // bound by copy
   double weight = __cself->weight; // bound by copy
+  CaptureVariableBlock *self = __cself->self; // bound by copy
 
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_dbaa80_mi_0, lastname, age);
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_dbaa80_mi_1, (*height), weight);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_78255f_mi_0, lastname, age);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_78255f_mi_1, (*height), weight);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_78255f_mi_2, ((int (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("foot")), vision);
     }
+static void __CaptureVariableBlock__test_block_copy_0(struct __CaptureVariableBlock__test_block_impl_0*dst, struct __CaptureVariableBlock__test_block_impl_0*src) {_Block_object_assign((void*)&dst->self, (void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
+
+static void __CaptureVariableBlock__test_block_dispose_0(struct __CaptureVariableBlock__test_block_impl_0*src) {_Block_object_dispose((void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
 
 static struct __CaptureVariableBlock__test_block_desc_0 {
   size_t reserved;
   size_t Block_size;
-} __CaptureVariableBlock__test_block_desc_0_DATA = { 0, sizeof(struct __CaptureVariableBlock__test_block_impl_0)};
+  void (*copy)(struct __CaptureVariableBlock__test_block_impl_0*, struct __CaptureVariableBlock__test_block_impl_0*);
+  void (*dispose)(struct __CaptureVariableBlock__test_block_impl_0*);
+} __CaptureVariableBlock__test_block_desc_0_DATA = { 0, sizeof(struct __CaptureVariableBlock__test_block_impl_0), __CaptureVariableBlock__test_block_copy_0, __CaptureVariableBlock__test_block_dispose_0};
 
 static void _I_CaptureVariableBlock_test(CaptureVariableBlock * self, SEL _cmd) {
+    ((void (*)(id, SEL, int))(void *)objc_msgSend)((id)self, sel_registerName("setFoot:"), 5);
     double weight = 66;
     static int height = 170;
-
     const char *lastname = "weng";
 
-    void (*personInfoBlock)(void) = ((void (*)())&__CaptureVariableBlock__test_block_impl_0((void *)__CaptureVariableBlock__test_block_func_0, &__CaptureVariableBlock__test_block_desc_0_DATA, lastname, &height, weight));
+    void (*personInfoBlock)(void) = ((void (*)())&__CaptureVariableBlock__test_block_impl_0((void *)__CaptureVariableBlock__test_block_func_0, &__CaptureVariableBlock__test_block_desc_0_DATA, lastname, &height, weight, self, 570425344));
 
     ((void (*)(__block_impl *))((__block_impl *)personInfoBlock)->FuncPtr)((__block_impl *)personInfoBlock);
 }
 
+
+static int _I_CaptureVariableBlock_foot(CaptureVariableBlock * self, SEL _cmd) { return (*(int *)((char *)self + OBJC_IVAR_$_CaptureVariableBlock$_foot)); }
+static void _I_CaptureVariableBlock_setFoot_(CaptureVariableBlock * self, SEL _cmd, int foot) { (*(int *)((char *)self + OBJC_IVAR_$_CaptureVariableBlock$_foot)) = foot; }
 // @end
 
 struct _prop_t {
@@ -32776,14 +32789,28 @@ struct _category_t {
 extern "C" __declspec(dllimport) struct objc_cache _objc_empty_cache;
 #pragma warning(disable:4273)
 
+extern "C" unsigned long int OBJC_IVAR_$_CaptureVariableBlock$_foot __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct CaptureVariableBlock, _foot);
+
+static struct /*_ivar_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _prop_t)
+	unsigned int count;
+	struct _ivar_t ivar_list[1];
+} _OBJC_$_INSTANCE_VARIABLES_CaptureVariableBlock __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_ivar_t),
+	1,
+	{{(unsigned long int *)&OBJC_IVAR_$_CaptureVariableBlock$_foot, "_foot", "i", 2, 4}}
+};
+
 static struct /*_method_list_t*/ {
 	unsigned int entsize;  // sizeof(struct _objc_method)
 	unsigned int method_count;
-	struct _objc_method method_list[1];
+	struct _objc_method method_list[3];
 } _OBJC_$_INSTANCE_METHODS_CaptureVariableBlock __attribute__ ((used, section ("__DATA,__objc_const"))) = {
 	sizeof(_objc_method),
-	1,
-	{{(struct objc_selector *)"test", "v16@0:8", (void *)_I_CaptureVariableBlock_test}}
+	3,
+	{{(struct objc_selector *)"test", "v16@0:8", (void *)_I_CaptureVariableBlock_test},
+	{(struct objc_selector *)"foot", "i16@0:8", (void *)_I_CaptureVariableBlock_foot},
+	{(struct objc_selector *)"setFoot:", "v20@0:8i16", (void *)_I_CaptureVariableBlock_setFoot_}}
 };
 
 static struct _class_ro_t _OBJC_METACLASS_RO_$_CaptureVariableBlock __attribute__ ((used, section ("__DATA,__objc_const"))) = {
@@ -32798,12 +32825,12 @@ static struct _class_ro_t _OBJC_METACLASS_RO_$_CaptureVariableBlock __attribute_
 };
 
 static struct _class_ro_t _OBJC_CLASS_RO_$_CaptureVariableBlock __attribute__ ((used, section ("__DATA,__objc_const"))) = {
-	0, sizeof(struct CaptureVariableBlock_IMPL), sizeof(struct CaptureVariableBlock_IMPL), 
+	0, __OFFSETOFIVAR__(struct CaptureVariableBlock, _foot), sizeof(struct CaptureVariableBlock_IMPL), 
 	0, 
 	"CaptureVariableBlock",
 	(const struct _method_list_t *)&_OBJC_$_INSTANCE_METHODS_CaptureVariableBlock,
 	0, 
-	0, 
+	(const struct _ivar_list_t *)&_OBJC_$_INSTANCE_VARIABLES_CaptureVariableBlock,
 	0, 
 	0, 
 };

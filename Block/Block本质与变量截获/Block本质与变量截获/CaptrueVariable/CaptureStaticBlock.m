@@ -10,16 +10,21 @@
 
 @implementation CaptureStaticBlock
 
+static int vision = 5;
 - (void)test
 {
     NSLog(@"captrue static variable in block");
-
-    static int height = 170;
+    static const int height = 170;
+    static int weight = 60;
+    int good = 5;
     void (^personInfoBlock)(void) = ^() {
-        NSLog(@"height is %d", height);
+        weight = 70;
+        vision = 4;
+        NSLog(@"vision is %d, height is %d, weight is %d", vision, height, weight);
     };
     
-    height = 180;
+//    weight = 80;
+//    vision = 3;
     personInfoBlock();
 }
 

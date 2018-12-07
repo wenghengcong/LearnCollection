@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E23460721BA363B00227851 /* CaptureConstBlcok.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E23460621BA363B00227851 /* CaptureConstBlcok.m */; };
 		5EE65ECA21B4DE3C006C7937 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65EC921B4DE3C006C7937 /* AppDelegate.m */; };
 		5EE65ECD21B4DE3C006C7937 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65ECC21B4DE3C006C7937 /* ViewController.m */; };
 		5EE65ED021B4DE3C006C7937 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE65ECE21B4DE3C006C7937 /* Main.storyboard */; };
@@ -16,12 +17,14 @@
 		5EE65EE021B4DF2E006C7937 /* CaptureAutoBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65EDF21B4DF2E006C7937 /* CaptureAutoBlock.m */; };
 		5EE65EE321B4DF3E006C7937 /* CaptureStaticBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65EE221B4DF3E006C7937 /* CaptureStaticBlock.m */; };
 		5EE65EE621B4DF4D006C7937 /* CaptureSelfBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65EE521B4DF4D006C7937 /* CaptureSelfBlock.m */; };
-		5EE65EE921B4DF61006C7937 /* CaptureGlobalBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65EE821B4DF61006C7937 /* CaptureGlobalBlock.m */; };
 		5EE65EF421B61765006C7937 /* CaptureVariableBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65EF321B61765006C7937 /* CaptureVariableBlock.m */; };
 		5EE65EF921B61807006C7937 /* BlockStruct.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE65EF821B61807006C7937 /* BlockStruct.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E23460521BA363B00227851 /* CaptureConstBlcok.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptureConstBlcok.h; sourceTree = "<group>"; };
+		5E23460621BA363B00227851 /* CaptureConstBlcok.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptureConstBlcok.m; sourceTree = "<group>"; };
+		5E23460821BA37DC00227851 /* CaptureConstBlcok.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CaptureConstBlcok.cpp; sourceTree = "<group>"; };
 		5EE65EC521B4DE3C006C7937 /* Block本质与变量截获.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Block本质与变量截获.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE65EC821B4DE3C006C7937 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EE65EC921B4DE3C006C7937 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -38,10 +41,7 @@
 		5EE65EE221B4DF3E006C7937 /* CaptureStaticBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptureStaticBlock.m; sourceTree = "<group>"; };
 		5EE65EE421B4DF4C006C7937 /* CaptureSelfBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptureSelfBlock.h; sourceTree = "<group>"; };
 		5EE65EE521B4DF4D006C7937 /* CaptureSelfBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptureSelfBlock.m; sourceTree = "<group>"; };
-		5EE65EE721B4DF61006C7937 /* CaptureGlobalBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptureGlobalBlock.h; sourceTree = "<group>"; };
-		5EE65EE821B4DF61006C7937 /* CaptureGlobalBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptureGlobalBlock.m; sourceTree = "<group>"; };
 		5EE65EEA21B51B75006C7937 /* CaptureAutoBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CaptureAutoBlock.cpp; sourceTree = "<group>"; };
-		5EE65EEB21B51B75006C7937 /* CaptureGlobalBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CaptureGlobalBlock.cpp; sourceTree = "<group>"; };
 		5EE65EEC21B51B75006C7937 /* CaptureStaticBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CaptureStaticBlock.cpp; sourceTree = "<group>"; };
 		5EE65EED21B51B75006C7937 /* CaptureSelfBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CaptureSelfBlock.cpp; sourceTree = "<group>"; };
 		5EE65EF221B61765006C7937 /* CaptureVariableBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptureVariableBlock.h; sourceTree = "<group>"; };
@@ -111,12 +111,12 @@
 				5EE65EE121B4DF3E006C7937 /* CaptureStaticBlock.h */,
 				5EE65EE221B4DF3E006C7937 /* CaptureStaticBlock.m */,
 				5EE65EEC21B51B75006C7937 /* CaptureStaticBlock.cpp */,
+				5E23460521BA363B00227851 /* CaptureConstBlcok.h */,
+				5E23460621BA363B00227851 /* CaptureConstBlcok.m */,
+				5E23460821BA37DC00227851 /* CaptureConstBlcok.cpp */,
 				5EE65EE421B4DF4C006C7937 /* CaptureSelfBlock.h */,
 				5EE65EE521B4DF4D006C7937 /* CaptureSelfBlock.m */,
 				5EE65EED21B51B75006C7937 /* CaptureSelfBlock.cpp */,
-				5EE65EE721B4DF61006C7937 /* CaptureGlobalBlock.h */,
-				5EE65EE821B4DF61006C7937 /* CaptureGlobalBlock.m */,
-				5EE65EEB21B51B75006C7937 /* CaptureGlobalBlock.cpp */,
 			);
 			path = CaptrueVariable;
 			sourceTree = "<group>";
@@ -191,8 +191,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E23460721BA363B00227851 /* CaptureConstBlcok.m in Sources */,
 				5EE65EE621B4DF4D006C7937 /* CaptureSelfBlock.m in Sources */,
-				5EE65EE921B4DF61006C7937 /* CaptureGlobalBlock.m in Sources */,
 				5EE65ECD21B4DE3C006C7937 /* ViewController.m in Sources */,
 				5EE65EE021B4DF2E006C7937 /* CaptureAutoBlock.m in Sources */,
 				5EE65EF921B61807006C7937 /* BlockStruct.m in Sources */,

@@ -1,8 +1,8 @@
 //
-//  CaptureGlobalBlock.h
+//  CaptureConstBlcok.h
 //  Block本质与变量截获
 //
-//  Created by WengHengcong on 2018/12/3.
+//  Created by WengHengcong on 2018/12/7.
 //  Copyright © 2018 WengHengcong. All rights reserved.
 //
 
@@ -10,7 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CaptureGlobalBlock : NSObject
+@interface CaptureConstBlcok : NSObject
+
 - (void)test;
 @end
 

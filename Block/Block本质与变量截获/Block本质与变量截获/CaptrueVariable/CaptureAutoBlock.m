@@ -10,21 +10,17 @@
 
 @implementation CaptureAutoBlock
 
+int height = 170;
 - (void)test
 {
     NSLog(@"captrue auto variable in block");
-
-    int height = 170;
-    auto double weight = 66;
-    
+    auto int weight = 66;
     void (^personInfoBlock)(void) = ^() {
-        NSLog(@"height is %d, weight is %f", height, weight);
+        NSLog(@"height is %d, weight is %d", height, weight);
     };
     
-    void (^bmiBlock)(int, double) = ^(int height, double weight) {
-        double heightByM = (double)height/100;
-        double bmi = weight/(heightByM * heightByM);
-        NSLog(@"bmi is %f", bmi);
+    void (^bmiBlock)(int, int) = ^(int height, int weight) {
+        NSLog(@"height is %d, weight is %d", height, weight);
     };
     
     height = 180;
