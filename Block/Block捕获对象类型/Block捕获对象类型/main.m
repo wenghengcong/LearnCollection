@@ -1,33 +1,31 @@
 //
-//  ViewController.m
-//  Block捕获对象
+//  main.m
+//  Block捕获对象类型
 //
 //  Created by WengHengcong on 2018/12/9.
 //  Copyright © 2018 WengHengcong. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <Foundation/Foundation.h>
 #import "BFPerson.h"
 
-@interface ViewController ()
-
-@end
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    [self test];
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+        // insert code here...
+        NSLog(@"Hello, World!");
+    }
+    return 0;
 }
 
 typedef void (^BFBlock)(void);
-- (void)test
+
+void test()
 {
+    {
+        BFPerson *person = [[BFPerson alloc] init];
+        person.age = 28;
+    }
+    
     BFBlock block;
     NSLog(@"begin");
     {
@@ -41,5 +39,3 @@ typedef void (^BFBlock)(void);
     NSLog(@"class %@", [block class]);
     NSLog(@"end");
 }
-
-@end
