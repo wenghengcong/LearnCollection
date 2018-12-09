@@ -32,6 +32,7 @@
 		5E5A644121BCB5DC003FB025 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		5E5A644221BCB5DC003FB025 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		5E5A644321BCB5DC003FB025 /* BFPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPerson.m; sourceTree = "<group>"; };
+		5E5A644721BCEF89003FB025 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 				5E5A644121BCB5DC003FB025 /* Test.h */,
 				5E5A644221BCB5DC003FB025 /* Test.m */,
 				5E5A643021BCB55D003FB025 /* main.m */,
+				5E5A644721BCEF89003FB025 /* main.cpp */,
 			);
 			path = "Block捕获对象类型";
 			sourceTree = "<group>";
@@ -253,7 +255,7 @@
 		5E5A643521BCB55D003FB025 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69XHTLCF36;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -263,7 +265,7 @@
 		5E5A643621BCB55D003FB025 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69XHTLCF36;
 				PRODUCT_NAME = "$(TARGET_NAME)";
