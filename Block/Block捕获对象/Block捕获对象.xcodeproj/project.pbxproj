@@ -7,33 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E23461821BA83C200227851 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E23461721BA83C200227851 /* AppDelegate.m */; };
-		5E23461B21BA83C200227851 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E23461A21BA83C200227851 /* ViewController.m */; };
-		5E23461E21BA83C200227851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E23461C21BA83C200227851 /* Main.storyboard */; };
-		5E23462021BA83C300227851 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E23461F21BA83C300227851 /* Assets.xcassets */; };
-		5E23462321BA83C300227851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E23462121BA83C300227851 /* LaunchScreen.storyboard */; };
-		5E23462621BA83C300227851 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E23462521BA83C300227851 /* main.m */; };
-		5E23463021BBBECC00227851 /* BFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E23462F21BBBECC00227851 /* BFPerson.m */; };
+		5E23463F21BC6FE700227851 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E23463E21BC6FE700227851 /* AppDelegate.m */; };
+		5E23464521BC6FE700227851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E23464321BC6FE700227851 /* Main.storyboard */; };
+		5E23464721BC6FE800227851 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E23464621BC6FE800227851 /* Assets.xcassets */; };
+		5E23464A21BC6FE800227851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E23464821BC6FE800227851 /* LaunchScreen.storyboard */; };
+		5E23464D21BC6FE800227851 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E23464C21BC6FE800227851 /* main.m */; };
+		5E23465521BC702E00227851 /* BFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E23465421BC702E00227851 /* BFPerson.m */; };
+		5E23465821BCAB8E00227851 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E23464121BC6FE700227851 /* ViewController.m */; };
+		5E5A642321BCAF6A003FB025 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5A641F21BCAED8003FB025 /* Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5E23461321BA83C200227851 /* Block类型与copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Block类型与copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E23461621BA83C200227851 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5E23461721BA83C200227851 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5E23461921BA83C200227851 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5E23461A21BA83C200227851 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5E23461D21BA83C200227851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5E23461F21BA83C300227851 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5E23462221BA83C300227851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5E23462421BA83C300227851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E23462521BA83C300227851 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5E23462C21BB609C00227851 /* ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ViewController.cpp; sourceTree = "<group>"; };
-		5E23462E21BBBECC00227851 /* BFPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFPerson.h; sourceTree = "<group>"; };
-		5E23462F21BBBECC00227851 /* BFPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFPerson.m; sourceTree = "<group>"; };
+		5E23463A21BC6FE700227851 /* Block捕获对象.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Block捕获对象.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E23463D21BC6FE700227851 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5E23463E21BC6FE700227851 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5E23464021BC6FE700227851 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5E23464121BC6FE700227851 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5E23464421BC6FE700227851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E23464621BC6FE800227851 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E23464921BC6FE800227851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5E23464B21BC6FE800227851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E23464C21BC6FE800227851 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5E23465321BC702E00227851 /* BFPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFPerson.h; sourceTree = "<group>"; };
+		5E23465421BC702E00227851 /* BFPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFPerson.m; sourceTree = "<group>"; };
+		5E23465621BCAA3800227851 /* ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ViewController.cpp; sourceTree = "<group>"; };
+		5E5A641E21BCAED8003FB025 /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		5E5A641F21BCAED8003FB025 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		5E5A642121BCAF1D003FB025 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5E23461021BA83C200227851 /* Frameworks */ = {
+		5E23463721BC6FE700227851 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,76 +47,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E23460A21BA83C200227851 = {
+		5E23463121BC6FE700227851 = {
 			isa = PBXGroup;
 			children = (
-				5E23461521BA83C200227851 /* Block类型与copy */,
-				5E23461421BA83C200227851 /* Products */,
+				5E23463C21BC6FE700227851 /* Block捕获对象 */,
+				5E23463B21BC6FE700227851 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5E23461421BA83C200227851 /* Products */ = {
+		5E23463B21BC6FE700227851 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5E23461321BA83C200227851 /* Block类型与copy.app */,
+				5E23463A21BC6FE700227851 /* Block捕获对象.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5E23461521BA83C200227851 /* Block类型与copy */ = {
+		5E23463C21BC6FE700227851 /* Block捕获对象 */ = {
 			isa = PBXGroup;
 			children = (
-				5E23461621BA83C200227851 /* AppDelegate.h */,
-				5E23461721BA83C200227851 /* AppDelegate.m */,
-				5E23461921BA83C200227851 /* ViewController.h */,
-				5E23461A21BA83C200227851 /* ViewController.m */,
-				5E23462C21BB609C00227851 /* ViewController.cpp */,
-				5E23462E21BBBECC00227851 /* BFPerson.h */,
-				5E23462F21BBBECC00227851 /* BFPerson.m */,
-				5E23461C21BA83C200227851 /* Main.storyboard */,
-				5E23461F21BA83C300227851 /* Assets.xcassets */,
-				5E23462121BA83C300227851 /* LaunchScreen.storyboard */,
-				5E23462421BA83C300227851 /* Info.plist */,
-				5E23462521BA83C300227851 /* main.m */,
+				5E23463D21BC6FE700227851 /* AppDelegate.h */,
+				5E23463E21BC6FE700227851 /* AppDelegate.m */,
+				5E23464021BC6FE700227851 /* ViewController.h */,
+				5E23464121BC6FE700227851 /* ViewController.m */,
+				5E23465621BCAA3800227851 /* ViewController.cpp */,
+				5E23464321BC6FE700227851 /* Main.storyboard */,
+				5E23464621BC6FE800227851 /* Assets.xcassets */,
+				5E23464821BC6FE800227851 /* LaunchScreen.storyboard */,
+				5E23464B21BC6FE800227851 /* Info.plist */,
+				5E23464C21BC6FE800227851 /* main.m */,
+				5E23465321BC702E00227851 /* BFPerson.h */,
+				5E23465421BC702E00227851 /* BFPerson.m */,
+				5E5A641E21BCAED8003FB025 /* Test.h */,
+				5E5A641F21BCAED8003FB025 /* Test.m */,
+				5E5A642121BCAF1D003FB025 /* Test.cpp */,
 			);
-			path = "Block类型与copy";
+			path = "Block捕获对象";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5E23461221BA83C200227851 /* Block类型与copy */ = {
+		5E23463921BC6FE700227851 /* Block捕获对象 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E23462921BA83C300227851 /* Build configuration list for PBXNativeTarget "Block类型与copy" */;
+			buildConfigurationList = 5E23465021BC6FE800227851 /* Build configuration list for PBXNativeTarget "Block捕获对象" */;
 			buildPhases = (
-				5E23460F21BA83C200227851 /* Sources */,
-				5E23461021BA83C200227851 /* Frameworks */,
-				5E23461121BA83C200227851 /* Resources */,
+				5E23463621BC6FE700227851 /* Sources */,
+				5E23463721BC6FE700227851 /* Frameworks */,
+				5E23463821BC6FE700227851 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Block类型与copy";
-			productName = "Block类型与copy";
-			productReference = 5E23461321BA83C200227851 /* Block类型与copy.app */;
+			name = "Block捕获对象";
+			productName = "Block捕获对象";
+			productReference = 5E23463A21BC6FE700227851 /* Block捕获对象.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5E23460B21BA83C200227851 /* Project object */ = {
+		5E23463221BC6FE700227851 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = WengHengcong;
 				TargetAttributes = {
-					5E23461221BA83C200227851 = {
+					5E23463921BC6FE700227851 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 5E23460E21BA83C200227851 /* Build configuration list for PBXProject "Block类型与copy" */;
+			buildConfigurationList = 5E23463521BC6FE700227851 /* Build configuration list for PBXProject "Block捕获对象" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -120,56 +127,57 @@
 				en,
 				Base,
 			);
-			mainGroup = 5E23460A21BA83C200227851;
-			productRefGroup = 5E23461421BA83C200227851 /* Products */;
+			mainGroup = 5E23463121BC6FE700227851;
+			productRefGroup = 5E23463B21BC6FE700227851 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5E23461221BA83C200227851 /* Block类型与copy */,
+				5E23463921BC6FE700227851 /* Block捕获对象 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5E23461121BA83C200227851 /* Resources */ = {
+		5E23463821BC6FE700227851 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E23462321BA83C300227851 /* LaunchScreen.storyboard in Resources */,
-				5E23462021BA83C300227851 /* Assets.xcassets in Resources */,
-				5E23461E21BA83C200227851 /* Main.storyboard in Resources */,
+				5E23464A21BC6FE800227851 /* LaunchScreen.storyboard in Resources */,
+				5E23464721BC6FE800227851 /* Assets.xcassets in Resources */,
+				5E23464521BC6FE700227851 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5E23460F21BA83C200227851 /* Sources */ = {
+		5E23463621BC6FE700227851 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E23463021BBBECC00227851 /* BFPerson.m in Sources */,
-				5E23461B21BA83C200227851 /* ViewController.m in Sources */,
-				5E23462621BA83C300227851 /* main.m in Sources */,
-				5E23461821BA83C200227851 /* AppDelegate.m in Sources */,
+				5E5A642321BCAF6A003FB025 /* Test.m in Sources */,
+				5E23465821BCAB8E00227851 /* ViewController.m in Sources */,
+				5E23465521BC702E00227851 /* BFPerson.m in Sources */,
+				5E23464D21BC6FE800227851 /* main.m in Sources */,
+				5E23463F21BC6FE700227851 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5E23461C21BA83C200227851 /* Main.storyboard */ = {
+		5E23464321BC6FE700227851 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5E23461D21BA83C200227851 /* Base */,
+				5E23464421BC6FE700227851 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		5E23462121BA83C300227851 /* LaunchScreen.storyboard */ = {
+		5E23464821BC6FE800227851 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5E23462221BA83C300227851 /* Base */,
+				5E23464921BC6FE800227851 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -177,7 +185,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5E23462721BA83C300227851 /* Debug */ = {
+		5E23464E21BC6FE800227851 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,7 +244,7 @@
 			};
 			name = Debug;
 		};
-		5E23462821BA83C300227851 /* Release */ = {
+		5E23464F21BC6FE800227851 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -289,37 +297,37 @@
 			};
 			name = Release;
 		};
-		5E23462A21BA83C300227851 /* Debug */ = {
+		5E23465121BC6FE800227851 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69XHTLCF36;
-				INFOPLIST_FILE = "Block类型与copy/Info.plist";
+				INFOPLIST_FILE = "Block捕获对象/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.luci.Block---copy";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luci.Block----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		5E23462B21BA83C300227851 /* Release */ = {
+		5E23465221BC6FE800227851 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69XHTLCF36;
-				INFOPLIST_FILE = "Block类型与copy/Info.plist";
+				INFOPLIST_FILE = "Block捕获对象/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.luci.Block---copy";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.luci.Block----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -328,25 +336,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5E23460E21BA83C200227851 /* Build configuration list for PBXProject "Block类型与copy" */ = {
+		5E23463521BC6FE700227851 /* Build configuration list for PBXProject "Block捕获对象" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E23462721BA83C300227851 /* Debug */,
-				5E23462821BA83C300227851 /* Release */,
+				5E23464E21BC6FE800227851 /* Debug */,
+				5E23464F21BC6FE800227851 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E23462921BA83C300227851 /* Build configuration list for PBXNativeTarget "Block类型与copy" */ = {
+		5E23465021BC6FE800227851 /* Build configuration list for PBXNativeTarget "Block捕获对象" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E23462A21BA83C300227851 /* Debug */,
-				5E23462B21BA83C300227851 /* Release */,
+				5E23465121BC6FE800227851 /* Debug */,
+				5E23465221BC6FE800227851 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5E23460B21BA83C200227851 /* Project object */;
+	rootObject = 5E23463221BC6FE700227851 /* Project object */;
 }
