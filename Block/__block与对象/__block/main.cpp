@@ -32714,9 +32714,15 @@ static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
 
             NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_4cf623_mi_0, (blockPerson->__forwarding->blockPerson), objectPerson);
         }
-static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {_Block_object_assign((void*)&dst->blockPerson, (void*)src->blockPerson, 8/*BLOCK_FIELD_IS_BYREF*/);_Block_object_assign((void*)&dst->objectPerson, (void*)src->objectPerson, 3/*BLOCK_FIELD_IS_OBJECT*/);}
+static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {
+    _Block_object_assign((void*)&dst->blockPerson, (void*)src->blockPerson, 8/*BLOCK_FIELD_IS_BYREF*/);
+    _Block_object_assign((void*)&dst->objectPerson, (void*)src->objectPerson, 3/*BLOCK_FIELD_IS_OBJECT*/);
+}
 
-static void __main_block_dispose_0(struct __main_block_impl_0*src) {_Block_object_dispose((void*)src->blockPerson, 8/*BLOCK_FIELD_IS_BYREF*/);_Block_object_dispose((void*)src->objectPerson, 3/*BLOCK_FIELD_IS_OBJECT*/);}
+static void __main_block_dispose_0(struct __main_block_impl_0*src) {
+    _Block_object_dispose((void*)src->blockPerson, 8/*BLOCK_FIELD_IS_BYREF*/);
+    _Block_object_dispose((void*)src->objectPerson, 3/*BLOCK_FIELD_IS_OBJECT*/)
+}
 
 static struct __main_block_desc_0 {
   size_t reserved;
