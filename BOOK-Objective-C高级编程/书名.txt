@@ -1,0 +1,3 @@
+书名：
+Objective-C高级编程 iOS与OS X多线程和内存管理
+Pro Multithreading and Memory Management for iOS and OS X with ARC C Grand Central Dispatch and Blocks
