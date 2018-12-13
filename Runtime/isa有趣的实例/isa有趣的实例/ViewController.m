@@ -15,14 +15,17 @@
 @end
 
 @implementation ViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSString *test = @"good";
+    int age = 18;
     id cls = [BFPerson class];
     void *obj = &cls;
     [(__bridge id)obj print];
+    
+    //正常调用
+//    BFPerson *person = [[BFPerson alloc] init];
+//    [person print];
 }
-
-
 @end

@@ -29,6 +29,8 @@
 		5E5A650B21C13246003FB025 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5E5A651221C1325F003FB025 /* BFPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPerson.h; sourceTree = "<group>"; };
 		5E5A651321C13260003FB025 /* BFPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPerson.m; sourceTree = "<group>"; };
+		5E5A651521C1C166003FB025 /* ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ViewController.cpp; sourceTree = "<group>"; };
+		5E5A651721C1C177003FB025 /* BFPerson.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BFPerson.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +65,12 @@
 			children = (
 				5E5A651221C1325F003FB025 /* BFPerson.h */,
 				5E5A651321C13260003FB025 /* BFPerson.m */,
+				5E5A651721C1C177003FB025 /* BFPerson.cpp */,
 				5E5A64FC21C13245003FB025 /* AppDelegate.h */,
 				5E5A64FD21C13245003FB025 /* AppDelegate.m */,
 				5E5A64FF21C13245003FB025 /* ViewController.h */,
 				5E5A650021C13245003FB025 /* ViewController.m */,
+				5E5A651521C1C166003FB025 /* ViewController.cpp */,
 				5E5A650221C13245003FB025 /* Main.storyboard */,
 				5E5A650521C13246003FB025 /* Assets.xcassets */,
 				5E5A650721C13246003FB025 /* LaunchScreen.storyboard */,

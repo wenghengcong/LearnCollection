@@ -9,10 +9,8 @@
 #import "BFPerson.h"
 
 @implementation BFPerson
-
 - (void)print
 {
     NSLog(@"my name is %@", self.name);
 }
-
 @end

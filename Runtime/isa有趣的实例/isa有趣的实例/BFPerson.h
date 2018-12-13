@@ -11,11 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BFPerson : NSObject
-
 @property (nonatomic, copy) NSString * name;
-
 - (void)print;
-
 @end
 
 NS_ASSUME_NONNULL_END
