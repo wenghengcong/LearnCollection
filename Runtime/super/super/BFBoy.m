@@ -8,25 +8,26 @@
 
 #import "BFBoy.h"
 
+// LLVM
+// OC -> 中间代码（.ll） -> 汇编、机器代码
 
 /*
  [super message]的底层实现
  1.消息接收者仍然是子类对象
  2.从父类开始查找方法的实现
  */
-struct objc_super {
-    __unsafe_unretained _Nonnull id receiver; // 消息接收者
-    __unsafe_unretained _Nonnull Class super_class; // 消息接收者的父类
-};
+//struct objc_super {
+//    __unsafe_unretained _Nonnull id receiver; // 消息接收者
+//    __unsafe_unretained _Nonnull Class super_class; // 消息接收者的父类
+//};
 
 @implementation BFBoy
-
 
 - (void)eat
 {
     // super调用的receiver仍然是BFPerson对象
-    //    struct objc_super arg = {self, [BFPerson class]};
-    //    objc_msgSendSuper(arg, @selector(eat));
+//    struct objc_super arg = {self, [BFPerson class]};
+//    objc_msgSendSuper2(arg, @selector(eat));
     [super eat];
 }
 
@@ -36,9 +37,7 @@ struct objc_super {
         // objc_msgSend(self, @selector(class));
         NSLog(@"[self class] = %@", [self class]);                // BFBoy
         NSLog(@"[self superclass] = %@", [self superclass]);      // BFPerson
-        
         NSLog(@"--------------------------------");
-        
         // objc_msgSendSuper({self, [BFPerson class]}, @selector(class));
         NSLog(@"[super class] = %@", [super class]);              // BFBoy
         NSLog(@"[super superclass] = %@", [super superclass]);    // BFPerson
@@ -59,6 +58,4 @@ struct objc_super {
 //}
 //
 //@end
-
-
 @end

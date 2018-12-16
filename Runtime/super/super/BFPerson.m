@@ -9,10 +9,8 @@
 #import "BFPerson.h"
 
 @implementation BFPerson
-
 - (void)eat
 {
     NSLog(@"%s", __func__);
 }
-
 @end

@@ -32700,9 +32700,6 @@ struct objc_super {
 
 
 static void _I_BFBoy_eat(BFBoy * self, SEL _cmd) {
-
-
-
     ((void (*)(__rw_objc_super *, SEL))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("BFBoy"))}, sel_registerName("eat"));
 }
 

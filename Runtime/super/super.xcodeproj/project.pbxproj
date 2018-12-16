@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5EEC363321C634C200B6A30B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC363221C634C200B6A30B /* main.m */; };
 		5EEC363B21C634D400B6A30B /* BFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC363A21C634D400B6A30B /* BFPerson.m */; };
 		5EEC363E21C634E000B6A30B /* BFBoy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC363D21C634E000B6A30B /* BFBoy.m */; };
+		5EEC365921C67A2A00B6A30B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC363221C634C200B6A30B /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +32,7 @@
 		5EEC363C21C634E000B6A30B /* BFBoy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFBoy.h; sourceTree = "<group>"; };
 		5EEC363D21C634E000B6A30B /* BFBoy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFBoy.m; sourceTree = "<group>"; };
 		5EEC363F21C636BD00B6A30B /* BFBoy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BFBoy.cpp; sourceTree = "<group>"; };
+		5EEC365721C67A2100B6A30B /* BFBoy.ll */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.llvm; path = BFBoy.ll; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 				5EEC363C21C634E000B6A30B /* BFBoy.h */,
 				5EEC363D21C634E000B6A30B /* BFBoy.m */,
 				5EEC363F21C636BD00B6A30B /* BFBoy.cpp */,
+				5EEC365721C67A2100B6A30B /* BFBoy.ll */,
 			);
 			path = super;
 			sourceTree = "<group>";
@@ -130,9 +132,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EEC365921C67A2A00B6A30B /* main.m in Sources */,
 				5EEC363E21C634E000B6A30B /* BFBoy.m in Sources */,
 				5EEC363B21C634D400B6A30B /* BFPerson.m in Sources */,
-				5EEC363321C634C200B6A30B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
