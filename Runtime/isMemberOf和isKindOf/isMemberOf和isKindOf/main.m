@@ -12,32 +12,26 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        //        NSLog(@"%d", [[NSObject class] isKindOfClass:[NSObject class]]);
-        //        NSLog(@"%d", [[NSObject class] isMemberOfClass:[NSObject class]]);
-        //        NSLog(@"%d", [[BFPerson class] isKindOfClass:[BFPerson class]]);
-        //        NSLog(@"%d", [[BFPerson class] isMemberOfClass:[BFPerson class]]);
         
+        NSLog(@"%d", [[NSObject class] isKindOfClass:[NSObject class]]);
+        NSLog(@"%d", [[NSObject class] isMemberOfClass:[NSObject class]]);
+        NSLog(@"%d", [[BFPerson class] isKindOfClass:[BFPerson class]]);
+        NSLog(@"%d", [[BFPerson class] isMemberOfClass:[BFPerson class]]);
+        NSLog(@"------------------");
         
         // 这句代码的方法调用者不管是哪个类（只要是NSObject体系下的），都返回YES
         NSLog(@"%d", [NSObject isKindOfClass:[NSObject class]]);        // 1
         NSLog(@"%d", [NSObject isMemberOfClass:[NSObject class]]);      // 0
         NSLog(@"%d", [BFPerson isKindOfClass:[BFPerson class]]);        // 0
         NSLog(@"%d", [BFPerson isMemberOfClass:[BFPerson class]]);      // 0
+        NSLog(@"------------------");
         
-        
-        //        id person = [[MJPerson alloc] init];
-        
-        //        NSLog(@"%d", [person isMemberOfClass:[BFPerson class]]);
-        //        NSLog(@"%d", [person isMemberOfClass:[NSObject class]]);
-        
-        //        NSLog(@"%d", [person isKindOfClass:[BFPerson class]]);
-        //        NSLog(@"%d", [person isKindOfClass:[NSObject class]]);
-        
-        
-        //        NSLog(@"%d", [BFPerson isMemberOfClass:object_getClass([BFPerson class])]);
-        //        NSLog(@"%d", [BFPerson isKindOfClass:object_getClass([NSObject class])]);
-        
-        //        NSLog(@"%d", [BFPerson isKindOfClass:[NSObject class]]);
+        //正常使用实例对象
+        BFPerson *person = [[BFPerson alloc] init];
+        NSLog(@"%d", [person isMemberOfClass:[BFPerson class]]);
+        NSLog(@"%d", [person isMemberOfClass:[NSObject class]]);
+        NSLog(@"%d", [person isKindOfClass:[BFPerson class]]);
+        NSLog(@"%d", [person isKindOfClass:[NSObject class]]);
     }
     return 0;
 }
