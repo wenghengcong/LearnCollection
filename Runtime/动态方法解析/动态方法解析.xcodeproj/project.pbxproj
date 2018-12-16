@@ -13,6 +13,9 @@
 		5E70A81D21C3293200B8EB0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E70A81C21C3293200B8EB0B /* Assets.xcassets */; };
 		5E70A82021C3293200B8EB0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E70A81E21C3293200B8EB0B /* LaunchScreen.storyboard */; };
 		5E70A82321C3293200B8EB0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E70A82221C3293200B8EB0B /* main.m */; };
+		5E70A84D21C5073A00B8EB0B /* BFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E70A84C21C5073A00B8EB0B /* BFPerson.m */; };
+		5E70A85021C50C9C00B8EB0B /* BFBoy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E70A84F21C50C9C00B8EB0B /* BFBoy.m */; };
+		5EEC361921C514E400B6A30B /* BFGirl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC361821C514E400B6A30B /* BFGirl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		5E70A81F21C3293200B8EB0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E70A82121C3293200B8EB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E70A82221C3293200B8EB0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5E70A84B21C5073A00B8EB0B /* BFPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFPerson.h; sourceTree = "<group>"; };
+		5E70A84C21C5073A00B8EB0B /* BFPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFPerson.m; sourceTree = "<group>"; };
+		5E70A84E21C50C9C00B8EB0B /* BFBoy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFBoy.h; sourceTree = "<group>"; };
+		5E70A84F21C50C9C00B8EB0B /* BFBoy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFBoy.m; sourceTree = "<group>"; };
+		5EEC361721C514E400B6A30B /* BFGirl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFGirl.h; sourceTree = "<group>"; };
+		5EEC361821C514E400B6A30B /* BFGirl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFGirl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,12 @@
 				5E70A81421C3293200B8EB0B /* AppDelegate.m */,
 				5E70A81621C3293200B8EB0B /* ViewController.h */,
 				5E70A81721C3293200B8EB0B /* ViewController.m */,
+				5E70A84B21C5073A00B8EB0B /* BFPerson.h */,
+				5E70A84C21C5073A00B8EB0B /* BFPerson.m */,
+				5E70A84E21C50C9C00B8EB0B /* BFBoy.h */,
+				5E70A84F21C50C9C00B8EB0B /* BFBoy.m */,
+				5EEC361721C514E400B6A30B /* BFGirl.h */,
+				5EEC361821C514E400B6A30B /* BFGirl.m */,
 				5E70A81921C3293200B8EB0B /* Main.storyboard */,
 				5E70A81C21C3293200B8EB0B /* Assets.xcassets */,
 				5E70A81E21C3293200B8EB0B /* LaunchScreen.storyboard */,
@@ -141,9 +156,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E70A84D21C5073A00B8EB0B /* BFPerson.m in Sources */,
 				5E70A81821C3293200B8EB0B /* ViewController.m in Sources */,
+				5E70A85021C50C9C00B8EB0B /* BFBoy.m in Sources */,
 				5E70A82321C3293200B8EB0B /* main.m in Sources */,
 				5E70A81521C3293200B8EB0B /* AppDelegate.m in Sources */,
+				5EEC361921C514E400B6A30B /* BFGirl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
