@@ -27,6 +27,7 @@ int main(int argc, const char * argv[]) {
         
         class_rw_t *studentMetaClassData = studentClass->metaClass()->data();
         class_rw_t *personMetaClassData = personClass->metaClass()->data();
+
         NSLog(@"Hello, World!");
     }
     return 0;
