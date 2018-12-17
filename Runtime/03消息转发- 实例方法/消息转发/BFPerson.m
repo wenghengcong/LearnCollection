@@ -29,7 +29,8 @@
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
     if (aSelector == @selector(eat)) {
-        return [NSMethodSignature signatureWithObjCTypes:"v16@0:8"];
+        NSMethodSignature *signature = [NSMethodSignature signatureWithObjCTypes:"v16@0:8"];
+        return signature;
     } else if (aSelector == @selector(eat:)) {
 //        return [NSMethodSignature signatureWithObjCTypes:"v@:@"];
         // 以这种方式返回，注意不要使得BFBoy继承与BFPerson，否则假如BFBoy未实现methodSignatureForSelector，
@@ -57,8 +58,8 @@
         /*------------------测试转发流程------------------*/
         //！！！如果是下面这种方式直接调用，会崩溃。
         //因为target是assign，一赋值给target后，立即销毁，但target无法保留对象，所以在调用时会崩溃
-        //    anInvocation.target = [[BFBoy alloc] init];
-        //    [anInvocation invoke];
+//        anInvocation.target = [[BFBoy alloc] init];
+//        [anInvocation invoke];
         
         //下面调用方式，在[anInvocation invoke]时，boy仍然保留
         [anInvocation invokeWithTarget:[[BFBoy alloc] init]];

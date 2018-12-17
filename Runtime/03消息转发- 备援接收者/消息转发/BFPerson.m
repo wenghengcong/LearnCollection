@@ -12,7 +12,6 @@
 
 @implementation BFPerson
 
-
 /**
  备援接收者
  */
