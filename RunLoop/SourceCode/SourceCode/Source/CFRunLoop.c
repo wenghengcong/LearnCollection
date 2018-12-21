@@ -2096,17 +2096,18 @@ static int32_t __CFRunLoopRun(CFRunLoopRef rl, CFRunLoopModeRef rlm, CFTimeInter
         __CFRunLoopUnsetIgnoreWakeUps(rl);
         
         if (rlm->_observerMask & kCFRunLoopBeforeTimers)
-            // 2. 通知 Observers: RunLoop 即将触发 Timer 回调。
+            // 2. 通知 Observers: RunLoop 即将处理 Timer 回调。
             __CFRunLoopDoObservers(rl, rlm, kCFRunLoopBeforeTimers);
         if (rlm->_observerMask & kCFRunLoopBeforeSources)
-            // 3. 通知 Observers: RunLoop 即将触发 Source0 (非port) 回调。
+            // 3. 通知 Observers: RunLoop 即将处理 Source
             __CFRunLoopDoObservers(rl, rlm, kCFRunLoopBeforeSources);
-        // 4. 执行被加入的block
+        // 4. 处理Blocks
         __CFRunLoopDoBlocks(rl, rlm);
         
-        // 5. RunLoop 触发 Source0 (非port) 回调。
+        // 5. 处理 Source0 (非port) 回调(可能再次处理Blocks)
         Boolean sourceHandledThisLoop = __CFRunLoopDoSources0(rl, rlm, stopAfterHandle);
         if (sourceHandledThisLoop) {
+            // 处理Blocks
             __CFRunLoopDoBlocks(rl, rlm);
         }
         
