@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 线程一启动，就会在线程thread中执行self的run方法
     self.thread = [[BFThread alloc] initWithTarget:self selector:@selector(run) object:nil];
     [self.thread start];
 }
@@ -31,7 +32,7 @@
 // 子线程需要执行的任务
 - (void)test
 {
-    NSLog(@"%s %@", __func__, [NSThread currentThread]);
+    NSLog(@"执行子线程任务 %s %@", __func__, [NSThread currentThread]);
 }
 
 // 这个方法的目的：线程保活
