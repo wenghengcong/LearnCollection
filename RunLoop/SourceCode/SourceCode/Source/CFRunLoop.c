@@ -2325,6 +2325,7 @@ SInt32 CFRunLoopRunSpecific(CFRunLoopRef rl, CFStringRef modeName, CFTimeInterva
     if (currentMode->_observerMask & kCFRunLoopEntry )
         // 1. 通知 Observers: 进入RunLoop。
         __CFRunLoopDoObservers(rl, currentMode, kCFRunLoopEntry);
+        // 2---11，RunLoop的运行循环的核心代码
     result = __CFRunLoopRun(rl, currentMode, seconds, returnAfterSourceHandled, previousMode);
     
     if (currentMode->_observerMask & kCFRunLoopExit )

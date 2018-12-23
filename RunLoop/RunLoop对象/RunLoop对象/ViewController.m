@@ -36,6 +36,7 @@
 
 - (void)RunLoopMode
 {
+    // 打印后可以观察到下面的模式：
     //    kCFRunLoopDefaultMode;
     //    NSDefaultRunLoopMode;
     NSLog(@"%@", [NSRunLoop mainRunLoop]);
