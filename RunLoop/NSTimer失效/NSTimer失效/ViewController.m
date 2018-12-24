@@ -28,7 +28,7 @@
 //    [[NSRunLoop currentRunLoop] addTimer:timer forMode: NSDefaultRunLoopMode];
     
     
-    // 方式2：创建timer默认添加到default mode，滑动时定时器停止
+//     方式2：创建timer默认添加到default mode，滑动时定时器停止
 //    static int count = 0;
     // Creates a timer and schedules it on the current run loop in the default mode.
 //    [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
@@ -53,6 +53,7 @@
         NSLog(@"%d", ++count);
     }];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    NSLog(@"%@", [NSRunLoop currentRunLoop]);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
