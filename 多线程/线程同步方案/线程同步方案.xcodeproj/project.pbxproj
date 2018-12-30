@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E0AD8CC21D909B600769925 /* DispatchBarrier.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AD8CB21D909B600769925 /* DispatchBarrier.m */; };
 		5E52FEF621D64927003EAD65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E52FEF521D64927003EAD65 /* AppDelegate.m */; };
 		5E52FEF921D64927003EAD65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E52FEF821D64927003EAD65 /* ViewController.m */; };
 		5E52FEFC21D64927003EAD65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E52FEFA21D64927003EAD65 /* Main.storyboard */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E0AD8CA21D909B600769925 /* DispatchBarrier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchBarrier.h; sourceTree = "<group>"; };
+		5E0AD8CB21D909B600769925 /* DispatchBarrier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchBarrier.m; sourceTree = "<group>"; };
 		5E52FEF121D64927003EAD65 /* 线程同步方案.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "线程同步方案.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E52FEF421D64927003EAD65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E52FEF521D64927003EAD65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				5E52FF2A21D6E213003EAD65 /* SerialQueueDemo.m */,
 				5E52FF2C21D6E24D003EAD65 /* SemaphoreDemo.h */,
 				5E52FF2D21D6E24D003EAD65 /* SemaphoreDemo.m */,
+				5E0AD8CA21D909B600769925 /* DispatchBarrier.h */,
+				5E0AD8CB21D909B600769925 /* DispatchBarrier.m */,
 				5E52FF2F21D6E26F003EAD65 /* SynchronizedDemo.h */,
 				5E52FF3021D6E26F003EAD65 /* SynchronizedDemo.m */,
 			);
@@ -222,6 +227,7 @@
 				5E52FF2B21D6E213003EAD65 /* SerialQueueDemo.m in Sources */,
 				5E52FEF921D64927003EAD65 /* ViewController.m in Sources */,
 				5E52FF3121D6E26F003EAD65 /* SynchronizedDemo.m in Sources */,
+				5E0AD8CC21D909B600769925 /* DispatchBarrier.m in Sources */,
 				5E52FF1621D6DDED003EAD65 /* OSUnfailLockDemo.m in Sources */,
 				5E52FF1021D67928003EAD65 /* OSSpinLockDemo.m in Sources */,
 				5E52FF1321D6DD77003EAD65 /* OSSpinLockDemo2.m in Sources */,

@@ -17,6 +17,25 @@
 
 @implementation ViewController
 
+- (void)usage
+{
+    // 初始化锁
+    pthread_rwlock_t lock;
+    pthread_rwlock_init(&lock, NULL);
+    // 读-尝试加锁
+    pthread_rwlock_tryrdlock(&lock);
+    // 读-加锁
+    pthread_rwlock_rdlock(&lock);
+    // 写-尝试加锁
+    pthread_rwlock_trywrlock(&lock);
+    // 写-加锁
+    pthread_rwlock_wrlock(&lock);
+    // 解锁
+    pthread_rwlock_unlock(&lock);
+    // 销毁
+    pthread_rwlock_destroy(&lock);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -97,30 +116,26 @@
     
     for (int i = 0; i < 10; i++) {
         dispatch_async(queue, ^{
-            [self read];
+            [self readByLock];
         });
         dispatch_async(queue, ^{
-            [self write];
+            [self writeByLock];
         });
     }
 }
 
 - (void)readByLock {
     pthread_rwlock_rdlock(&_lock);
-    
     sleep(1);
-    NSLog(@"%s", __func__);
-    
+    NSLog(@"read");
     pthread_rwlock_unlock(&_lock);
 }
 
 - (void)writeByLock
 {
     pthread_rwlock_wrlock(&_lock);
-    
     sleep(1);
-    NSLog(@"%s", __func__);
-    
+    NSLog(@"write");
     pthread_rwlock_unlock(&_lock);
 }
 

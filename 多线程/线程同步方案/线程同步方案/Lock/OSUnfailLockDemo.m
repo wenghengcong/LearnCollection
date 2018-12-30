@@ -16,6 +16,18 @@
 
 @implementation OSUnfailLockDemo
 
+-(void)usage
+{
+    //初始化
+    os_unfair_lock lock = OS_UNFAIR_LOCK_INIT;
+    //尝试加锁
+    bool result = os_unfair_lock_trylock(&lock);
+    //加锁
+    os_unfair_lock_lock(&lock);
+    //解锁
+    os_unfair_lock_unlock(&lock);
+}
+
 - (instancetype)init
 {
     if (self = [super init]) {

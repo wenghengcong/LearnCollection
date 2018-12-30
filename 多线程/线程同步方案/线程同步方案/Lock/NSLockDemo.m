@@ -15,6 +15,13 @@
 
 @implementation NSLockDemo
 
+-(void)usage
+{
+    NSLock *lock = [[NSLock alloc] init];
+    [lock lock];
+    [lock unlock];
+}
+
 - (instancetype)init
 {
     if (self = [super init]) {

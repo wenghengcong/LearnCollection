@@ -7,8 +7,16 @@
 //
 
 #import "SynchronizedDemo.h"
+#include <stdatomic.h>
 
 @implementation SynchronizedDemo
+
+- (void)usage
+{
+//    @synchronized (obj) {
+//        //任务
+//    }
+}
 
 - (void)__drawMoney
 {

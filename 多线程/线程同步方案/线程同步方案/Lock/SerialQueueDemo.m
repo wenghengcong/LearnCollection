@@ -15,6 +15,14 @@
 
 @implementation SerialQueueDemo
 
+- (void)usage
+{
+    dispatch_queue_t queue = dispatch_queue_create("lock_queue", DISPATCH_QUEUE_SERIAL);
+    dispatch_sync(queue, ^{
+        //任务
+    });
+}
+
 - (instancetype)init
 {
     if (self = [super init]) {

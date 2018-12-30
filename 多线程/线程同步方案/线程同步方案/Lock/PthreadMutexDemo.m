@@ -16,25 +16,33 @@
 
 @implementation PthreadMutexDemo
 
-- (void)__initMutex:(pthread_mutex_t *)mutex
+- (void)usage
 {
     // 静态初始化
-    //        pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+    pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
     
-    // 初始化属性
-//    pthread_mutexattr_t attr;
-//    pthread_mutexattr_init(&attr);
-//    pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_DEFAULT);
-//    // 初始化锁
-//    pthread_mutex_init(mutex, &attr);
-//    // 销毁属性
-//    pthread_mutexattr_destroy(&attr);
+    // 初始化锁属性
+    pthread_mutexattr_t attr;
+    pthread_mutexattr_init(&attr);
+    pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_DEFAULT);
+    // 初始化锁
+    pthread_mutex_init(&mutex, &attr);
+    
+    // 尝试加锁
+    pthread_mutex_trylock(&mutex);
+    // 加锁
+    pthread_mutex_lock(&mutex);
+    // 解锁
+    pthread_mutex_unlock(&mutex);
+    // 销毁
+    pthread_mutexattr_destroy(&attr);
+    pthread_mutex_destroy(&mutex);
+}
 
+- (void)__initMutex:(pthread_mutex_t *)mutex
+{
     // 初始化锁
     pthread_mutex_init(mutex, NULL);
-    
-    // 销毁属性
-    //    pthread_mutexattr_destroy(&attr);
 }
 
 - (instancetype)init

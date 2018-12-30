@@ -29,6 +29,17 @@ dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
 
 @implementation SemaphoreDemo
 
+- (void)usage
+{
+    // 初始化信号量，传入信号量的初始值
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
+    // 如果信号量的值<=0，当前线程就会进入休眠等待（直到信号量的值>0）
+    // 如果信号量的值>0，就减1，继续执行
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    // 信号量的值+1
+    dispatch_semaphore_signal(semaphore);
+}
+
 - (instancetype)init
 {
     if (self = [super init]) {

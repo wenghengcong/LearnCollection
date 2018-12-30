@@ -18,6 +18,18 @@
 
 @implementation OSSpinLockDemo
 
+- (void)usage
+{
+    //初始化
+    OSSpinLock lock = OS_SPINLOCK_INIT;
+    //尝试加锁（如果已经被其他线程加锁，需要等待，直接返回false；否则加锁成功，返回trure）
+    bool result = OSSpinLockTry(&lock);
+    //加锁
+    OSSpinLockLock(&lock);
+    //解锁
+    OSSpinLockUnlock(&lock);
+}
+
 - (instancetype)init
 {
     if (self = [super init]) {

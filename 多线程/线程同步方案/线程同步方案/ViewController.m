@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "BaseDemo.h"
 #import "SerialQueueDemo.h"
+#import "PthreadRecuriseMutexDemo.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) BaseDemo *demo;
@@ -21,13 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    BaseDemo *demo = [[SerialQueueDemo alloc] init];
+    BaseDemo *demo = [[PthreadRecuriseMutexDemo alloc] init];
     //    [demo ticketTest];
     //    [demo moneyTest];
     [demo otherTest];
     
     
-    //    MJBaseDemo *demo2 = [[SynchronizedDemo alloc] init];
+    //    BaseDemo *demo2 = [[SynchronizedDemo alloc] init];
     //    [demo2 ticketTest];
     
     //    self.thread = [[NSThread alloc] initWithBlock:^{

@@ -16,14 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self asyncOperationsOnConcurrentThread];
+    [self syncOperationsOnConcurrentThread];
 }
 
 /**
  主队列-同步：崩溃
- 提交到主队列，syncOperationMainThread、任务1
- 主队列在主线程执行，任务1执行，必须先要执行完syncOperationMainThread
- 但是，syncOperationMainThread执行完毕，又要依赖任务1执行完，两者互相等待
+ 1.依次将任务提交到主队列：syncOperationMainThread、任务1；
+ 2.在主线程先执行syncOperationMainThread，其内部需要执行任务1；
+ 3.但执行任务1，根据串行队列的特点，又需要执行完syncOperationMainThread；
+ 4.相互依赖对方执行完才能继续执行，产生死锁，崩溃。
  */
 -(void)syncOperationMainThread {
     dispatch_queue_t q = dispatch_get_main_queue();
@@ -37,10 +38,10 @@
 }
 /**
  主队列-异步
- 提交到主队列，所以是asyncOperationsOnMainThread，任务1
- 主队列在主线程执行，执行syncOperationMainThread，其中遇到任务1
- 由于任务1是异步提交的，所以不需要等待任务1返回，可以继续syncOperationMainThread
- 执行完syncOperationMainThread，继续执行异步提交的任务1
+ 1.依次提交任务到主队列，所以是asyncOperationsOnMainThread，任务1；
+ 2.主队列在主线程执行，执行syncOperationMainThread，其中遇到任务1；
+ 3.由于任务1是异步提交的，所以不需要等待任务1返回，可以继续syncOperationMainThread；
+ 4.执行完syncOperationMainThread，继续在主线程执行异步提交的任务1。
  */
 - (void)asyncOperationsOnMainThread {
     NSLog(@"------------Start------------");
@@ -55,9 +56,11 @@
 
 /**
  全局队列-同步
- 提交到全局队列，所以是asyncOperationsOnMainThread，任务1
- 由于是全局队列，是个并发队列，也就是可以多个任务并发执行。
- 但是任务1是同步提交，所以要等待任务1执行完之后，才能执行asyncOperationsOnMainThread
+ 1.在主线程执行asyncOperationsOnMainThread；
+ 2.将任务1提交到全局队列，遇到任务1，由于是同步提交，需要立即执行任务1，阻塞当前主线程；
+ 3.原本任务1提交全局队列，是个并发队列，也就是任务1原本可以在多个线程并发执行，但由于同步需要单个任务串行执行；
+ 4.而且由于同步操作的优化，原本任务1会在主线程之外的新进程进行，此处也会优化成在主线程执行；
+ 5.待任务1执行完之后，继续执行asyncOperationsOnMainThread；
  */
 - (void)syncOperationsOnGloabThread {
     NSLog(@"------------Start------------");
@@ -75,10 +78,10 @@
 
 /**
  全局队列-异步
- 在主线程执行asyncOperationsOnGloabThread
- 将任务1提交到全局队列，并且以异步方式提交。
- 异步提交后，继续执行asyncOperationsOnGloabThread
- 之后开始执行任务1，并且全局队列会调度多个新线程并发执行任务1
+ 1.在主线程执行asyncOperationsOnGloabThread；
+ 2.将任务1提交到全局队列，并且以异步方式提交；
+ 3.异步提交后，继续执行asyncOperationsOnGloabThread；
+ 4.之后开始执行任务1，并且全局队列会调度多个新线程并发执行任务1。
  */
 - (void)asyncOperationsOnGloabThread {
     NSLog(@"------------Start------------");
@@ -93,10 +96,10 @@
 
 /**
  串行队列-同步
- 主线程执行syncOperationsOnSerialThread
- 将任务1同步提交到一个串行队列，由于是同步，提交任务1后，需要等待执行完
- 任务1执行完，回到主线程继续执行syncOperationsOnSerialThread
- 由于优化，同步任务会直接调度在主线程完成
+ 1.主线程执行syncOperationsOnSerialThread；
+ 2.将任务1同步提交到一个串行队列"serial"，队列"serial"，分配新线程执行任务1，由于是同步，需要等待执行完；
+   （由于优化，同步任务会直接调度在主线程完成）
+ 3.任务1执行完，回到主线程继续执行syncOperationsOnSerialThread。
  */
 - (void)syncOperationsOnSerialThread {
     dispatch_queue_t q = dispatch_queue_create("serial",DISPATCH_QUEUE_SERIAL);
@@ -112,10 +115,10 @@
 
 /**
  串行队列-异步
- 主线程执行asyncOperationsOnSerialThread
- 将任务1异步提交到串行队列
- 由于是异步提交，回到主线程继续执行asyncOperationsOnSerialThread
- 串行队列分派新线程执行任务1
+ 1.主线程执行asyncOperationsOnSerialThread;
+ 2.将任务1异步提交到串行队列，队列将分配新线程执行任务1，由于是异步提交，无须立即返回结果和等待。
+   回到主线程继续执行asyncOperationsOnSerialThread；
+ 3.执行完asyncOperationsOnSerialThread，新线程依次执行任务1；
  */
 - (void)asyncOperationsOnSerialThread {
     dispatch_queue_t q = dispatch_queue_create("serial",DISPATCH_QUEUE_SERIAL);
@@ -130,14 +133,15 @@
 
 /**
  并发队列-同步
- 执行syncOperationsOnConcurrentThread
- 同步提交任务1到并发队列，由于是同步，将会等待任务1执行完毕
- 并且由于优化，将同步任务分配到主线程执行
- 执行完任务1后，继续执行syncOperationsOnConcurrentThread
+ 1.执行syncOperationsOnConcurrentThread;
+ 2.同步提交任务1到并发队列，由于是同步，将会等待任务1执行完毕;
+ 3.并且由于优化，将同步任务分配到主线程执行;
+ 4.执行完任务1后，继续执行syncOperationsOnConcurrentThread。
  */
 - (void)syncOperationsOnConcurrentThread {
     dispatch_queue_t q = dispatch_queue_create("concurrent",DISPATCH_QUEUE_CONCURRENT);
     NSLog(@"------------Start------------");
+    dispatch_queue_t seriq = dispatch_queue_create("serial", DISPATCH_QUEUE_SERIAL);
     for (int i = 0; i < 10; ++i) {
         // 同步任务顺序执行
         dispatch_sync(q, ^{
@@ -149,9 +153,9 @@
 
 /**
  并发队列-异步
- 执行asyncOperationsOnConcurrentThread
- 异步提交任务1到并发队列，由于异步提交，将会继续执行asyncOperationsOnConcurrentThread
- 执行完后，并发队列将任务1分配到多个线程执行任务1
+ 1.执行asyncOperationsOnConcurrentThread
+ 2.异步提交任务1到并发队列，由于异步提交，将会继续执行asyncOperationsOnConcurrentThread;
+ 3.执行完后，并发队列将任务1分配到多个线程执行任务1
  */
 - (void)asyncOperationsOnConcurrentThread {
     dispatch_queue_t q = dispatch_queue_create("concurrent",DISPATCH_QUEUE_CONCURRENT);

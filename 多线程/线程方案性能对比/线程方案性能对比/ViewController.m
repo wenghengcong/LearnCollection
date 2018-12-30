@@ -33,6 +33,7 @@
     [self testSemaphore];
     [self testOSSpinLock];
     [self testOSUnfairLock];
+    [self testSerialQueue];
     
     [self testNSLock];
     [self testNSCondition];
@@ -131,7 +132,7 @@
         });
     }
     CFTimeInterval end = CFAbsoluteTimeGetCurrent();
-    printf("dispathch serial queue         : %8.2f ms\n", (end-begin) * 1000);
+    printf("dispathch serial queue     : %8.2f ms\n", (end-begin) * 1000);
 }
 
 - (void)testOSSpinLock
@@ -221,7 +222,7 @@
         pthread_rwlock_unlock(&rwlock);
     }
     CFTimeInterval end = CFAbsoluteTimeGetCurrent();
-    printf("pthread read lock             : %8.2f ms\n", (end-begin) * 1000);
+    printf("pthread read lock          : %8.2f ms\n", (end-begin) * 1000);
 }
 
 - (void)testPthreadWriteLock
@@ -233,7 +234,7 @@
         pthread_rwlock_unlock(&rwlock);
     }
     CFTimeInterval end = CFAbsoluteTimeGetCurrent();
-    printf("pthread write lock             : %8.2f ms\n", (end-begin) * 1000);
+    printf("pthread write lock         : %8.2f ms\n", (end-begin) * 1000);
 }
 
 @end

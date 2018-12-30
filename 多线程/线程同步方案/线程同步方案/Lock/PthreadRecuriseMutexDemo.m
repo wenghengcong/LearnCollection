@@ -17,6 +17,17 @@
 
 @implementation PthreadRecuriseMutexDemo
 
+- (void)usage
+{
+    // 初始化锁的属性
+    pthread_mutexattr_t attr;
+    pthread_mutexattr_init(&attr);
+    pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE);
+    // 初始化锁
+    pthread_mutex_t mutex;
+    pthread_mutex_init(&mutex, &attr);
+}
+
 - (void)__initMutex:(pthread_mutex_t *)mutex
 {
     // 递归锁：允许同一个线程对一把锁进行重复加锁
@@ -56,20 +67,20 @@
     static int count = 0;
     if (count < 10) {
         count++;
-        [self otherTest];
+        [self otherTest2];
     }
     
     pthread_mutex_unlock(&_mutex);
 }
 
-//- (void)otherTest2
-//{
-//    pthread_mutex_lock(&_mutex2);
-//
-//    NSLog(@"%s", __func__);
-//
-//    pthread_mutex_unlock(&_mutex2);
-//}
+- (void)otherTest2
+{
+    pthread_mutex_lock(&_mutex);
+
+    NSLog(@"%s", __func__);
+
+    pthread_mutex_unlock(&_mutex);
+}
 
 - (void)dealloc
 {
