@@ -12,47 +12,44 @@
 
 @end
 
+@implementation ViewController
+
 int a = 10;
 int b;
-
-@implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     static int c = 20;
-    
     static int d;
-    
     int e;
     int f = 20;
     
     NSString *str = @"123";
-    
     NSObject *obj1 = [[NSObject alloc] init];
     NSObject *obj2 = [[NSObject alloc] init];
-    
     NSLog(@"\n&a=%p\n&b=%p\n&c=%p\n&d=%p\n&e=%p\n&f=%p\nstr=%p\nobj1=%p\nobj2=%p\n",
           &a, &b, &c, &d, &e, &f, str, obj1, obj2);
 }
 /*
+ iOS 真机下地址
  字符串常量
- str = 0x10c4aa068
+ str = 0x10062c068
  
  已初始化的全局变量、静态变量
- &a = 0x10c4aad98
- &c = 0x10c4aad9c
+ &a = 0x10062cd98
+ &c = 0x10062cd9c
  
  未初始化的全局变量、静态变量
- &d = 0x10c4aae60
- &b = 0x10c4aae64
+ &d = 0x10062ce60
+ &b = 0x10062ce64
  
  堆
- obj1 = 0x600001e6cab0
- obj2 = 0x600001e6cac0
+ obj1 = 0x1c0002240
+ obj2 = 0x1c0002200
  
  栈
- &f = 0x7ffee3754940
- &e = 0x7ffee3754944
+ &f = 0x16f7d9358
+ &e = 0x16f7d935c
  */
 @end

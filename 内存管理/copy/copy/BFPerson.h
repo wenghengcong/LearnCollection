@@ -10,11 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BFPerson : NSObject
+@interface BFPerson : NSObject<NSCopying>
 
 @property (nonatomic, copy) NSString *name;
-
-@property (nonatomic, copy) NSArray *data;
+@property (nonatomic, assign) NSInteger age;
+//@property (nonatomic, copy) NSMutableArray *data;
+@property (nonatomic, strong) NSMutableArray *data;
 
 @end
 

@@ -42,8 +42,8 @@ BOOL isTaggedPointer(id pointer)
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self taggedPointerMemory];
-//    [self taggedPointer];
+//    [self taggedPointerMemory];
+    [self taggedPointer];
     [self stringType];
 }
 
@@ -54,6 +54,7 @@ BOOL isTaggedPointer(id pointer)
     NSString *str2 = [NSString stringWithFormat:@"123"];
     NSString *str3 = [NSString stringWithFormat:@"123123123123123123123123123123"];
     NSMutableString *str4 = [NSMutableString stringWithFormat:@"123"];
+    // __NSCFConstantString NSTaggedPointerString __NSCFString __NSCFString
     NSLog(@"%@ %@ %@ %@", [str1 class], [str2 class], [str3 class], [str4 class]);
 }
 
@@ -95,26 +96,36 @@ BOOL isTaggedPointer(id pointer)
      1. NSNumber *number = [NSNumber numberWithInt:10]; 与 NSNumber *number = @(10);、NSNumber *number1 = @1; 本质是相同的，为语法糖
      2. NSNumber类型：最高4位的“b”表示是NSNumber类型，最低4位(Int为2，long为3，float为4，double为5）表示基本数据类型，其余56位则用来存储数值本身内容。存储用的数值超过56位存储上限的时候，那么NSNumber才会用真正的64位内存地址存储数值，然后用指针指向该内存地址
      */
-    
-    NSNumber *number1 = @1;                     //0x b 000000000000012 91
-    NSNumber *number2 = @2;                     //0x b 000000000000022 a1
-    NSNumber *number3 = @3;                     //0x b 000000000000032 b1
-    NSNumber *number4 = @(0xFFFFFFFFFFFFFFF);   //0x100f058e0
+    NSNumber *number1 = @1;                          //0xb000000000000012
+    NSNumber *number2 = @2;                          //0xb000000000000022
+    NSNumber *number3 = @(0xFFFFFFFFFFFFFFF);        //0x1c0022560
+    NSNumber *number4 = @(1.2);                      //0x1c0024b80
+
+    int num4 = 5;
+    NSNumber *number5 = @(num4);                     //0xb000000000000052
+    long num5 = 6;
+    NSNumber *number6 = @(num5);                     //0xb000000000000063
+    float num6 = 7;
+    NSNumber *number7 = @(num6);                     //0xb000000000000074
+    double num7 = 8;
+    NSNumber *number8 = @(num7);                     //0xb000000000000085
     
     NSLog(@"%d %d %d %d",
-          isTaggedPointer(number1),
-          isTaggedPointer(number2),
-          isTaggedPointer(number3),
-          isTaggedPointer(number4)); //1 1 1 0
+          isTaggedPointer(number1),  //1
+          isTaggedPointer(number2),  //1
+          isTaggedPointer(number3),  //0
+          isTaggedPointer(number4)); //0
     NSLog(@"%@ %@ %@ %@",
-          [number1 class],
-          [number2 class],
-          [number3 class],
-          [number4 class]); //__NSCFNumber __NSCFNumber __NSCFNumber __NSCFNumber
-    //打印地址
-    NSLog(@"%p %p %p %p", &number1, &number2, &number3, &number4); //0x16f3cd328 0x16f3cd320 0x16f3cd318 0x16f3cd310
-    //打印该地址存储的值
-    NSLog(@"%p %p %p %p", number1, number2, number3, number4); //0xb000000000000012 0xb000000000000022 0xb000000000000032 0x100f058e0
+          [number1 class],  //__NSCFNumber
+          [number2 class],  //__NSCFNumber
+          [number3 class],  //__NSCFNumber
+          [number3 class]); //__NSCFNumber
+
+    //打印地址：0x16da11318 0x16da11310 0x16da11308 0x16da11300 0x16da112f0 0x16da112e0 0x16da112d0 0x16da112c0
+    NSLog(@"%p %p %p %p %p %p %p %p", &number1, &number2, &number3, &number4, &number5, &number6, &number7, &number8);
+    
+    //打印该地址存储的值：0xb000000000000012 0xb000000000000022 0x1c0022560 0x1c0024b80 0xb000000000000052 0xb000000000000063 0xb000000000000074 0xb000000000000085
+    NSLog(@"%p %p %p %p %p %p %p %p", number1, number2, number3, number4, number5, number6, number7, number8);
     
     /*
      NSString类型：最高位表示类型，最低位表示字符串长度。而其余的56位也是用来存储数据内容。
@@ -122,11 +133,11 @@ BOOL isTaggedPointer(id pointer)
      NSString类型：当String的内容有中文或者特殊字符（非 ASCII 字符）时，那么就只能存储为String指针。
      NSString类型：字面型字符串常量却从不存储为Tagged Pointer，因为字符串常量必须在不同的操作系统版本下保持二进制兼容，而Tagged Pointer在运行时总是由Apple的代码生成。
      */
-    NSString *str1 = @"a";                                //0x a 00000000000061 1
-    NSString *str2 = [NSString stringWithFormat:@"a"];    //0x a 00000000000061 1
-    NSString *str3 = [NSString stringWithFormat:@"bc"];   //0x a 00000000006362 2
-    NSString *str4 = [NSString stringWithFormat:@"c"];    //0x a 00000000000063 1
-    NSString *str5 = [NSString stringWithFormat:@"cdasjkfsdljfiwejdsjdlajfl"];  //0x100fd3200
+    NSString *str1 = @"a";                                          //0x1049cc248
+    NSString *str2 = [NSString stringWithFormat:@"a"];              //0xa000000000000611
+    NSString *str3 = [NSString stringWithFormat:@"bccd"];           //0xa000000646363624
+    NSString *str4 = [NSString stringWithFormat:@"c"];              //0xa000000000000631
+    NSString *str5 = [NSString stringWithFormat:@"cdasjkfsdljfiwejdsjdlajfl"];  //0x1c02418f0
     NSLog(@"%d %d %d %d %d",
           isTaggedPointer(str1),
           isTaggedPointer(str2),
@@ -139,13 +150,15 @@ BOOL isTaggedPointer(id pointer)
           [str3 class],   //NSTaggedPointerString
           [str4 class],   //NSTaggedPointerString
           [str5 class]);  // __NSCFString
-    NSLog(@"%p %p %p %p %p", &str1, &str2, &str3, &str4, &str5);  //0x16f3dd308 0x16f3dd300 0x16f3dd2f8 0x16f3dd2f0 0x16f3dd2e8
+    
+    //0x16b4392b8 0x16b4392b0 0x16b4392a8 0x16b4392a0 0x16b439298
+    NSLog(@"%p %p %p %p %p", &str1, &str2, &str3, &str4, &str5);
     NSLog(@"%p %p %p %p %p",
-          str1,     //0x100a28208
-          str2,     //0x a 00000000000061 1
-          str3,     //0x a 00000000006362 2
-          str4,     //0x a 00000000000063 1
-          str5);    //0x145d00c30
+          str1,     //0x10043c248
+          str2,     //0xa 00000000000061 1
+          str3,     //0xa 00000064636362 4
+          str4,     //0xa 00000000000063 1
+          str5);    //0x1c045bf90
 }
 
 - (void)testTaggedPointer
