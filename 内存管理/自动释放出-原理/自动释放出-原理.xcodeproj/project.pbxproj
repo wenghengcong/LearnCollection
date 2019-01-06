@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5E178F0921E024C900AAC4FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E178F0821E024C900AAC4FE /* AppDelegate.m */; };
-		5E178F0C21E024C900AAC4FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E178F0B21E024C900AAC4FE /* ViewController.m */; };
+		5E178F0C21E024C900AAC4FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E178F0B21E024C900AAC4FE /* ViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5E178F0F21E024C900AAC4FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E178F0D21E024C900AAC4FE /* Main.storyboard */; };
 		5E178F1121E024CA00AAC4FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E178F1021E024CA00AAC4FE /* Assets.xcassets */; };
 		5E178F1421E024CA00AAC4FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E178F1221E024CA00AAC4FE /* LaunchScreen.storyboard */; };
 		5E178F1721E024CA00AAC4FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E178F1621E024CA00AAC4FE /* main.m */; };
+		5E178F1F21E028F600AAC4FE /* BFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E178F1E21E028F600AAC4FE /* BFPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		5E178F1321E024CA00AAC4FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E178F1521E024CA00AAC4FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E178F1621E024CA00AAC4FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5E178F1D21E028F600AAC4FE /* BFPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFPerson.h; sourceTree = "<group>"; };
+		5E178F1E21E028F600AAC4FE /* BFPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFPerson.m; sourceTree = "<group>"; };
+		5E178F2021E06A5D00AAC4FE /* ViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ViewController.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,9 @@
 				5E178F0821E024C900AAC4FE /* AppDelegate.m */,
 				5E178F0A21E024C900AAC4FE /* ViewController.h */,
 				5E178F0B21E024C900AAC4FE /* ViewController.m */,
+				5E178F2021E06A5D00AAC4FE /* ViewController.cpp */,
+				5E178F1D21E028F600AAC4FE /* BFPerson.h */,
+				5E178F1E21E028F600AAC4FE /* BFPerson.m */,
 				5E178F0D21E024C900AAC4FE /* Main.storyboard */,
 				5E178F1021E024CA00AAC4FE /* Assets.xcassets */,
 				5E178F1221E024CA00AAC4FE /* LaunchScreen.storyboard */,
@@ -141,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E178F1F21E028F600AAC4FE /* BFPerson.m in Sources */,
 				5E178F0C21E024C900AAC4FE /* ViewController.m in Sources */,
 				5E178F1721E024CA00AAC4FE /* main.m in Sources */,
 				5E178F0921E024C900AAC4FE /* AppDelegate.m in Sources */,
