@@ -45,13 +45,14 @@
     dispatch_source_set_timer(timer,
                               dispatch_time(DISPATCH_TIME_NOW, start * NSEC_PER_SEC), interval * NSEC_PER_SEC, 0);
     
-    //设置回调
-//    dispatch_source_set_event_handler(timer, ^{
-//        NSLog(@"定时器触发 - %@", [NSThread currentThread]);
-//    });
+    // 设置回调
+    dispatch_source_set_event_handler(timer, ^{
+        NSLog(@"定时器触发 - %@", [NSThread currentThread]);
+    });
     
-    dispatch_source_set_event_handler_f(timer, timerFire);
+//    dispatch_source_set_event_handler_f(timer, timerFire);
     
+    // 启动定时器
     dispatch_resume(timer);
     
     //只有保留timer，timer才能执行
