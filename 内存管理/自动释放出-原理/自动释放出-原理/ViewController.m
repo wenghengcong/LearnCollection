@@ -74,11 +74,11 @@ extern void _objc_autoreleasePoolPrint(void);
 
 - (void)test2
 {
-    atautoreleasepool_obj = objc_autoreleasePoolPush();
+    atautoreleasepoolobj = objc_autoreleasePoolPush();
     
     BFPerson *person = [[[BFPerson alloc] init] autorelease];
     
-    objc_autoreleasePoolPop(atautoreleasepool_obj);
+    objc_autoreleasePoolPop(atautoreleasepoolobj);
     /*
       //@autoreleasepool
      {
@@ -104,6 +104,10 @@ extern void _objc_autoreleasePoolPrint(void);
         } // 8000个字节
     }
     //        objc_autoreleasePoolPop(0x1038);
+    
+    @autoreleasepool {
+        BFPerson *person = [[[BFPerson alloc] init] autorelease];
+    }
 }
 
 
@@ -125,13 +129,13 @@ extern void _objc_autoreleasePoolPrint(void);
 
 /*
  typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
- kCFRunLoopEntry = (1UL << 0),  1
- kCFRunLoopBeforeTimers = (1UL << 1), 2
- kCFRunLoopBeforeSources = (1UL << 2), 4
- kCFRunLoopBeforeWaiting = (1UL << 5), 32
- kCFRunLoopAfterWaiting = (1UL << 6), 64
- kCFRunLoopExit = (1UL << 7), 128
- kCFRunLoopAllActivities = 0x0FFFFFFFU
+    kCFRunLoopEntry = (1UL << 0),  1
+    kCFRunLoopBeforeTimers = (1UL << 1), 2
+    kCFRunLoopBeforeSources = (1UL << 2), 4
+    kCFRunLoopBeforeWaiting = (1UL << 5), 32
+    kCFRunLoopAfterWaiting = (1UL << 6), 64
+    kCFRunLoopExit = (1UL << 7), 128
+    kCFRunLoopAllActivities = 0x0FFFFFFFU
  };
  */
 

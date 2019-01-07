@@ -34,9 +34,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self dataTypeCopy];
-    [self objectCopy];
-    [self copyProperty];
+//    [self dataTypeCopy];
+//    [self objectCopy];
+//    [self copyProperty];
 //    [self stringCopy];
 //    [self mutableStringCopy];
 //    [self arrayCopy];
@@ -60,6 +60,8 @@
     
     BFPerson *jack = [tom copy];
     jack.name = @"jack";
+    
+    BFPerson *lily = [tom mutableCopy];
     
     NSLog(@"tom: %@, jack: %@", tom, jack);
 }
@@ -85,7 +87,7 @@
     //0xa000000003332313, 0xa000000003332313, 0x1c00524e0
     NSLog(@"%p, %p, %p", str1, str2, str3);
     //-1, -1, 1
-    NSLog(@"retainCount: %ld, %ld, %ld ",
+    NSLog(@"retainCount: %lu, %lu, %lu ",
           [str1 retainCount],
           [str2 retainCount],
           [str3 retainCount]);
@@ -176,24 +178,33 @@
 {
     /*
      深拷贝
-     1. 常量元素不会深拷贝
-     2. 对象元素会进行深拷贝，并且以适当的方式存储，比如第一个元素[NSMutableString stringWithString:@"a"]，就会以Tagged Pointer存储
+     对于array最顶层的调用copyWithZone
+     [[NSDictionary alloc] initWithDictionary:[NSDictionary dictionary] copyItems:YES];
     */
     NSLog(@"deepCopy");
-    NSArray *arr1 = [NSArray arrayWithObjects:[NSMutableString stringWithString:@"a"],@"b",@"c",nil];
+    BFPerson *person = [[BFPerson alloc] init];
+    NSMutableArray *strArr = [NSMutableArray arrayWithObjects:@"a", nil];
+    NSArray *arr1 = [NSArray arrayWithObjects:strArr,
+                     [NSMutableString stringWithString:@"b"],person,@"c", nil];
     NSArray *arr2 = [[NSArray alloc] initWithArray:arr1 copyItems:YES];
-    
-    NSLog(@"arr1: %p [0]: %p, [1]: %p", arr1, arr1[0], arr1[1]);
-    NSLog(@"arr2: %p [0]: %p, [1]: %p", arr2, arr2[0], arr2[1]);
 
-    NSLog(@"arr1 count: %ld, [0]: %ld, [1]: %ld",
+    NSLog(@"class: %@ %@ %@ %@ %@ %@ %@ %@",
+          [arr1[0] class], [arr1[1] class], [arr1[2] class],[arr1[3] class],
+          [arr2[0] class], [arr2[1] class],[arr2[2] class], [arr2[3] class]);
+
+    NSLog(@"arr1: %p [0]: %p, [1]: %p, [2]: %p", arr1, arr1[0], arr1[1], arr2[2]);
+    NSLog(@"arr2: %p [0]: %p, [1]: %p, [2]: %p", arr2, arr2[0], arr2[1], arr2[2]);
+
+    NSLog(@"arr1 count: %ld, [0]: %ld, [1]: %ld, [2]: %ld",
           [arr1 retainCount],
           [arr1[0] retainCount],
-          [arr1[1] retainCount]);
-    NSLog(@"arr2 count: %ld, [0]: %ld, [1]: %ld",
+          [arr1[1] retainCount],
+          [arr1[2] retainCount]);
+    NSLog(@"arr2 count: %ld, [0]: %ld, [1]: %ld, [2]: %ld",
           [arr2 retainCount],
           [arr2[0] retainCount],
-          [arr2[1] retainCount]);
+          [arr2[1] retainCount],
+          [arr1[2] retainCount]);
     
     [arr1 release];
     [arr2 release];
@@ -206,24 +217,32 @@
 {
     /*
       全面深拷贝
-      1. 常量元素也会深拷贝，并且以适当的方式存储，比如第2个元素@"b"，就会以Tagged Pointer存储
+      1. 常量元素也会深拷贝，并且以适当的方式存储，比如第3个元素@"b"，就会以Tagged Pointer存储
       2. 对象元素会进行深拷贝
       */
     NSLog(@"deepCopy2");
-    NSArray *arr1 = [NSArray arrayWithObjects:[NSMutableString stringWithString:@"a"],@"b",@"c",nil];
+    BFPerson *person = [[BFPerson alloc] init];
+    NSArray *arr1 = [NSArray arrayWithObjects:[NSMutableArray arrayWithObjects:@"a", nil],
+                     [NSMutableString stringWithString:@"b"],person, @"c",nil];
     NSArray *arr2 = [NSKeyedUnarchiver unarchiveObjectWithData: [NSKeyedArchiver archivedDataWithRootObject:arr1]];
    
-    NSLog(@"arr1: %p [0]: %p, [1]: %p", arr1, arr1[0], arr1[1]);
-    NSLog(@"arr2: %p [0]: %p, [1]: %p", arr2, arr2[0], arr2[1]);
+    NSLog(@"class: %@ %@ %@ %@ %@ %@ %@ %@",
+          [arr1[0] class], [arr1[1] class], [arr1[2] class],[arr1[3] class],
+          [arr2[0] class], [arr2[1] class],[arr2[2] class], [arr2[3] class]);
     
-    NSLog(@"arr1 count: %ld, [0]: %ld, [1]: %ld",
+    NSLog(@"arr1: %p [0]: %p, [1]: %p, [2]: %p", arr1, arr1[0], arr1[1], arr2[2]);
+    NSLog(@"arr2: %p [0]: %p, [1]: %p, [2]: %p", arr2, arr2[0], arr2[1], arr2[2]);
+    
+    NSLog(@"arr1 count: %ld, [0]: %ld, [1]: %ld, [2]: %ld",
           [arr1 retainCount],
           [arr1[0] retainCount],
-          [arr1[1] retainCount]);
-    NSLog(@"arr2 count: %ld, [0]: %ld, [1]: %ld",
+          [arr1[1] retainCount],
+          [arr1[2] retainCount]);
+    NSLog(@"arr2 count: %ld, [0]: %ld, [1]: %ld, [2]: %ld",
           [arr2 retainCount],
           [arr2[0] retainCount],
-          [arr2[1] retainCount]);
+          [arr2[1] retainCount],
+          [arr1[2] retainCount]);
     
     [arr1 release];
     [arr2 release];

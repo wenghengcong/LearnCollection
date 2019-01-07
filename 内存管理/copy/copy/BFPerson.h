@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BFPerson : NSObject<NSCopying>
+@interface BFPerson : NSObject<NSCopying, NSCoding>
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) NSInteger age;

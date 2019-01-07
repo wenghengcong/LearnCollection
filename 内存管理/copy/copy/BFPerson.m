@@ -30,6 +30,28 @@
     return person;
 }
 
+//- (id)mutableCopy
+//{
+//
+//}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super init]) {
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.age = [aDecoder decodeIntegerForKey:@"age"];
+        self.data = [aDecoder decodeObjectForKey:@"data"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeInteger:self.age forKey:@"age"];
+    [aCoder encodeObject:self.data forKey:@"data"];
+}
+
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"name = %@, age = %ld", self.name, (long)self.age];
