@@ -43,7 +43,9 @@
     BOOL equalE = [bar isEqualToString:bar2];
     
     NSLog(@"NSString:%d-%d-%d-%d-%d",equalA,equalB,equalC,equalD,equalE);   //NO,YES,YES
-
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [dic setValue:<#(nullable id)#> forKey:<#(nonnull NSString *)#>]
+    [dic setObject:<#(nonnull id)#> forKey:<#(nonnull id<NSCopying>)#>]
 }
 
 - (void)testClassIsEqualWitiNoOverride
