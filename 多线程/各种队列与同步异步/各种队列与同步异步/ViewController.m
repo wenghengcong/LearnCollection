@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self syncOperationsOnConcurrentThread];
+    [self asyncOperationsOnSerialThread];
 }
 
 /**
@@ -36,11 +36,12 @@
     }
     NSLog(@"------------End------------");
 }
+
 /**
  主队列-异步
  1.依次提交任务到主队列，所以是asyncOperationsOnMainThread，任务1；
  2.主队列在主线程执行，执行syncOperationMainThread，其中遇到任务1；
- 3.由于任务1是异步提交的，所以不需要等待任务1返回，可以继续syncOperationMainThread；
+ 3.由于任务1是异步提交的，所以不需要等待任务1返回，可以继续asyncOperationsOnMainThread；
  4.执行完syncOperationMainThread，继续在主线程执行异步提交的任务1。
  */
 - (void)asyncOperationsOnMainThread {
@@ -56,11 +57,11 @@
 
 /**
  全局队列-同步
- 1.在主线程执行asyncOperationsOnMainThread；
+ 1.在主线程执行syncOperationsOnGloabThread；
  2.将任务1提交到全局队列，遇到任务1，由于是同步提交，需要立即执行任务1，阻塞当前主线程；
- 3.原本任务1提交全局队列，是个并发队列，也就是任务1原本可以在多个线程并发执行，但由于同步需要单个任务串行执行；
- 4.而且由于同步操作的优化，原本任务1会在主线程之外的新进程进行，此处也会优化成在主线程执行；
- 5.待任务1执行完之后，继续执行asyncOperationsOnMainThread；
+    2.1 原本任务1提交全局队列，是个并发队列，也就是任务1原本可以在多个线程并发执行，但由于同步需要单个任务串行执行；
+    2.2 而且由于同步操作的优化，原本任务1会在主线程之外的新进程串行进行，此处也会优化成在主线程执行；
+ 3.待任务1执行完之后，继续执行syncOperationsOnGloabThread；
  */
 - (void)syncOperationsOnGloabThread {
     NSLog(@"------------Start------------");

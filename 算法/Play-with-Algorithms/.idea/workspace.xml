@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Algo" targetName="Algo" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="57349ea0-eb1d-4eb7-bf92-f6e61f94b504" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07/04-Read-Graph/SparseGraph.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#126#145#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07/05-DFS-and-Components/Components.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="718">
+              <caret line="51" column="26" lean-forward="true" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07/05-DFS-and-Components/DenseGraph.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="102" column="33" lean-forward="true" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07/06-Finding-a-Path/Path.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/08/01-Weighted-Graph/Edge.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-99" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/08/01-Weighted-Graph/DenseGraph.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="535">
+              <caret line="121" column="34" lean-forward="true" selection-start-line="121" selection-start-column="34" selection-end-line="121" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/08/03-Lazy-Prim/Edge.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/04/08-Index-Heap/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07/05-DFS-and-Components/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07/05-DFS-and-Components/ReadGraph.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-251" />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/03/04-Merge-Sort-Bottom-Up/main.cpp" />
+        <option value="$PROJECT_DIR$/05/04-Binary-Search-Tree-Search/main.cpp" />
+        <option value="$PROJECT_DIR$/05/07-Binary-Search-Tree-Remove-Min-and-Max/main.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="234" />
+    <option name="y" value="44" />
+    <option name="width" value="1221" />
+    <option name="height" value="679" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="04" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="04" type="462c0819:PsiDirectoryNode" />
+              <item name="03-Shift-Up" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="04" type="462c0819:PsiDirectoryNode" />
+              <item name="04-Shift-Down" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="04" type="462c0819:PsiDirectoryNode" />
+              <item name="05-Heapify" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="04" type="462c0819:PsiDirectoryNode" />
+              <item name="06-Heap-Sort" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="04" type="462c0819:PsiDirectoryNode" />
+              <item name="08-Index-Heap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="05" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="05" type="462c0819:PsiDirectoryNode" />
+              <item name="01-Binary-Search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="05" type="462c0819:PsiDirectoryNode" />
+              <item name="02-Binary-Search-Tree-Basics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="05" type="462c0819:PsiDirectoryNode" />
+              <item name="03-Binary-Search-Tree-Insert" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="05" type="462c0819:PsiDirectoryNode" />
+              <item name="04-Binary-Search-Tree-Search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="05" type="462c0819:PsiDirectoryNode" />
+              <item name="05-Binary-Search-Tree-Traverse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="05" type="462c0819:PsiDirectoryNode" />
+              <item name="07-Binary-Search-Tree-Remove-Min-and-Max" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="06" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="06" type="462c0819:PsiDirectoryNode" />
+              <item name="02-Quick-Find" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="06" type="462c0819:PsiDirectoryNode" />
+              <item name="03-Quick-Union" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="06" type="462c0819:PsiDirectoryNode" />
+              <item name="04-Optimize-by-Size" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="06" type="462c0819:PsiDirectoryNode" />
+              <item name="05-Optimize-by-Rank" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="06" type="462c0819:PsiDirectoryNode" />
+              <item name="06-Path-Compression" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="06" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter-06-Completed-Code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="07" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="07" type="462c0819:PsiDirectoryNode" />
+              <item name="02-Graph-Representation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="07" type="462c0819:PsiDirectoryNode" />
+              <item name="03-Vertex Adjacent Iterator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="07" type="462c0819:PsiDirectoryNode" />
+              <item name="04-Read-Graph" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="07" type="462c0819:PsiDirectoryNode" />
+              <item name="05-DFS-and-Components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="07" type="462c0819:PsiDirectoryNode" />
+              <item name="06-Finding-a-Path" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="08" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="08" type="462c0819:PsiDirectoryNode" />
+              <item name="01-Weighted-Graph" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="08" type="462c0819:PsiDirectoryNode" />
+              <item name="03-Lazy-Prim" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="08" type="462c0819:PsiDirectoryNode" />
+              <item name="05-Implementation-of-Optimized-Prim-Algorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="08" type="462c0819:PsiDirectoryNode" />
+              <item name="06-Kruskal-Algorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algo" type="462c0819:PsiDirectoryNode" />
+              <item name="08" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter-08-Completed-Code" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/09" />
+      <recent name="$PROJECT_DIR$/08" />
+      <recent name="$PROJECT_DIR$/07" />
+      <recent name="$PROJECT_DIR$/06" />
+      <recent name="$PROJECT_DIR$/05" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Algo" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algo" TARGET_NAME="Algo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Algo" RUN_TARGET_NAME="Algo">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57349ea0-eb1d-4eb7-bf92-f6e61f94b504" name="Default Changelist" comment="" />
+      <created>1547388998156</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1547388998156</updated>
+      <workItem from="1547388999412" duration="2328000" />
+      <workItem from="1547398082940" duration="10541000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="12869000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="234" y="44" width="1221" height="679" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2663274" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="CMake" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03/04-Merge-Sort-Bottom-Up/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03/05-Quick-Sort/InsertionSort.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03/05-Quick-Sort/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03/04-Merge-Sort-Bottom-Up/MergeSort.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03/03-Merge-Sort-Advance/MergeSort.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03/06-Quick-Sort-Deal-With-Nearly-Ordered-Array/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="60" column="60" lean-forward="true" selection-start-line="60" selection-start-column="60" selection-end-line="60" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04/03-Shift-Up/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-536">
+          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04/05-Heapify/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04/05-Heapify/Heap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="89" column="21" lean-forward="true" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04/04-Shift-Down/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05/02-Binary-Search-Tree-Basics/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05/01-Binary-Search/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="21" lean-forward="true" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05/04-Binary-Search-Tree-Search/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#142#172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05/03-Binary-Search-Tree-Insert/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="46" column="14" lean-forward="true" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05/07-Binary-Search-Tree-Remove-Min-and-Max/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="245" lean-forward="true" selection-start-line="245" selection-end-line="245" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05/05-Binary-Search-Tree-Traverse/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="209" lean-forward="true" selection-start-line="209" selection-end-line="209" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06/02-Quick-Find/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06/02-Quick-Find/UnionFindTestHelper.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06/03-Quick-Union/UnionFind2.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06/04-Optimize-by-Size/UnionFind3.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-358" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06/02-Quick-Find/UnionFind1.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06/05-Optimize-by-Rank/UnionFind4.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06/06-Path-Compression/UnionFind5.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="37" column="15" lean-forward="true" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07/03-Vertex Adjacent Iterator/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07/02-Graph-Representation/main.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07/02-Graph-Representation/DenseGraph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07/02-Graph-Representation/SparseGraph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07/04-Read-Graph/DenseGraph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="37" column="15" lean-forward="true" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07/04-Read-Graph/testG2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07/04-Read-Graph/testG1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07/04-Read-Graph/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07/04-Read-Graph/ReadGraph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07/04-Read-Graph/SparseGraph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#126#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07/05-DFS-and-Components/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07/05-DFS-and-Components/ReadGraph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-251" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07/05-DFS-and-Components/Components.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="51" column="26" lean-forward="true" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07/05-DFS-and-Components/DenseGraph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="102" column="33" lean-forward="true" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07/06-Finding-a-Path/Path.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="50" column="9" lean-forward="true" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/08/01-Weighted-Graph/Edge.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/08/01-Weighted-Graph/DenseGraph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="121" column="34" lean-forward="true" selection-start-line="121" selection-start-column="34" selection-end-line="121" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/08/03-Lazy-Prim/Edge.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04/08-Index-Heap/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
