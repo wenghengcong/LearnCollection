@@ -29,7 +29,8 @@ extern void _objc_autoreleasePoolPrint(void);
     // 它可能是在某次RunLoop循环中，RunLoop休眠之前调用了release
     //    BFPerson *person = [[[BFPerson alloc] init] autorelease];
     // person对象不是有main函数中的autorelease pool管理的
-    BFPerson *person = [[BFPerson alloc] init];
+    // 在viewWillAppear里调用
+    BFPerson *person = [[[BFPerson alloc] init] autorelease];
     NSLog(@"%s", __func__);
 }
 
@@ -74,11 +75,11 @@ extern void _objc_autoreleasePoolPrint(void);
 
 - (void)test2
 {
-    atautoreleasepoolobj = objc_autoreleasePoolPush();
+//    atautoreleasepoolobj = objc_autoreleasePoolPush();
     
     BFPerson *person = [[[BFPerson alloc] init] autorelease];
     
-    objc_autoreleasePoolPop(atautoreleasepoolobj);
+//    objc_autoreleasePoolPop(atautoreleasepoolobj);
     /*
       //@autoreleasepool
      {

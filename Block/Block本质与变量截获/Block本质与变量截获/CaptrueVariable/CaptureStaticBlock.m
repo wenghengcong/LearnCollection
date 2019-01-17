@@ -16,7 +16,7 @@ static int vision = 5;
     NSLog(@"captrue static variable in block");
     static const int height = 170;
     static int weight = 60;
-    int good = 5;
+    const int good = 5;
     void (^personInfoBlock)(void) = ^() {
         weight = 70;
         vision = 4;

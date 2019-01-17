@@ -14,7 +14,8 @@ const int vision = 5;
 - (void)test
 {
     NSLog(@"captrue const variable in block");
-    const int height = 170;
+    auto const int height = 170;
+    int good = 3;
     void (^personInfoBlock)(void) = ^() {
         NSLog(@"height is %d, vision is %d", height, vision);
     };

@@ -11,62 +11,6 @@
 
 typedef void (^BFBlock)(void);
 
-void testsss()
-{
-    //
-    //        {
-    //            MJPerson *person = [[MJPerson alloc] init];
-    //            person.age = 10;
-    //        }
-    //        这里person就会被销毁
-    //        NSLog(@"------");
-    
-    
-    //        MJBlock block;
-    //
-    //        {
-    //            MJPerson *person = [[MJPerson alloc] init];
-    //            person.age = 10;
-    //
-    //            MJPerson *weakPerson = person;
-    //            block = ^{
-    //                NSLog(@"---------%d", weakPerson.age);
-    //            };
-    //        }
-    //        person未被销毁
-    //        NSLog(@"------");
-    
-    
-    //        MJBlock block;
-    //
-    //        {
-    //            MJPerson *person = [[MJPerson alloc] init];
-    //            person.age = 10;
-    //
-    //            __weak MJPerson *weakPerson = person;
-    //            block = ^{
-    //                NSLog(@"---------%d", weakPerson.age);
-    //            };
-    //        }
-    //        person未被销毁
-    //        NSLog(@"------");
-    
-//    MJBlock block;
-//
-//    {
-//        MJPerson *person = [[MJPerson alloc] init];
-//        person.age = 10;
-//
-//        //            __weak MJPerson *weakPerson = person;
-//        int age = 10;
-//        block = ^{
-//            NSLog(@"---------%d", person.age);
-//        };
-//    }
-    
-    NSLog(@"------");
-}
-
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         /*

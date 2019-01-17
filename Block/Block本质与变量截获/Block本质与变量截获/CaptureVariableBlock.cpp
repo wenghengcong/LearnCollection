@@ -106,9 +106,10 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_78255f_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"lastname %s, age is %d,",23};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_78255f_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d, weight is %f",26};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_78255f_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"foot is %d, vision is %f",24};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_2ce744_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"lastname %s, age is %d,",23};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_2ce744_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d, weight is %f",26};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_2ce744_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"foot is %d, vision is %f",24};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_2ce744_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"sight %d",8};
 
 
 
@@ -32684,16 +32685,25 @@ struct __CaptureVariableBlock__test_block_impl_0 {
   int *height;
   double weight;
   CaptureVariableBlock *self;
+  const int sight;
+  __CaptureVariableBlock__test_block_impl_0(void *fp, struct __CaptureVariableBlock__test_block_desc_0 *desc, const char *_lastname, int *_height, double _weight, CaptureVariableBlock *_self, const int _sight, int flags=0) : lastname(_lastname), height(_height), weight(_weight), self(_self), sight(_sight) {
+    impl.isa = &_NSConcreteStackBlock;
+    impl.Flags = flags;
+    impl.FuncPtr = fp;
+    Desc = desc;
+  }
 };
 static void __CaptureVariableBlock__test_block_func_0(struct __CaptureVariableBlock__test_block_impl_0 *__cself) {
   const char *lastname = __cself->lastname; // bound by copy
   int *height = __cself->height; // bound by copy
   double weight = __cself->weight; // bound by copy
   CaptureVariableBlock *self = __cself->self; // bound by copy
+  const int sight = __cself->sight; // bound by copy
 
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_78255f_mi_0, lastname, age);
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_78255f_mi_1, (*height), weight);
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_78255f_mi_2, ((int (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("foot")), vision);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_2ce744_mi_0, lastname, age);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_2ce744_mi_1, (*height), weight);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_2ce744_mi_2, ((int (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("foot")), vision);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureVariableBlock_2ce744_mi_3, sight);
     }
 static void __CaptureVariableBlock__test_block_copy_0(struct __CaptureVariableBlock__test_block_impl_0*dst, struct __CaptureVariableBlock__test_block_impl_0*src) {_Block_object_assign((void*)&dst->self, (void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
 
@@ -32711,9 +32721,9 @@ static void _I_CaptureVariableBlock_test(CaptureVariableBlock * self, SEL _cmd) 
     double weight = 66;
     static int height = 170;
     const char *lastname = "weng";
+    const int sight = 5;
 
-    void (*personInfoBlock)(void) = ((void (*)())&__CaptureVariableBlock__test_block_impl_0((void *)__CaptureVariableBlock__test_block_func_0, &__CaptureVariableBlock__test_block_desc_0_DATA, lastname, &height, weight, self, 570425344));
-
+    void (*personInfoBlock)(void) = ((void (*)())&__CaptureVariableBlock__test_block_impl_0((void *)__CaptureVariableBlock__test_block_func_0, &__CaptureVariableBlock__test_block_desc_0_DATA, lastname, &height, weight, self, sight, 570425344));
     ((void (*)(__block_impl *))((__block_impl *)personInfoBlock)->FuncPtr)((__block_impl *)personInfoBlock);
 }
 

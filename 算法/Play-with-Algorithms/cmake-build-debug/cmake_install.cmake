@@ -1,4 +1,4 @@
-# Install script for directory: /Users/wenghengcong/Desktop/Algo
+# Install script for directory: /Users/wenghengcong/MyApps/LearnCollection/算法/Play-with-Algorithms
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/wenghengcong/Desktop/Algo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/wenghengcong/MyApps/LearnCollection/算法/Play-with-Algorithms/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -106,8 +106,8 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureConstBlcok_b33b47_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"captrue const variable in block",31};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureConstBlcok_b33b47_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d, vision is %d",26};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureConstBlcok_033aa7_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"captrue const variable in block",31};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureConstBlcok_033aa7_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"height is %d, vision is %d",26};
 
 
 
@@ -32681,7 +32681,7 @@ struct __CaptureConstBlcok__test_block_impl_0 {
 static void __CaptureConstBlcok__test_block_func_0(struct __CaptureConstBlcok__test_block_impl_0 *__cself) {
   const int height = __cself->height; // bound by copy
 
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureConstBlcok_b33b47_mi_1, height, vision);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureConstBlcok_033aa7_mi_1, height, vision);
     }
 
 static struct __CaptureConstBlcok__test_block_desc_0 {
@@ -32690,8 +32690,9 @@ static struct __CaptureConstBlcok__test_block_desc_0 {
 } __CaptureConstBlcok__test_block_desc_0_DATA = { 0, sizeof(struct __CaptureConstBlcok__test_block_impl_0)};
 
 static void _I_CaptureConstBlcok_test(CaptureConstBlcok * self, SEL _cmd) {
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureConstBlcok_b33b47_mi_0);
-    const int height = 170;
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_CaptureConstBlcok_033aa7_mi_0);
+    auto const int height = 170;
+    int good = 3;
     void (*personInfoBlock)(void) = ((void (*)())&__CaptureConstBlcok__test_block_impl_0((void *)__CaptureConstBlcok__test_block_func_0, &__CaptureConstBlcok__test_block_desc_0_DATA, height));
 
     ((void (*)(__block_impl *))((__block_impl *)personInfoBlock)->FuncPtr)((__block_impl *)personInfoBlock);

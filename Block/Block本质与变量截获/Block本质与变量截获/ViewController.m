@@ -11,9 +11,11 @@
 #import "CaptureSelfBlock.h"
 #import "CaptureStaticBlock.h"
 #import "CaptureConstBlcok.h"
+#import "CaptureVariableBlock.h"
 
 @interface ViewController ()
 
+@property (nonatomic, strong) CaptureVariableBlock *variableBlock;
 @property (nonatomic, strong) CaptureAutoBlock *autoBlock;
 @property (nonatomic, strong) CaptureSelfBlock *selfBlock;
 @property (nonatomic, strong) CaptureStaticBlock *staticBlock;
@@ -25,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.variableBlock = [[CaptureVariableBlock alloc] init];
     self.autoBlock = [[CaptureAutoBlock alloc] init];
     self.selfBlock = [[CaptureSelfBlock alloc] init];
     self.staticBlock = [[CaptureStaticBlock alloc] init];
@@ -34,10 +37,11 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+//    [self.variableBlock test];
 //    [self.autoBlock test];
 //    [self.selfBlock test];
-    [self.staticBlock test];
-//    [self.constBlock test];
+//    [self.staticBlock test];
+    [self.constBlock test];
 //    [self.globalBlock test];
 }
 
