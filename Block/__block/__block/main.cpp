@@ -110,12 +110,10 @@ static void __Block_byref_id_object_copy_131(void *dst, void *src) {
  _Block_object_assign((char*)dst + 40, *(void * *) ((char*)src + 40), 131);
 }
 static void __Block_byref_id_object_dispose_131(void *src) {
- _Block_object_dispose(*(void * *) ((char*)src + 40), 131);
+    _Block_object_dispose(*(void * *) ((char*)src + 40), 131);
 }
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_472e0f_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"malloc age address: %p",22};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_472e0f_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"malloc age is %d",16};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_472e0f_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"stack age address: %p",21};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_472e0f_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"stack age is %d",15};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_8030ba_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"age is %d",9};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_8030ba_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"person is %@",12};
 
 
 
@@ -3099,7 +3097,7 @@ CFAllocatorRef CFGetAllocator(CFTypeRef cf);
 
 
 extern
-CFTypeRef CFMakeCollectable(CFTypeRef cf) __attribute__((unavailable("not available in automatic reference counting mode")));
+CFTypeRef CFMakeCollectable(CFTypeRef cf) ;
 }
 extern "C" {
 typedef const void * (*CFArrayRetainCallBack)(CFAllocatorRef allocator, const void *value);
@@ -7131,7 +7129,7 @@ extern "C" __attribute__((visibility("default"))) const char * _Nonnull object_g
     __attribute__((availability(macosx,introduced=10.0))) __attribute__((availability(ios,introduced=2.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(watchos,introduced=1.0)));
 extern "C" __attribute__((visibility("default"))) void * _Nullable object_getIndexedIvars(id _Nullable obj)
     __attribute__((availability(macosx,introduced=10.0))) __attribute__((availability(ios,introduced=2.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(watchos,introduced=1.0)))
-    __attribute__((unavailable("not available in automatic reference counting mode")));
+                        ;
 extern "C" __attribute__((visibility("default"))) BOOL sel_isMapped(SEL _Nonnull sel)
     __attribute__((availability(macosx,introduced=10.0))) __attribute__((availability(ios,introduced=2.0))) __attribute__((availability(tvos,introduced=9.0))) __attribute__((availability(watchos,introduced=1.0)));
 extern "C" __attribute__((visibility("default"))) SEL _Nonnull sel_getUid(const char * _Nonnull str)
@@ -7201,12 +7199,12 @@ typedef struct {} _objc_exc_NSInvocation;
 
 // - (BOOL)respondsToSelector:(SEL)aSelector;
 
-// - (instancetype)retain __attribute__((unavailable("not available in automatic reference counting mode")));
-// - (oneway void)release __attribute__((unavailable("not available in automatic reference counting mode")));
-// - (instancetype)autorelease __attribute__((unavailable("not available in automatic reference counting mode")));
-// - (NSUInteger)retainCount __attribute__((unavailable("not available in automatic reference counting mode")));
+// - (instancetype)retain ;
+// - (oneway void)release ;
+// - (instancetype)autorelease ;
+// - (NSUInteger)retainCount ;
 
-// - (struct _NSZone *)zone __attribute__((unavailable("not available in automatic reference counting mode")));
+// - (struct _NSZone *)zone ;
 
 // @property (readonly, copy) NSString *description;
 /* @optional */
@@ -7227,7 +7225,7 @@ typedef struct {} _objc_exc_NSObject;
 #endif
 
 struct NSObject_IMPL {
-	__unsafe_unretained Class isa;
+	Class isa;
 };
 
 
@@ -7253,8 +7251,8 @@ struct NSObject_IMPL {
 // - (id)copy;
 // - (id)mutableCopy;
 
-// + (id)copyWithZone:(struct _NSZone *)zone __attribute__((unavailable("not available in automatic reference counting mode")));
-// + (id)mutableCopyWithZone:(struct _NSZone *)zone __attribute__((unavailable("not available in automatic reference counting mode")));
+// + (id)copyWithZone:(struct _NSZone *)zone ;
+// + (id)mutableCopyWithZone:(struct _NSZone *)zone ;
 
 // + (BOOL)instancesRespondToSelector:(SEL)aSelector;
 // + (BOOL)conformsToProtocol:(Protocol *)protocol;
@@ -7355,7 +7353,7 @@ static __inline__ __attribute__((__always_inline__)) __attribute__((__nonnull__)
 void
 _dispatch_object_validate(dispatch_object_t object)
 {
- void *isa = *(void *volatile*)(__bridge void*)object;
+ void *isa = *(void *volatile*)( void*)object;
  (void)isa;
 }
 typedef void (*dispatch_block_t)(void);
@@ -7497,7 +7495,7 @@ static __inline__ __attribute__((__always_inline__)) __attribute__((__const__)) 
 dispatch_queue_main_t
 dispatch_get_main_queue(void)
 {
- return ((__bridge dispatch_queue_main_t)&(_dispatch_main_q));
+ return (( dispatch_queue_main_t)&(_dispatch_main_q));
 }
 typedef long dispatch_queue_priority_t;
 
@@ -10330,12 +10328,12 @@ extern "C" void *NSZoneMalloc(NSZone * _Nullable zone, NSUInteger size) __attrib
 extern "C" void *NSZoneCalloc(NSZone * _Nullable zone, NSUInteger numElems, NSUInteger byteSize) __attribute__((availability(swift, unavailable, message="Zone-based memory management is unavailable")));
 extern "C" void *NSZoneRealloc(NSZone * _Nullable zone, void * _Nullable ptr, NSUInteger size) __attribute__((availability(swift, unavailable, message="Zone-based memory management is unavailable")));
 extern "C" void NSZoneFree(NSZone * _Nullable zone, void *ptr) __attribute__((availability(swift, unavailable, message="Zone-based memory management is unavailable")));
-static __inline__ __attribute__((always_inline)) __attribute__((ns_returns_retained)) id _Nullable NSMakeCollectable(CFTypeRef _Nullable __attribute__((cf_consumed)) cf) __attribute__((unavailable("not available in automatic reference counting mode"))) __attribute__((availability(swift, unavailable, message="Garbage Collection is not supported")));
+static __inline__ __attribute__((always_inline)) __attribute__((ns_returns_retained)) id _Nullable NSMakeCollectable(CFTypeRef _Nullable __attribute__((cf_consumed)) cf) __attribute__((availability(swift, unavailable, message="Garbage Collection is not supported")));
 static __inline__ __attribute__((always_inline)) __attribute__((ns_returns_retained)) id _Nullable NSMakeCollectable(CFTypeRef _Nullable __attribute__((cf_consumed)) cf) {
 
-    return __null;
 
 
+    return (id)cf;
 
 }
 
@@ -10454,29 +10452,26 @@ typedef struct {} _objc_exc_Protocol;
 
 
 
-extern "C" id NSAllocateObject(Class aClass, NSUInteger extraBytes, NSZone * _Nullable zone) __attribute__((unavailable("not available in automatic reference counting mode")));
+extern "C" id NSAllocateObject(Class aClass, NSUInteger extraBytes, NSZone * _Nullable zone) ;
 
-extern "C" void NSDeallocateObject(id object) __attribute__((unavailable("not available in automatic reference counting mode")));
+extern "C" void NSDeallocateObject(id object) ;
 
-extern "C" id NSCopyObject(id object, NSUInteger extraBytes, NSZone * _Nullable zone) __attribute__((unavailable("not available in automatic reference counting mode"))) __attribute__((availability(macos,introduced=10.0,deprecated=10.8,message="Not supported"))) __attribute__((availability(ios,introduced=2.0,deprecated=6.0,message="Not supported"))) __attribute__((availability(watchos,introduced=2.0,deprecated=2.0,message="Not supported"))) __attribute__((availability(tvos,introduced=9.0,deprecated=9.0,message="Not supported")));
+extern "C" id NSCopyObject(id object, NSUInteger extraBytes, NSZone * _Nullable zone) __attribute__((availability(macos,introduced=10.0,deprecated=10.8,message="Not supported"))) __attribute__((availability(ios,introduced=2.0,deprecated=6.0,message="Not supported"))) __attribute__((availability(watchos,introduced=2.0,deprecated=2.0,message="Not supported"))) __attribute__((availability(tvos,introduced=9.0,deprecated=9.0,message="Not supported")));
 
-extern "C" BOOL NSShouldRetainWithZone(id anObject, NSZone * _Nullable requestedZone) __attribute__((unavailable("not available in automatic reference counting mode")));
+extern "C" BOOL NSShouldRetainWithZone(id anObject, NSZone * _Nullable requestedZone) ;
 
-extern "C" void NSIncrementExtraRefCount(id object) __attribute__((unavailable("not available in automatic reference counting mode")));
+extern "C" void NSIncrementExtraRefCount(id object) ;
 
-extern "C" BOOL NSDecrementExtraRefCountWasZero(id object) __attribute__((unavailable("not available in automatic reference counting mode")));
+extern "C" BOOL NSDecrementExtraRefCountWasZero(id object) ;
 
-extern "C" NSUInteger NSExtraRefCount(id object) __attribute__((unavailable("not available in automatic reference counting mode")));
-
-
-
-
+extern "C" NSUInteger NSExtraRefCount(id object) ;
 static __inline__ __attribute__((always_inline)) __attribute__((cf_returns_retained)) CFTypeRef _Nullable CFBridgingRetain(id _Nullable X) {
-    return (__bridge_retained CFTypeRef)X;
+    return X ? CFRetain((CFTypeRef)X) : __null;
 }
 
+
 static __inline__ __attribute__((always_inline)) id _Nullable CFBridgingRelease(CFTypeRef __attribute__((cf_consumed)) _Nullable X) {
-    return (__bridge_transfer id)X;
+    return ((id (*)(id, SEL))(void *)objc_msgSend)((id)CFMakeCollectable(X), sel_registerName("autorelease"));
 }
 #pragma clang assume_nonnull end
 
@@ -10965,7 +10960,7 @@ struct NSMutableArray_IMPL {
 
 #pragma clang assume_nonnull begin
 
-__attribute__((unavailable("not available in automatic reference counting mode")))
+
 
 #ifndef _REWRITER_typedef_NSAutoreleasePool
 #define _REWRITER_typedef_NSAutoreleasePool
@@ -12183,7 +12178,7 @@ typedef struct {} _objc_exc_NSCountedSet;
 
 struct NSCountedSet_IMPL {
 	struct NSMutableSet_IMPL NSMutableSet_IVARS;
-	__strong id _table;
+	id _table;
 	void *_reserved;
 };
 
@@ -12263,23 +12258,23 @@ struct NSProgress_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
 	NSProgress *__weak _parent;
 	int64_t _reserved4;
-	__strong id _values;
+	id _values;
 	void (*_resumingHandler)();
 	void (*_cancellationHandler)();
 	void (*_pausingHandler)();
 	void (*_prioritizationHandler)();
 	uint64_t _flags;
-	__strong id _userInfoProxy;
-	NSString *__strong _publisherID;
-	__strong id _reserved5;
+	id _userInfoProxy;
+	NSString *_publisherID;
+	id _reserved5;
 	NSInteger _reserved6;
 	NSInteger _reserved7;
 	NSInteger _reserved8;
-	NSMutableDictionary *__strong _acknowledgementHandlersByLowercaseBundleID;
-	NSMutableDictionary *__strong _lastNotificationTimesByKey;
-	NSMutableDictionary *__strong _userInfoLastNotificationTimesByKey;
-	NSLock *__strong _lock;
-	NSMutableSet *__strong _children;
+	NSMutableDictionary *_acknowledgementHandlersByLowercaseBundleID;
+	NSMutableDictionary *_lastNotificationTimesByKey;
+	NSMutableDictionary *_userInfoLastNotificationTimesByKey;
+	NSLock *_lock;
+	NSMutableSet *_children;
 };
 
 
@@ -12666,13 +12661,13 @@ typedef struct {} _objc_exc_NSBundle;
 struct NSBundle_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
 	NSUInteger _flags;
-	__strong id _cfBundle;
+	id _cfBundle;
 	NSUInteger _reserved2;
-	__unsafe_unretained Class _principalClass;
-	__strong id _initialPath;
-	__strong id _resolvedPath;
-	__unsafe_unretained Class _firstClass;
-	__strong id _lock;
+	Class _principalClass;
+	id _initialPath;
+	id _resolvedPath;
+	Class _firstClass;
+	id _lock;
 };
 
 
@@ -13750,8 +13745,8 @@ struct NSCoder_IMPL {
 
 
 
-// - (void)setObjectZone:(nullable NSZone *)zone __attribute__((unavailable("not available in automatic reference counting mode")));
-// - (nullable NSZone *)objectZone __attribute__((unavailable("not available in automatic reference counting mode")));
+// - (void)setObjectZone:(nullable NSZone *)zone ;
+// - (nullable NSZone *)objectZone ;
 
 // @property (readonly) unsigned int systemVersion;
 
@@ -14392,7 +14387,7 @@ typedef struct {} _objc_exc_NSDateFormatter;
 
 struct NSDateFormatter_IMPL {
 	struct NSFormatter_IMPL NSFormatter_IVARS;
-	NSMutableDictionary *__strong _attributes;
+	NSMutableDictionary *_attributes;
 	CFDateFormatterRef _formatter;
 	NSUInteger _counter;
 };
@@ -14531,17 +14526,17 @@ typedef struct {} _objc_exc_NSDateIntervalFormatter;
 
 struct NSDateIntervalFormatter_IMPL {
 	struct NSFormatter_IMPL NSFormatter_IVARS;
-	NSLocale *__strong _locale;
-	NSCalendar *__strong _calendar;
-	NSTimeZone *__strong _timeZone;
-	NSString *__strong _dateTemplate;
-	NSString *__strong _dateTemplateFromStyles;
+	NSLocale *_locale;
+	NSCalendar *_calendar;
+	NSTimeZone *_timeZone;
+	NSString *_dateTemplate;
+	NSString *_dateTemplateFromStyles;
 	void *_formatter;
 	NSDateIntervalFormatterStyle _dateStyle;
 	NSDateIntervalFormatterStyle _timeStyle;
 	BOOL _modified;
 	BOOL _useTemplate;
-	__strong dispatch_semaphore_t _lock;
+	dispatch_semaphore_t _lock;
 	void *_reserved[4];
 };
 
@@ -14632,7 +14627,7 @@ typedef struct {} _objc_exc_NSISO8601DateFormatter;
 struct NSISO8601DateFormatter_IMPL {
 	struct NSFormatter_IMPL NSFormatter_IVARS;
 	CFDateFormatterRef _formatter;
-	NSTimeZone *__strong _timeZone;
+	NSTimeZone *_timeZone;
 	NSISO8601DateFormatOptions _formatOptions;
 };
 
@@ -14908,7 +14903,7 @@ typedef struct {} _objc_exc_NSUnit;
 
 struct NSUnit_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSString *__strong _symbol;
+	NSString *_symbol;
 };
 
 
@@ -14936,7 +14931,7 @@ typedef struct {} _objc_exc_NSDimension;
 struct NSDimension_IMPL {
 	struct NSUnit_IMPL NSUnit_IVARS;
 	NSUInteger _reserved;
-	NSUnitConverter *__strong _converter;
+	NSUnitConverter *_converter;
 };
 
 
@@ -15554,7 +15549,7 @@ typedef struct {} _objc_exc_NSMeasurement;
 
 struct NSMeasurement_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong UnitType _unit;
+	UnitType _unit;
 	double _doubleValue;
 };
 
@@ -15661,11 +15656,11 @@ typedef struct {} _objc_exc_NSNumberFormatter;
 
 struct NSNumberFormatter_IMPL {
 	struct NSFormatter_IMPL NSFormatter_IVARS;
-	NSMutableDictionary *__strong _attributes;
+	NSMutableDictionary *_attributes;
 	CFNumberFormatterRef _formatter;
 	NSUInteger _counter;
 	NSNumberFormatterBehavior _behavior;
-	NSRecursiveLock *__strong _lock;
+	NSRecursiveLock *_lock;
 	unsigned long _stateBitMask;
 	NSInteger _cacheGeneration;
 	void *_reserved[8];
@@ -16064,7 +16059,7 @@ typedef struct {} _objc_exc_NSPersonNameComponents;
 
 struct NSPersonNameComponents_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _private;
+	id _private;
 };
 
 
@@ -16141,7 +16136,7 @@ typedef struct {} _objc_exc_NSPersonNameComponentsFormatter;
 
 struct NSPersonNameComponentsFormatter_IMPL {
 	struct NSFormatter_IMPL NSFormatter_IVARS;
-	__strong id _private;
+	id _private;
 };
 
 
@@ -16430,10 +16425,10 @@ typedef struct {} _objc_exc_NSException;
 
 struct NSException_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSString *__strong name;
-	NSString *__strong reason;
-	NSDictionary *__strong userInfo;
-	__strong id reserved;
+	NSString *name;
+	NSString *reason;
+	NSDictionary *userInfo;
+	id reserved;
 };
 
 
@@ -16740,8 +16735,8 @@ struct NSError_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
 	void *_reserved;
 	NSInteger _code;
-	NSString *__strong _domain;
-	NSDictionary *__strong _userInfo;
+	NSString *_domain;
+	NSDictionary *_userInfo;
 };
 
 
@@ -16852,11 +16847,11 @@ typedef struct {} _objc_exc_NSRunLoop;
 
 struct NSRunLoop_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _rl;
-	__strong id _dperf;
-	__strong id _perft;
-	__strong id _info;
-	__strong id _ports;
+	id _rl;
+	id _dperf;
+	id _perft;
+	id _info;
+	id _ports;
 	void *_reserved[6];
 };
 
@@ -17198,8 +17193,8 @@ typedef struct {} _objc_exc_NSURL;
 
 struct NSURL_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSString *__strong _urlString;
-	NSURL *__strong _baseURL;
+	NSString *_urlString;
+	NSURL *_baseURL;
 	void *_clients;
 	void *_reserved;
 };
@@ -17620,8 +17615,8 @@ typedef struct {} _objc_exc_NSURLQueryItem;
 
 struct NSURLQueryItem_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSString *__strong _name;
-	NSString *__strong _value;
+	NSString *_name;
+	NSString *_value;
 };
 
 // - (instancetype)initWithName:(NSString *)name value:(nullable NSString *)value __attribute__((objc_designated_initializer));
@@ -18284,9 +18279,9 @@ typedef struct {} _objc_exc_NSFileProviderService;
 
 struct NSFileProviderService_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong NSFileProviderServiceName _name;
-	__strong id _endpointCreatingProxy;
-	__strong dispatch_group_t _requestFinishedGroup;
+	NSFileProviderServiceName _name;
+	id _endpointCreatingProxy;
+	dispatch_group_t _requestFinishedGroup;
 };
 
 // - (void)getFileProviderConnectionWithCompletionHandler:(void (^)(NSXPCConnection * _Nullable connection, NSError * _Nullable error))completionHandler;
@@ -18697,7 +18692,7 @@ typedef struct {} _objc_exc_NSHTTPCookie;
 
 struct NSHTTPCookie_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSHTTPCookieInternal *__strong _cookiePrivate;
+	NSHTTPCookieInternal *_cookiePrivate;
 };
 
 // - (nullable instancetype)initWithProperties:(NSDictionary<NSHTTPCookiePropertyKey, id> *)properties;
@@ -18812,7 +18807,7 @@ typedef struct {} _objc_exc_NSHTTPCookieStorage;
 
 struct NSHTTPCookieStorage_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSHTTPCookieStorageInternal *__strong _internal;
+	NSHTTPCookieStorageInternal *_internal;
 };
 
 @property(class, readonly, strong) NSHTTPCookieStorage *sharedHTTPCookieStorage;
@@ -19082,8 +19077,8 @@ struct NSInvocation_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
 	void *_frame;
 	void *_retdata;
-	__strong id _signature;
-	__strong id _container;
+	id _signature;
+	id _container;
 	uint8_t _retainedArgs;
 	uint8_t _reserved[15];
 };
@@ -19875,20 +19870,20 @@ struct NSKeyedArchiver_IMPL {
 	struct NSCoder_IMPL NSCoder_IVARS;
 	void *_stream;
 	NSUInteger _flags;
-	__strong id _delegate;
-	__strong id _containers;
-	__strong id _objects;
-	__strong id _objRefMap;
-	__strong id _replacementMap;
-	__strong id _classNameMap;
-	__strong id _conditionals;
-	__strong id _classes;
+	id _delegate;
+	id _containers;
+	id _objects;
+	id _objRefMap;
+	id _replacementMap;
+	id _classNameMap;
+	id _conditionals;
+	id _classes;
 	NSUInteger _genericKey;
 	void *_cache;
 	NSUInteger _cacheSize;
 	NSUInteger _estimatedCount;
 	void *_reserved2;
-	__strong id _visited;
+	id _visited;
 	void *_reserved0;
 };
 
@@ -19944,21 +19939,21 @@ typedef struct {} _objc_exc_NSKeyedUnarchiver;
 
 struct NSKeyedUnarchiver_IMPL {
 	struct NSCoder_IMPL NSCoder_IVARS;
-	__strong id _delegate;
+	id _delegate;
 	uint32_t _flags;
-	__strong id _objRefMap;
-	__strong id _replacementMap;
-	__strong id _nameClassMap;
-	__strong id _tmpRefObjMap;
-	__strong id _refObjMap;
+	id _objRefMap;
+	id _replacementMap;
+	id _nameClassMap;
+	id _tmpRefObjMap;
+	id _refObjMap;
 	int32_t _genericKey;
-	__strong id _data;
+	id _data;
 	void *_offsetData;
-	__strong id _containers;
-	__strong id _objects;
+	id _containers;
+	id _objects;
 	const uint8_t *_bytes;
 	uint64_t _len;
-	__strong id _helper;
+	id _helper;
 	void *_reserved0;
 };
 
@@ -20452,11 +20447,11 @@ typedef struct {} _objc_exc_NSNotificationQueue;
 
 struct NSNotificationQueue_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _notificationCenter;
-	__strong id _asapQueue;
-	__strong id _asapObs;
-	__strong id _idleQueue;
-	__strong id _idleObs;
+	id _notificationCenter;
+	id _asapQueue;
+	id _asapObs;
+	id _idleQueue;
+	id _idleObs;
 };
 
 @property (class, readonly, strong) NSNotificationQueue *defaultQueue;
@@ -20531,7 +20526,7 @@ typedef struct {} _objc_exc_NSOperation;
 
 struct NSOperation_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _private;
+	id _private;
 	int32_t _private1;
 	int32_t _private1b;
 };
@@ -20589,7 +20584,7 @@ typedef struct {} _objc_exc_NSBlockOperation;
 
 struct NSBlockOperation_IMPL {
 	struct NSOperation_IMPL NSOperation_IVARS;
-	__strong id _private2;
+	id _private2;
 	void *_reserved2;
 };
 
@@ -20614,8 +20609,8 @@ typedef struct {} _objc_exc_NSInvocationOperation;
 
 struct NSInvocationOperation_IMPL {
 	struct NSOperation_IMPL NSOperation_IVARS;
-	__strong id _inv;
-	__strong id _exception;
+	id _inv;
+	id _exception;
 	void *_reserved2;
 };
 
@@ -20645,7 +20640,7 @@ typedef struct {} _objc_exc_NSOperationQueue;
 
 struct NSOperationQueue_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _private;
+	id _private;
 	void *_reserved;
 };
 
@@ -20932,7 +20927,7 @@ typedef struct {} _objc_exc_NSMachPort;
 
 struct NSMachPort_IMPL {
 	struct NSPort_IMPL NSPort_IVARS;
-	__strong id _delegate;
+	id _delegate;
 	NSUInteger _flags;
 	uint32_t _machPort;
 	NSUInteger _reserved;
@@ -20990,7 +20985,7 @@ typedef struct {} _objc_exc_NSMessagePort;
 struct NSMessagePort_IMPL {
 	struct NSPort_IMPL NSPort_IVARS;
 	void *_port;
-	__strong id _delegate;
+	id _delegate;
 };
 
 
@@ -21052,10 +21047,10 @@ typedef struct {} _objc_exc_NSProcessInfo;
 
 struct NSProcessInfo_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSDictionary *__strong environment;
-	NSArray *__strong arguments;
-	NSString *__strong hostName;
-	NSString *__strong name;
+	NSDictionary *environment;
+	NSArray *arguments;
+	NSString *hostName;
+	NSString *name;
 	NSInteger automaticTerminationOptOutCounter;
 };
 
@@ -21234,12 +21229,12 @@ typedef struct {} _objc_exc_NSProxy;
 #endif
 
 struct NSProxy_IMPL {
-	__unsafe_unretained Class isa;
+	Class isa;
 };
 
 
 // + (id)alloc;
-// + (id)allocWithZone:(nullable NSZone *)zone __attribute__((unavailable("not available in automatic reference counting mode")));
+// + (id)allocWithZone:(nullable NSZone *)zone ;
 // + (Class)class;
 
 // - (void)forwardInvocation:(NSInvocation *)invocation;
@@ -21470,10 +21465,10 @@ typedef struct {} _objc_exc_NSRegularExpression;
 
 struct NSRegularExpression_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSString *__strong _pattern;
+	NSString *_pattern;
 	NSUInteger _options;
 	void *_internal;
-	__strong id _reserved1;
+	id _reserved1;
 	int32_t _checkout;
 	int32_t _reserved2;
 };
@@ -21584,9 +21579,9 @@ typedef struct {} _objc_exc_NSSortDescriptor;
 struct NSSortDescriptor_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
 	NSUInteger _sortDescriptorFlags;
-	NSString *__strong _key;
+	NSString *_key;
 	SEL _selector;
-	__strong id _selectorOrBlock;
+	id _selectorOrBlock;
 };
 
 
@@ -21983,7 +21978,7 @@ typedef struct {} _objc_exc_NSThread;
 
 struct NSThread_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _private;
+	id _private;
 	uint8_t _bytes[44];
 };
 
@@ -22343,7 +22338,7 @@ typedef struct {} _objc_exc_NSURLAuthenticationChallenge;
 
 struct NSURLAuthenticationChallenge_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSURLAuthenticationChallengeInternal *__strong _internal;
+	NSURLAuthenticationChallengeInternal *_internal;
 };
 
 // - (instancetype)initWithProtectionSpace:(NSURLProtectionSpace *)space proposedCredential:(nullable NSURLCredential *)credential previousFailureCount:(NSInteger)previousFailureCount failureResponse:(nullable NSURLResponse *)response error:(nullable NSError *)error sender:(id<NSURLAuthenticationChallengeSender>)sender;
@@ -22441,7 +22436,7 @@ typedef struct {} _objc_exc_NSCachedURLResponse;
 
 struct NSCachedURLResponse_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSCachedURLResponseInternal *__strong _internal;
+	NSCachedURLResponseInternal *_internal;
 };
 
 // - (instancetype)initWithResponse:(NSURLResponse *)response data:(NSData *)data;
@@ -22499,7 +22494,7 @@ typedef struct {} _objc_exc_NSURLCache;
 
 struct NSURLCache_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSURLCacheInternal *__strong _internal;
+	NSURLCacheInternal *_internal;
 };
 
 @property (class, strong) NSURLCache *sharedURLCache;
@@ -22650,7 +22645,7 @@ typedef struct {} _objc_exc_NSURLConnection;
 
 struct NSURLConnection_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSURLConnectionInternal *__strong _internal;
+	NSURLConnectionInternal *_internal;
 };
 
 
@@ -24287,6 +24282,10 @@ CFStringRef SecCreateSharedWebCredentialPassword(void) __attribute__((availabili
 
 
 }
+extern "C" {
+__attribute__((visibility("default"))) void *sec_retain(void *obj);
+__attribute__((visibility("default"))) void sec_release(void *obj);
+}
 // @protocol OS_sec_object <NSObject> /* @end */
  typedef NSObject/*<OS_sec_object>*/ * __attribute__((objc_independent_class)) sec_object_t;
 
@@ -25405,7 +25404,7 @@ typedef struct {} _objc_exc_NSURLCredential;
 
 struct NSURLCredential_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSURLCredentialInternal *__strong _internal;
+	NSURLCredentialInternal *_internal;
 };
 
 
@@ -25622,7 +25621,7 @@ typedef struct {} _objc_exc_NSURLProtectionSpace;
 
 struct NSURLProtectionSpace_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSURLProtectionSpaceInternal *__strong _internal;
+	NSURLProtectionSpaceInternal *_internal;
 };
 
 // - (instancetype)initWithHost:(NSString *)host port:(NSInteger)port protocol:(nullable NSString *)protocol realm:(nullable NSString *)realm authenticationMethod:(nullable NSString *)authenticationMethod;
@@ -25757,7 +25756,7 @@ typedef struct {} _objc_exc_NSURLCredentialStorage;
 
 struct NSURLCredentialStorage_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSURLCredentialStorageInternal *__strong _internal;
+	NSURLCredentialStorageInternal *_internal;
 };
 
 
@@ -27031,7 +27030,7 @@ typedef struct {} _objc_exc_NSURLProtocol;
 
 struct NSURLProtocol_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSURLProtocolInternal *__strong _internal;
+	NSURLProtocolInternal *_internal;
 };
 
 // - (instancetype)initWithRequest:(NSURLRequest *)request cachedResponse:(nullable NSCachedURLResponse *)cachedResponse client:(nullable id <NSURLProtocolClient>)client __attribute__((objc_designated_initializer));
@@ -27158,7 +27157,7 @@ typedef struct {} _objc_exc_NSURLRequest;
 
 struct NSURLRequest_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSURLRequestInternal *__strong _internal;
+	NSURLRequestInternal *_internal;
 };
 
 // + (instancetype)requestWithURL:(NSURL *)URL;
@@ -27345,7 +27344,7 @@ typedef struct {} _objc_exc_NSURLResponse;
 
 struct NSURLResponse_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSURLResponseInternal *__strong _internal;
+	NSURLResponseInternal *_internal;
 };
 
 // - (instancetype)initWithURL:(NSURL *)URL MIMEType:(nullable NSString *)MIMEType expectedContentLength:(NSInteger)length textEncodingName:(nullable NSString *)name __attribute__((objc_designated_initializer));
@@ -27381,7 +27380,7 @@ typedef struct {} _objc_exc_NSHTTPURLResponse;
 
 struct NSHTTPURLResponse_IMPL {
 	struct NSURLResponse_IMPL NSURLResponse_IVARS;
-	NSHTTPURLResponseInternal *__strong _httpInternal;
+	NSHTTPURLResponseInternal *_httpInternal;
 };
 
 // - (nullable instancetype)initWithURL:(NSURL *)url statusCode:(NSInteger)statusCode HTTPVersion:(nullable NSString *)HTTPVersion headerFields:(nullable NSDictionary<NSString *, NSString *> *)headerFields __attribute__((availability(macos,introduced=10.7))) __attribute__((availability(ios,introduced=5.0))) __attribute__((availability(watchos,introduced=2.0))) __attribute__((availability(tvos,introduced=9.0)));
@@ -27459,7 +27458,7 @@ typedef struct {} _objc_exc_NSUserDefaults;
 
 struct NSUserDefaults_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _kvo_;
+	id _kvo_;
 	CFStringRef _identifier_;
 	CFStringRef _container_;
 	void *_reserved[2];
@@ -27769,11 +27768,11 @@ typedef struct {} _objc_exc_NSXMLParser;
 
 struct NSXMLParser_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _reserved0;
-	__strong id _delegate;
-	__strong id _reserved1;
-	__strong id _reserved2;
-	__strong id _reserved3;
+	id _reserved0;
+	id _delegate;
+	id _reserved1;
+	id _reserved2;
+	id _reserved3;
 };
 
 // - (nullable instancetype)initWithContentsOfURL:(NSURL *)url;
@@ -28250,23 +28249,23 @@ typedef struct {} _objc_exc_NSXPCConnection;
 struct NSXPCConnection_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
 	void *_xconnection;
-	__strong id _repliesExpected;
-	__strong dispatch_queue_t _userQueue;
+	id _repliesExpected;
+	dispatch_queue_t _userQueue;
 	uint32_t _state;
 	uint32_t _state2;
 	void (*_interruptionHandler)();
 	void (*_invalidationHandler)();
-	__strong id _exportInfo;
-	__strong id _repliesRequested;
-	__strong id _importInfo;
+	id _exportInfo;
+	id _repliesRequested;
+	id _importInfo;
 	id _otherInfo;
-	__strong id _reserved1;
-	__strong id _lock;
-	NSXPCInterface *__strong _remoteObjectInterface;
-	NSString *__strong _serviceName;
-	NSXPCListenerEndpoint *__strong _endpoint;
-	__strong id _eCache;
-	__strong id _dCache;
+	id _reserved1;
+	id _lock;
+	NSXPCInterface *_remoteObjectInterface;
+	NSString *_serviceName;
+	NSXPCListenerEndpoint *_endpoint;
+	id _eCache;
+	id _dCache;
 };
 
 
@@ -28338,13 +28337,13 @@ typedef struct {} _objc_exc_NSXPCListener;
 struct NSXPCListener_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
 	void *_xconnection;
-	__strong dispatch_queue_t _userQueue;
+	dispatch_queue_t _userQueue;
 	void *reserved0;
 	id _delegate;
-	NSString *__strong _serviceName;
+	NSString *_serviceName;
 	uint64_t _state;
-	__strong id _reserved1;
-	__strong id _reserved2;
+	id _reserved1;
+	id _reserved2;
 };
 
 
@@ -28396,9 +28395,9 @@ typedef struct {} _objc_exc_NSXPCInterface;
 
 struct NSXPCInterface_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	Protocol *__strong _protocol;
+	Protocol *_protocol;
 	void *_reserved2;
-	__strong id _reserved1;
+	id _reserved1;
 };
 
 
@@ -28682,7 +28681,7 @@ typedef struct {} _objc_exc_NSCache;
 
 struct NSCache_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _delegate;
+	id _delegate;
 	void *_private[5];
 	void *_reserved;
 };
@@ -28877,9 +28876,9 @@ typedef struct {} _objc_exc_NSComparisonPredicate;
 struct NSComparisonPredicate_IMPL {
 	struct NSPredicate_IMPL NSPredicate_IVARS;
 	void *_reserved2;
-	NSPredicateOperator *__strong _predicateOperator;
-	NSExpression *__strong _lhs;
-	NSExpression *__strong _rhs;
+	NSPredicateOperator *_predicateOperator;
+	NSExpression *_lhs;
+	NSExpression *_rhs;
 };
 
 
@@ -28936,7 +28935,7 @@ struct NSCompoundPredicate_IMPL {
 	struct NSPredicate_IMPL NSPredicate_IVARS;
 	void *_reserved2;
 	NSUInteger _type;
-	NSArray *__strong _subpredicates;
+	NSArray *_subpredicates;
 };
 
 
@@ -29002,10 +29001,10 @@ struct NSDateComponentsFormatter_IMPL {
 	pthread_mutex_t _lock;
 	void *_fmt;
 	void *_unused;
-	NSString *__strong _fmtLocaleIdent;
-	NSCalendar *__strong _calendar;
-	NSDate *__strong _referenceDate;
-	NSNumberFormatter *__strong _unitFormatter;
+	NSString *_fmtLocaleIdent;
+	NSCalendar *_calendar;
+	NSDate *_referenceDate;
+	NSNumberFormatter *_unitFormatter;
 	NSCalendarUnit _allowedUnits;
 	NSFormattingContext _formattingContext;
 	NSDateComponentsFormatterUnitsStyle _unitsStyle;
@@ -29421,7 +29420,7 @@ typedef struct {} _objc_exc_NSFileAccessIntent;
 
 struct NSFileAccessIntent_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSURL *__strong _url;
+	NSURL *_url;
 	BOOL _isRead;
 	NSInteger _options;
 };
@@ -29443,13 +29442,13 @@ typedef struct {} _objc_exc_NSFileCoordinator;
 
 struct NSFileCoordinator_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _accessArbiter;
-	__strong id _fileReactor;
-	__strong id _purposeID;
-	NSURL *__strong _recentFilePresenterURL;
-	__strong id _accessClaimIDOrIDs;
+	id _accessArbiter;
+	id _fileReactor;
+	id _purposeID;
+	NSURL *_recentFilePresenterURL;
+	id _accessClaimIDOrIDs;
 	BOOL _isCancelled;
-	NSMutableDictionary *__strong _movedItems;
+	NSMutableDictionary *_movedItems;
 };
 
 
@@ -29710,19 +29709,19 @@ typedef struct {} _objc_exc_NSFileVersion;
 
 struct NSFileVersion_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSURL *__strong _fileURL;
-	__strong id _addition;
-	__strong id _deadVersionIdentifier;
-	__strong id _nonLocalVersion;
-	NSURL *__strong _contentsURL;
+	NSURL *_fileURL;
+	id _addition;
+	id _deadVersionIdentifier;
+	id _nonLocalVersion;
+	NSURL *_contentsURL;
 	BOOL _isBackup;
-	NSString *__strong _localizedName;
-	NSString *__strong _localizedComputerName;
-	NSDate *__strong _modificationDate;
+	NSString *_localizedName;
+	NSString *_localizedComputerName;
+	NSDate *_modificationDate;
 	BOOL _isResolved;
 	BOOL _contentsURLIsAccessed;
-	__strong id _reserved;
-	NSString *__strong _name;
+	id _reserved;
+	NSString *_name;
 };
 
 
@@ -29905,12 +29904,12 @@ typedef struct {} _objc_exc_NSFileWrapper;
 
 struct NSFileWrapper_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSDictionary *__strong _fileAttributes;
-	NSString *__strong _preferredFileName;
-	NSString *__strong _fileName;
-	__strong id _contents;
-	__strong id _icon;
-	__strong id _moreVars;
+	NSDictionary *_fileAttributes;
+	NSString *_preferredFileName;
+	NSString *_fileName;
+	id _contents;
+	id _icon;
+	id _moreVars;
 };
 
 
@@ -30135,11 +30134,11 @@ typedef struct {} _objc_exc_NSLinguisticTagger;
 
 struct NSLinguisticTagger_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSArray *__strong _schemes;
+	NSArray *_schemes;
 	NSUInteger _options;
-	NSString *__strong _string;
-	__strong id _orthographyArray;
-	__strong id _tokenArray;
+	NSString *_string;
+	id _orthographyArray;
+	id _tokenArray;
 	void *_reserved;
 };
 
@@ -30532,7 +30531,7 @@ struct NSMetadataQuery_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
 	NSUInteger _flags;
 	NSTimeInterval _interval;
-	id __strong _private[11];
+	id _private[11];
 	void *_reserved;
 };
 
@@ -30634,7 +30633,7 @@ typedef struct {} _objc_exc_NSMetadataItem;
 
 struct NSMetadataItem_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _item;
+	id _item;
 	void *_reserved;
 };
 
@@ -30659,8 +30658,8 @@ typedef struct {} _objc_exc_NSMetadataQueryAttributeValueTuple;
 
 struct NSMetadataQueryAttributeValueTuple_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _attr;
-	__strong id _value;
+	id _attr;
+	id _value;
 	NSUInteger _count;
 	void *_reserved;
 };
@@ -30683,7 +30682,7 @@ typedef struct {} _objc_exc_NSMetadataQueryResultGroup;
 
 struct NSMetadataQueryResultGroup_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	id __strong _private[9];
+	id _private[9];
 	NSUInteger _private2[1];
 	void *_reserved;
 };
@@ -30821,9 +30820,9 @@ typedef struct {} _objc_exc_NSNetService;
 
 struct NSNetService_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _netService;
-	__strong id _delegate;
-	__strong id _reserved;
+	id _netService;
+	id _delegate;
+	id _reserved;
 };
 
 
@@ -30943,8 +30942,8 @@ typedef struct {} _objc_exc_NSNetServiceBrowser;
 
 struct NSNetServiceBrowser_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _netServiceBrowser;
-	__strong id _delegate;
+	id _netServiceBrowser;
+	id _delegate;
 	void *_reserved;
 };
 
@@ -31109,9 +31108,9 @@ typedef struct {} _objc_exc_NSUbiquitousKeyValueStore;
 
 struct NSUbiquitousKeyValueStore_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _private1;
-	__strong id _private2;
-	__strong id _private3;
+	id _private1;
+	id _private2;
+	id _private3;
 	void *_private4;
 	void *_reserved[3];
 	int _daemonWakeToken;
@@ -31188,12 +31187,12 @@ typedef struct {} _objc_exc_NSUndoManager;
 
 struct NSUndoManager_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	__strong id _undoStack;
-	__strong id _redoStack;
-	NSArray *__strong _runLoopModes;
+	id _undoStack;
+	id _redoStack;
+	NSArray *_runLoopModes;
 	uint64_t _NSUndoManagerPrivate1;
-	__strong id _target;
-	__strong id _proxy;
+	id _target;
+	id _proxy;
 	void *_NSUndoManagerPrivate2;
 	void *_NSUndoManagerPrivate3;
 };
@@ -32661,6 +32660,34 @@ struct BFPerson_IMPL {
 #pragma clang assume_nonnull end
 
 struct __Block_byref_age_0 {
+    void *__isa;
+    struct __Block_byref_age_0 *__forwarding;
+    int __flags;
+    int __size;
+    int age;
+};
+
+struct __main_block_desc_0 {
+    size_t reserved;
+    size_t Block_size;
+    void (*copy)(void);
+    void (*dispose)(void);
+};
+
+struct __block_impl {
+    void *isa;
+    int Flags;
+    int Reserved;
+    void *FuncPtr;
+};
+
+struct __main_block_impl_0 {
+    struct __block_impl impl;
+    struct __main_block_desc_0* Desc;
+    struct __Block_byref_age_0 *age;
+};
+int five = 5;
+struct __Block_byref_age_0 {
   void *__isa;
 __Block_byref_age_0 *__forwarding;
  int __flags;
@@ -32674,7 +32701,7 @@ __Block_byref_person_1 *__forwarding;
  int __size;
  void (*__Block_byref_id_object_copy)(void*, void*);
  void (*__Block_byref_id_object_dispose)(void*);
- BFPerson *__strong person;
+ BFPerson *person;
 };
 
 struct __main_block_impl_0 {
@@ -32695,16 +32722,18 @@ static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
 
             (age->__forwarding->age) = 30;
             (person->__forwarding->person) = ((BFPerson *(*)(id, SEL))(void *)objc_msgSend)((id)((BFPerson *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("BFPerson"), sel_registerName("alloc")), sel_registerName("init"));
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_472e0f_mi_0, &(age->__forwarding->age));
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_472e0f_mi_1, (age->__forwarding->age));
-
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_8030ba_mi_0, (age->__forwarding->age));
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_8030ba_mi_1, (person->__forwarding->person));
         }
-static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {_Block_object_assign((void*)&dst->age, (void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);
-    _Block_object_assign((void*)&dst->person, (void*)src->person, 8/*BLOCK_FIELD_IS_BYREF*/);}
+static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {
+    _Block_object_assign((void*)&dst->age, (void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);
+    _Block_object_assign((void*)&dst->person, (void*)src->person, 8/*BLOCK_FIELD_IS_BYREF*/);
+}
 
 static void __main_block_dispose_0(struct __main_block_impl_0*src) {
     _Block_object_dispose((void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);
-    _Block_object_dispose((void*)src->person, 8/*BLOCK_FIELD_IS_BYREF*/);}
+    _Block_object_dispose((void*)src->person, 8/*BLOCK_FIELD_IS_BYREF*/);
+}
 
 static struct __main_block_desc_0 {
   size_t reserved;
@@ -32714,19 +32743,11 @@ static struct __main_block_desc_0 {
 } __main_block_desc_0_DATA = { 0, sizeof(struct __main_block_impl_0), __main_block_copy_0, __main_block_dispose_0};
 int main(int argc, const char * argv[]) {
     /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
-
-
-
-
-
-
         __attribute__((__blocks__(byref))) __Block_byref_age_0 age = {(void*)0,(__Block_byref_age_0 *)&age, 0, sizeof(__Block_byref_age_0), 20};
         __attribute__((__blocks__(byref))) __Block_byref_person_1 person = {(void*)0,(__Block_byref_person_1 *)&person, 33554432, sizeof(__Block_byref_person_1), __Block_byref_id_object_copy_131, __Block_byref_id_object_dispose_131, ((BFPerson *(*)(id, SEL))(void *)objc_msgSend)((id)((BFPerson *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("BFPerson"), sel_registerName("alloc")), sel_registerName("init"))};
 
         void(*block)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, (__Block_byref_age_0 *)&age, (__Block_byref_person_1 *)&person, 570425344));
         ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_472e0f_mi_2, &(age.__forwarding->age));
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_472e0f_mi_3, (age.__forwarding->age));
     }
     return 0;
 }
