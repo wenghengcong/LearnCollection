@@ -7,17 +7,36 @@
 //
 
 #import "ViewController.h"
+#import "BFPersonPresenter.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) BFPersonPresenter *presenter;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    self.presenter = [[BFPersonPresenter alloc] initWithCotroller:self];
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.presenter tableView:self.tableView numberOfRowsInSection:section];
+}
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    return [self.presenter tableView:self.tableView cellForRowAtIndexPath:indexPath];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.presenter tableView:self.tableView didSelectRowAtIndexPath:indexPath];
+}
 @end
+

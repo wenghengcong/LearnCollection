@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E517ED821F55DC700B14E33 /* BFPersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E517ED721F55DC700B14E33 /* BFPersonCell.m */; };
+		5E517EDB21F55DD700B14E33 /* BFPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E517EDA21F55DD700B14E33 /* BFPerson.m */; };
+		5E517EDE21F55DFC00B14E33 /* BFPersonPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E517EDD21F55DFC00B14E33 /* BFPersonPresenter.m */; };
 		5E5EE52221F21B27007C16F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5EE52121F21B27007C16F7 /* AppDelegate.m */; };
 		5E5EE52521F21B27007C16F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5EE52421F21B27007C16F7 /* ViewController.m */; };
 		5E5EE52821F21B27007C16F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5EE52621F21B27007C16F7 /* Main.storyboard */; };
@@ -16,6 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E517ED621F55DC700B14E33 /* BFPersonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFPersonCell.h; sourceTree = "<group>"; };
+		5E517ED721F55DC700B14E33 /* BFPersonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFPersonCell.m; sourceTree = "<group>"; };
+		5E517ED921F55DD700B14E33 /* BFPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFPerson.h; sourceTree = "<group>"; };
+		5E517EDA21F55DD700B14E33 /* BFPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFPerson.m; sourceTree = "<group>"; };
+		5E517EDC21F55DFC00B14E33 /* BFPersonPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFPersonPresenter.h; sourceTree = "<group>"; };
+		5E517EDD21F55DFC00B14E33 /* BFPersonPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFPersonPresenter.m; sourceTree = "<group>"; };
 		5E5EE51D21F21B27007C16F7 /* MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5EE52021F21B27007C16F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E5EE52121F21B27007C16F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +71,12 @@
 				5E5EE52121F21B27007C16F7 /* AppDelegate.m */,
 				5E5EE52321F21B27007C16F7 /* ViewController.h */,
 				5E5EE52421F21B27007C16F7 /* ViewController.m */,
+				5E517ED621F55DC700B14E33 /* BFPersonCell.h */,
+				5E517ED721F55DC700B14E33 /* BFPersonCell.m */,
+				5E517ED921F55DD700B14E33 /* BFPerson.h */,
+				5E517EDA21F55DD700B14E33 /* BFPerson.m */,
+				5E517EDC21F55DFC00B14E33 /* BFPersonPresenter.h */,
+				5E517EDD21F55DFC00B14E33 /* BFPersonPresenter.m */,
 				5E5EE52621F21B27007C16F7 /* Main.storyboard */,
 				5E5EE52921F21B28007C16F7 /* Assets.xcassets */,
 				5E5EE52B21F21B28007C16F7 /* LaunchScreen.storyboard */,
@@ -141,6 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E517ED821F55DC700B14E33 /* BFPersonCell.m in Sources */,
+				5E517EDE21F55DFC00B14E33 /* BFPersonPresenter.m in Sources */,
+				5E517EDB21F55DD700B14E33 /* BFPerson.m in Sources */,
 				5E5EE52521F21B27007C16F7 /* ViewController.m in Sources */,
 				5E5EE53021F21B28007C16F7 /* main.m in Sources */,
 				5E5EE52221F21B27007C16F7 /* AppDelegate.m in Sources */,

@@ -11,9 +11,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class BFPersonCell, BFPerson;
+
+@protocol BFPersonCellDelegate <NSObject>
+@optional
+- (void)didSelectedPerson:(BFPersonCell *)cell;
+@end
+
 @interface BFPersonCell : UITableViewCell
 
-@property (strong, nonatomic) BFPerson *person;
+@property (nonatomic, strong) BFPerson *person;
+@property (nonatomic, weak) id delegate;
 
 @end
 

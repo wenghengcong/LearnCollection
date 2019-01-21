@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "BFPersonCell.h"
 
-@interface ViewController ()
+@interface ViewController ()<BFPersonCellDelegate>
 {
     NSMutableArray *_personsData;
 }
@@ -72,16 +72,24 @@
     // MVC变种，将打破Controller进行Model与View之间的唯一中间人
     // View将拥有Model，这一举措将会减轻C的负担，同时也会增加耦合
     cell.person = person;
+    cell.delegate = self;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //设置cell delegate后，这里失效
     if (indexPath.row > _personsData.count) return;
     BFPerson *person = _personsData[indexPath.row];
     NSLog(@"select person: %@ %d", person.name, person.age);
 }
 
+- (void)didSelectedPerson:(BFPersonCell *)cell
+{
+    if (cell == nil)  return;
+    BFPerson *person = cell.person;
+    NSLog(@"select person: %@ %d", person.name, person.age);
+}
 
 @end
 

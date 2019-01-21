@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E23A08721F5D17D00D5AD22 /* SingleInstanceTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E23A08621F5D17D00D5AD22 /* SingleInstanceTwo.m */; };
+		5E23A08A21F5D81800D5AD22 /* SingleInstanceThr.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E23A08921F5D81800D5AD22 /* SingleInstanceThr.m */; };
+		5E23A08D21F5D88A00D5AD22 /* Macro.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E23A08C21F5D88A00D5AD22 /* Macro.m */; };
 		5E5EE56621F21B3B007C16F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5EE56521F21B3B007C16F7 /* AppDelegate.m */; };
 		5E5EE56921F21B3B007C16F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5EE56821F21B3B007C16F7 /* ViewController.m */; };
 		5E5EE56C21F21B3B007C16F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5EE56A21F21B3B007C16F7 /* Main.storyboard */; };
 		5E5EE56E21F21B3B007C16F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E5EE56D21F21B3B007C16F7 /* Assets.xcassets */; };
 		5E5EE57121F21B3B007C16F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5EE56F21F21B3B007C16F7 /* LaunchScreen.storyboard */; };
 		5E5EE57421F21B3B007C16F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5EE57321F21B3B007C16F7 /* main.m */; };
+		5E9A4A8821F5D08B00389CD2 /* SingleInstanceOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A4A8721F5D08B00389CD2 /* SingleInstanceOne.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E23A08521F5D17D00D5AD22 /* SingleInstanceTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleInstanceTwo.h; sourceTree = "<group>"; };
+		5E23A08621F5D17D00D5AD22 /* SingleInstanceTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleInstanceTwo.m; sourceTree = "<group>"; };
+		5E23A08821F5D81800D5AD22 /* SingleInstanceThr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleInstanceThr.h; sourceTree = "<group>"; };
+		5E23A08921F5D81800D5AD22 /* SingleInstanceThr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleInstanceThr.m; sourceTree = "<group>"; };
+		5E23A08B21F5D88A00D5AD22 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		5E23A08C21F5D88A00D5AD22 /* Macro.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Macro.m; sourceTree = "<group>"; };
 		5E5EE56121F21B3B007C16F7 /* 单例模式.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "单例模式.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5EE56421F21B3B007C16F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E5EE56521F21B3B007C16F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +36,8 @@
 		5E5EE57021F21B3B007C16F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E5EE57221F21B3B007C16F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E5EE57321F21B3B007C16F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5E9A4A8621F5D08B00389CD2 /* SingleInstanceOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleInstanceOne.h; sourceTree = "<group>"; };
+		5E9A4A8721F5D08B00389CD2 /* SingleInstanceOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleInstanceOne.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,14 @@
 				5E5EE56521F21B3B007C16F7 /* AppDelegate.m */,
 				5E5EE56721F21B3B007C16F7 /* ViewController.h */,
 				5E5EE56821F21B3B007C16F7 /* ViewController.m */,
+				5E23A08B21F5D88A00D5AD22 /* Macro.h */,
+				5E23A08C21F5D88A00D5AD22 /* Macro.m */,
+				5E9A4A8621F5D08B00389CD2 /* SingleInstanceOne.h */,
+				5E9A4A8721F5D08B00389CD2 /* SingleInstanceOne.m */,
+				5E23A08521F5D17D00D5AD22 /* SingleInstanceTwo.h */,
+				5E23A08621F5D17D00D5AD22 /* SingleInstanceTwo.m */,
+				5E23A08821F5D81800D5AD22 /* SingleInstanceThr.h */,
+				5E23A08921F5D81800D5AD22 /* SingleInstanceThr.m */,
 				5E5EE56A21F21B3B007C16F7 /* Main.storyboard */,
 				5E5EE56D21F21B3B007C16F7 /* Assets.xcassets */,
 				5E5EE56F21F21B3B007C16F7 /* LaunchScreen.storyboard */,
@@ -143,7 +163,11 @@
 			files = (
 				5E5EE56921F21B3B007C16F7 /* ViewController.m in Sources */,
 				5E5EE57421F21B3B007C16F7 /* main.m in Sources */,
+				5E23A08D21F5D88A00D5AD22 /* Macro.m in Sources */,
 				5E5EE56621F21B3B007C16F7 /* AppDelegate.m in Sources */,
+				5E23A08A21F5D81800D5AD22 /* SingleInstanceThr.m in Sources */,
+				5E23A08721F5D17D00D5AD22 /* SingleInstanceTwo.m in Sources */,
+				5E9A4A8821F5D08B00389CD2 /* SingleInstanceOne.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

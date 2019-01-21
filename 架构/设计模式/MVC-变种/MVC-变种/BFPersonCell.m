@@ -28,4 +28,11 @@
     // Configure the view for the selected state
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(didSelectedPerson:)]) {
+        [self.delegate didSelectedPerson:self];
+    }
+}
+
 @end
