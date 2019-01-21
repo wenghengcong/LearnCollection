@@ -9,17 +9,19 @@
 #import "SingleInstanceTwo.h"
 
 @implementation SingleInstanceTwo
-
 /**
  懒汉式：互斥锁实现
+ 互斥锁@synchronized，极大的影响性能
  */
-- (instancetype)shared
++ (instancetype)sharedTwo
 {
-    static SingleInstanceTwo *shared = nil;
+    static SingleInstanceTwo *_shared = nil;
     @synchronized (self) {
-        shared = [[self alloc] init];
+        if (_shared == nil) {
+            _shared = [[self alloc] init];
+        }
     }
-    return shared;
+    return _shared;
 }
 
 @end

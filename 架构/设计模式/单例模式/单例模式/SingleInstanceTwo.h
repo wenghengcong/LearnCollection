@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SingleInstanceTwo : NSObject
 
-- (instancetype)shared;
++ (instancetype)sharedTwo;
 
 @end
 

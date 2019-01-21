@@ -8,8 +8,7 @@
 
 #import "SingleInstanceThr.h"
 
-static SingleInstanceThr *shared;
-
+static SingleInstanceThr *_shared;
 
 /**
  饿汉式：
@@ -18,14 +17,14 @@ static SingleInstanceThr *shared;
 
 + (void)load
 {
-    shared = [[self alloc] init];
+    _shared = [[self alloc] init];
 }
 
-- (instancetype)shared
++ (instancetype)sharedThr
 {
-    if (shared == nil) {
-        shared = [[SingleInstanceThr alloc] init];
+    if (_shared == nil) {
+        _shared = [[self alloc] init];
     }
-    return shared;
+    return _shared;
 }
 @end

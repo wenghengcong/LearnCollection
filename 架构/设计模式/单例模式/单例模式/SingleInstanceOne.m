@@ -8,19 +8,32 @@
 
 #import "SingleInstanceOne.h"
 
+static SingleInstanceOne *_shared = nil;
 @implementation SingleInstanceOne
 
 /**
  懒汉式：GCD实现
  */
-- (instancetype)shared
++ (instancetype)sharedOne
 {
-    static SingleInstanceOne *shared = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        shared = [[SingleInstanceOne alloc] init];
+        _shared = [[self alloc] init];
     });
-    return shared;
+    return _shared;
+}
+
++ (instancetype)allocWithZone:(struct _NSZone *)zone
+{
+    if (_shared == nil) {
+        _shared = [self sharedOne];
+    }
+    return _shared;
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return [SingleInstanceOne sharedOne];
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-//  SingleInstanceOne.h
+//  SingleIntanceFour.h
 //  单例模式
 //
 //  Created by WengHengcong on 2019/1/21.
@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Macro.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SingleInstanceOne : NSObject<NSCopying>
+@interface SingleIntanceFour : NSObject
 
-+ (instancetype)sharedOne;
-
+Singleton_INTERFACE(SingleIntanceFour)
 @end
 
 NS_ASSUME_NONNULL_END

@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SingleInstanceThr : NSObject
-
++ (instancetype)sharedThr;
 @end
 
 NS_ASSUME_NONNULL_END
