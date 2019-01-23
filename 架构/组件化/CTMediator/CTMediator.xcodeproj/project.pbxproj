@@ -58,6 +58,9 @@
 		4AC1765A1DE163B600566741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AED66AC1DB895D900C13EDC /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		4AED66AD1DB895D900C13EDC /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		5E750D0921F8577500E2E9D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5E750D0A21F8585700E2E9D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5E750D0B21F8587500E2E9D3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E9C114EF1101F17773DD4798 /* Pods-CTMediator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTMediator.release.xcconfig"; path = "Pods/Target Support Files/Pods-CTMediator/Pods-CTMediator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,9 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				4AED66AB1DB895C600C13EDC /* TableViewController */,
-				4A85F5501DA92AFC00DB882C /* Categories(实际应用中，这是一个单独的repo，所用需要调度其他模块的人，只需要依赖这个repo。这个repo由target-action维护者维护) */,
-				4A5CE5141C9531E9006AEDB9 /* CTMediator（这也是单独的repo，完整的中间件就这100行代码） */,
-				4A5CE5211C953D5A006AEDB9 /* DemoModule（target-action所在的模块，也就是提供服务的模块，这也是单独的repo，但无需被其他人依赖，其他人通过category调用到这里的功能） */,
+				4A85F5501DA92AFC00DB882C /* Categories */,
+				4A5CE5141C9531E9006AEDB9 /* CTMediator */,
+				4A5CE5211C953D5A006AEDB9 /* DemoModule */,
 				4A5CE5001C9531C9006AEDB9 /* AppDelegate.h */,
 				4A5CE5011C9531C9006AEDB9 /* AppDelegate.m */,
 				4A5CE5031C9531C9006AEDB9 /* ViewController.h */,
@@ -128,24 +131,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4A5CE5141C9531E9006AEDB9 /* CTMediator（这也是单独的repo，完整的中间件就这100行代码） */ = {
+		4A5CE5141C9531E9006AEDB9 /* CTMediator */ = {
 			isa = PBXGroup;
 			children = (
+				5E750D0B21F8587500E2E9D3 /* README.md */,
 				4A5CE5181C95322F006AEDB9 /* CTMediator.h */,
 				4A5CE5191C95322F006AEDB9 /* CTMediator.m */,
 			);
-			name = "CTMediator（这也是单独的repo，完整的中间件就这100行代码）";
 			path = CTMediator;
 			sourceTree = "<group>";
 		};
-		4A5CE5211C953D5A006AEDB9 /* DemoModule（target-action所在的模块，也就是提供服务的模块，这也是单独的repo，但无需被其他人依赖，其他人通过category调用到这里的功能） */ = {
+		4A5CE5211C953D5A006AEDB9 /* DemoModule */ = {
 			isa = PBXGroup;
 			children = (
+				5E750D0921F8577500E2E9D3 /* README.md */,
 				4A5CE5221C953D5A006AEDB9 /* Actions */,
 				4A5CE5231C953D7D006AEDB9 /* DemoModuleADetailViewController.h */,
 				4A5CE5241C953D7D006AEDB9 /* DemoModuleADetailViewController.m */,
 			);
-			name = "DemoModule（target-action所在的模块，也就是提供服务的模块，这也是单独的repo，但无需被其他人依赖，其他人通过category调用到这里的功能）";
 			path = DemoModule;
 			sourceTree = "<group>";
 		};
@@ -158,12 +161,12 @@
 			path = Actions;
 			sourceTree = "<group>";
 		};
-		4A85F5501DA92AFC00DB882C /* Categories(实际应用中，这是一个单独的repo，所用需要调度其他模块的人，只需要依赖这个repo。这个repo由target-action维护者维护) */ = {
+		4A85F5501DA92AFC00DB882C /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				5E750D0A21F8585700E2E9D3 /* README.md */,
 				4A85F5511DA92AFC00DB882C /* ModuleA */,
 			);
-			name = "Categories(实际应用中，这是一个单独的repo，所用需要调度其他模块的人，只需要依赖这个repo。这个repo由target-action维护者维护)";
 			path = Categories;
 			sourceTree = "<group>";
 		};

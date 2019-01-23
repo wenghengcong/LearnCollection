@@ -40,7 +40,10 @@ NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParams
 - (id)performActionWithUrl:(NSURL *)url completion:(void (^)(NSDictionary *))completion
 {
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    // query 字符串
+    // http://www.example.com/index.php?key1=value1&key2=value2, the query string is key1=value1&key2=value2.
     NSString *urlString = [url query];
+    // 解析出参数
     for (NSString *param in [urlString componentsSeparatedByString:@"&"]) {
         NSArray *elts = [param componentsSeparatedByString:@"="];
         if([elts count] < 2) continue;
@@ -119,6 +122,10 @@ NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParams
 }
 
 #pragma mark - private methods
+
+/**
+ 找不到响应的方法
+ */
 - (void)NoTargetActionResponseWithTargetString:(NSString *)targetString selectorString:(NSString *)selectorString originParams:(NSDictionary *)originParams
 {
     SEL action = NSSelectorFromString(@"Action_response:");
@@ -132,6 +139,9 @@ NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParams
     [self safePerformAction:action target:target params:params];
 }
 
+/**
+ 真正调用target action
+ */
 - (id)safePerformAction:(SEL)action target:(NSObject *)target params:(NSDictionary *)params
 {
     NSMethodSignature* methodSig = [target methodSignatureForSelector:action];
@@ -139,10 +149,10 @@ NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParams
         return nil;
     }
     const char* retType = [methodSig methodReturnType];
-
+    // 针对特殊的返回类型，做层包装
     if (strcmp(retType, @encode(void)) == 0) {
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSig];
-        [invocation setArgument:&params atIndex:2];
+        [invocation setArgument:&params atIndex:2]; // 前两个参数分别是target action
         [invocation setSelector:action];
         [invocation setTarget:target];
         [invocation invoke];
