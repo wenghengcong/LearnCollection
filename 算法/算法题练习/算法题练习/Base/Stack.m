@@ -18,6 +18,22 @@
     return self;
 }
 
+- (instancetype)initWithArray:(int[])array length:(int)length
+{
+    self = [self init];
+    for (int i = 0; i < length; i++) {
+        NSNumber *num = @(array[i]);
+        Node *node = [Node nodeWithValue:num];
+        [self push:node];
+    }
+    return self;
+}
+
++ (instancetype)stackWithArray:(int[])array length:(int)length
+{
+    return [[self alloc] initWithArray:array length:length];
+}
+
 - (void)push:(Node *)item
 {
     Node *oldTop = _top;
@@ -62,5 +78,15 @@
     return _top == nil;
 }
 
+- (void)print
+{
+    NSMutableString *output = [NSMutableString string];
+    Node *current = _top;
+    for (int i = 0; i < _size; i++) {
+        [output appendString:[NSString stringWithFormat:@"%@->", current.value]];
+        current = current.next;
+    }
+    NSLog(@"linked list: %@", output);
+}
 
 @end

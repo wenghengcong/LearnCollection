@@ -14,10 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Queue<__covariant ObjectType> : NSObject
 
 @property (nonatomic, strong) Node<ObjectType> *first;
-
 @property (nonatomic, strong) Node<ObjectType> *last;
 
 @property (nonatomic, assign) NSInteger size;
+
+- (instancetype)initWithArray:(int[])array length:(int)length;
++ (instancetype)queueWithArray:(int[])array length:(int)length;
+
 
 - (void)enQueue:(Node *)item;
 - (void)enQueueWithValue:(ObjectType)value;
@@ -31,6 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (BOOL)isEmpty;
+- (void)print;
 
 @end
 

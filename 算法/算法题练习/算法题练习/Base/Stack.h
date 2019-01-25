@@ -20,7 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) NSInteger     size;
 
-- (instancetype)init;
+- (instancetype)initWithArray:(int[])array length:(int)length;
++ (instancetype)stackWithArray:(int[])array length:(int)length;
 
 - (void)push:(Node *)item;
 - (void)pushValue:(ObjectType)value;
@@ -34,6 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (BOOL)isEmpty;
+- (void)print;
 
 @end
 

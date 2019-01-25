@@ -10,11 +10,18 @@
 #import "DataType.h"
 
 
+/**
+ 暂时不维护tail结点
+ */
 @interface LinkList<__covariant ObjectType> : NSObject
 
 @property (nonatomic, strong) Node *head;
 @property (nonatomic, strong) Node *tail;
-@property (nonatomic, assign) NSInteger count;
+@property (nonatomic, assign) NSInteger size;
+
+- (instancetype)initWithArray:(int[])array length:(int)length;
++ (instancetype)linkListWithArray:(int[])array length:(int)length;
+
 
 #pragma mark - Add
 /**
@@ -53,6 +60,9 @@
 - (int)indexOfNode:(Node *)node;
 
 #pragma mark - other
+
+- (BOOL)isEmpty;
+
 - (BOOL)contains:(Node *)value;
 
 - (void)print;

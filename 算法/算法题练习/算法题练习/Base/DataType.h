@@ -20,5 +20,6 @@
 @property (nonatomic, strong) ObjectType value;
 
 - (instancetype)initWithValue:(id)value;
++ (instancetype)nodeWithValue:(id)value;
 
 @end

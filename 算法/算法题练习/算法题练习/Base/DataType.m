@@ -20,4 +20,9 @@
     return self;
 }
 
++ (instancetype)nodeWithValue:(id)value
+{
+    return [[self alloc] initWithValue:value];
+}
+
 @end
