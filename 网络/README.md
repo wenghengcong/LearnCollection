@@ -16,9 +16,7 @@
 
 
 
-其他
-
-[HTTP (HyperText Transfer Protocol)](https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html)
+# iOS 架构
 
 [iOS应用架构谈 网络层设计方案](https://casatwy.com/iosying-yong-jia-gou-tan-wang-luo-ceng-she-ji-fang-an.html)
 
@@ -29,3 +27,16 @@
 [深度优化iOS网络模块](http://mrpeak.cn/blog/ios-network/)
 
 [美团点评移动网络优化实践](https://tech.meituan.com/2017/03/17/shark-sdk.html)
+
+
+
+
+
+# 基础协议
+
+[HTTP (HyperText Transfer Protocol)](https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html)
+
+[SSH原理与运用（一）：远程登录](http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html)
+
+[SSH原理与运用（二）：远程操作与端口转发](http://www.ruanyifeng.com/blog/2011/12/ssh_port_forwarding.html)
+
