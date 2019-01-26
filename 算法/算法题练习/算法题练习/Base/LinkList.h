@@ -44,6 +44,7 @@
 /**
  移除特定结点（位于排列第一个）
  */
+- (void)removeValue:(ObjectType)value;
 - (void)removeNode:(Node *)node;
 
 /**

@@ -11,13 +11,13 @@
 /**
  链接结点
  */
-@interface Node<__covariant ObjectType> : NSObject
+@interface Node<__covariant ObjectType> : NSObject <NSCopying>
 // 下一个结点
 @property (nonatomic, strong) Node<ObjectType> *next;
 // 上一个结点
 @property (nonatomic, strong) Node<ObjectType> *prev;
 // 数据
-@property (nonatomic, strong) ObjectType value;
+@property (nonatomic, copy) ObjectType value;
 
 - (instancetype)initWithValue:(id)value;
 + (instancetype)nodeWithValue:(id)value;

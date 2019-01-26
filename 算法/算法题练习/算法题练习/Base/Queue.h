@@ -11,6 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ 先进先出
+ */
 @interface Queue<__covariant ObjectType> : NSObject
 
 @property (nonatomic, strong) Node<ObjectType> *first;

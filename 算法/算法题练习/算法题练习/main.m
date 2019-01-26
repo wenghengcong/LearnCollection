@@ -10,6 +10,7 @@
 #import "BinarySearch.h"
 #import "Search/SelectionSort.h"
 #import "TypeHeader.h"
+#import "LinkeList/ReverseLinkList.h"
 
 int sortedArr[10] = {2, 3, 5, 8, 11, 34, 45, 89, 100, 122};
 int disorderArr[10] = {11, 2, 3, 34, 8, 122, 45, 5, 89, 100};
@@ -24,7 +25,11 @@ int main(int argc, const char * argv[]) {
         [st print];
         
         LinkList *list = [LinkList linkListWithArray:disorderArr length:10];
+        [list removeValue:@11];
         [list print];
+        
+        [ReverseLinkList reverseLinkList:list];
+        [ReverseLinkList reverseLinkListOptimize:list];
     }
     return 0;
 }

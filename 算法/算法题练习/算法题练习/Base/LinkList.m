@@ -35,12 +35,13 @@
 
 - (void)addNode:(Node *)node
 {
+    Node *newNode = [node copy];
     if ([self isEmpty]) {
-        _head = node;
+        _head = newNode;
     } else {
         Node *oldHead = _head;
-        _head = node;
-        node.next = oldHead;
+        _head = newNode;
+        newNode.next = oldHead;
     }
     _size++;
 }
@@ -53,18 +54,52 @@
 // remove
 - (void)removeLastNode
 {
-    NSAssert([self isEmpty], @"List empty");
+    NSAssert(![self isEmpty], @"List empty");
     Node *p = _head;
     //p --> p.next--> p.next.next
     while (p.next.next != nil) {
         p = p.next;
     }
     p.next = nil;
+    
+    _size--;
+}
+
+- (void)removeValue:(id)value
+{
+    // current -> current.next -> current.next.next
+    // 移除的是current.next
+    Node *current = _head;
+    while (current.next != nil) {
+        if (current.next.value == value) {
+            Node *removeNode = current.next;
+            current.next = current.next.next;
+            
+            // 移除
+            removeNode.value = nil;
+            removeNode.next = nil;
+        }
+        current = current.next;
+    }
+    _size--;
 }
 
 - (void)removeNode:(Node *)node
 {
-    
+    Node *current = _head;
+    while (current.next != nil) {
+        if (current.next.value == node.value) {
+            Node *remove = current.next;
+            
+            current.next = current.next.next;
+            
+            remove.value = nil;
+            remove.next = nil;
+        }
+        
+        current = current.next;
+    }
+    _size--;
 }
 
 - (void)removeNodeAtIndex:(int)index
@@ -114,7 +149,7 @@
 {
     NSMutableString *output = [NSMutableString string];
     Node *current = _head;
-    for (int i = 0; i < _size; i++) {
+    while (current != nil) {
         [output appendString:[NSString stringWithFormat:@"%@->", current.value]];
         current = current.next;
     }

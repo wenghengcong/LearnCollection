@@ -37,14 +37,15 @@
 
 - (void)enQueue:(Node *)item
 {
+    Node *newLast = [item copy];
     Node *oldLast = _last;
-    _last = item;
+    _last = newLast;
     _last.next = nil;
     
     if ([self isEmpty]) {
         _first = _last;
     } else {
-        oldLast.next = _last;
+        oldLast.next = newLast;
     }
     _size++;
 }
@@ -68,7 +69,7 @@
 
 - (nullable Node *)deQueue
 {
-    NSAssert([self isEmpty], @"Queue underflow");
+    NSAssert(![self isEmpty], @"Queue underflow");
     Node *node = _first;
     _first = _first.next;
     _size--;
@@ -85,7 +86,7 @@
 
 - (nullable Node *)peek
 {
-    NSAssert([self isEmpty], @"Queue underflow");
+    NSAssert(![self isEmpty], @"Queue underflow");
     Node *node = _first;
     return node;
 }
@@ -105,11 +106,11 @@
 {
     NSMutableString *output = [NSMutableString string];
     Node *current = _first;
-    for (int i = 0; i < _size; i++) {
+    while (current != nil) {
         [output appendString:[NSString stringWithFormat:@"%@->", current.value]];
         current = current.next;
     }
-    NSLog(@"linked list: %@", output);
+    NSLog(@"Queue: %@",output);
 }
 
 @end

@@ -37,7 +37,7 @@
 - (void)push:(Node *)item
 {
     Node *oldTop = _top;
-    _top = item;
+    _top = [item copy];
     _top.next = oldTop;
     _size++;
 }
@@ -51,7 +51,7 @@
 
 - (nullable Node *)pop
 {
-    NSAssert([self isEmpty], @"stack is empty");
+    NSAssert(![self isEmpty], @"stack is empty");
     Node *oldTop = _top;
     _top = _top.next;
     _size--;
@@ -82,11 +82,11 @@
 {
     NSMutableString *output = [NSMutableString string];
     Node *current = _top;
-    for (int i = 0; i < _size; i++) {
+    while (current != nil) {
         [output appendString:[NSString stringWithFormat:@"%@->", current.value]];
         current = current.next;
     }
-    NSLog(@"linked list: %@", output);
+    NSLog(@"Stack: %@", output);
 }
 
 @end

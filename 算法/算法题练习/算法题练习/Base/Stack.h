@@ -11,6 +11,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+/**
+ 栈：先进后出
+ 任何进行逆序的都可以考虑到栈这种结构
+ */
 @interface Stack<__covariant ObjectType> : NSObject
 
 /**

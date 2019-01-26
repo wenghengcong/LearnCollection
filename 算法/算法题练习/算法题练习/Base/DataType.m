@@ -25,4 +25,14 @@
     return [[self alloc] initWithValue:value];
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    // 将属性全部声明为copy
+    Node *node = [[Node alloc] init];
+    node.next = self.next;  //保持链接关系
+    node.prev = self.prev;  //保持链接关系
+    node.value = [self.value copy];
+    return node;
+}
+
 @end
