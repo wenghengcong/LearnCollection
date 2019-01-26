@@ -74,32 +74,52 @@
         return;
     }
     // current -> current.next -> current.next.next
-    // 移除的是current.next
-    Node *current = _head;
-    while (current.next != nil) {
-        if (current.next.value == value) {
-            Node *removeNode = current.next;
-            current.next = current.next.next;
-            // 移除
-            removeNode = nil;
+    // 假如移除的是头结点
+    if (_head.value == value) {
+        Node *current = _head;
+        _head = _head.next;
+        current = nil;
+        _size--;
+    } else {
+        // 移除的是current.next
+        Node *current = _head;
+        while (current.next != nil) {
+            if (current.next.value == value) {
+                Node *removeNode = current.next;
+                current.next = current.next.next;
+                removeNode = nil;
+                _size--;
+                break;
+            }
+            current = current.next;
         }
-        current = current.next;
     }
-    _size--;
 }
 
 - (void)removeNode:(Node *)node
 {
-    Node *current = _head;
-    while (current.next != nil) {
-        if (current.next == node) {
-            Node *removeNode = current.next;
-            current.next = current.next.next;
-            removeNode = nil;
-        }
-        current = current.next;
+    if (node == nil || _head == nil) {
+        return;
     }
-    _size--;
+    
+    Node *current = _head;
+    // 移除的是头结点
+    if (_head == node) {
+        _head = _head.next;
+        current = nil;
+        _size--;
+    } else {
+        while (current.next != nil) {
+            if (current.next == node) {
+                Node *removeNode = current.next;
+                current.next = current.next.next;
+                removeNode = nil;
+                _size--;
+                break;
+            }
+            current = current.next;
+        }
+    }
 }
 
 - (void)removeNodeAtIndex:(int)index

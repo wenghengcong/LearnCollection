@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E4C807321FC4F4C00F760E8 /* ReverseLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C807221FC4F4C00F760E8 /* ReverseLinkList.m */; };
+		5E4C807621FC6E0F00F760E8 /* RemoveNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C807521FC6E0F00F760E8 /* RemoveNode.m */; };
 		5E750D1921FA091500E2E9D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D1821FA091500E2E9D3 /* main.m */; };
 		5E750D2121FA092D00E2E9D3 /* BinarySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D2021FA092D00E2E9D3 /* BinarySearch.m */; };
 		5E750D2621FA10AA00E2E9D3 /* SelectionSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D2521FA10AA00E2E9D3 /* SelectionSort.m */; };
@@ -34,6 +35,8 @@
 /* Begin PBXFileReference section */
 		5E4C807121FC4F4C00F760E8 /* ReverseLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReverseLinkList.h; sourceTree = "<group>"; };
 		5E4C807221FC4F4C00F760E8 /* ReverseLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReverseLinkList.m; sourceTree = "<group>"; };
+		5E4C807421FC6E0F00F760E8 /* RemoveNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoveNode.h; sourceTree = "<group>"; };
+		5E4C807521FC6E0F00F760E8 /* RemoveNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoveNode.m; sourceTree = "<group>"; };
 		5E750D1521FA091500E2E9D3 /* 算法题练习 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "算法题练习"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E750D1821FA091500E2E9D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5E750D1F21FA092D00E2E9D3 /* BinarySearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinarySearch.h; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 			children = (
 				5E4C807121FC4F4C00F760E8 /* ReverseLinkList.h */,
 				5E4C807221FC4F4C00F760E8 /* ReverseLinkList.m */,
+				5E4C807421FC6E0F00F760E8 /* RemoveNode.h */,
+				5E4C807521FC6E0F00F760E8 /* RemoveNode.m */,
 			);
 			path = LinkeList;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			files = (
 				5E750D2921FA12C300E2E9D3 /* SortBase.m in Sources */,
 				5E750D3921FAB60900E2E9D3 /* DataType.m in Sources */,
+				5E4C807621FC6E0F00F760E8 /* RemoveNode.m in Sources */,
 				5E4C807321FC4F4C00F760E8 /* ReverseLinkList.m in Sources */,
 				5E750D2621FA10AA00E2E9D3 /* SelectionSort.m in Sources */,
 				5E750D3C21FAFB8500E2E9D3 /* TypeHeader.m in Sources */,

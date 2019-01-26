@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) Node<ObjectType> *first;
 @property (nonatomic, strong) Node<ObjectType> *last;
 
-@property (nonatomic, assign) NSInteger size;
+@property (nonatomic, assign) int size;
 
 - (instancetype)initWithArray:(int[])array length:(int)length;
 + (instancetype)queueWithArray:(int[])array length:(int)length;

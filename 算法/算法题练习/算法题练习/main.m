@@ -25,7 +25,7 @@ int main(int argc, const char * argv[]) {
         [st print];
         
         SingleLinkedList *list = [SingleLinkedList linkListWithArray:disorderArr length:10];
-        [list removeValue:@11];
+        [list removeValue:@100];
         [list print];
         
         [ReverseLinkList reverseLinkList:list];

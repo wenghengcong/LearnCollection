@@ -16,7 +16,7 @@
 @interface SingleLinkedList<__covariant ObjectType> : NSObject
 
 @property (nonatomic, strong) Node *head;
-@property (nonatomic, assign) NSInteger size;
+@property (nonatomic, assign) int size;
 
 - (instancetype)initWithArray:(int[])array length:(int)length;
 + (instancetype)linkListWithArray:(int[])array length:(int)length;
@@ -54,6 +54,7 @@
 #pragma mark - get
 - (Node *)firstNode;
 - (Node *)lastNode;
+- (Node *)nodeOfValue:(int)value;
 - (Node *)nodeAtIndex:(int)index;
 
 #pragma mark - index
