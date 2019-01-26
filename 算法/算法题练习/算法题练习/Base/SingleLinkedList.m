@@ -6,10 +6,11 @@
 //  Copyright © 2019 WengHengcong. All rights reserved.
 //
 
-#import "LinkList.h"
+#import "SingleLinkedList.h"
 
-@implementation LinkList
+@implementation SingleLinkedList
 
+#pragma mark - Create
 - (instancetype)init
 {
     self = [super init];
@@ -33,6 +34,7 @@
     return [[self alloc] initWithArray:array length:length];
 }
 
+#pragma mark - Add
 - (void)addNode:(Node *)node
 {
     Node *newNode = [node copy];
@@ -51,6 +53,7 @@
     
 }
 
+#pragma mark - Remove
 // remove
 - (void)removeLastNode
 {
@@ -67,6 +70,9 @@
 
 - (void)removeValue:(id)value
 {
+    if (_head == nil || value == nil) {
+        return;
+    }
     // current -> current.next -> current.next.next
     // 移除的是current.next
     Node *current = _head;
@@ -74,10 +80,8 @@
         if (current.next.value == value) {
             Node *removeNode = current.next;
             current.next = current.next.next;
-            
             // 移除
-            removeNode.value = nil;
-            removeNode.next = nil;
+            removeNode = nil;
         }
         current = current.next;
     }
@@ -88,15 +92,11 @@
 {
     Node *current = _head;
     while (current.next != nil) {
-        if (current.next.value == node.value) {
-            Node *remove = current.next;
-            
+        if (current.next == node) {
+            Node *removeNode = current.next;
             current.next = current.next.next;
-            
-            remove.value = nil;
-            remove.next = nil;
+            removeNode = nil;
         }
-        
         current = current.next;
     }
     _size--;
@@ -107,21 +107,32 @@
     
 }
 
+#pragma mark - Get
 // get
 - (Node *)firstNode
 {
     return _head;
 }
 
+
 - (Node *)lastNode
 {
-    return _head;
+    Node *current = _head;
+    while (current.next != nil) {
+        current = current.next;
+    }
+    return current;
 }
+
+/**
+ 未完善
+ */
 - (Node *)nodeAtIndex:(int)index
 {
     return _head;
 }
 
+#pragma mark - Index
 //index
 - (int)indexOfNode:(Node *)node
 {
@@ -133,8 +144,8 @@
     return -1;
 }
 
+#pragma mark - Other
 //other
-
 - (BOOL)isEmpty
 {
     return _head == nil;

@@ -24,7 +24,7 @@ int main(int argc, const char * argv[]) {
         Stack *st = [Stack stackWithArray:disorderArr length:10];
         [st print];
         
-        LinkList *list = [LinkList linkListWithArray:disorderArr length:10];
+        SingleLinkedList *list = [SingleLinkedList linkListWithArray:disorderArr length:10];
         [list removeValue:@11];
         [list print];
         

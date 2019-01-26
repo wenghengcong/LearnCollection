@@ -14,7 +14,7 @@
 		5E750D2921FA12C300E2E9D3 /* SortBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D2821FA12C300E2E9D3 /* SortBase.m */; };
 		5E750D2C21FA9B9500E2E9D3 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D2B21FA9B9500E2E9D3 /* Stack.m */; };
 		5E750D2F21FA9BA100E2E9D3 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D2E21FA9BA100E2E9D3 /* Queue.m */; };
-		5E750D3221FA9BB700E2E9D3 /* LinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D3121FA9BB700E2E9D3 /* LinkList.m */; };
+		5E750D3221FA9BB700E2E9D3 /* SingleLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D3121FA9BB700E2E9D3 /* SingleLinkedList.m */; };
 		5E750D3921FAB60900E2E9D3 /* DataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D3821FAB60900E2E9D3 /* DataType.m */; };
 		5E750D3C21FAFB8500E2E9D3 /* TypeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D3B21FAFB8500E2E9D3 /* TypeHeader.m */; };
 /* End PBXBuildFile section */
@@ -46,8 +46,8 @@
 		5E750D2B21FA9B9500E2E9D3 /* Stack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		5E750D2D21FA9BA100E2E9D3 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		5E750D2E21FA9BA100E2E9D3 /* Queue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
-		5E750D3021FA9BB700E2E9D3 /* LinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkList.h; sourceTree = "<group>"; };
-		5E750D3121FA9BB700E2E9D3 /* LinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkList.m; sourceTree = "<group>"; };
+		5E750D3021FA9BB700E2E9D3 /* SingleLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleLinkedList.h; sourceTree = "<group>"; };
+		5E750D3121FA9BB700E2E9D3 /* SingleLinkedList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleLinkedList.m; sourceTree = "<group>"; };
 		5E750D3721FAB60900E2E9D3 /* DataType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataType.h; sourceTree = "<group>"; };
 		5E750D3821FAB60900E2E9D3 /* DataType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataType.m; sourceTree = "<group>"; };
 		5E750D3A21FAFB8500E2E9D3 /* TypeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeHeader.h; sourceTree = "<group>"; };
@@ -125,8 +125,8 @@
 				5E750D2B21FA9B9500E2E9D3 /* Stack.m */,
 				5E750D2D21FA9BA100E2E9D3 /* Queue.h */,
 				5E750D2E21FA9BA100E2E9D3 /* Queue.m */,
-				5E750D3021FA9BB700E2E9D3 /* LinkList.h */,
-				5E750D3121FA9BB700E2E9D3 /* LinkList.m */,
+				5E750D3021FA9BB700E2E9D3 /* SingleLinkedList.h */,
+				5E750D3121FA9BB700E2E9D3 /* SingleLinkedList.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -195,7 +195,7 @@
 				5E750D2121FA092D00E2E9D3 /* BinarySearch.m in Sources */,
 				5E750D2F21FA9BA100E2E9D3 /* Queue.m in Sources */,
 				5E750D2C21FA9B9500E2E9D3 /* Stack.m in Sources */,
-				5E750D3221FA9BB700E2E9D3 /* LinkList.m in Sources */,
+				5E750D3221FA9BB700E2E9D3 /* SingleLinkedList.m in Sources */,
 				5E750D1921FA091500E2E9D3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

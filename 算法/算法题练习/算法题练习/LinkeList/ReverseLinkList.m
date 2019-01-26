@@ -10,7 +10,7 @@
 
 @implementation ReverseLinkList
 
-+ (void)reverseLinkList:(LinkList *)list
++ (void)reverseLinkList:(SingleLinkedList *)list
 {
     if (list == nil || list.size == 0) {
         return;
@@ -30,7 +30,7 @@
 /**
  递归本质上就是一个栈
  */
-+ (void)reverseLinkListOptimize:(LinkList *)list
++ (void)reverseLinkListOptimize:(SingleLinkedList *)list
 {
     if (list != nil) {
         [self reverseLinkListByHead:list.head];

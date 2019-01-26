@@ -15,9 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface ReverseLinkList : TypeHeader
 
-+ (void)reverseLinkList:(LinkList *)list;
++ (void)reverseLinkList:(SingleLinkedList *)list;
 
-+ (void)reverseLinkListOptimize:(LinkList *)list;
++ (void)reverseLinkListOptimize:(SingleLinkedList *)list;
 
 @end
 

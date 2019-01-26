@@ -13,10 +13,9 @@
 /**
  暂时不维护tail结点
  */
-@interface LinkList<__covariant ObjectType> : NSObject
+@interface SingleLinkedList<__covariant ObjectType> : NSObject
 
 @property (nonatomic, strong) Node *head;
-@property (nonatomic, strong) Node *tail;
 @property (nonatomic, assign) NSInteger size;
 
 - (instancetype)initWithArray:(int[])array length:(int)length;
