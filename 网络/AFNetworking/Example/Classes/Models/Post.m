@@ -33,10 +33,12 @@
         return nil;
     }
     
-    self.postID = (NSUInteger)[[attributes valueForKeyPath:@"id"] integerValue];
-    self.text = [attributes valueForKeyPath:@"text"];
+    self.postID = (NSUInteger)[[attributes valueForKeyPath:@"idMeal"] integerValue];
+    self.text = [attributes valueForKeyPath:@"strMeal"];
     
     self.user = [[User alloc] initWithAttributes:[attributes valueForKeyPath:@"user"]];
+    self.user.username = [NSString stringWithFormat:@"%d", self.postID];
+    self.user.avatarImageURLString = [attributes valueForKeyPath:@"strMealThumb"];
     
     return self;
 }
@@ -44,8 +46,10 @@
 #pragma mark -
 
 + (NSURLSessionDataTask *)globalTimelinePostsWithBlock:(void (^)(NSArray *posts, NSError *error))block {
-    return [[AFAppDotNetAPIClient sharedClient] GET:@"stream/0/posts/stream/global" parameters:nil progress:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
-        NSArray *postsFromResponse = [JSON valueForKeyPath:@"data"];
+    
+    return [[AFAppDotNetAPIClient sharedClient] GET:@"api/json/v1/1/filter.php?c=Seafood" parameters:nil progress:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        NSArray *postsFromResponse = [JSON valueForKeyPath:@"meals"];
+        
         NSMutableArray *mutablePosts = [NSMutableArray arrayWithCapacity:[postsFromResponse count]];
         for (NSDictionary *attributes in postsFromResponse) {
             Post *post = [[Post alloc] initWithAttributes:attributes];
