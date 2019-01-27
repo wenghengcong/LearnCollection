@@ -23,7 +23,7 @@
     self = [self init];
     for (int i = 0; i < length; i++) {
         NSNumber *num = @(array[i]);
-        Node *node = [Node nodeWithValue:num];
+        ListNode *node = [ListNode nodeWithValue:num];
         [self push:node];
     }
     return self;
@@ -34,9 +34,9 @@
     return [[self alloc] initWithArray:array length:length];
 }
 
-- (void)push:(Node *)item
+- (void)push:(ListNode *)item
 {
-    Node *oldTop = _top;
+    ListNode *oldTop = _top;
     _top = [item copy];
     _top.next = oldTop;
     _size++;
@@ -44,15 +44,15 @@
 
 - (void)pushValue:(id)value
 {
-    Node *newTop = [[Node alloc] init];
+    ListNode *newTop = [[ListNode alloc] init];
     newTop.value = value;
     [self push:newTop];
 }
 
-- (nullable Node *)pop
+- (nullable ListNode *)pop
 {
     NSAssert(![self isEmpty], @"stack is empty");
-    Node *oldTop = _top;
+    ListNode *oldTop = _top;
     _top = _top.next;
     _size--;
     return oldTop;
@@ -60,11 +60,11 @@
 
 - (nullable id)popValue
 {
-    Node *node = [self pop];
+    ListNode *node = [self pop];
     return node.value;
 }
 
-- (nullable Node *)peek
+- (nullable ListNode *)peek
 {
     return _top;
 }
@@ -81,7 +81,7 @@
 - (void)print
 {
     NSMutableString *output = [NSMutableString string];
-    Node *current = _top;
+    ListNode *current = _top;
     while (current != nil) {
         [output appendString:[NSString stringWithFormat:@"%@->", current.value]];
         current = current.next;

@@ -12,18 +12,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57349ea0-eb1d-4eb7-bf92-f6e61f94b504" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../算法题练习/AlgoTest/BSTTest.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../算法题练习/AlgoTest/DataTypeTest.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../算法题练习/AlgoTest/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../算法题练习/AlgoTest/LinkListTest.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../算法题练习/AlgoTest/SearchTest.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../算法题练习/AlgoTest/SortTest.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Tree/BinarySearchTree.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Tree/BinarySearchTree.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Algo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Algo.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Algo.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Algo.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Algo.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Algo.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/xcuserdata/wenghengcong.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/xcuserdata/wenghengcong.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/DataType.h" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/DataType.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/DataType.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/DataType.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Queue.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Queue.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Queue.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/SingleLinkedList.h" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/SingleLinkedList.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/SingleLinkedList.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/SingleLinkedList.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Stack.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Stack.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Stack.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/LinkeList/ReverseLinkList.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/LinkeList/ReverseLinkList.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Search/BinarySearch.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Search/BinarySearch.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/TypeHeader.h" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/TypeHeader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/main.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/main.m" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,53 +50,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/05/Optional-05-Floor-and-Ceil-in-BST/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="105" column="5" lean-forward="true" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02/01-Selection-Sort/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02/02-Selection-Sort-Using-Template/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-330">
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02/03-Selection-Sort-Generate-Test-Cases/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02/04-Selection-Sort-Detect-Performance/main.cpp">
+        <entry file="file://$PROJECT_DIR$/02/05-Insertion-Sort/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <folding>
@@ -93,20 +61,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02/05-Insertion-Sort/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02/06-Insertion-Sort-Advance/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-109">
+            <state>
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -117,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/03/04-Merge-Sort-Bottom-Up/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
+            <state relative-caret-position="300">
               <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -126,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/03/05-Quick-Sort/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="239">
-              <caret line="64" column="15" lean-forward="true" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="15" />
+              <caret line="64" column="15" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="15" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -139,9 +96,59 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/05/02-Binary-Search-Tree-Basics/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-46">
+              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/05/03-Binary-Search-Tree-Insert/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="76" column="1" lean-forward="true" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/05/04-Binary-Search-Tree-Search/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1786">
+              <caret line="36" column="11" lean-forward="true" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#142#172#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/05/06-Binary-Search-Tree-Level-Traverse/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="428">
+              <caret line="168" column="9" selection-start-line="168" selection-start-column="9" selection-end-line="168" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/05/04-Binary-Search-Tree-Search/SequenceST.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1680" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/03/04-Merge-Sort-Bottom-Up/MergeSort.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-396">
+            <state relative-caret-position="240">
               <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
             </state>
           </provider>
@@ -162,9 +169,9 @@
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="138" />
-    <option name="y" value="38" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="216" />
+    <option name="y" value="92" />
     <option name="width" value="1221" />
     <option name="height" value="679" />
   </component>
@@ -174,7 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -245,10 +251,47 @@
               <item name="Play-with-Algorithms" type="462c0819:PsiDirectoryNode" />
               <item name="05" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Play-with-Algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="05" type="462c0819:PsiDirectoryNode" />
+              <item name="01-Binary-Search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Play-with-Algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="05" type="462c0819:PsiDirectoryNode" />
+              <item name="02-Binary-Search-Tree-Basics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Play-with-Algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="05" type="462c0819:PsiDirectoryNode" />
+              <item name="03-Binary-Search-Tree-Insert" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Play-with-Algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="05" type="462c0819:PsiDirectoryNode" />
+              <item name="04-Binary-Search-Tree-Search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Play-with-Algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="05" type="462c0819:PsiDirectoryNode" />
+              <item name="05-Binary-Search-Tree-Traverse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Play-with-Algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="05" type="462c0819:PsiDirectoryNode" />
+              <item name="06-Binary-Search-Tree-Level-Traverse" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,17 +341,18 @@
       <workItem from="1547388999412" duration="2328000" />
       <workItem from="1547398082940" duration="10541000" />
       <workItem from="1547567688096" duration="4300000" />
+      <workItem from="1548585384414" duration="2261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17169000" />
+    <option name="totallyTimeSpent" value="19430000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="138" y="38" width="1221" height="679" extended-state="1" />
+    <frame x="216" y="92" width="1221" height="679" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2875318" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29262087" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -333,16 +377,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/03/05-Quick-Sort/InsertionSort.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -400,13 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05/02-Binary-Search-Tree-Basics/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/05/01-Binary-Search/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -414,24 +441,6 @@
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05/04-Binary-Search-Tree-Search/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#142#172#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05/03-Binary-Search-Tree-Insert/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="46" column="14" lean-forward="true" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -625,7 +634,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/05/Optional-05-Floor-and-Ceil-in-BST/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
+        <state relative-caret-position="1575">
           <caret line="105" column="5" lean-forward="true" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -635,8 +644,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/02/01-Selection-Sort/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        <state relative-caret-position="165">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -645,7 +654,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/02/02-Selection-Sort-Using-Template/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
+        <state>
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -654,7 +663,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/02/03-Selection-Sort-Generate-Test-Cases/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
+        <state>
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -672,7 +681,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/02/05-Insertion-Sort/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
+        <state>
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -681,7 +690,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/02/06-Insertion-Sort-Advance/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-109">
+        <state>
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03/04-Merge-Sort-Bottom-Up/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -690,25 +709,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/03/04-Merge-Sort-Bottom-Up/MergeSort.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-396">
+        <state relative-caret-position="240">
           <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03/04-Merge-Sort-Bottom-Up/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/03/05-Quick-Sort/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
-          <caret line="64" column="15" lean-forward="true" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="15" />
+          <caret line="64" column="15" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05/02-Binary-Search-Tree-Basics/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05/03-Binary-Search-Tree-Insert/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="76" column="1" lean-forward="true" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05/04-Binary-Search-Tree-Search/SequenceST.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1680" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05/04-Binary-Search-Tree-Search/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1786">
+          <caret line="36" column="11" lean-forward="true" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#142#172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05/06-Binary-Search-Tree-Level-Traverse/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="168" column="9" selection-start-line="168" selection-start-column="9" selection-end-line="168" selection-end-column="9" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

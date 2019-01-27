@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface Queue<__covariant ObjectType> : NSObject
 
-@property (nonatomic, strong) Node<ObjectType> *first;
-@property (nonatomic, strong) Node<ObjectType> *last;
+@property (nonatomic, strong) ListNode<ObjectType> *first;
+@property (nonatomic, strong) ListNode<ObjectType> *last;
 
 @property (nonatomic, assign) int size;
 
@@ -25,14 +25,14 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)queueWithArray:(int[])array length:(int)length;
 
 
-- (void)enQueue:(Node *)item;
+- (void)enQueue:(ListNode *)item;
 - (void)enQueueWithValue:(ObjectType)value;
 
 
-- (nullable Node *)deQueue;
+- (nullable ListNode *)deQueue;
 - (nullable ObjectType)deQueueValue;
 
-- (nullable Node *)peek;
+- (nullable ListNode *)peek;
 - (nullable ObjectType)peekValue;
 
 

@@ -17,7 +17,7 @@
     }
     
     Stack *st = [[Stack alloc] init];
-    Node *current = list.head;
+    ListNode *current = list.head;
     while (current != nil) {
         [st push:current];
         current = current.next;
@@ -37,7 +37,7 @@
     }
 }
 
-+ (void)reverseLinkListByHead:(Node *)node
++ (void)reverseLinkListByHead:(ListNode *)node
 {
     if (node != nil) {
         [self reverseLinkListByHead:node.next];

@@ -10,12 +10,14 @@
 #import "DataType.h"
 
 
+
 /**
- 暂时不维护tail结点
+ 单向链表
+ 链表计数从1开始，[1....n]
  */
 @interface SingleLinkedList<__covariant ObjectType> : NSObject
 
-@property (nonatomic, strong) Node *head;
+@property (nonatomic, strong) ListNode *head;
 @property (nonatomic, assign) int size;
 
 - (instancetype)initWithArray:(int[])array length:(int)length;
@@ -26,12 +28,12 @@
 /**
  在头部插入
  */
-- (void)addNode:(Node *)node;
+- (void)addNode:(ListNode *)node;
 
 /**
  在特定位置插入
  */
-- (void)insertNode:(Node *)node atIndex:(int)index;
+- (void)insertNode:(ListNode *)node atIndex:(int)index;
 
 #pragma mark - remove
 
@@ -44,7 +46,7 @@
  移除特定结点（位于排列第一个）
  */
 - (void)removeValue:(ObjectType)value;
-- (void)removeNode:(Node *)node;
+- (void)removeNode:(ListNode *)node;
 
 /**
  移除特定位置的结点
@@ -52,19 +54,25 @@
 - (void)removeNodeAtIndex:(int)index;
 
 #pragma mark - get
-- (Node *)firstNode;
-- (Node *)lastNode;
-- (Node *)nodeOfValue:(int)value;
-- (Node *)nodeAtIndex:(int)index;
+- (ListNode *)firstNode;
+- (ListNode *)lastNode;
+- (ListNode *)nodeOfValue:(int)value;
+- (ListNode *)nodeAtIndex:(int)index;
 
 #pragma mark - index
-- (int)indexOfNode:(Node *)node;
+
+/**
+ 返回节点的Index
+ 节点定义从1开始计数，计数为 [1...index]
+ */
+- (int)indexOfNode:(ListNode *)node;
+
+#pragma mark - Cotains
+- (BOOL)isEmpty;
+- (BOOL)contain:(ListNode *)node;
+- (BOOL)containValue:(ObjectType)value;
 
 #pragma mark - other
-
-- (BOOL)isEmpty;
-
-- (BOOL)contains:(Node *)value;
 
 - (void)print;
 

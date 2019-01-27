@@ -10,6 +10,7 @@
 #import "Base/Stack.h"
 #import "Base/Queue.h"
 #import "Base/SingleLinkedList.h"
+#import "Tree/BinarySearchTree.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

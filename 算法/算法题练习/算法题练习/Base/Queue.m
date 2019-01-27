@@ -24,7 +24,7 @@
     self = [self init];
     for (int i = 0; i < length; i++) {
         NSNumber *num = @(array[i]);
-        Node *node = [Node nodeWithValue:num];
+        ListNode *node = [ListNode nodeWithValue:num];
         [self enQueue:node];
     }
     return self;
@@ -35,10 +35,10 @@
     return [[self alloc] initWithArray:array length:length];
 }
 
-- (void)enQueue:(Node *)item
+- (void)enQueue:(ListNode *)item
 {
-    Node *newLast = [item copy];
-    Node *oldLast = _last;
+    ListNode *newLast = [item copy];
+    ListNode *oldLast = _last;
     _last = newLast;
     _last.next = nil;
     
@@ -52,9 +52,9 @@
 
 - (void)enQueueWithValue:(id)value
 {
-    Node *oldLast = _last;
+    ListNode *oldLast = _last;
 
-    Node *newLast = [[Node alloc] initWithValue:value];
+    ListNode *newLast = [[ListNode alloc] initWithValue:value];
     _last = newLast;
     _last.next = nil;
 
@@ -67,10 +67,10 @@
 }
 
 
-- (nullable Node *)deQueue
+- (nullable ListNode *)deQueue
 {
     NSAssert(![self isEmpty], @"Queue underflow");
-    Node *node = _first;
+    ListNode *node = _first;
     _first = _first.next;
     _size--;
     if ([self isEmpty]) {
@@ -84,10 +84,10 @@
     return [self deQueue].value;
 }
 
-- (nullable Node *)peek
+- (nullable ListNode *)peek
 {
     NSAssert(![self isEmpty], @"Queue underflow");
-    Node *node = _first;
+    ListNode *node = _first;
     return node;
 }
 
@@ -105,7 +105,7 @@
 - (void)print
 {
     NSMutableString *output = [NSMutableString string];
-    Node *current = _first;
+    ListNode *current = _first;
     while (current != nil) {
         [output appendString:[NSString stringWithFormat:@"%@->", current.value]];
         current = current.next;

@@ -8,7 +8,7 @@
 
 #import "DataType.h"
 
-@implementation Node
+@implementation ListNode
 
 - (instancetype)initWithValue:(id)value
 {
@@ -28,10 +28,40 @@
 - (id)copyWithZone:(NSZone *)zone
 {
     // 将属性全部声明为copy
-    Node *node = [[Node alloc] init];
+    ListNode *node = [[ListNode alloc] init];
     node.next = self.next;  //保持链接关系
     node.prev = self.prev;  //保持链接关系
     node.value = [self.value copy];
+    return node;
+}
+
+@end
+
+@implementation TreeNode
+
+- (instancetype)initWithKey:(nonnull id)key value:(id)value size:(int)size
+{
+    self = [super init];
+    self.key = key;
+    self.value = value;
+    self.size = size;
+    return self;
+}
+
++ (instancetype)nodeWithKey:(nonnull id)key value:(id)value size:(int)size
+{
+    return [[self alloc] initWithKey:key value:value size:size];
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    // 将属性全部声明为copy
+    TreeNode *node = [[TreeNode alloc] init];
+    node.left = self.left;  //保持链接关系
+    node.right = self.right;  //保持链接关系
+    node.key = self.key;
+    node.value = [self.value copy];
+    node.size = self.size;
     return node;
 }
 

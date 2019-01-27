@@ -23,7 +23,7 @@
     self = [self init];
     for (int i = 0; i < length; i++) {
         NSNumber *num = @(array[i]);
-        Node *node = [Node nodeWithValue:num];
+        ListNode *node = [ListNode nodeWithValue:num];
         [self addNode:node];
     }
     return self;
@@ -35,20 +35,20 @@
 }
 
 #pragma mark - Add
-- (void)addNode:(Node *)node
+- (void)addNode:(ListNode *)node
 {
-    Node *newNode = [node copy];
+    ListNode *newNode = [node copy];
     if ([self isEmpty]) {
         _head = newNode;
     } else {
-        Node *oldHead = _head;
+        ListNode *oldHead = _head;
         _head = newNode;
         newNode.next = oldHead;
     }
     _size++;
 }
 
-- (void)insertNode:(Node *)node atIndex:(int)index
+- (void)insertNode:(ListNode *)node atIndex:(int)index
 {
     
 }
@@ -58,7 +58,7 @@
 - (void)removeLastNode
 {
     NSAssert(![self isEmpty], @"List empty");
-    Node *p = _head;
+    ListNode *p = _head;
     //p --> p.next--> p.next.next
     while (p.next.next != nil) {
         p = p.next;
@@ -76,16 +76,16 @@
     // current -> current.next -> current.next.next
     // 假如移除的是头结点
     if (_head.value == value) {
-        Node *current = _head;
+        ListNode *current = _head;
         _head = _head.next;
         current = nil;
         _size--;
     } else {
         // 移除的是current.next
-        Node *current = _head;
+        ListNode *current = _head;
         while (current.next != nil) {
             if (current.next.value == value) {
-                Node *removeNode = current.next;
+                ListNode *removeNode = current.next;
                 current.next = current.next.next;
                 removeNode = nil;
                 _size--;
@@ -96,13 +96,13 @@
     }
 }
 
-- (void)removeNode:(Node *)node
+- (void)removeNode:(ListNode *)node
 {
     if (node == nil || _head == nil) {
         return;
     }
     
-    Node *current = _head;
+    ListNode *current = _head;
     // 移除的是头结点
     if (_head == node) {
         _head = _head.next;
@@ -111,7 +111,7 @@
     } else {
         while (current.next != nil) {
             if (current.next == node) {
-                Node *removeNode = current.next;
+                ListNode *removeNode = current.next;
                 current.next = current.next.next;
                 removeNode = nil;
                 _size--;
@@ -129,15 +129,15 @@
 
 #pragma mark - Get
 // get
-- (Node *)firstNode
+- (ListNode *)firstNode
 {
     return _head;
 }
 
 
-- (Node *)lastNode
+- (ListNode *)lastNode
 {
-    Node *current = _head;
+    ListNode *current = _head;
     while (current.next != nil) {
         current = current.next;
     }
@@ -147,14 +147,22 @@
 /**
  未完善
  */
-- (Node *)nodeAtIndex:(int)index
+- (ListNode *)nodeOfValue:(int)value
+{
+    return _head;
+}
+
+/**
+ 未完善
+ */
+- (ListNode *)nodeAtIndex:(int)index
 {
     return _head;
 }
 
 #pragma mark - Index
 //index
-- (int)indexOfNode:(Node *)node
+- (int)indexOfNode:(ListNode *)node
 {
     return -1;
 }
@@ -164,22 +172,27 @@
     return -1;
 }
 
-#pragma mark - Other
-//other
+#pragma mark - Cotains
 - (BOOL)isEmpty
 {
     return _head == nil;
 }
 
-- (BOOL)contains:(id)node
+- (BOOL)contain:(id)node
 {
     return NO;
 }
 
+- (BOOL)containValue:(id)value
+{
+    return NO;
+}
+
+#pragma mark - Other
 - (void)print
 {
     NSMutableString *output = [NSMutableString string];
-    Node *current = _head;
+    ListNode *current = _head;
     while (current != nil) {
         [output appendString:[NSString stringWithFormat:@"%@->", current.value]];
         current = current.next;

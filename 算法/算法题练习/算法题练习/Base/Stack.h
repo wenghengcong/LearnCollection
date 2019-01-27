@@ -21,21 +21,21 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  栈顶
  */
-@property (nonatomic, strong, nullable) Node<ObjectType> *top;
+@property (nonatomic, strong, nullable) ListNode<ObjectType> *top;
 
 @property (nonatomic, assign) int     size;
 
 - (instancetype)initWithArray:(int[])array length:(int)length;
 + (instancetype)stackWithArray:(int[])array length:(int)length;
 
-- (void)push:(Node *)item;
+- (void)push:(ListNode *)item;
 - (void)pushValue:(ObjectType)value;
 
 
-- (nullable Node *)pop;
+- (nullable ListNode *)pop;
 - (nullable ObjectType)popValue;
 
-- (nullable Node *)peek;
+- (nullable ListNode *)peek;
 - (nullable ObjectType)peekValue;
 
 

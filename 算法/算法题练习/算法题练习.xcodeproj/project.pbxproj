@@ -7,8 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E46989321FE0D000020382A /* BSTTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E46989221FE0D000020382A /* BSTTest.m */; };
+		5E46989421FE0DB90020382A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D1821FA091500E2E9D3 /* main.m */; };
+		5E46989521FE0DD60020382A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E46988421FE09F30020382A /* XCTest.framework */; };
+		5E46989721FE0E5D0020382A /* BinarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C807821FDA24500F760E8 /* BinarySearchTree.m */; };
+		5E46989821FE0E620020382A /* SingleLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D3121FA9BB700E2E9D3 /* SingleLinkedList.m */; };
+		5E46989921FE0E660020382A /* ReverseLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C807221FC4F4C00F760E8 /* ReverseLinkList.m */; };
+		5E46989A21FE0E6C0020382A /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D2B21FA9B9500E2E9D3 /* Stack.m */; };
+		5E46989B21FE0E6F0020382A /* DataType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D3821FAB60900E2E9D3 /* DataType.m */; };
+		5E46989C21FE0E730020382A /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D2E21FA9BA100E2E9D3 /* Queue.m */; };
+		5E46989D21FE0E770020382A /* SortBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D2821FA12C300E2E9D3 /* SortBase.m */; };
+		5E46989E21FE0E7A0020382A /* BinarySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D2021FA092D00E2E9D3 /* BinarySearch.m */; };
+		5E46989F21FE0E7E0020382A /* SelectionSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D2521FA10AA00E2E9D3 /* SelectionSort.m */; };
+		5E4698A021FE0E960020382A /* TypeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D3B21FAFB8500E2E9D3 /* TypeHeader.m */; };
+		5E4698A321FE11560020382A /* DataTypeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4698A221FE11560020382A /* DataTypeTest.m */; };
+		5E4698A521FE11B10020382A /* LinkListTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4698A421FE11B10020382A /* LinkListTest.m */; };
+		5E4698A721FE11C00020382A /* SortTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4698A621FE11C00020382A /* SortTest.m */; };
+		5E4698A921FE11C70020382A /* SearchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4698A821FE11C70020382A /* SearchTest.m */; };
 		5E4C807321FC4F4C00F760E8 /* ReverseLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C807221FC4F4C00F760E8 /* ReverseLinkList.m */; };
 		5E4C807621FC6E0F00F760E8 /* RemoveNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C807521FC6E0F00F760E8 /* RemoveNode.m */; };
+		5E4C807921FDA24500F760E8 /* BinarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4C807821FDA24500F760E8 /* BinarySearchTree.m */; };
 		5E750D1921FA091500E2E9D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D1821FA091500E2E9D3 /* main.m */; };
 		5E750D2121FA092D00E2E9D3 /* BinarySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D2021FA092D00E2E9D3 /* BinarySearch.m */; };
 		5E750D2621FA10AA00E2E9D3 /* SelectionSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D2521FA10AA00E2E9D3 /* SelectionSort.m */; };
@@ -33,10 +51,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E46988421FE09F30020382A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5E46988A21FE0CD10020382A /* AlgoTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgoTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E46988E21FE0CD10020382A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E46989221FE0D000020382A /* BSTTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSTTest.m; sourceTree = "<group>"; };
+		5E4698A221FE11560020382A /* DataTypeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataTypeTest.m; sourceTree = "<group>"; };
+		5E4698A421FE11B10020382A /* LinkListTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkListTest.m; sourceTree = "<group>"; };
+		5E4698A621FE11C00020382A /* SortTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortTest.m; sourceTree = "<group>"; };
+		5E4698A821FE11C70020382A /* SearchTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTest.m; sourceTree = "<group>"; };
 		5E4C807121FC4F4C00F760E8 /* ReverseLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReverseLinkList.h; sourceTree = "<group>"; };
 		5E4C807221FC4F4C00F760E8 /* ReverseLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReverseLinkList.m; sourceTree = "<group>"; };
 		5E4C807421FC6E0F00F760E8 /* RemoveNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoveNode.h; sourceTree = "<group>"; };
 		5E4C807521FC6E0F00F760E8 /* RemoveNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoveNode.m; sourceTree = "<group>"; };
+		5E4C807721FDA24500F760E8 /* BinarySearchTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinarySearchTree.h; sourceTree = "<group>"; };
+		5E4C807821FDA24500F760E8 /* BinarySearchTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTree.m; sourceTree = "<group>"; };
 		5E750D1521FA091500E2E9D3 /* 算法题练习 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "算法题练习"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E750D1821FA091500E2E9D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5E750D1F21FA092D00E2E9D3 /* BinarySearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinarySearch.h; sourceTree = "<group>"; };
@@ -58,6 +86,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5E46988721FE0CD10020382A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E46989521FE0DD60020382A /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5E750D1221FA091400E2E9D3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -68,6 +104,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E46988021FDDB1E0020382A /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				5E4C807721FDA24500F760E8 /* BinarySearchTree.h */,
+				5E4C807821FDA24500F760E8 /* BinarySearchTree.m */,
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
+		5E46988321FE09F20020382A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E46988421FE09F30020382A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E46988B21FE0CD10020382A /* AlgoTest */ = {
+			isa = PBXGroup;
+			children = (
+				5E46989221FE0D000020382A /* BSTTest.m */,
+				5E4698A221FE11560020382A /* DataTypeTest.m */,
+				5E46988E21FE0CD10020382A /* Info.plist */,
+				5E4698A421FE11B10020382A /* LinkListTest.m */,
+				5E4698A621FE11C00020382A /* SortTest.m */,
+				5E4698A821FE11C70020382A /* SearchTest.m */,
+			);
+			path = AlgoTest;
+			sourceTree = "<group>";
+		};
 		5E4C806D21FC4F2500F760E8 /* LinkeList */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,7 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				5E750D1721FA091500E2E9D3 /* 算法题练习 */,
+				5E46988B21FE0CD10020382A /* AlgoTest */,
 				5E750D1621FA091500E2E9D3 /* Products */,
+				5E46988321FE09F20020382A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				5E750D1521FA091500E2E9D3 /* 算法题练习 */,
+				5E46988A21FE0CD10020382A /* AlgoTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +169,7 @@
 			children = (
 				5E750D3A21FAFB8500E2E9D3 /* TypeHeader.h */,
 				5E750D3B21FAFB8500E2E9D3 /* TypeHeader.m */,
+				5E46988021FDDB1E0020382A /* Tree */,
 				5E4C806D21FC4F2500F760E8 /* LinkeList */,
 				5E750D3321FA9BBB00E2E9D3 /* Base */,
 				5E750D2321FA0D9100E2E9D3 /* Search */,
@@ -139,6 +209,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5E46988921FE0CD10020382A /* AlgoTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E46988F21FE0CD10020382A /* Build configuration list for PBXNativeTarget "AlgoTest" */;
+			buildPhases = (
+				5E46988621FE0CD10020382A /* Sources */,
+				5E46988721FE0CD10020382A /* Frameworks */,
+				5E46988821FE0CD10020382A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlgoTest;
+			productName = AlgoTest;
+			productReference = 5E46988A21FE0CD10020382A /* AlgoTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5E750D1421FA091400E2E9D3 /* 算法题练习 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E750D1C21FA091500E2E9D3 /* Build configuration list for PBXNativeTarget "算法题练习" */;
@@ -165,6 +252,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = WengHengcong;
 				TargetAttributes = {
+					5E46988921FE0CD10020382A = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					5E750D1421FA091400E2E9D3 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -183,11 +273,45 @@
 			projectRoot = "";
 			targets = (
 				5E750D1421FA091400E2E9D3 /* 算法题练习 */,
+				5E46988921FE0CD10020382A /* AlgoTest */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		5E46988821FE0CD10020382A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		5E46988621FE0CD10020382A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E4698A021FE0E960020382A /* TypeHeader.m in Sources */,
+				5E46989F21FE0E7E0020382A /* SelectionSort.m in Sources */,
+				5E46989E21FE0E7A0020382A /* BinarySearch.m in Sources */,
+				5E46989D21FE0E770020382A /* SortBase.m in Sources */,
+				5E46989C21FE0E730020382A /* Queue.m in Sources */,
+				5E46989B21FE0E6F0020382A /* DataType.m in Sources */,
+				5E46989A21FE0E6C0020382A /* Stack.m in Sources */,
+				5E46989921FE0E660020382A /* ReverseLinkList.m in Sources */,
+				5E4698A721FE11C00020382A /* SortTest.m in Sources */,
+				5E46989821FE0E620020382A /* SingleLinkedList.m in Sources */,
+				5E4698A521FE11B10020382A /* LinkListTest.m in Sources */,
+				5E46989721FE0E5D0020382A /* BinarySearchTree.m in Sources */,
+				5E46989421FE0DB90020382A /* main.m in Sources */,
+				5E4698A921FE11C70020382A /* SearchTest.m in Sources */,
+				5E4698A321FE11560020382A /* DataTypeTest.m in Sources */,
+				5E46989321FE0D000020382A /* BSTTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5E750D1121FA091400E2E9D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,6 +320,7 @@
 				5E750D3921FAB60900E2E9D3 /* DataType.m in Sources */,
 				5E4C807621FC6E0F00F760E8 /* RemoveNode.m in Sources */,
 				5E4C807321FC4F4C00F760E8 /* ReverseLinkList.m in Sources */,
+				5E4C807921FDA24500F760E8 /* BinarySearchTree.m in Sources */,
 				5E750D2621FA10AA00E2E9D3 /* SelectionSort.m in Sources */,
 				5E750D3C21FAFB8500E2E9D3 /* TypeHeader.m in Sources */,
 				5E750D2121FA092D00E2E9D3 /* BinarySearch.m in Sources */,
@@ -209,6 +334,40 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		5E46989021FE0CD10020382A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 69XHTLCF36;
+				INFOPLIST_FILE = AlgoTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.luci.AlgoTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5E46989121FE0CD10020382A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 69XHTLCF36;
+				INFOPLIST_FILE = AlgoTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.luci.AlgoTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		5E750D1A21FA091500E2E9D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -325,6 +484,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69XHTLCF36;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -334,6 +494,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69XHTLCF36;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -341,6 +502,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5E46988F21FE0CD10020382A /* Build configuration list for PBXNativeTarget "AlgoTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E46989021FE0CD10020382A /* Debug */,
+				5E46989121FE0CD10020382A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5E750D1021FA091400E2E9D3 /* Build configuration list for PBXProject "算法题练习" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

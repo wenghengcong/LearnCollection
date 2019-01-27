@@ -10,10 +10,15 @@
 
 @implementation BinarySearch
 
+
+/**
+ 在array数组中查找key
+ */
 + (int)binarySearchByKey:(int)key array:(int[])array length:(int)length;
 {
     int lo = 0;
-    int hi = length;
+    int hi = length-1;
+    // 在[lo...hi]中查找该关键字
     while (lo <= hi) {
         int mid = lo + (hi-lo)/2;
         if (key < array[mid] ) {
