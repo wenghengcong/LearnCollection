@@ -29,6 +29,7 @@
     [self.bstTree print:PrePrintOrder];
     [self.bstTree print:InPrintOrder];
     [self.bstTree print:PostPrintOrder];
+    [self.bstTree print:LvevelPrintOrder];
 }
 
 - (void)testMinAndMax

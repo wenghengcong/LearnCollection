@@ -12,6 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57349ea0-eb1d-4eb7-bf92-f6e61f94b504" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../算法题练习/AlgoTest/BSTTest.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/AlgoTest/BSTTest.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Tree/BinarySearchTree.h" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Tree/BinarySearchTree.h" afterDir="false" />
@@ -114,7 +115,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/05/Optional-06-Predecessor-and-Successor-in-BST/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7665">
+            <state relative-caret-position="158">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -122,14 +124,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/05/04-Binary-Search-Tree-Search/SequenceST.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1680" />
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>level</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -144,9 +144,9 @@
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="219" />
-    <option name="y" value="25" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="564" />
+    <option name="y" value="32" />
     <option name="width" value="1221" />
     <option name="height" value="679" />
   </component>
@@ -357,15 +357,16 @@
       <workItem from="1547388999412" duration="2328000" />
       <workItem from="1547398082940" duration="10541000" />
       <workItem from="1547567688096" duration="4300000" />
-      <workItem from="1548585384414" duration="3755000" />
+      <workItem from="1548585384414" duration="4717000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20924000" />
+    <option name="totallyTimeSpent" value="21886000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="219" y="25" width="1221" height="679" extended-state="1" />
+    <frame x="564" y="32" width="1221" height="679" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29262087" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -392,16 +393,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/05/01-Binary-Search/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="21" lean-forward="true" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/05/07-Binary-Search-Tree-Remove-Min-and-Max/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -769,9 +760,17 @@
         <state relative-caret-position="-405" />
       </provider>
     </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/queue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="193" column="27" selection-start-line="193" selection-start-column="27" selection-end-line="193" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/05/Optional-06-Predecessor-and-Successor-in-BST/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7665">
+        <state relative-caret-position="158">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

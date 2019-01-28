@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "DataType.h"
+// 层序遍历，即广度遍历，需要借助Queue实现
+#import "Queue.h"
 
 typedef enum : NSUInteger {
     PrePrintOrder,
     InPrintOrder,
     PostPrintOrder,
+    LvevelPrintOrder,
 } PrintOrder;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -21,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 1.每个节点的值 都大于其左子树中的任意节点的值，而小于右子树的任意节点的值
  * 2.跟满二叉树或者完全二叉树关系不大
  */
-@interface BinarySearchTree<__covariant KeyType, __covariant ObjectType> : NSObject
+@interface BinarySearchTree<__covariant KeyType, __covariant ObjectType>: NSObject
 
 @property (nonatomic, strong) TreeNode  *root;
 
@@ -40,6 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)preOrder;
 - (void)inOrder;
 - (void)postOrder;
+- (void)levelOrder;
 
 #pragma mark - min/max
 - (KeyType)min;

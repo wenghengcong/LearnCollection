@@ -79,7 +79,19 @@
 // 层序：广度遍历
 - (void)levelOrder
 {
-    
+    _orderOutput = [@"" mutableCopy];
+    Queue<TreeNode *> *queue = [[Queue alloc] init];
+    [queue enQueueWithValue:_root];
+    while (!queue.isEmpty) {
+        TreeNode *node = [queue deQueueValue];
+        [_orderOutput appendString:[NSString stringWithFormat:@"%@[%d]->", node.value, node.size]];
+        if (node.left) {
+            [queue enQueueWithValue:node.left];
+        }
+        if (node.right) {
+            [queue enQueueWithValue:node.right];
+        }
+    }
 }
 
 #pragma mark min/max
@@ -360,6 +372,8 @@
         [self inOrder];
     } else if (order == PostPrintOrder) {
         [self postOrder];
+    } else if (order == LvevelPrintOrder) {
+        [self levelOrder];
     }
     
     NSLog(@"%@", _orderOutput);
