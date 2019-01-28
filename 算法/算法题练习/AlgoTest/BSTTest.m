@@ -26,19 +26,14 @@
 }
 
 - (void)testOrder {
-    [self.bstTree preOrder];
-    [self.bstTree print];
-    
-    [self.bstTree inOrder];
-    [self.bstTree print];
-    
-    [self.bstTree postOrder];
-    [self.bstTree print];
+    [self.bstTree print:PrePrintOrder];
+    [self.bstTree print:InPrintOrder];
+    [self.bstTree print:PostPrintOrder];
 }
 
 - (void)testMinAndMax
 {
-    [self.bstTree print];
+    [self.bstTree print:InPrintOrder];
     NSLog(@"min: %@", [self.bstTree min]);
     NSLog(@"max: %@", [self.bstTree max]);
     
@@ -47,6 +42,13 @@
     [self.bstTree deleteMax];
     NSLog(@"min: %@", [self.bstTree min]);
     NSLog(@"max: %@", [self.bstTree max]);
+}
+
+- (void)testDeleteKey
+{
+    [self.bstTree print:InPrintOrder];
+    [self.bstTree delete:@19];
+    [self.bstTree print:InPrintOrder];
 }
 
 - (void)testPerformanceExample {

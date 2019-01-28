@@ -64,20 +64,16 @@
 // 前序
 - (void)preOrder
 {
-    _orderOutput = [@"" mutableCopy];
     [self __preOrder:_root];
 }
 // 中序
 - (void)inOrder
 {
-    _orderOutput = [@"" mutableCopy];
     [self __inOrder:_root];
 }
 // 后序
 - (void)postOrder
 {
-    // 排序前将其置空
-    _orderOutput = [@"" mutableCopy];
     [self __postOrder:_root];
 }
 // 层序：广度遍历
@@ -112,6 +108,28 @@
     if (_root) {
         _root = [self __deleteMax:_root];
     }
+}
+
+- (void)delete:(id)key
+{
+    _root = [self __delete:key node:_root];
+}
+
+
+#pragma mark select/rank
+/**
+ 返回 排名为k 的Key
+ 定义为：有k个键 小于它
+ */
+- (id)select:(int)k
+{
+    return [self __select:k node:_root].key;
+}
+
+/** Key对应的键的排名 */
+- (int)rank:(id)key
+{
+    return [self __rank:key node:_root];
 }
 
 
@@ -164,13 +182,55 @@
     return node;
 }
 
+- (TreeNode *)__delete:(id)key node:(TreeNode *)node
+{
+    if (node == nil) {
+        return nil;
+    }
+    
+    int cmp = [key compare:node.key];
+    // 遍历子树，寻找需要删除的节点
+    if (cmp < 0) {
+        node.left = [self __delete:key node:node.left];
+    } else if (cmp > 0) {
+        node.right = [self __delete:key node:node.right];
+    } else {
+        // 找到要删除的节点，分为三种情况
+        
+        // 1. 无左子树，直接将右子树返回
+        if (node.left == nil) {
+            return node.right;
+        }
+        // 2.无右子树，直接将左子树返回
+        if (node.right == nil) {
+            return node.left;
+        }
+        
+        // 3.既有左子树，又有右子树
+        /*
+            删除后，需要继续满足二叉搜索树的性质，即  左子树<根<右子树，将哪个节点提上来能继续满足呢？
+            3.1 将左子树中的最大节点提上来
+            3.2 将右子树中的最小节点提上来，此处用这种方式
+            最大、最小节点根据上面的deleteMin，deleteMax就可以得到
+         */
+        TreeNode *upNode = [self __min:node.right]; //获得最小节点
+        upNode.left = node.left;           // 上提的右子树最小节点的左节点，是将要删除的节点的左节点，即左节点部分不变动
+        upNode.right = [self __deleteMax:node.right];     // 上提的右子树的最小节点的右节点，即deleteMax中返回的节点
+        node = upNode;      // 赋值返回
+        
+        _size--;
+    }
+    node.size = node.left.size + node.right.size + 1;
+    return node;
+}
+
 #pragma mark Order
 
 - (void)__preOrder:(TreeNode *)node
 {
     if (node) {
         // 前序输出，这里做想要针对前序做的事情，此处只是打印
-        [_orderOutput appendString:[NSString stringWithFormat:@"%@->", node.value]];
+        [_orderOutput appendString:[NSString stringWithFormat:@"%@[%d]->", node.value, node.size]];
         // 遍历左子树
         [self __preOrder:node.left];
         // 遍历右子树
@@ -184,7 +244,7 @@
         // 遍历左子树
         [self __inOrder:node.left];
         // 前序输出，这里做想要针对前序做的事情，此处只是打印
-        [_orderOutput appendString:[NSString stringWithFormat:@"%@->", node.value]];
+        [_orderOutput appendString:[NSString stringWithFormat:@"%@[%d]->", node.value, node.size]];
         // 遍历右子树
         [self __inOrder:node.right];
     }
@@ -198,7 +258,7 @@
         // 遍历右子树
         [self __postOrder:node.right];
         // 前序输出，这里做想要针对前序做的事情，此处只是打印
-        [_orderOutput appendString:[NSString stringWithFormat:@"%@->", node.value]];
+        [_orderOutput appendString:[NSString stringWithFormat:@"%@[%d]->", node.value, node.size]];
     }
 }
 
@@ -247,14 +307,61 @@
     return node;
 }
 
+// 选择：假设我们想找到排名为k的键（即树中正好有k个小于它的键）。
+// 如果左子树中的结点数t大于k，那么我们就继续（递归地）在左子树中查找排名为k的键；
+// 如果t等于k，我们就返回根结点中的键；如果t小于k，我们就（递归地）在右子树中查找排名为（k-t-1）的键
+- (TreeNode *)__select:(int)k node:(TreeNode *)node
+{
+    if (node == nil) {
+        return nil;
+    }
+    int leftSize = node.left.size;
+    if (k < leftSize) {
+        // k 比当前左子树的小，说明在左子树中，并且仍然是排名为k
+        return [self __select:k node:node.left];
+    } else if(k > leftSize) {
+        // k 比当前的左子树大，即在当前右子树中，那么在右子树的排名为：k-leftSize-1(包含leftSize，以及根节点)
+        return [self __select:k-leftSize-1 node:node.right];
+    } else {
+        return node;
+    }
+}
+
+// 排名：rank()是select()的逆方法，它会返回给定键的排名。
+// 如果给定的键和根结点的键相等，我们返回左子树中的结点总数t；
+// 如果给定的键小于根结点，我们会返回该键在左子树中的排名（递归计算）；
+// 如果给定的键大于根结点，我们会返回t+1（根结点）加上它在右子树中的排名（递归计算）。
+- (int)__rank:(id)key node:(TreeNode *)node
+{
+    if (node == nil) {
+        return 0;
+    }
+    int cmp = [key compare:node.key];
+    if (cmp < 0) {
+        // key 小于当前的node的key，即key在当前node的左子树中，返回的总排名 = 在左子树的排名
+        return [self __rank:key node:node.left];
+    } else if (cmp > 0) {
+        // key大于当前的node的key，即key在当前node的右子树中，返回的总排名 = 左子树总数 +  1 （根） + 在右子树中的排名
+        return [self __rank:key node:node.right] + 1 + node.left.size;
+    } else {
+        // 与当前的nodekey相当，直接返回左子树的size
+        return node.left.size;
+    }
+}
+
 #pragma mark Other
 
-- (void)print
+- (void)print:(PrintOrder)order
 {
-    // 如果未指定排序，以中序输出
-    if (_orderOutput == nil || _orderOutput.length == 0) {
+    _orderOutput = [@"" mutableCopy];
+    if (order == PrePrintOrder) {
+        [self preOrder];
+    } else if(order == InPrintOrder) {
         [self inOrder];
+    } else if (order == PostPrintOrder) {
+        [self postOrder];
     }
+    
     NSLog(@"%@", _orderOutput);
 }
 

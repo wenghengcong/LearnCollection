@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "DataType.h"
 
+typedef enum : NSUInteger {
+    PrePrintOrder,
+    InPrintOrder,
+    PostPrintOrder,
+} PrintOrder;
+
 NS_ASSUME_NONNULL_BEGIN
 /**
  * 二叉搜索树
@@ -23,22 +29,38 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithArray:(int[])array length:(int)length;
 
+// 获取key对应的值
 - (nullable ObjectType)get:(nonnull KeyType)key;
-
+// 插入新节点
 - (void)put:(nonnull KeyType)key value:(ObjectType)value;
+// 删除节点
+- (void)delete:(id)key;
 
 #pragma mark - Order
 - (void)preOrder;
 - (void)inOrder;
 - (void)postOrder;
 
+#pragma mark - min/max
 - (KeyType)min;
 - (KeyType)max;
 
 - (void)deleteMin;
 - (void)deleteMax;
 
-- (void)print;
+#pragma mark - select/rank
+
+/**
+ 返回 排名为k 的Key
+ 排名从0开始
+ */
+- (KeyType)select:(int)k;
+
+/** Key对应的键的排名 */
+- (int)rank:(KeyType)key;
+
+#pragma mark - Other
+- (void)print:(PrintOrder)order;
 @end
 
 NS_ASSUME_NONNULL_END
