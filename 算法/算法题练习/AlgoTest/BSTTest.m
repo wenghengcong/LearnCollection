@@ -36,6 +36,19 @@
     [self.bstTree print];
 }
 
+- (void)testMinAndMax
+{
+    [self.bstTree print];
+    NSLog(@"min: %@", [self.bstTree min]);
+    NSLog(@"max: %@", [self.bstTree max]);
+    
+    //delete min
+    [self.bstTree deleteMin];
+    [self.bstTree deleteMax];
+    NSLog(@"min: %@", [self.bstTree min]);
+    NSLog(@"max: %@", [self.bstTree max]);
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{

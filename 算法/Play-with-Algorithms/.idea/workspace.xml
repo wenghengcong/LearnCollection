@@ -12,32 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57349ea0-eb1d-4eb7-bf92-f6e61f94b504" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../算法题练习/AlgoTest/BSTTest.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../算法题练习/AlgoTest/DataTypeTest.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../算法题练习/AlgoTest/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../算法题练习/AlgoTest/LinkListTest.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../算法题练习/AlgoTest/SearchTest.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../算法题练习/AlgoTest/SortTest.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Tree/BinarySearchTree.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Tree/BinarySearchTree.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/xcuserdata/wenghengcong.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/xcuserdata/wenghengcong.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/DataType.h" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/DataType.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/DataType.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/DataType.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Queue.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Queue.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Queue.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/SingleLinkedList.h" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/SingleLinkedList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/SingleLinkedList.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/SingleLinkedList.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Stack.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Stack.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Base/Stack.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/LinkeList/ReverseLinkList.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/LinkeList/ReverseLinkList.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Search/BinarySearch.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Search/BinarySearch.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/TypeHeader.h" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/TypeHeader.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/main.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/main.m" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,17 +25,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02/05-Insertion-Sort/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02/06-Insertion-Sort-Advance/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
@@ -126,11 +91,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/05/06-Binary-Search-Tree-Level-Traverse/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="168" column="9" selection-start-line="168" selection-start-column="9" selection-end-line="168" selection-end-column="9" />
+            <state relative-caret-position="-1186">
+              <caret line="126" column="29" selection-start-line="126" selection-start-column="29" selection-end-line="126" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/05/08-Binary-Search-Tree-Remove/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1711">
+              <caret line="230" column="10" selection-start-line="230" selection-start-column="10" selection-end-line="230" selection-end-column="10" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -170,8 +147,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="216" />
-    <option name="y" value="92" />
+    <option name="x" value="219" />
+    <option name="y" value="25" />
     <option name="width" value="1221" />
     <option name="height" value="679" />
   </component>
@@ -287,6 +264,18 @@
               <item name="05" type="462c0819:PsiDirectoryNode" />
               <item name="06-Binary-Search-Tree-Level-Traverse" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Play-with-Algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="05" type="462c0819:PsiDirectoryNode" />
+              <item name="07-Binary-Search-Tree-Remove-Min-and-Max" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Play-with-Algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="05" type="462c0819:PsiDirectoryNode" />
+              <item name="08-Binary-Search-Tree-Remove" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -341,15 +330,15 @@
       <workItem from="1547388999412" duration="2328000" />
       <workItem from="1547398082940" duration="10541000" />
       <workItem from="1547567688096" duration="4300000" />
-      <workItem from="1548585384414" duration="2261000" />
+      <workItem from="1548585384414" duration="3254000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19430000" />
+    <option name="totallyTimeSpent" value="20423000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="216" y="92" width="1221" height="679" extended-state="0" />
+    <frame x="219" y="25" width="1221" height="679" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29262087" />
@@ -377,9 +366,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/03/05-Quick-Sort/InsertionSort.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/03/03-Merge-Sort-Advance/MergeSort.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -756,8 +742,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/05/06-Binary-Search-Tree-Level-Traverse/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="168" column="9" selection-start-line="168" selection-start-column="9" selection-end-line="168" selection-end-column="9" />
+        <state relative-caret-position="-1186">
+          <caret line="126" column="29" selection-start-line="126" selection-start-column="29" selection-end-line="126" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05/08-Binary-Search-Tree-Remove/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1711">
+          <caret line="230" column="10" selection-start-line="230" selection-start-column="10" selection-end-line="230" selection-end-column="10" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

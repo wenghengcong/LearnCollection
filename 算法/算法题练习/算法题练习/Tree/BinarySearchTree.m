@@ -20,6 +20,8 @@
 
 #pragma mark - Public
 
+#pragma mark Create
+
 - (instancetype)init
 {
     self = [super init];
@@ -40,18 +42,24 @@
     return self;
 }
 
+#pragma mark get/put
+/**
+ 在二分搜索树中查找Key所对应的值，如果不存在，返回nil
+ */
 - (nullable id)get:(nonnull id)key
 {
     return [self __getNode:_root key:key];
 }
 
-
+/**
+ 插入一个新的(key,value)数据对
+ */
 - (void)put:(nonnull id)key value:(id)value
 {
    _root = [self __putRootNode:_root key:key value:value];
 }
 
-#pragma mark - Order
+#pragma mark Order
 // 前序、中序、后序都是深度遍历
 // 前序
 - (void)preOrder
@@ -78,9 +86,85 @@
     
 }
 
+#pragma mark min/max
+/**
+ 返回最小键的key
+ */
+- (id)min
+{
+    return [self __min:_root].key;
+}
+
+- (id)max
+{
+    return [self __max:_root].key;
+}
+
+- (void)deleteMin
+{
+    if (_root) {
+        _root = [self __deleteMin:_root];
+    }
+}
+
+- (void)deleteMax
+{
+    if (_root) {
+        _root = [self __deleteMax:_root];
+    }
+}
+
+
+/** 私有方法 */
 #pragma mark - Private
 
-#pragma mark  Order
+#pragma mark min/max
+
+- (TreeNode *)__min:(TreeNode *)node
+{
+    // 如果没有左子树，就找到了最小key，返回该node
+    if (node.left == nil) return node;
+    // 否则，继续向左子树查找
+    return [self __min:node.left];
+}
+
+- (TreeNode *)__max:(TreeNode *)node
+{
+    if(node.right == nil) return node;
+    return [self __max:node.right];
+}
+
+- (TreeNode *)__deleteMin:(TreeNode *)node
+{
+    // 查找最小左子树，即最小节点的位置
+    if(node.left == nil) {
+        // 找到最小节点的位置node
+        // 维护整棵树的节点数目
+        _size--;
+        // 找到后，删除该节点，删除该节点，就是相当于将node的右节点返回，赋给上一个节点，即使右节点为空，也符合
+        return node.right;
+    }
+    // 否则，继续寻找左子树
+    node.left = [self __deleteMin:node.left];
+    // 维护node为根节点的子树的节点数目
+    node.size = node.left.size + node.right.size + 1;
+    return node;
+}
+
+- (TreeNode *)__deleteMax:(TreeNode *)node
+{
+    if (node.right == nil) {
+        // 维护整棵树的节点数目
+        _size--;
+        return node.left;
+    }
+    node.right = [self __deleteMax:node.right];
+    // 维护node为根节点的子树的节点数目
+    node.size = node.left.size + node.right.size + 1;
+    return node;
+}
+
+#pragma mark Order
 
 - (void)__preOrder:(TreeNode *)node
 {
@@ -117,6 +201,8 @@
         [_orderOutput appendString:[NSString stringWithFormat:@"%@->", node.value]];
     }
 }
+
+#pragma mark get/put
 
 /**
  在根节点为node的子树中查找并返回key所对应的值
@@ -161,8 +247,14 @@
     return node;
 }
 
+#pragma mark Other
+
 - (void)print
 {
+    // 如果未指定排序，以中序输出
+    if (_orderOutput == nil || _orderOutput.length == 0) {
+        [self inOrder];
+    }
     NSLog(@"%@", _orderOutput);
 }
 

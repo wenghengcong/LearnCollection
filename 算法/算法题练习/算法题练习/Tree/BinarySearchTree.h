@@ -32,6 +32,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)inOrder;
 - (void)postOrder;
 
+- (KeyType)min;
+- (KeyType)max;
+
+- (void)deleteMin;
+- (void)deleteMax;
 
 - (void)print;
 @end
