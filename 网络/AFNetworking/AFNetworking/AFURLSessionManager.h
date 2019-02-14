@@ -189,6 +189,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @return A manager for a newly-created session.
  */
+// 指定初始化函数
 - (instancetype)initWithSessionConfiguration:(nullable NSURLSessionConfiguration *)configuration NS_DESIGNATED_INITIALIZER;
 
 /**

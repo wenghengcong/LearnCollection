@@ -12,11 +12,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57349ea0-eb1d-4eb7-bf92-f6e61f94b504" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../OCObject/KVO与KVC/KVC-02-principle/KVC.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../OCObject/KVO与KVC/KVC-02-principle/KVC.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RunLoop/线程保活/线程保活.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../RunLoop/线程保活/线程保活.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Runtime/isMemberOf和isKindOf/isMemberOf和isKindOf.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../Runtime/isMemberOf和isKindOf/isMemberOf和isKindOf.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../内存管理/ARC/ARC.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../内存管理/ARC/ARC.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../内存管理/GCD定时器/GCD定时器.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../内存管理/GCD定时器/GCD定时器.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../内存管理/循环引用/循环引用.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../内存管理/循环引用/循环引用.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../内存管理/自动释放出-原理/自动释放出-原理.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../内存管理/自动释放出-原理/自动释放出-原理.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../多线程/GCD/GCD.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../多线程/GCD/GCD.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../多线程/GCD/GCD/ViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../多线程/GCD/GCD/ViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../多线程/各种队列与同步异步/各种队列与同步异步.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../多线程/各种队列与同步异步/各种队列与同步异步.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../多线程/线程同步方案/线程同步方案.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../多线程/线程同步方案/线程同步方案.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../多线程/读写安全/读写安全.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../多线程/读写安全/读写安全.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/AlgoTest/BSTTest.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/AlgoTest/BSTTest.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习.xcodeproj/project.xcworkspace/xcuserdata/wenghengcong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Tree/BinarySearchTree.h" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Tree/BinarySearchTree.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../算法题练习/算法题练习/Tree/BinarySearchTree.m" beforeDir="false" afterPath="$PROJECT_DIR$/../算法题练习/算法题练习/Tree/BinarySearchTree.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../网络/AFNetworking/AFNetworking/AFHTTPSessionManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../网络/AFNetworking/AFNetworking/AFHTTPSessionManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../网络/AFNetworking/AFNetworking/AFHTTPSessionManager.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../网络/AFNetworking/AFNetworking/AFHTTPSessionManager.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../网络/AFNetworking/AFNetworking/AFURLSessionManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../网络/AFNetworking/AFNetworking/AFURLSessionManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../网络/AFNetworking/AFNetworking/AFURLSessionManager.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../网络/AFNetworking/AFNetworking/AFURLSessionManager.m" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -115,8 +129,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/05/Optional-06-Predecessor-and-Successor-in-BST/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+            <state relative-caret-position="233">
+              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -357,12 +371,12 @@
       <workItem from="1547388999412" duration="2328000" />
       <workItem from="1547398082940" duration="10541000" />
       <workItem from="1547567688096" duration="4300000" />
-      <workItem from="1548585384414" duration="4717000" />
+      <workItem from="1548585384414" duration="5110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21886000" />
+    <option name="totallyTimeSpent" value="22279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="564" y="32" width="1221" height="679" extended-state="0" />
@@ -769,8 +783,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/05/Optional-06-Predecessor-and-Successor-in-BST/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+        <state relative-caret-position="233">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

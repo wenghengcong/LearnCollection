@@ -133,4 +133,18 @@
     NSLog(@"%p %p %p %p %p", queue1, queue2, queue3, queue4, queue5);
 }
 
+- (void)testLog
+{
+    NSLog(@"2");
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSThread *thread = [[NSThread alloc] initWithBlock:^{
+        NSLog(@"1");
+    }];
+    [thread start];
+    [self performSelector:@selector(testLog) onThread:thread withObject:nil waitUntilDone:YES];
+}
+
 @end

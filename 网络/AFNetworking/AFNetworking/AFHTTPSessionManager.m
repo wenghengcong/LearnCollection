@@ -78,6 +78,7 @@
 
     self.baseURL = url;
 
+    // 序列化对象
     self.requestSerializer = [AFHTTPRequestSerializer serializer];
     self.responseSerializer = [AFJSONResponseSerializer serializer];
 
@@ -87,6 +88,7 @@
 #pragma mark -
 
 - (void)setRequestSerializer:(AFHTTPRequestSerializer <AFURLRequestSerialization> *)requestSerializer {
+    // 断言
     NSParameterAssert(requestSerializer);
 
     _requestSerializer = requestSerializer;
@@ -335,6 +337,7 @@
     return dataTask;
 }
 
+// 网络请求最后的调用方法，包括get、put、post、delete等各种供求
 - (NSURLSessionDataTask *)dataTaskWithHTTPMethod:(NSString *)method
                                        URLString:(NSString *)URLString
                                       parameters:(id)parameters
@@ -345,10 +348,14 @@
                                          failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
     NSError *serializationError = nil;
+    // 创建一个可变网络请求，urlrequest可指定timeout、Cache policy、allow cellular
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:method URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters error:&serializationError];
     for (NSString *headerField in headers.keyEnumerator) {
+        // 添加请求头，Host: www.nowhere123.com\Accept: text/plain, text/html
+        // Accept-Language: en-us\User-Agent: Mozilla/4.0
         [request addValue:headers[headerField] forHTTPHeaderField:headerField];
     }
+    //序列化错误
     if (serializationError) {
         if (failure) {
             dispatch_async(self.completionQueue ?: dispatch_get_main_queue(), ^{
@@ -358,8 +365,9 @@
 
         return nil;
     }
-
+    
     __block NSURLSessionDataTask *dataTask = nil;
+    // 调用父类的创建session task
     dataTask = [self dataTaskWithRequest:request
                           uploadProgress:uploadProgress
                         downloadProgress:downloadProgress

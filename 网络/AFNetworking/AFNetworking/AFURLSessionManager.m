@@ -61,6 +61,7 @@ static dispatch_queue_t url_session_manager_processing_queue() {
     return af_url_session_manager_processing_queue;
 }
 
+// C语言的静态函数，返回session completion group
 static dispatch_group_t url_session_manager_completion_group() {
     static dispatch_group_t af_url_session_manager_completion_group;
     static dispatch_once_t onceToken;
@@ -71,6 +72,7 @@ static dispatch_group_t url_session_manager_completion_group() {
     return af_url_session_manager_completion_group;
 }
 
+// 通知名，以域名倒置
 NSString * const AFNetworkingTaskDidResumeNotification = @"com.alamofire.networking.task.resume";
 NSString * const AFNetworkingTaskDidCompleteNotification = @"com.alamofire.networking.task.complete";
 NSString * const AFNetworkingTaskDidSuspendNotification = @"com.alamofire.networking.task.suspend";
@@ -86,6 +88,7 @@ NSString * const AFNetworkingTaskDidCompleteSessionTaskMetrics = @"com.alamofire
 
 static NSString * const AFURLSessionManagerLockName = @"com.alamofire.networking.session.manager.lock";
 
+// 在后台创建上传session task的最大尝试次数
 static NSUInteger const AFMaximumNumberOfAttemptsToRecreateBackgroundSessionUploadTask = 3;
 
 typedef void (^AFURLSessionDidBecomeInvalidBlock)(NSURLSession *session, NSError *error);
@@ -233,17 +236,19 @@ didCompleteWithError:(NSError *)error
 
     if (error) {
         userInfo[AFNetworkingTaskDidCompleteErrorKey] = error;
-
+        // 若没有指定group或者线程，均采用默认的。此处group为url_session_manager_completion_group，线程为主线程
         dispatch_group_async(manager.completionGroup ?: url_session_manager_completion_group(), manager.completionQueue ?: dispatch_get_main_queue(), ^{
             if (self.completionHandler) {
+                // error时，responseObject为nil
                 self.completionHandler(task.response, responseObject, error);
             }
-
+            // 在主线程发送通知
             dispatch_async(dispatch_get_main_queue(), ^{
                 [[NSNotificationCenter defaultCenter] postNotificationName:AFNetworkingTaskDidCompleteNotification object:task userInfo:userInfo];
             });
         });
     } else {
+        // url_session_manager_processing_queue 是并发队列
         dispatch_async(url_session_manager_processing_queue(), ^{
             NSError *serializationError = nil;
             responseObject = [manager.responseSerializer responseObjectForResponse:task.response data:data error:&serializationError];
@@ -351,7 +356,7 @@ didFinishDownloadingToURL:(NSURL *)location
  *  - https://github.com/AFNetworking/AFNetworking/issues/2638
  *  - https://github.com/AFNetworking/AFNetworking/pull/2702
  */
-
+// 交换方法以及添加方法
 static inline void af_swizzleSelector(Class theClass, SEL originalSelector, SEL swizzledSelector) {
     Method originalMethod = class_getInstanceMethod(theClass, originalSelector);
     Method swizzledMethod = class_getInstanceMethod(theClass, swizzledSelector);
@@ -510,13 +515,14 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
     }
 
     if (!configuration) {
+        // 若config为空，采用默认的
         configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     }
 
     self.sessionConfiguration = configuration;
 
     self.operationQueue = [[NSOperationQueue alloc] init];
-    self.operationQueue.maxConcurrentOperationCount = 1;
+    self.operationQueue.maxConcurrentOperationCount = 1;    // 默认并发数为1
 
     self.responseSerializer = [AFJSONResponseSerializer serializer];
 
@@ -569,11 +575,12 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
 
 #pragma mark -
 
-
+// task 标识
 - (NSString *)taskDescriptionForSessionTasks {
     return [NSString stringWithFormat:@"%p", self];
 }
 
+// AFNSURLSessionTaskDidResumeNotification 该通知的处理
 - (void)taskDidResume:(NSNotification *)notification {
     NSURLSessionTask *task = notification.object;
     if ([task respondsToSelector:@selector(taskDescription)]) {
@@ -585,6 +592,7 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
     }
 }
 
+// AFNSURLSessionTaskDidSuspendNotification 通知的处理
 - (void)taskDidSuspend:(NSNotification *)notification {
     NSURLSessionTask *task = notification.object;
     if ([task respondsToSelector:@selector(taskDescription)]) {
@@ -596,7 +604,7 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
     }
 }
 
-#pragma mark -
+#pragma mark - 维护delegate 与 task 的关系
 
 - (AFURLSessionManagerTaskDelegate *)delegateForTask:(NSURLSessionTask *)task {
     NSParameterAssert(task);
@@ -614,10 +622,10 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
 {
     NSParameterAssert(task);
     NSParameterAssert(delegate);
-
+    // 注意可变字典的读写需要加锁
     [self.lock lock];
     self.mutableTaskDelegatesKeyedByTaskIdentifier[@(task.taskIdentifier)] = delegate;
-    [self addNotificationObserverForTask:task];
+    [self addNotificationObserverForTask:task];     // 针对task的resume以及suspend进行监听
     [self.lock unlock];
 }
 
@@ -626,10 +634,14 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
               downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgressBlock
              completionHandler:(void (^)(NSURLResponse *response, id responseObject, NSError *error))completionHandler
 {
+    // 为每一个session task关联一个delegate
+    // delegate提供了progress，以及completion hanlder
     AFURLSessionManagerTaskDelegate *delegate = [[AFURLSessionManagerTaskDelegate alloc] initWithTask:dataTask];
     delegate.manager = self;
     delegate.completionHandler = completionHandler;
 
+    // 将delegate和task关系保存在url session manager的全局字典里
+    // 字典的key为task的内存地址,value为delegate
     dataTask.taskDescription = self.taskDescriptionForSessionTasks;
     [self setDelegate:delegate forTask:dataTask];
 
@@ -683,8 +695,8 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
     [self.lock unlock];
 }
 
-#pragma mark -
-
+#pragma mark - 获取task
+// ！！！学习该方法，如何从异步任务中，进行同步获取
 - (NSArray *)tasksForKeyPath:(NSString *)keyPath {
     __block NSArray *tasks = nil;
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
@@ -1280,7 +1292,7 @@ expectedTotalBytes:(int64_t)expectedTotalBytes
     }
 }
 
-#pragma mark - NSSecureCoding
+#pragma mark - NSSecureCoding 协议重写
 
 + (BOOL)supportsSecureCoding {
     return YES;
@@ -1301,7 +1313,7 @@ expectedTotalBytes:(int64_t)expectedTotalBytes
     [coder encodeObject:self.session.configuration forKey:@"sessionConfiguration"];
 }
 
-#pragma mark - NSCopying
+#pragma mark - NSCopying 协议重写
 
 - (instancetype)copyWithZone:(NSZone *)zone {
     return [[[self class] allocWithZone:zone] initWithSessionConfiguration:self.session.configuration];

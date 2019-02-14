@@ -240,6 +240,7 @@
 
 - (void)__preOrder:(TreeNode *)node
 {
+    // 迭代实现
     if (node) {
         // 前序输出，这里做想要针对前序做的事情，此处只是打印
         [_orderOutput appendString:[NSString stringWithFormat:@"%@[%d]->", node.value, node.size]];
@@ -248,6 +249,9 @@
         // 遍历右子树
         [self __preOrder:node.right];
     }
+    
+    // TODO: 循环实现
+   
 }
 
 - (void)__inOrder:(TreeNode *)node
