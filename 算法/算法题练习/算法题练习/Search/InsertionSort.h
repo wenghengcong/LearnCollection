@@ -1,8 +1,8 @@
 //
-//  SelectionSort.h
+//  InsertionSort.h
 //  算法题练习
 //
-//  Created by WengHengcong on 2019/1/24.
+//  Created by WengHengcong on 2019/2/20.
 //  Copyright © 2019 WengHengcong. All rights reserved.
 //
 
@@ -13,13 +13,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- 选择排序
- 性能：O^2
- 稳定性：
+ 插入排序
  */
-@interface SelectionSort : SortBase
+@interface InsertionSort : SortBase
 
 + (void)sort:(int[])array length:(int)length;
+
+
+/**
+ 优化后的插入排序
+ */
++ (void)sortOptimize:(int[])array length:(int)length;
 
 @end
 

@@ -11,7 +11,7 @@
 @implementation SelectionSort
 
 //选择排序
-+ (void)selectionSort:(int[])array length:(int)length
++ (void)sort:(int[])array length:(int)length
 {
     for (int i = 0; i < length; i++) {
         int minIndex = i;

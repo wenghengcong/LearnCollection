@@ -10,6 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ 所有排序，都是从小到大排序
+ */
 @interface SortBase : NSObject
 
 /**

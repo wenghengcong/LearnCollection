@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E20B763221D7001001DF2A6 /* InsertionSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E20B762221D7001001DF2A6 /* InsertionSort.m */; };
 		5E46989321FE0D000020382A /* BSTTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E46989221FE0D000020382A /* BSTTest.m */; };
 		5E46989421FE0DB90020382A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D1821FA091500E2E9D3 /* main.m */; };
 		5E46989521FE0DD60020382A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E46988421FE09F30020382A /* XCTest.framework */; };
@@ -51,6 +52,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E20B761221D7001001DF2A6 /* InsertionSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsertionSort.h; sourceTree = "<group>"; };
+		5E20B762221D7001001DF2A6 /* InsertionSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsertionSort.m; sourceTree = "<group>"; };
 		5E46988421FE09F30020382A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5E46988A21FE0CD10020382A /* AlgoTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgoTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E46988E21FE0CD10020382A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 				5E750D2021FA092D00E2E9D3 /* BinarySearch.m */,
 				5E750D2421FA10AA00E2E9D3 /* SelectionSort.h */,
 				5E750D2521FA10AA00E2E9D3 /* SelectionSort.m */,
+				5E20B761221D7001001DF2A6 /* InsertionSort.h */,
+				5E20B762221D7001001DF2A6 /* InsertionSort.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 				5E750D3C21FAFB8500E2E9D3 /* TypeHeader.m in Sources */,
 				5E750D2121FA092D00E2E9D3 /* BinarySearch.m in Sources */,
 				5E750D2F21FA9BA100E2E9D3 /* Queue.m in Sources */,
+				5E20B763221D7001001DF2A6 /* InsertionSort.m in Sources */,
 				5E750D2C21FA9B9500E2E9D3 /* Stack.m in Sources */,
 				5E750D3221FA9BB700E2E9D3 /* SingleLinkedList.m in Sources */,
 				5E750D1921FA091500E2E9D3 /* main.m in Sources */,
