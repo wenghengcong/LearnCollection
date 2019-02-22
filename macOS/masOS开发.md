@@ -1,0 +1,52 @@
+masOS开发
+
+raywenderlich https://www.raywenderlich.com/macos
+
+
+
+1. 菜单栏app开发  
+
+   [Menus and Popovers in Menu Bar Apps for macOS](https://www.raywenderlich.com/450-menus-and-popovers-in-menu-bar-apps-for-macos)
+
+   [WeatherBar](http://footle.org/WeatherBar/)
+
+2. Sparkle
+
+   暂时还不支持Mac App Store
+
+   https://blog.csdn.net/lovechris00/article/details/80247987
+
+   https://meniny.cn/posts/sparkle_1_setup/
+
+   https://sparkle-project.org/documentation/
+
+3. CollectionView
+
+   https://developer.apple.com/library/archive/documentation/WindowsViews/Conceptual/CollectionViews/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009030
+
+   https://www.raywenderlich.com/783-nscollectionview-tutorial
+
+   https://www.raywenderlich.com/1047-advanced-collection-views-in-os-x-tutorial
+
+   https://www.raywenderlich.com/1246-collection-views-in-os-x-tutorial
+
+4. macOS Controls
+
+   https://www.raywenderlich.com/759-macos-controls-tutorial-part-1-2
+
+   https://www.raywenderlich.com/760-macos-controls-tutorial-part-2-2
+
+   https://www.raywenderlich.com/830-macos-nstableview-tutorial
+
+   https://www.raywenderlich.com/1101-core-graphics-on-macos-tutorial
+
+5. segmentcontrol
+
+   https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/SegmentedControl/Articles/SegmentedControlCode.html
+
+6. tableview
+
+   tableview with section https://medium.com/explorations-in-cocoa/nstableview-with-sections-f9657cd7910e
+
+7. d
+
