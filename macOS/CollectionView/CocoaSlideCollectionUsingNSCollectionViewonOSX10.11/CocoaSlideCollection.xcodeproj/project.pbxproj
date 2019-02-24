@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0518DB761AEFD75A006026FB /* AAPLSlideTableBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0518DB751AEFD75A006026FB /* AAPLSlideTableBackgroundView.m */; };
+		054BB0841B14C84A00B820AF /* AAPLSlideLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 054BB0831B14C84A00B820AF /* AAPLSlideLayout.m */; };
+		054BB0871B14CA1700B820AF /* AAPLCircularLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 054BB0861B14CA1700B820AF /* AAPLCircularLayout.m */; };
+		054BB08A1B14CA6800B820AF /* AAPLLoopLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 054BB0891B14CA6800B820AF /* AAPLLoopLayout.m */; };
+		054BB08D1B14CABB00B820AF /* AAPLScatterLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 054BB08C1B14CABB00B820AF /* AAPLScatterLayout.m */; };
+		054BB0901B14CB2100B820AF /* AAPLWrappedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 054BB08F1B14CB2100B820AF /* AAPLWrappedLayout.m */; };
+		05709BD01B1E27BE001B0B8E /* AAPLFileTreeWatcherThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 05004AE41B1DF9F6007D3051 /* AAPLFileTreeWatcherThread.m */; };
+		058F205A1AE0106A003C6E86 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058F20581AE0106A003C6E86 /* Slide.xib */; };
+		05A279A60A802A94005DE8F0 /* AAPLSlideCarrierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A279A50A802A94005DE8F0 /* AAPLSlideCarrierView.m */; };
+		05A27A010A802FA5005DE8F0 /* AAPLSlideImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A27A000A802FA5005DE8F0 /* AAPLSlideImageView.m */; };
+		05C20B3A1B06567300EE9D8B /* AAPLTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C20B391B06567300EE9D8B /* AAPLTag.m */; };
+		05C20B4A1B06864D00EE9D8B /* AAPLFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C20B471B06864D00EE9D8B /* AAPLFooterView.m */; };
+		05C20B4B1B06864D00EE9D8B /* AAPLHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C20B491B06864D00EE9D8B /* AAPLHeaderView.m */; };
+		05C20B501B06865E00EE9D8B /* Footer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C20B4C1B06865E00EE9D8B /* Footer.xib */; };
+		05C20B511B06865E00EE9D8B /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C20B4E1B06865E00EE9D8B /* Header.xib */; };
+		05E0E6E10A8A4B0700C10370 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E0E6E00A8A4B0700C10370 /* Quartz.framework */; };
+		05F0DE880A632614004CE6A7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F0DE870A632614004CE6A7 /* QuartzCore.framework */; };
+		05F0DFDB0A6326C5004CE6A7 /* AAPLImageCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F0DFD30A6326C5004CE6A7 /* AAPLImageCollection.m */; };
+		05F0DFDC0A6326C5004CE6A7 /* AAPLImageFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F0DFD50A6326C5004CE6A7 /* AAPLImageFile.m */; };
+		05F0DFE80A632702004CE6A7 /* AAPLSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F0DFE40A632702004CE6A7 /* AAPLSlide.m */; };
+		05F0DFEF0A632727004CE6A7 /* AAPLBrowserWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F0DFEC0A632727004CE6A7 /* AAPLBrowserWindowController.m */; };
+		05F0DFF00A632727004CE6A7 /* AAPLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F0DFEE0A632727004CE6A7 /* AAPLAppDelegate.m */; };
+		05F61A0F1B0509AD009C3004 /* SlideArt.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05F61A0E1B0509AD009C3004 /* SlideArt.xcassets */; };
+		05F61A121B0517DD009C3004 /* AAPLSlideBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F61A111B0517DD009C3004 /* AAPLSlideBorderView.m */; };
+		5317E3C416DED79500D89082 /* BrowserWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5317E3BE16DED79500D89082 /* BrowserWindow.xib */; };
+		5317E3C516DED79500D89082 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5317E3C016DED79500D89082 /* MainMenu.xib */; };
+		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
+		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
+		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05004AE31B1DF9F6007D3051 /* AAPLFileTreeWatcherThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLFileTreeWatcherThread.h; sourceTree = "<group>"; };
+		05004AE41B1DF9F6007D3051 /* AAPLFileTreeWatcherThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLFileTreeWatcherThread.m; sourceTree = "<group>"; };
+		0518DB741AEFD75A006026FB /* AAPLSlideTableBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLSlideTableBackgroundView.h; sourceTree = "<group>"; };
+		0518DB751AEFD75A006026FB /* AAPLSlideTableBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLSlideTableBackgroundView.m; sourceTree = "<group>"; };
+		054BB0821B14C84A00B820AF /* AAPLSlideLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLSlideLayout.h; sourceTree = "<group>"; };
+		054BB0831B14C84A00B820AF /* AAPLSlideLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLSlideLayout.m; sourceTree = "<group>"; };
+		054BB0851B14CA1700B820AF /* AAPLCircularLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCircularLayout.h; sourceTree = "<group>"; };
+		054BB0861B14CA1700B820AF /* AAPLCircularLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCircularLayout.m; sourceTree = "<group>"; };
+		054BB0881B14CA6800B820AF /* AAPLLoopLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLLoopLayout.h; sourceTree = "<group>"; };
+		054BB0891B14CA6800B820AF /* AAPLLoopLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLLoopLayout.m; sourceTree = "<group>"; };
+		054BB08B1B14CABB00B820AF /* AAPLScatterLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLScatterLayout.h; sourceTree = "<group>"; };
+		054BB08C1B14CABB00B820AF /* AAPLScatterLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLScatterLayout.m; sourceTree = "<group>"; };
+		054BB08E1B14CB2100B820AF /* AAPLWrappedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLWrappedLayout.h; sourceTree = "<group>"; };
+		054BB08F1B14CB2100B820AF /* AAPLWrappedLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLWrappedLayout.m; sourceTree = "<group>"; };
+		056AC1AE0A841C1F005041B0 /* CocoaSlideCollection_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CocoaSlideCollection_Prefix.pch; sourceTree = "<group>"; };
+		058F20591AE0106A003C6E86 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Slide.xib; sourceTree = "<group>"; };
+		05A279A40A802A94005DE8F0 /* AAPLSlideCarrierView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AAPLSlideCarrierView.h; sourceTree = "<group>"; };
+		05A279A50A802A94005DE8F0 /* AAPLSlideCarrierView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AAPLSlideCarrierView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		05A279FF0A802FA5005DE8F0 /* AAPLSlideImageView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AAPLSlideImageView.h; sourceTree = "<group>"; };
+		05A27A000A802FA5005DE8F0 /* AAPLSlideImageView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AAPLSlideImageView.m; sourceTree = "<group>"; };
+		05C20B381B06567300EE9D8B /* AAPLTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLTag.h; sourceTree = "<group>"; };
+		05C20B391B06567300EE9D8B /* AAPLTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLTag.m; sourceTree = "<group>"; };
+		05C20B461B06864D00EE9D8B /* AAPLFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLFooterView.h; sourceTree = "<group>"; };
+		05C20B471B06864D00EE9D8B /* AAPLFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLFooterView.m; sourceTree = "<group>"; };
+		05C20B481B06864D00EE9D8B /* AAPLHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLHeaderView.h; sourceTree = "<group>"; };
+		05C20B491B06864D00EE9D8B /* AAPLHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLHeaderView.m; sourceTree = "<group>"; };
+		05C20B4D1B06865E00EE9D8B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Footer.xib; sourceTree = "<group>"; };
+		05C20B4F1B06865E00EE9D8B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Header.xib; sourceTree = "<group>"; };
+		05E0E6E00A8A4B0700C10370 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
+		05F0DE870A632614004CE6A7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		05F0DFD20A6326C5004CE6A7 /* AAPLImageCollection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AAPLImageCollection.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		05F0DFD30A6326C5004CE6A7 /* AAPLImageCollection.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AAPLImageCollection.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		05F0DFD40A6326C5004CE6A7 /* AAPLImageFile.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AAPLImageFile.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		05F0DFD50A6326C5004CE6A7 /* AAPLImageFile.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AAPLImageFile.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		05F0DFE30A632702004CE6A7 /* AAPLSlide.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = AAPLSlide.h; path = ../View/AAPLSlide.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		05F0DFE40A632702004CE6A7 /* AAPLSlide.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = AAPLSlide.m; path = ../View/AAPLSlide.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		05F0DFEB0A632727004CE6A7 /* AAPLBrowserWindowController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AAPLBrowserWindowController.h; sourceTree = "<group>"; };
+		05F0DFEC0A632727004CE6A7 /* AAPLBrowserWindowController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AAPLBrowserWindowController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		05F0DFED0A632727004CE6A7 /* AAPLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AAPLAppDelegate.h; sourceTree = "<group>"; };
+		05F0DFEE0A632727004CE6A7 /* AAPLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AAPLAppDelegate.m; sourceTree = "<group>"; };
+		05F61A0E1B0509AD009C3004 /* SlideArt.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SlideArt.xcassets; path = ../Resources/SlideArt.xcassets; sourceTree = "<group>"; };
+		05F61A101B0517DD009C3004 /* AAPLSlideBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLSlideBorderView.h; sourceTree = "<group>"; };
+		05F61A111B0517DD009C3004 /* AAPLSlideBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AAPLSlideBorderView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		4D523C501B190C540032EEB7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5317E3BF16DED79500D89082 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/BrowserWindow.xib; sourceTree = "<group>"; };
+		5317E3C116DED79500D89082 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		53AE252416DED25D00165898 /* CocoaSlideCollection.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = CocoaSlideCollection.entitlements; path = CocoaSlideCollection/CocoaSlideCollection.entitlements; sourceTree = "<group>"; };
+		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CocoaSlideCollection/Info.plist; sourceTree = SOURCE_ROOT; };
+		8D15AC370486D014006FF6A4 /* CocoaSlideCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaSlideCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D15AC330486D014006FF6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				05F0DE880A632614004CE6A7 /* QuartzCore.framework in Frameworks */,
+				05E0E6E10A8A4B0700C10370 /* Quartz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		054BB0811B14C7D900B820AF /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				054BB0821B14C84A00B820AF /* AAPLSlideLayout.h */,
+				054BB0831B14C84A00B820AF /* AAPLSlideLayout.m */,
+				054BB0851B14CA1700B820AF /* AAPLCircularLayout.h */,
+				054BB0861B14CA1700B820AF /* AAPLCircularLayout.m */,
+				054BB0881B14CA6800B820AF /* AAPLLoopLayout.h */,
+				054BB0891B14CA6800B820AF /* AAPLLoopLayout.m */,
+				054BB08B1B14CABB00B820AF /* AAPLScatterLayout.h */,
+				054BB08C1B14CABB00B820AF /* AAPLScatterLayout.m */,
+				054BB08E1B14CB2100B820AF /* AAPLWrappedLayout.h */,
+				054BB08F1B14CB2100B820AF /* AAPLWrappedLayout.m */,
+			);
+			name = Layouts;
+			path = View/Layouts;
+			sourceTree = "<group>";
+		};
+		05AF34991B15655100BFC864 /* Background View */ = {
+			isa = PBXGroup;
+			children = (
+				0518DB741AEFD75A006026FB /* AAPLSlideTableBackgroundView.h */,
+				0518DB751AEFD75A006026FB /* AAPLSlideTableBackgroundView.m */,
+			);
+			name = "Background View";
+			sourceTree = "<group>";
+		};
+		05D26BCA1AEFBEE6000E92C4 /* Header and Footer Views */ = {
+			isa = PBXGroup;
+			children = (
+				05C20B481B06864D00EE9D8B /* AAPLHeaderView.h */,
+				05C20B491B06864D00EE9D8B /* AAPLHeaderView.m */,
+				05C20B461B06864D00EE9D8B /* AAPLFooterView.h */,
+				05C20B471B06864D00EE9D8B /* AAPLFooterView.m */,
+			);
+			name = "Header and Footer Views";
+			sourceTree = "<group>";
+		};
+		05D26BCB1AEFBEF7000E92C4 /* Slide */ = {
+			isa = PBXGroup;
+			children = (
+				05A279A40A802A94005DE8F0 /* AAPLSlideCarrierView.h */,
+				05A279A50A802A94005DE8F0 /* AAPLSlideCarrierView.m */,
+				05F61A101B0517DD009C3004 /* AAPLSlideBorderView.h */,
+				05F61A111B0517DD009C3004 /* AAPLSlideBorderView.m */,
+				05A279FF0A802FA5005DE8F0 /* AAPLSlideImageView.h */,
+				05A27A000A802FA5005DE8F0 /* AAPLSlideImageView.m */,
+			);
+			name = Slide;
+			sourceTree = "<group>";
+		};
+		05F0DFCF0A6326A4004CE6A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05F0DFD20A6326C5004CE6A7 /* AAPLImageCollection.h */,
+				05F0DFD30A6326C5004CE6A7 /* AAPLImageCollection.m */,
+				05C20B381B06567300EE9D8B /* AAPLTag.h */,
+				05C20B391B06567300EE9D8B /* AAPLTag.m */,
+				05F0DFD40A6326C5004CE6A7 /* AAPLImageFile.h */,
+				05F0DFD50A6326C5004CE6A7 /* AAPLImageFile.m */,
+				05004AE31B1DF9F6007D3051 /* AAPLFileTreeWatcherThread.h */,
+				05004AE41B1DF9F6007D3051 /* AAPLFileTreeWatcherThread.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		05F0DFE00A6326EC004CE6A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				05D26BCB1AEFBEF7000E92C4 /* Slide */,
+				05D26BCA1AEFBEE6000E92C4 /* Header and Footer Views */,
+				05AF34991B15655100BFC864 /* Background View */,
+			);
+			name = Views;
+			path = View;
+			sourceTree = "<group>";
+		};
+		05F0DFEA0A632715004CE6A7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				05F0DFED0A632727004CE6A7 /* AAPLAppDelegate.h */,
+				05F0DFEE0A632727004CE6A7 /* AAPLAppDelegate.m */,
+				05F0DFEB0A632727004CE6A7 /* AAPLBrowserWindowController.h */,
+				05F0DFEC0A632727004CE6A7 /* AAPLBrowserWindowController.m */,
+				05F0DFE30A632702004CE6A7 /* AAPLSlide.h */,
+				05F0DFE40A632702004CE6A7 /* AAPLSlide.m */,
+			);
+			name = Controllers;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05E0E6E00A8A4B0700C10370 /* Quartz.framework */,
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+				05F0DE870A632614004CE6A7 /* QuartzCore.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
+				13E42FBA07B3F13500E4EEF1 /* CoreData.framework */,
+				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D15AC370486D014006FF6A4 /* CocoaSlideCollection.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* xGallery */ = {
+			isa = PBXGroup;
+			children = (
+				4D523C501B190C540032EEB7 /* README.md */,
+				53AE252416DED25D00165898 /* CocoaSlideCollection.entitlements */,
+				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
+				2A37F4B8FDCFA73011CA2CEA /* Resources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+			);
+			name = xGallery;
+			sourceTree = "<group>";
+		};
+		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				05F0DFEA0A632715004CE6A7 /* Controllers */,
+				05F0DFE00A6326EC004CE6A7 /* Views */,
+				054BB0811B14C7D900B820AF /* Layouts */,
+				05F0DFCF0A6326A4004CE6A7 /* Model */,
+			);
+			name = Classes;
+			path = CocoaSlideCollection;
+			sourceTree = "<group>";
+		};
+		2A37F4AFFDCFA73011CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				056AC1AE0A841C1F005041B0 /* CocoaSlideCollection_Prefix.pch */,
+				2A37F4B0FDCFA73011CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			path = CocoaSlideCollection;
+			sourceTree = "<group>";
+		};
+		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D15AC360486D014006FF6A4 /* Info.plist */,
+				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
+				058F20581AE0106A003C6E86 /* Slide.xib */,
+				05C20B4E1B06865E00EE9D8B /* Header.xib */,
+				05C20B4C1B06865E00EE9D8B /* Footer.xib */,
+				5317E3BE16DED79500D89082 /* BrowserWindow.xib */,
+				5317E3C016DED79500D89082 /* MainMenu.xib */,
+				05F61A0E1B0509AD009C3004 /* SlideArt.xcassets */,
+				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			path = CocoaSlideCollection/English.lproj;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
+				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D15AC270486D014006FF6A4 /* Cocoa Slides */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "Cocoa Slides" */;
+			buildPhases = (
+				8D15AC2B0486D014006FF6A4 /* Resources */,
+				8D15AC300486D014006FF6A4 /* Sources */,
+				8D15AC330486D014006FF6A4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cocoa Slides";
+			productInstallPath = "$(HOME)/Applications";
+			productName = xGallery;
+			productReference = 8D15AC370486D014006FF6A4 /* CocoaSlideCollection.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					8D15AC270486D014006FF6A4 = {
+						DevelopmentTeam = ZCR395M3U8;
+					};
+				};
+			};
+			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "CocoaSlideCollection" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* xGallery */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D15AC270486D014006FF6A4 /* Cocoa Slides */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D15AC2B0486D014006FF6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C20B501B06865E00EE9D8B /* Footer.xib in Resources */,
+				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
+				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
+				05C20B511B06865E00EE9D8B /* Header.xib in Resources */,
+				5317E3C416DED79500D89082 /* BrowserWindow.xib in Resources */,
+				5317E3C516DED79500D89082 /* MainMenu.xib in Resources */,
+				058F205A1AE0106A003C6E86 /* Slide.xib in Resources */,
+				05F61A0F1B0509AD009C3004 /* SlideArt.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D15AC300486D014006FF6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC320486D014006FF6A4 /* main.m in Sources */,
+				05F0DFDB0A6326C5004CE6A7 /* AAPLImageCollection.m in Sources */,
+				054BB0841B14C84A00B820AF /* AAPLSlideLayout.m in Sources */,
+				05F0DFDC0A6326C5004CE6A7 /* AAPLImageFile.m in Sources */,
+				0518DB761AEFD75A006026FB /* AAPLSlideTableBackgroundView.m in Sources */,
+				054BB08D1B14CABB00B820AF /* AAPLScatterLayout.m in Sources */,
+				054BB0901B14CB2100B820AF /* AAPLWrappedLayout.m in Sources */,
+				05F0DFE80A632702004CE6A7 /* AAPLSlide.m in Sources */,
+				05F0DFEF0A632727004CE6A7 /* AAPLBrowserWindowController.m in Sources */,
+				054BB08A1B14CA6800B820AF /* AAPLLoopLayout.m in Sources */,
+				05F0DFF00A632727004CE6A7 /* AAPLAppDelegate.m in Sources */,
+				05709BD01B1E27BE001B0B8E /* AAPLFileTreeWatcherThread.m in Sources */,
+				05F61A121B0517DD009C3004 /* AAPLSlideBorderView.m in Sources */,
+				05C20B4A1B06864D00EE9D8B /* AAPLFooterView.m in Sources */,
+				054BB0871B14CA1700B820AF /* AAPLCircularLayout.m in Sources */,
+				05C20B4B1B06864D00EE9D8B /* AAPLHeaderView.m in Sources */,
+				05C20B3A1B06567300EE9D8B /* AAPLTag.m in Sources */,
+				05A279A60A802A94005DE8F0 /* AAPLSlideCarrierView.m in Sources */,
+				05A27A010A802FA5005DE8F0 /* AAPLSlideImageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		058F20581AE0106A003C6E86 /* Slide.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				058F20591AE0106A003C6E86 /* English */,
+			);
+			name = Slide.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		05C20B4C1B06865E00EE9D8B /* Footer.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05C20B4D1B06865E00EE9D8B /* English */,
+			);
+			name = Footer.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		05C20B4E1B06865E00EE9D8B /* Header.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05C20B4F1B06865E00EE9D8B /* English */,
+			);
+			name = Header.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1660FE840EACC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A37F4BAFDCFA73011CA2CEA /* English */,
+			);
+			name = Credits.rtf;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5317E3BE16DED79500D89082 /* BrowserWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5317E3BF16DED79500D89082 /* English */,
+			);
+			name = BrowserWindow.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		5317E3C016DED79500D89082 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5317E3C116DED79500D89082 /* English */,
+			);
+			name = MainMenu.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C05733C808A9546B00998B17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = CocoaSlideCollection/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.CocoaSlideCollection";
+				PRODUCT_NAME = CocoaSlideCollection;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C05733C908A9546B00998B17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = CocoaSlideCollection/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.CocoaSlideCollection";
+				PRODUCT_NAME = CocoaSlideCollection;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C05733CC08A9546B00998B17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C05733CD08A9546B00998B17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "Cocoa Slides" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C05733C808A9546B00998B17 /* Debug */,
+				C05733C908A9546B00998B17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "CocoaSlideCollection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C05733CC08A9546B00998B17 /* Debug */,
+				C05733CD08A9546B00998B17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}

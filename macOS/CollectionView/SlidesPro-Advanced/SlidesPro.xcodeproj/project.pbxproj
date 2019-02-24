@@ -1,0 +1,361 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		872E8B7C1C034D4D008C0329 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E8B7B1C034D4D008C0329 /* AppDelegate.swift */; };
+		872E8B7E1C034D4D008C0329 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E8B7D1C034D4D008C0329 /* ViewController.swift */; };
+		872E8B801C034D4D008C0329 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 872E8B7F1C034D4D008C0329 /* Assets.xcassets */; };
+		872E8B831C034D4D008C0329 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 872E8B811C034D4D008C0329 /* Main.storyboard */; };
+		872E8B901C034EE8008C0329 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E8B8F1C034EE8008C0329 /* WindowController.swift */; };
+		872E8B921C0350C0008C0329 /* ImageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E8B911C0350C0008C0329 /* ImageFile.swift */; };
+		872E8B941C035259008C0329 /* ImageDirectoryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E8B931C035259008C0329 /* ImageDirectoryLoader.swift */; };
+		873212B21CCCD41C00B4AEF4 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873212B11CCCD41C00B4AEF4 /* CollectionView.swift */; };
+		873212B41CCCD81800B4AEF4 /* StickyHeadersLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873212B31CCCD81800B4AEF4 /* StickyHeadersLayout.swift */; };
+		876B1D6D1C09C5E0009DEAF6 /* CollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876B1D6B1C09C5E0009DEAF6 /* CollectionViewItem.swift */; };
+		876B1D6E1C09C5E0009DEAF6 /* CollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 876B1D6C1C09C5E0009DEAF6 /* CollectionViewItem.xib */; };
+		876B1D701C09D4C3009DEAF6 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 876B1D6F1C09D4C3009DEAF6 /* HeaderView.xib */; };
+		876B1D721C09D5CC009DEAF6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876B1D711C09D5CC009DEAF6 /* HeaderView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		872E8B781C034D4D008C0329 /* SlidesPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlidesPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		872E8B7B1C034D4D008C0329 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		872E8B7D1C034D4D008C0329 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		872E8B7F1C034D4D008C0329 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		872E8B821C034D4D008C0329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		872E8B841C034D4D008C0329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		872E8B8F1C034EE8008C0329 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		872E8B911C0350C0008C0329 /* ImageFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFile.swift; sourceTree = "<group>"; };
+		872E8B931C035259008C0329 /* ImageDirectoryLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDirectoryLoader.swift; sourceTree = "<group>"; };
+		873212B11CCCD41C00B4AEF4 /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		873212B31CCCD81800B4AEF4 /* StickyHeadersLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyHeadersLayout.swift; sourceTree = "<group>"; };
+		876B1D6B1C09C5E0009DEAF6 /* CollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewItem.swift; sourceTree = "<group>"; };
+		876B1D6C1C09C5E0009DEAF6 /* CollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewItem.xib; sourceTree = "<group>"; };
+		876B1D6F1C09D4C3009DEAF6 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		876B1D711C09D5CC009DEAF6 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		872E8B751C034D4D008C0329 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		872E8B6F1C034D4D008C0329 = {
+			isa = PBXGroup;
+			children = (
+				872E8B7A1C034D4D008C0329 /* SlidesPro */,
+				872E8B791C034D4D008C0329 /* Products */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+		};
+		872E8B791C034D4D008C0329 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				872E8B781C034D4D008C0329 /* SlidesPro.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		872E8B7A1C034D4D008C0329 /* SlidesPro */ = {
+			isa = PBXGroup;
+			children = (
+				872E8B8A1C034D94008C0329 /* Controllers */,
+				872E8B8E1C034E2D008C0329 /* Views */,
+				872E8B8D1C034DFE008C0329 /* Model */,
+				87829EFC1CC7F544001380C9 /* Layout */,
+				872E8B8C1C034DE9008C0329 /* Resources */,
+				872E8B7F1C034D4D008C0329 /* Assets.xcassets */,
+				872E8B841C034D4D008C0329 /* Info.plist */,
+			);
+			path = SlidesPro;
+			sourceTree = "<group>";
+		};
+		872E8B8A1C034D94008C0329 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				872E8B7B1C034D4D008C0329 /* AppDelegate.swift */,
+				872E8B7D1C034D4D008C0329 /* ViewController.swift */,
+				876B1D6B1C09C5E0009DEAF6 /* CollectionViewItem.swift */,
+				872E8B8F1C034EE8008C0329 /* WindowController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		872E8B8C1C034DE9008C0329 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				876B1D6F1C09D4C3009DEAF6 /* HeaderView.xib */,
+				872E8B811C034D4D008C0329 /* Main.storyboard */,
+				876B1D6C1C09C5E0009DEAF6 /* CollectionViewItem.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		872E8B8D1C034DFE008C0329 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				872E8B911C0350C0008C0329 /* ImageFile.swift */,
+				872E8B931C035259008C0329 /* ImageDirectoryLoader.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		872E8B8E1C034E2D008C0329 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				873212B11CCCD41C00B4AEF4 /* CollectionView.swift */,
+				876B1D711C09D5CC009DEAF6 /* HeaderView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		87829EFC1CC7F544001380C9 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				873212B31CCCD81800B4AEF4 /* StickyHeadersLayout.swift */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		872E8B771C034D4D008C0329 /* SlidesPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 872E8B871C034D4D008C0329 /* Build configuration list for PBXNativeTarget "SlidesPro" */;
+			buildPhases = (
+				872E8B741C034D4D008C0329 /* Sources */,
+				872E8B751C034D4D008C0329 /* Frameworks */,
+				872E8B761C034D4D008C0329 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlidesPro;
+			productName = SlidesMagic;
+			productReference = 872E8B781C034D4D008C0329 /* SlidesPro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		872E8B701C034D4D008C0329 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = razeware;
+				TargetAttributes = {
+					872E8B771C034D4D008C0329 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 872E8B731C034D4D008C0329 /* Build configuration list for PBXProject "SlidesPro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 872E8B6F1C034D4D008C0329;
+			productRefGroup = 872E8B791C034D4D008C0329 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				872E8B771C034D4D008C0329 /* SlidesPro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		872E8B761C034D4D008C0329 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				872E8B801C034D4D008C0329 /* Assets.xcassets in Resources */,
+				872E8B831C034D4D008C0329 /* Main.storyboard in Resources */,
+				876B1D6E1C09C5E0009DEAF6 /* CollectionViewItem.xib in Resources */,
+				876B1D701C09D4C3009DEAF6 /* HeaderView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		872E8B741C034D4D008C0329 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				872E8B7E1C034D4D008C0329 /* ViewController.swift in Sources */,
+				872E8B921C0350C0008C0329 /* ImageFile.swift in Sources */,
+				873212B41CCCD81800B4AEF4 /* StickyHeadersLayout.swift in Sources */,
+				872E8B901C034EE8008C0329 /* WindowController.swift in Sources */,
+				872E8B941C035259008C0329 /* ImageDirectoryLoader.swift in Sources */,
+				872E8B7C1C034D4D008C0329 /* AppDelegate.swift in Sources */,
+				876B1D6D1C09C5E0009DEAF6 /* CollectionViewItem.swift in Sources */,
+				873212B21CCCD41C00B4AEF4 /* CollectionView.swift in Sources */,
+				876B1D721C09D5CC009DEAF6 /* HeaderView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		872E8B811C034D4D008C0329 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				872E8B821C034D4D008C0329 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		872E8B851C034D4D008C0329 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		872E8B861C034D4D008C0329 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		872E8B881C034D4D008C0329 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SlidesPro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.SlidesPro;
+				PRODUCT_NAME = SlidesPro;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		872E8B891C034D4D008C0329 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SlidesPro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.SlidesPro;
+				PRODUCT_NAME = SlidesPro;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		872E8B731C034D4D008C0329 /* Build configuration list for PBXProject "SlidesPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				872E8B851C034D4D008C0329 /* Debug */,
+				872E8B861C034D4D008C0329 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		872E8B871C034D4D008C0329 /* Build configuration list for PBXNativeTarget "SlidesPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				872E8B881C034D4D008C0329 /* Debug */,
+				872E8B891C034D4D008C0329 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 872E8B701C034D4D008C0329 /* Project object */;
+}
