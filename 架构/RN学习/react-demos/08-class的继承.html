@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>class 的继承</title>
+</head>
+<body>
+  <script>
+    class Person {
+      constructor (name, age, gender) {
+        this.name = name
+        this.age = age
+        this.gender = gender
+        this.type = 'human'
+      }
+
+      sayHello () {
+        window.alert('hello ' + this.name)
+      }
+    }
+
+    // class 可以使用 extends 关键字实现对父类的继承
+    // 不仅可以继承属性，还可以继承父类的原型方法
+    // 这里继承的本质是使用的：原型式继承
+    // 注意：在子类中，如果没有写 constructor 则不需要调用 super
+    //        如果一旦写了 constructor ，就必须手动调用一下 super 父类构造函数，否则报错
+    class Student extends Person {
+      constructor (name, age, gender, id) {
+        // super 就父类构造函数
+        // 借用父类构造函数，把 name、age、gender 初始化到 Student 实例中
+        super(name, age, gender)
+        this.id = id
+      }
+
+      study () {
+        console.log(this.name + ' 在学习。。。')
+      }
+    }
+
+    class Teacher extends Person {
+      constructor (name, age, gender) {
+        // super 就父类构造函数
+        // 借用父类构造函数，把 name、age、gender 初始化到 Student 实例中
+        super(name, age, gender)
+      }
+
+      teaching () {
+        console.log(this.name + ' 在上课。。。')
+      }
+    }
+
+    const s1 = new Student('张三', 18, '男')
+  </script>
+</body>
+</html>

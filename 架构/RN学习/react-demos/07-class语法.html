@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // function Point(x, y) {
+    //   this.x = x;
+    //   this.y = y;
+    // }
+
+    // // 静态成员，不需要实例化就可以访问的成员
+    // Point.foo = 'bar'
+
+    // Point.prototype.toString = function () {
+    //   return '(' + this.x + ', ' + this.y + ')';
+    // };
+
+    // var p = new Point(1, 2);
+
+    // console.log(p.toString())
+
+    // $.ajax()
+    // $('#div').ajax() // 不允许的
+
+    // class 就是改变了构造函数的书写方式，这种友好的方式被称之为语法糖
+    // 本质还是基于原型的
+    const Person = class {
+      // 语法报错，浏览器无法原生支持
+      // foo = 'bar'
+      // #foo 目前不支持
+      // constructor 就是类的构造函数
+      // 当你 new Person() 的时候，constructor 就会被自动调用
+      // 在类的内部通过特殊的名字：constructor 来充当类的构造函数
+      constructor (name, age) {
+        this.name = name
+        this.age = age
+      }
+
+      // 这里不是写 key-value 对儿
+      // 在实例方法中直接通过 this 来访问实例对象
+      gretting () {
+        console.log(`hello ${this.name}`)
+      }
+
+      // 如果有 static 关键字，则只能通过 类名.sayHello 来访问
+      // 而不能使用实例来调用
+      static sayHello () {
+        console.log('hello Person')
+      }
+    }
+
+    Person.foo = 'bar'
+
+    // 可以，但是不推荐
+    // Person.prototype.haha = function () {
+    //   console.log('hahaha')
+    // }
+
+    // 类不能当函数调用
+    const p1 = new Person('张三', 18)
+  </script>
+</body>
+
+</html>

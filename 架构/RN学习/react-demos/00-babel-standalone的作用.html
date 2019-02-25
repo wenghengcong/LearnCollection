@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>00-babel-standalone的作用.html</title>
+</head>
+<body>
+  <!-- 
+    @babel/standalone 的作用是可以在浏览器中调用 babel 的 API 完成 EcmaScript 6 - EcmaScript 5 的转换
+    @babel/standalone 是一个独立的编译工具，支持调用它的 API 完成 EcmaScript 6 到 EcmaScript 5 的转换
+   -->
+  <script src="node_modules/@babel/standalone/babel.js"></script>
+  <!-- <script>
+    var input = 'const getMessage = () => "Hello World"; console.log(getMessage())';
+
+    // 调用 Babel 提供的转换 API 完成编译转换，得到结果字符串
+    // 编译过程比较耗时，所以只推荐开发测试使用
+    // 咱们这里使用它的目的是为了简化 react 的学习过程
+    var output = Babel.transform(input, { presets: ['es2015'] }).code;
+    window.eval(output)
+  </script> -->
+
+  <!-- 
+    当 babel-standalone 发现 type="text/babel" 类型标签的时候：
+      1. 将 script 标签中的内容转换为浏览器可以识别的 JavaScript
+      2. 使用 eval 执行编译结果代码
+   -->
+  <script type="text/babel">
+    const getMessage = () => "Hello World";
+    console.log(getMessage())
+  </script>
+</body>
+</html>

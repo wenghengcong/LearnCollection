@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jsx语法</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="node_modules/@babel/standalone/babel.js"></script>
+  <script src="node_modules/react/umd/react.development.js"></script>
+  <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+  <script type="text/babel">
+    // const element = <h1>Hello, react!</h1>
+
+    // 换行或者多标签，推荐加 ()
+    // const element = (
+    //   <div>
+    //     <h1>hello react</h1>
+    //     <p>aaa</p>
+    //   </div>
+    // )
+
+    // function getTitle () {
+    //   // JavaScript 语法，return 就不往后执行了
+    //   return (
+    //     <div>
+    //       <h1>hello</h1>
+    //       <p>haha</p>
+    //     </div>
+    //   )
+    // }
+
+    // const element = getTitle()
+
+    const user = {
+      name: 'Jack',
+      age: 18,
+      gender: 0
+    }
+
+    // **********************
+    // #region /在 jsx 中嵌入 JavaScript 表达式
+    // **********************
+    // const element = (
+    //   <div>
+    //     <p>{1 + 1}</p>
+    //     <p>{'hello'}</p>
+    // 
+    //     {
+    //       // 不推荐
+    //       // 这是 jsx 和 EcmaScript 6 模板字符串混搭
+    //     }
+    // 
+    //     {/* 推荐：单行注释 */}
+    //     {/*
+    //       * 推荐：多行注释
+    //       * 这是 jsx 和 EcmaScript 6 模板字符串混搭
+    //       */}
+    //     <p>{`hello ${user.name}`}</p>
+    //     <p>姓名：{user.name}</p>
+    //     <p>年龄：{user.age}</p>
+    //     <p>性别：{user.gender === 0 ? '男' : '女'}</p>
+    //   </div>
+    // )
+    // **********************
+    // #endregion /在 jsx 中嵌入 JavaScript 表达式
+    // **********************
+
+    // **********************
+    // #region /在 JavaScript 中嵌入 jsx
+    // **********************
+    // function getGreeting (user) {
+    //   if (user) {
+    //     return <h1>hello {user.name}</h1>
+    //   }
+    //   return <h1>Hello Stranger</h1>
+    // }
+    // 
+    // const element = getGreeting(null)
+    // **********************
+    // #endregion /在 JavaScript 中嵌入 jsx
+    // **********************
+  
+    // jsx 中本质还是 JavaScript
+    // class 在 JavaScript 中是一个关键字
+    // 所以在这里写 class 的时候要改为 className
+    const element = (
+      <div className="box" title={user.name}>
+        <div>
+          <label htmlFor="name">用户名</label>
+          {/* jsx 单标签必须结束 */}
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <input type="checkbox" defaultChecked />
+        </div>
+        <div>
+          <input type="text" defaultValue="hello" />
+        </div>
+      </div>
+    )
+
+    
+    ReactDOM.render(
+      element,
+      document.getElementById('app')
+    )
+  </script>
+</body>
+</html>

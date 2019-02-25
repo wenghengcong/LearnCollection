@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>事件处理</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="node_modules/@babel/standalone/babel.js"></script>
+  <script src="node_modules/react/umd/react.development.js"></script>
+  <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+  <script type="text/babel">
+    // 这不叫组件，只是一个变量，没有状态
+    // const header = (
+    //   <div className="header">
+    //     <h1>头部</h1>
+    //   </div>
+    // )
+
+    // 组件的名字首字母必须大写
+    function AppHeader () {
+      return (
+        <div className="header">
+          <h1>头部</h1>
+        </div>
+      )
+    }
+
+    function AppAside () {
+      return (
+        <div className="aside">
+          <ul>
+            <li>正在热映</li>
+            <li>即将上映</li>
+          </ul>
+        </div>
+      )
+    }
+
+    function Welcome (props) {
+      return <h1>Hello, {props.name}</h1>
+    }
+
+    // EcmaScript 6 Class
+    class AppFooter extends React.Component {
+      constructor () {
+        super()
+        // state 就是组件的状态，也就是把数据驱动视图的数据初始化到 state 中
+        // state 类似于 Vue 中的 data
+        this.state = {
+          foo: 'bar'
+        }
+
+        setTimeout(() => {
+          // 这样不行
+          // this.state.foo = 'baz'
+
+          // 这才是正确的修改 state 数据的方式
+          this.setState({
+            foo: 'baz'
+          })
+        }, 2000)
+      }
+
+      render () {
+        return (
+          <div className="footer">
+            <p>底部 {this.state.foo}</p>
+          </div>
+        )
+      }
+    }
+
+
+    const element = (
+      <div>
+        <AppHeader />
+        <div className="main">
+          <AppAside />
+          <div className="content">
+            <Welcome name="张三" />
+            <Welcome name="李四" />
+            <Welcome name="Jack" />
+          </div>
+        </div>
+        <AppFooter />
+      </div>
+    )
+
+    ReactDOM.render(element, document.getElementById('app'))
+  </script>
+</body>
+</html>

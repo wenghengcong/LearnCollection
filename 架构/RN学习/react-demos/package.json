@@ -1,0 +1,19 @@
+{
+  "name": "react-demos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "browser-sync start --server --directory --files \"*.html\""
+  },
+  "dependencies": {
+    "@babel/standalone": "^7.0.0-beta.32",
+    "create-react-class": "^15.6.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13"
+  }
+}

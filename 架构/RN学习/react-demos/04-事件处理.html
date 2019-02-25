@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>事件处理</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="node_modules/@babel/standalone/babel.js"></script>
+  <script src="node_modules/react/umd/react.development.js"></script>
+  <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+  <script type="text/babel">
+    function handleClick () {
+      window.alert('hello')
+    }
+
+    // 1. 使用驼峰命名
+    // 2. 必须绑定一个函数
+    // 3. 不能使用字符串的方式，一定要使用 {函数} 来绑定
+    const element = (
+      <div>
+        <button onClick={handleClick}>点我</button>
+        {/* 直接绑定一个匿名函数 */}
+        <button onClick={() => alert('hello world')}>行内处理</button>
+      </div>
+    )
+
+    ReactDOM.render(element, document.getElementById('app'))
+  </script>
+</body>
+</html>

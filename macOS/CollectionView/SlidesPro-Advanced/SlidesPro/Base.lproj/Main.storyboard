@@ -726,7 +726,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="addSlide:" target="XfG-lQ-9wD" id="rvd-rI-BQA"/>
+                                    <action selector="addSlideWithSender:" target="XfG-lQ-9wD" id="YJD-vQ-PnO"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="K8n-DH-F2W">

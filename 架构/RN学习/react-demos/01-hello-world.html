@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>01-hello-world.html</title>
+</head>
+
+<body>
+  <!-- 应用入口 -->
+  <div id="app">
+  </div>
+  <script src="node_modules/@babel/standalone/babel.js"></script>
+  <script src="node_modules/react/umd/react.development.js"></script>
+  <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+  <!-- 
+    React 的核心理念就是：组件化，不支持管理 DOM 模板，它必须把所有的模板都放到组件中
+   -->
+  <!-- <script type="text/babel">
+    // 下面这句话的作用就是将一个 h1 标签渲染到指定的页面入口中
+    // 这种将 html 和 JavaScript 混写的方式叫做 JSX 语法
+    // 该语法必须通过 babel 编译完浏览器才能执行
+    ReactDOM.render(
+      <h1>Hello, react!</h1>,
+      document.getElementById('app')
+    )
+  </script> -->
+</body>
+
+</html>

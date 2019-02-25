@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="node_modules/@babel/standalone/babel.js"></script>
+  <script src="node_modules/react/umd/react.development.js"></script>
+  <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+  <script type="text/babel">
+    // 1. class 组件类，必须继承自 React.Component 才是一个组件类，否则就是一个普通的类
+    // 2. 在组件类中，必须通过 render 渲染函数返回组件模板
+    // 3. 接下来就可以在其它能访问到这个组件类的作用域中去使用这个组件了
+    class MyComponent extends React.Component {
+      render () {
+        return (
+          <div>
+            <h1>My Component</h1>
+          </div>
+        )
+      }
+    }
+
+    const element = <MyComponent />
+
+    ReactDOM.render(element, document.getElementById('app'))
+  </script>
+</body>
+</html>

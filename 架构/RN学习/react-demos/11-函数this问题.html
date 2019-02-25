@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>函数this问题</title>
+</head>
+<body>
+  <button id="btn">点我</button>
+  <script>
+    var btn = document.getElementById('btn')
+    
+    const user = {
+      name: 'Jack'
+    }
+
+    function handleClick(e) {
+      console.log(this)
+    }
+
+    btn.onclick = handleClick
+  </script>
+</body>
+</html>

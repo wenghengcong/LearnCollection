@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>列表渲染</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="node_modules/@babel/standalone/babel.js"></script>
+  <script src="node_modules/react/umd/react.development.js"></script>
+  <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+  <script type="text/babel">
+    const fruits = [
+      <li key="1">苹果</li>,
+      <li key="2">香蕉</li>,
+      <li key="3">橘子</li>
+    ]
+
+    const todos = [
+      {
+        id: 1,
+        title: '吃饭'
+      },
+      {
+        id: 2,
+        title: 'sleep'
+      },
+      {
+        id: 3,
+        title: '大'
+      }
+    ]
+
+    // const todoLis = []
+    // todos.forEach(item => {
+    //   todoLis.push(<li key={item.id}>{item.title}</li>)
+    // })
+
+    const todoLis = todos.map(item => {
+      return <li key={item.id}>{item.title}</li>
+    })
+
+
+
+    const element = (
+      <div>
+        {/* 在 jsx 中，绑定数组成员会直接把成员渲染到这里 */}
+        <ul>{fruits}</ul>
+        <ul>
+          {/* 直接绑定一个数据 */}
+          {todoLis}
+        </ul>
+        <hr>
+        {/* 直接在标签中动态生成一个数组 */}
+        <ul>
+          {
+            todos.map(item => {
+              return <li key={item.id}>{item.title}</li>
+            })
+          }
+        </ul>
+      </div>
+    )
+
+    ReactDOM.render(element, document.getElementById('app'))
+  </script>
+</body>
+</html>
