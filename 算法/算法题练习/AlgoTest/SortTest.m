@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "SelectionSort.h"
+#import "BubbleSort.h"
 
 @interface SortTest : XCTestCase
 
@@ -28,8 +29,9 @@
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     int disorderArr[10] = {11, 2, 3, 34, 8, 122, 45, 5, 89, 100};
     int length = 10;
-    [SelectionSort selectionSort:disorderArr length:length];
-
+//    [SelectionSort sort:disorderArr length:length];
+    [BubbleSort sort:disorderArr length:length];
+    [BubbleSort printArray:disorderArr length:length];
 }
 
 - (void)testPerformanceExample {

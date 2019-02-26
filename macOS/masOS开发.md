@@ -48,5 +48,9 @@ raywenderlich https://www.raywenderlich.com/macos
 
    tableview with section https://medium.com/explorations-in-cocoa/nstableview-with-sections-f9657cd7910e
 
-7. d
+7. 支持拖拽
+
+   拖拽支持的type [Uniform Type Identifier](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/UniformTypeIdentifier.html#//apple_ref/doc/uid/TP40008195-CH60). See [System-Declared Uniform Type Identifiers](https://developer.apple.com/library/archive/documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html#//apple_ref/doc/uid/TP40009259) 
+
+8. d
 

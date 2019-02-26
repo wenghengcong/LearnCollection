@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5E20B763221D7001001DF2A6 /* InsertionSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E20B762221D7001001DF2A6 /* InsertionSort.m */; };
+		5E285A662224ADA4009F7332 /* BubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E285A652224ADA4009F7332 /* BubbleSort.m */; };
+		5E2E61D622257690004CB047 /* BubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E285A652224ADA4009F7332 /* BubbleSort.m */; };
+		5E2E61DA22258262004CB047 /* ShellSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E61D922258262004CB047 /* ShellSort.m */; };
+		5E2E61DD22258274004CB047 /* MergeSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E61DC22258274004CB047 /* MergeSort.m */; };
+		5E2E61E022258281004CB047 /* QuickSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E61DF22258281004CB047 /* QuickSort.m */; };
+		5E2E61E32225828B004CB047 /* HeapSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E61E22225828B004CB047 /* HeapSort.m */; };
+		5E2E61E6222582AC004CB047 /* CountingSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E61E5222582AC004CB047 /* CountingSort.m */; };
+		5E2E61E9222582B7004CB047 /* BucketSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E61E8222582B7004CB047 /* BucketSort.m */; };
+		5E2E61EC222582CC004CB047 /* RadixSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E61EB222582CC004CB047 /* RadixSort.m */; };
 		5E46989321FE0D000020382A /* BSTTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E46989221FE0D000020382A /* BSTTest.m */; };
 		5E46989421FE0DB90020382A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E750D1821FA091500E2E9D3 /* main.m */; };
 		5E46989521FE0DD60020382A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E46988421FE09F30020382A /* XCTest.framework */; };
@@ -54,6 +63,22 @@
 /* Begin PBXFileReference section */
 		5E20B761221D7001001DF2A6 /* InsertionSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsertionSort.h; sourceTree = "<group>"; };
 		5E20B762221D7001001DF2A6 /* InsertionSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsertionSort.m; sourceTree = "<group>"; };
+		5E285A642224ADA4009F7332 /* BubbleSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort.h; sourceTree = "<group>"; };
+		5E285A652224ADA4009F7332 /* BubbleSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort.m; sourceTree = "<group>"; };
+		5E2E61D822258262004CB047 /* ShellSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShellSort.h; sourceTree = "<group>"; };
+		5E2E61D922258262004CB047 /* ShellSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShellSort.m; sourceTree = "<group>"; };
+		5E2E61DB22258274004CB047 /* MergeSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergeSort.h; sourceTree = "<group>"; };
+		5E2E61DC22258274004CB047 /* MergeSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MergeSort.m; sourceTree = "<group>"; };
+		5E2E61DE22258281004CB047 /* QuickSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickSort.h; sourceTree = "<group>"; };
+		5E2E61DF22258281004CB047 /* QuickSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickSort.m; sourceTree = "<group>"; };
+		5E2E61E12225828B004CB047 /* HeapSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeapSort.h; sourceTree = "<group>"; };
+		5E2E61E22225828B004CB047 /* HeapSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeapSort.m; sourceTree = "<group>"; };
+		5E2E61E4222582AC004CB047 /* CountingSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountingSort.h; sourceTree = "<group>"; };
+		5E2E61E5222582AC004CB047 /* CountingSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountingSort.m; sourceTree = "<group>"; };
+		5E2E61E7222582B7004CB047 /* BucketSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BucketSort.h; sourceTree = "<group>"; };
+		5E2E61E8222582B7004CB047 /* BucketSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BucketSort.m; sourceTree = "<group>"; };
+		5E2E61EA222582CC004CB047 /* RadixSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadixSort.h; sourceTree = "<group>"; };
+		5E2E61EB222582CC004CB047 /* RadixSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadixSort.m; sourceTree = "<group>"; };
 		5E46988421FE09F30020382A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5E46988A21FE0CD10020382A /* AlgoTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgoTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E46988E21FE0CD10020382A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,6 +132,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E2E61D722257DEA004CB047 /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				5E750D2721FA12C300E2E9D3 /* SortBase.h */,
+				5E750D2821FA12C300E2E9D3 /* SortBase.m */,
+				5E285A642224ADA4009F7332 /* BubbleSort.h */,
+				5E285A652224ADA4009F7332 /* BubbleSort.m */,
+				5E750D2421FA10AA00E2E9D3 /* SelectionSort.h */,
+				5E750D2521FA10AA00E2E9D3 /* SelectionSort.m */,
+				5E20B761221D7001001DF2A6 /* InsertionSort.h */,
+				5E20B762221D7001001DF2A6 /* InsertionSort.m */,
+				5E2E61D822258262004CB047 /* ShellSort.h */,
+				5E2E61D922258262004CB047 /* ShellSort.m */,
+				5E2E61DB22258274004CB047 /* MergeSort.h */,
+				5E2E61DC22258274004CB047 /* MergeSort.m */,
+				5E2E61DE22258281004CB047 /* QuickSort.h */,
+				5E2E61DF22258281004CB047 /* QuickSort.m */,
+				5E2E61E12225828B004CB047 /* HeapSort.h */,
+				5E2E61E22225828B004CB047 /* HeapSort.m */,
+				5E2E61E4222582AC004CB047 /* CountingSort.h */,
+				5E2E61E5222582AC004CB047 /* CountingSort.m */,
+				5E2E61E7222582B7004CB047 /* BucketSort.h */,
+				5E2E61E8222582B7004CB047 /* BucketSort.m */,
+				5E2E61EA222582CC004CB047 /* RadixSort.h */,
+				5E2E61EB222582CC004CB047 /* RadixSort.m */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
 		5E46988021FDDB1E0020382A /* Tree */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +229,7 @@
 				5E46988021FDDB1E0020382A /* Tree */,
 				5E4C806D21FC4F2500F760E8 /* LinkeList */,
 				5E750D3321FA9BBB00E2E9D3 /* Base */,
+				5E2E61D722257DEA004CB047 /* Sort */,
 				5E750D2321FA0D9100E2E9D3 /* Search */,
 				5E750D1821FA091500E2E9D3 /* main.m */,
 			);
@@ -184,14 +239,8 @@
 		5E750D2321FA0D9100E2E9D3 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				5E750D2721FA12C300E2E9D3 /* SortBase.h */,
-				5E750D2821FA12C300E2E9D3 /* SortBase.m */,
 				5E750D1F21FA092D00E2E9D3 /* BinarySearch.h */,
 				5E750D2021FA092D00E2E9D3 /* BinarySearch.m */,
-				5E750D2421FA10AA00E2E9D3 /* SelectionSort.h */,
-				5E750D2521FA10AA00E2E9D3 /* SelectionSort.m */,
-				5E20B761221D7001001DF2A6 /* InsertionSort.h */,
-				5E20B762221D7001001DF2A6 /* InsertionSort.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -298,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E2E61D622257690004CB047 /* BubbleSort.m in Sources */,
 				5E4698A021FE0E960020382A /* TypeHeader.m in Sources */,
 				5E46989F21FE0E7E0020382A /* SelectionSort.m in Sources */,
 				5E46989E21FE0E7A0020382A /* BinarySearch.m in Sources */,
@@ -322,17 +372,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E750D2921FA12C300E2E9D3 /* SortBase.m in Sources */,
+				5E285A662224ADA4009F7332 /* BubbleSort.m in Sources */,
 				5E750D3921FAB60900E2E9D3 /* DataType.m in Sources */,
+				5E2E61E32225828B004CB047 /* HeapSort.m in Sources */,
 				5E4C807621FC6E0F00F760E8 /* RemoveNode.m in Sources */,
 				5E4C807321FC4F4C00F760E8 /* ReverseLinkList.m in Sources */,
+				5E2E61E022258281004CB047 /* QuickSort.m in Sources */,
 				5E4C807921FDA24500F760E8 /* BinarySearchTree.m in Sources */,
 				5E750D2621FA10AA00E2E9D3 /* SelectionSort.m in Sources */,
 				5E750D3C21FAFB8500E2E9D3 /* TypeHeader.m in Sources */,
 				5E750D2121FA092D00E2E9D3 /* BinarySearch.m in Sources */,
+				5E2E61EC222582CC004CB047 /* RadixSort.m in Sources */,
 				5E750D2F21FA9BA100E2E9D3 /* Queue.m in Sources */,
 				5E20B763221D7001001DF2A6 /* InsertionSort.m in Sources */,
+				5E2E61E9222582B7004CB047 /* BucketSort.m in Sources */,
 				5E750D2C21FA9B9500E2E9D3 /* Stack.m in Sources */,
+				5E2E61E6222582AC004CB047 /* CountingSort.m in Sources */,
+				5E2E61DA22258262004CB047 /* ShellSort.m in Sources */,
 				5E750D3221FA9BB700E2E9D3 /* SingleLinkedList.m in Sources */,
+				5E2E61DD22258274004CB047 /* MergeSort.m in Sources */,
 				5E750D1921FA091500E2E9D3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

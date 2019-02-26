@@ -739,7 +739,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="removeSlide:" target="XfG-lQ-9wD" id="jgx-DP-VdB"/>
+                                    <action selector="removeSlideWithSender:" target="XfG-lQ-9wD" id="hyj-44-tFj"/>
                                 </connections>
                             </button>
                         </subviews>

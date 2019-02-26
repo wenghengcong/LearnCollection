@@ -28,69 +28,73 @@ import Cocoa
 
 class StickyHeadersLayout: NSCollectionViewFlowLayout {
 
-  override func layoutAttributesForElements(in rect: NSRect) -> [NSCollectionViewLayoutAttributes] {
-    
-    // 1
-    var layoutAttributes = super.layoutAttributesForElements(in: rect)
-    
-    // 2
-    let sectionsToMoveHeaders = NSMutableIndexSet()
-    for attributes in layoutAttributes {
-      if attributes.representedElementCategory == .item {
-        sectionsToMoveHeaders.add(attributes.indexPath!.section)
-      }
+      override func layoutAttributesForElements(in rect: NSRect) -> [NSCollectionViewLayoutAttributes] {
+      
+          // 1 The super method returns an array of attributes for the visible elements.
+          var layoutAttributes = super.layoutAttributesForElements(in: rect)
+        
+          // 2 The NSMutableIndexSet first aggregates all the sections that have at least one visible item.
+          let sectionsToMoveHeaders = NSMutableIndexSet()
+          for attributes in layoutAttributes {
+              if attributes.representedElementCategory == .item {
+                  sectionsToMoveHeaders.add(attributes.indexPath!.section)
+              }
+          }
+        
+          // 3 Remove all sections from the set where the header is already in layoutAttributes, leaving only the sections with “Missing Headers” in the set.
+          for attributes in layoutAttributes {
+              if let elementKind = attributes.representedElementKind, elementKind == NSCollectionView.elementKindSectionHeader {
+                  sectionsToMoveHeaders.remove(attributes.indexPath!.section)
+              }
+          }
+        
+          // 4 Request the attributes for the missing headers and add them to layoutAttributes.
+          sectionsToMoveHeaders.enumerate { (index, stop) -> Void in
+              let indexPath = NSIndexPath(forItem: 0, inSection: index)
+              let attributes = self.layoutAttributesForSupplementaryView(ofKind: NSCollectionView.elementKindSectionHeader, at: indexPath as IndexPath)
+              if attributes != nil {
+                  layoutAttributes.append(attributes!)
+              }
+          }
+        
+          for attributes in layoutAttributes {
+            // 5 Iterate over layoutAttributes and process only the headers.
+            if let elementKind = attributes.representedElementKind, elementKind == NSCollectionView.elementKindSectionHeader{
+              let section = attributes.indexPath!.section
+              let attributesForFirstItemInSection = layoutAttributesForItem(at: NSIndexPath(forItem: 0, inSection: section) as IndexPath)
+              let attributesForLastItemInSection = layoutAttributesForItem(at: NSIndexPath(forItem: collectionView!.numberOfItems(inSection: section) - 1, inSection: section) as IndexPath)
+              var frame = attributes.frame
+              
+              // 6 Set the coordinate for the top of the visible area, aka scroll offset.
+              let offset = collectionView!.enclosingScrollView?.documentVisibleRect.origin.y
+              
+              // 7 Make it so the header never goes further up than one-header-height above the upper bounds of the first item in the section.
+              let minY = (attributesForFirstItemInSection!.frame).minY - frame.height
+              
+              // 8 Make it so the header never goes further down than one-header-height above the lower bounds of the last item in the section.
+              let maxY = (attributesForLastItemInSection!.frame).maxY - frame.height
+              
+              /* 9
+               Let's break this into 2 statements:
+                  1)maybeY = max(offset!, minY): When the top of the section is above the visible area this pins (or pushes down) the header to the top of the visible area.
+                  2)y = min(maybeY, maxY): When the space between the bottom of the section to the top of the visible area is less than header height, it shows only the part of the header's bottom that fits this space.
+               */
+              let y = min(max(offset!, minY), maxY)
+              
+              // 10 Update the vertical position of the header.
+              frame.origin.y = y
+              attributes.frame = frame
+              
+              // 11 Make the items "go" under the header.
+              attributes.zIndex = 99
+            }
+        }
+        
+        // 12
+        return layoutAttributes
     }
-    
-    // 3
-    for attributes in layoutAttributes {
-      if let elementKind = attributes.representedElementKind, elementKind == NSCollectionView.elementKindSectionHeader {
-        sectionsToMoveHeaders.remove(attributes.indexPath!.section)
-      }
-    }
-    
-    // 4
-    sectionsToMoveHeaders.enumerate { (index, stop) -> Void in
-      let indexPath = NSIndexPath(forItem: 0, inSection: index)
-      let attributes = self.layoutAttributesForSupplementaryView(ofKind: NSCollectionView.elementKindSectionHeader, at: indexPath as IndexPath)
-      if attributes != nil {
-        layoutAttributes.append(attributes!)
-      }
-    }
-    
-    for attributes in layoutAttributes {
-      // 5
-      if let elementKind = attributes.representedElementKind, elementKind == NSCollectionView.elementKindSectionHeader{
-        let section = attributes.indexPath!.section
-        let attributesForFirstItemInSection = layoutAttributesForItem(at: NSIndexPath(forItem: 0, inSection: section) as IndexPath)
-        let attributesForLastItemInSection = layoutAttributesForItem(at: NSIndexPath(forItem: collectionView!.numberOfItems(inSection: section) - 1, inSection: section) as IndexPath)
-        var frame = attributes.frame
-        
-        // 6
-        let offset = collectionView!.enclosingScrollView?.documentVisibleRect.origin.y
-        
-        // 7
-        let minY = (attributesForFirstItemInSection!.frame).minY - frame.height
-        
-        // 8
-        let maxY = (attributesForLastItemInSection!.frame).maxY - frame.height
-        
-        // 9
-        let y = min(max(offset!, minY), maxY)
-        
-        // 10
-        frame.origin.y = y
-        attributes.frame = frame
-        
-        // 11
-        attributes.zIndex = 99
-      }
-    }
-    
-    // 12
-    return layoutAttributes
-  }
 
-  override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-    return true
-  }
+    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+        return true
+    }
 }

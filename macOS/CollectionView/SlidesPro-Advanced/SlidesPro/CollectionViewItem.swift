@@ -50,7 +50,7 @@ class CollectionViewItem: NSCollectionViewItem {
   }
   
   func setHighlight(selected: Bool) {
-    view.layer?.borderWidth = selected ? 5.0 : 0.0
+      view.layer?.borderWidth = selected ? 5.0 : 0.0
   }
   
 }
