@@ -1,0 +1,170 @@
+/* No comment provided by engineer. */
+"Add" = "Додати";
+
+/* Sidebar label */
+"Archive" = "Архів";
+
+/* No comment provided by engineer. */
+"Are you sure you want to irretrievably delete %d note(s)?" = "Вы впевнені що хочете назавжди видалити %d нотатку(ок)? ";
+
+/* No comment provided by engineer. */
+"Are you sure you want to remove project \"%@\" and all files inside?" = "Вы впевнені що хочете видалити директорію \"%@\"?";
+
+/* No comment provided by engineer. */
+"Attach storage" = "Підключити сховище";
+
+/* Delete menu */
+"Cancel" = "Відміна";
+
+/* No comment provided by engineer. */
+"Check Grammar With Spelling" = "Перевіряти граматику та правопис";
+
+/* No comment provided by engineer. */
+"Check Spelling While Typing" = "Перевіряти правопис під час набору";
+
+/* No comment provided by engineer. */
+"Copy HTML" = "Скопіювати HTML";
+
+/* No comment provided by engineer. */
+"Copy Plain Text" = "Скопіювати текст";
+
+/* No comment provided by engineer. */
+"Correct Spelling Automatically" = "Автоматично коригувати правописання";
+
+/* No comment provided by engineer. */
+"Data Detectors" = "Детектори даних";
+
+/* No comment provided by engineer. */
+"Delete" = "Видалити";
+
+/* No comment provided by engineer. */
+"FSNotes [edit]" = "FSNotes [редагування]";
+
+/* No comment provided by engineer. */
+"FSNotes [preview]" = "FSNotes [попередній перегляд]";
+
+/* No comment provided by engineer. */
+"Header 1" = "Заголовок 1";
+
+/* No comment provided by engineer. */
+"Header 2" = "Заголовок 2";
+
+/* No comment provided by engineer. */
+"Header 3" = "Заголовок 3";
+
+/* No comment provided by engineer. */
+"Header 4" = "Заголовок 4";
+
+/* No comment provided by engineer. */
+"Header 5" = "Заголовок 5";
+
+/* No comment provided by engineer. */
+"Header 6" = "Заголовок 6";
+
+/* No comment provided by engineer. */
+"Image" = "Зображення";
+
+/* Edit area */
+"Image title" = "Заголовок зображення";
+
+/* No comment provided by engineer. */
+"Link" = "Посилання";
+
+/* Menu */
+"Move" = "Перемістити";
+
+/* No comment provided by engineer. */
+"New" = "Новий";
+
+/* No comment provided by engineer. */
+"New folder" = "Нова директорія";
+
+/* No comment provided by engineer. */
+"New project" = "Нова директорія";
+
+/* No comment provided by engineer. */
+"New RTF" = "Новий RTF";
+
+/* Rename
+   Sidebar label */
+"Notes" = "Нотатки";
+
+/* Edit area */
+"Please enter image title:" = "Заголовок зображення:";
+
+/* No comment provided by engineer. */
+"Please enter project name:" = "Будь ласка, введіть назву директорії:";
+
+/* Menu */
+"Please enter tags (comma separated):" = "Будь ласка, введіть теги (розділити комою):";
+
+/* No comment provided by engineer. */
+"Preferences" = "Налаштування";
+
+/* No comment provided by engineer. */
+"Quit FSNotes" = "Завершити роботу FSNotes";
+
+/* Delete menu */
+"Remove" = "Видалити";
+
+/* No comment provided by engineer. */
+"Remove note(s)" = "Видалити нотатку(ок)";
+
+/* No comment provided by engineer. */
+"Reveal folder" = "Показати директорію";
+
+/* No comment provided by engineer. */
+"Search and create" = "Знайти або створити";
+
+/* No comment provided by engineer. */
+"Smart Copy/Paste" = "Розумне копіювання/вставка";
+
+/* No comment provided by engineer. */
+"Smart Dashes" = "Розумні тире";
+
+/* No comment provided by engineer. */
+"Smart Links" = "Розумні посилання";
+
+/* No comment provided by engineer. */
+"Smart Quotes" = "Розумні лапки";
+
+/* View menu */
+"Sort By" = "Сортувати за";
+
+/* No comment provided by engineer. */
+"Spelling and Grammar" = "Орфографія і граматика";
+
+/* No comment provided by engineer. */
+"Strikethrough" = "Перекреслений";
+
+/* No comment provided by engineer. */
+"Substitutions" = "Заміни";
+
+/* Menu
+   Sidebar label */
+"Tags" = "Теги";
+
+/* No comment provided by engineer. */
+"Text Replacement" = "Заміна тексту";
+
+/* Delete menu */
+"This action cannot be undone." = "Цю дію неможливо відмінити";
+
+/* No comment provided by engineer. */
+"Todo" = "Завдання";
+
+/* No comment provided by engineer. */
+"Toggle preview" = "Переключити перегляд";
+
+/* Sidebar label */
+"Trash" = "Сміття";
+
+/* No comment provided by engineer. */
+"Underline" = "Підкреслений";
+
+/* No comment provided by engineer. */
+"URL has been copied to clipboard" = "Ссылка была скопирована в буфер обмена";
+
+/* Menu */
+"View" = "Вид";
+

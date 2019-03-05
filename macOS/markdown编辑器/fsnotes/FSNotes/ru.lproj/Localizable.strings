@@ -1,0 +1,125 @@
+/* No comment provided by engineer. */
+"Add" = "Добавить";
+
+/* Sidebar label */
+"Archive" = "Архив";
+
+/* No comment provided by engineer. */
+"Are you sure you want to irretrievably delete %d note(s)?" = "Вы уверены что хотите выполнить необратимое удаление %d заметки(ок)?";
+
+/* No comment provided by engineer. */
+"Are you sure you want to remove project \"%@\" and all files inside?" = "Вы уверены что хотите удалить директорию \"%@\"?";
+
+/* No comment provided by engineer. */
+"Attach storage" = "Подключить хранилище";
+
+/* Delete menu */
+"Cancel" = "Отмена";
+
+/* No comment provided by engineer. */
+"Check Grammar With Spelling" = "Проверить грамматику с орфографией";
+
+/* No comment provided by engineer. */
+"Check Spelling While Typing" = "Проверять во время набора";
+
+/* No comment provided by engineer. */
+"Correct Spelling Automatically" = "Корректировать правописание";
+
+/* No comment provided by engineer. */
+"Data Detectors" = "Детекторы данных";
+
+/* No comment provided by engineer. */
+"Delete" = "Удаление";
+
+/* No comment provided by engineer. */
+"FSNotes [edit]" = "FSNotes [редактирование]";
+
+/* No comment provided by engineer. */
+"FSNotes [preview]" = "FSNotes [предпросмотр]";
+
+/* Edit area */
+"Image title" = "Заголовок";
+
+/* Menu */
+"Move" = "Переместить";
+
+/* No comment provided by engineer. */
+"New" = "Создать";
+
+/* No comment provided by engineer. */
+"New folder" = "Новая директория";
+
+/* No comment provided by engineer. */
+"New project" = "Новая директория";
+
+/* No comment provided by engineer. */
+"New RTF" = "Создать RTF";
+
+/* Rename
+   Sidebar label */
+"Notes" = "Заметки";
+
+/* Edit area */
+"Please enter image title:" = "Пожалуйста, введите заголовок изображения:";
+
+/* No comment provided by engineer. */
+"Please enter project name:" = "Пожалуйста, введите название директории:";
+
+/* Menu */
+"Please enter tags (comma separated):" = "Пожалуйста введите теги (через запятую):";
+
+/* No comment provided by engineer. */
+"Preferences" = "Настройки";
+
+/* No comment provided by engineer. */
+"Quit FSNotes" = "Выйти из FSNotes";
+
+/* Delete menu */
+"Remove" = "Удалить";
+
+/* No comment provided by engineer. */
+"Remove note(s)" = "Удалить";
+
+/* No comment provided by engineer. */
+"Search and create" = "Найти и создать";
+
+/* No comment provided by engineer. */
+"Smart Copy/Paste" = "Смарт-копирование/вставка";
+
+/* No comment provided by engineer. */
+"Smart Dashes" = "Смарт-тире";
+
+/* No comment provided by engineer. */
+"Smart Links" = "Смарт-ссылки";
+
+/* No comment provided by engineer. */
+"Smart Quotes" = "Смарт-кавычки";
+
+/* View menu */
+"Sort By" = "Упорядочить по";
+
+/* No comment provided by engineer. */
+"Spelling and Grammar" = "Орфография и грамматика";
+
+/* No comment provided by engineer. */
+"Substitutions" = "Замены";
+
+/* Menu
+   Sidebar label */
+"Tags" = "Теги";
+
+/* No comment provided by engineer. */
+"Text Replacement" = "Замена текста";
+
+/* Delete menu */
+"This action cannot be undone." = "Это действие не может быть отменено.";
+
+/* Sidebar label */
+"Trash" = "Корзина";
+
+/* No comment provided by engineer. */
+"URL has been copied to clipboard" = "Ссылка была скопирована в буфер обмена";
+
+/* Menu */
+"View" = "Вид";
+

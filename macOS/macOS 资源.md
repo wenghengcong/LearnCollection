@@ -8,7 +8,7 @@ https://github.com/jaywcjlove/awesome-mac
 
 https://github.com/iCHAIT/awesome-macOS
 
-https://github.com/serhii-londar/open-source-mac-os-apps
+特别棒 https://github.com/serhii-londar/open-source-mac-os-apps
 
 https://github.com/herrbischoff/awesome-macos-command-line
 

@@ -1,0 +1,170 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		1F8A8371195348C500B6BF69 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		1F8A8372195348C500B6BF69 /* greg */ = {isa = PBXFileReference; lastKnownFileType = folder; path = greg; sourceTree = "<group>"; };
+		1F8A8374195348C500B6BF69 /* pmh_grammar.leg */ = {isa = PBXFileReference; lastKnownFileType = text; path = pmh_grammar.leg; sourceTree = "<group>"; };
+		1F8A8376195348C500B6BF69 /* pmh_parser_foot.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pmh_parser_foot.c; sourceTree = "<group>"; };
+		1F8A8377195348C500B6BF69 /* pmh_parser_head.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pmh_parser_head.c; sourceTree = "<group>"; };
+		1F8A837A195348C500B6BF69 /* tools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tools; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1F8A8366195348C500B6BF69 = {
+			isa = PBXGroup;
+			children = (
+				1F8A8371195348C500B6BF69 /* Makefile */,
+				1F8A8372195348C500B6BF69 /* greg */,
+				1F8A8374195348C500B6BF69 /* pmh_grammar.leg */,
+				1F8A8376195348C500B6BF69 /* pmh_parser_foot.c */,
+				1F8A8377195348C500B6BF69 /* pmh_parser_head.c */,
+				1F8A837A195348C500B6BF69 /* tools */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		1F8A836B195348C500B6BF69 /* peg-markdown-highlight */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 1F8A837B195348C500B6BF69 /* Build configuration list for PBXLegacyTarget "peg-markdown-highlight" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			dependencies = (
+			);
+			name = "peg-markdown-highlight";
+			passBuildSettingsInEnvironment = 1;
+			productName = "peg-markdown-highlight";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		1F8A8367195348C500B6BF69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+			};
+			buildConfigurationList = 1F8A836A195348C500B6BF69 /* Build configuration list for PBXProject "peg-markdown-highlight" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1F8A8366195348C500B6BF69;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F8A836B195348C500B6BF69 /* peg-markdown-highlight */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		1F8A8368195348C500B6BF69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		1F8A8369195348C500B6BF69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+			};
+			name = Release;
+		};
+		1F8A837C195348C500B6BF69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+			};
+			name = Debug;
+		};
+		1F8A837D195348C500B6BF69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F8A836A195348C500B6BF69 /* Build configuration list for PBXProject "peg-markdown-highlight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F8A8368195348C500B6BF69 /* Debug */,
+				1F8A8369195348C500B6BF69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F8A837B195348C500B6BF69 /* Build configuration list for PBXLegacyTarget "peg-markdown-highlight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F8A837C195348C500B6BF69 /* Debug */,
+				1F8A837D195348C500B6BF69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F8A8367195348C500B6BF69 /* Project object */;
+}

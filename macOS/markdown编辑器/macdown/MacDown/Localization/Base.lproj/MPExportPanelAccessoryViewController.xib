@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MPExportPanelAccessoryViewController">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="229" height="74"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="PTZ-5f-xfe">
+                    <rect key="frame" x="18" y="38" width="193" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="189" id="MaJ-q9-wVG"/>
+                    </constraints>
+                    <buttonCell key="cell" type="check" title="Include styles" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="fod-Ff-UTI">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.stylesIncluded" id="cTf-hH-IPq"/>
+                    </connections>
+                </button>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="nEL-cH-uT8">
+                    <rect key="frame" x="18" y="18" width="193" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="189" id="fCr-Wo-6hO"/>
+                    </constraints>
+                    <buttonCell key="cell" type="check" title="Include syntax highlighting" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="1f7-JB-VR1">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.highlightingIncluded" id="3IL-0y-RAg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="nEL-cH-uT8" firstAttribute="top" secondItem="PTZ-5f-xfe" secondAttribute="bottom" constant="6" id="0wC-Ra-TzG"/>
+                <constraint firstItem="PTZ-5f-xfe" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="RC0-AT-wxB"/>
+                <constraint firstItem="nEL-cH-uT8" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="a0t-0v-IS7"/>
+                <constraint firstItem="PTZ-5f-xfe" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="kJR-Ah-kBC"/>
+            </constraints>
+        </customView>
+        <userDefaultsController representsSharedInstance="YES" id="esl-Ae-OeF"/>
+    </objects>
+</document>

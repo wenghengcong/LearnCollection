@@ -1,0 +1,13 @@
+disabled_rules:
+  - force_cast
+  - large_tuple
+  - line_length
+
+# paths to ignore during linting
+excluded:
+  - Pods
+  - Resources
+  - Twig/Libraries
+
+identifier_name:
+  min_length: 1
