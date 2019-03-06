@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53EE6D721CBD4BBF001EA5FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EE6D681CBD4BBF001EA5FD /* AppDelegate.m */; };
+		53EE6D731CBD4BBF001EA5FD /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EE6D6A1CBD4BBF001EA5FD /* CustomView.m */; };
+		53EE6D741CBD4BBF001EA5FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EE6D6B1CBD4BBF001EA5FD /* main.m */; };
+		53EE6D751CBD4BBF001EA5FD /* MyToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EE6D6D1CBD4BBF001EA5FD /* MyToken.m */; };
+		53EE6D761CBD4BBF001EA5FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EE6D6F1CBD4BBF001EA5FD /* ViewController.m */; };
+		53EE6D7C1CBD4BDF001EA5FD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 53EE6D781CBD4BDF001EA5FD /* Credits.rtf */; };
+		53EE6D7D1CBD4BDF001EA5FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53EE6D7A1CBD4BDF001EA5FD /* InfoPlist.strings */; };
+		53EE6D801CBD4BE7001EA5FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53EE6D7E1CBD4BE7001EA5FD /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		535FAEA41CBC3CD300A2554C /* Tokens.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Tokens.entitlements; path = Tokens/Tokens.entitlements; sourceTree = "<group>"; };
+		53CC48301C8648070044A31B /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		53EE6D671CBD4BBF001EA5FD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Tokens/AppDelegate.h; sourceTree = "<group>"; };
+		53EE6D681CBD4BBF001EA5FD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Tokens/AppDelegate.m; sourceTree = "<group>"; };
+		53EE6D691CBD4BBF001EA5FD /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomView.h; path = Tokens/CustomView.h; sourceTree = "<group>"; };
+		53EE6D6A1CBD4BBF001EA5FD /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomView.m; path = Tokens/CustomView.m; sourceTree = "<group>"; };
+		53EE6D6B1CBD4BBF001EA5FD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Tokens/main.m; sourceTree = "<group>"; };
+		53EE6D6C1CBD4BBF001EA5FD /* MyToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyToken.h; path = Tokens/MyToken.h; sourceTree = "<group>"; };
+		53EE6D6D1CBD4BBF001EA5FD /* MyToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyToken.m; path = Tokens/MyToken.m; sourceTree = "<group>"; };
+		53EE6D6E1CBD4BBF001EA5FD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Tokens/ViewController.h; sourceTree = "<group>"; };
+		53EE6D6F1CBD4BBF001EA5FD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Tokens/ViewController.m; sourceTree = "<group>"; };
+		53EE6D791CBD4BDF001EA5FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = Tokens/en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		53EE6D7B1CBD4BDF001EA5FD /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = Tokens/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		53EE6D7F1CBD4BE7001EA5FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Tokens/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		53EE6D811CBD4BEF001EA5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tokens/Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Tokens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tokens.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Tokens.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* TokenTest */ = {
+			isa = PBXGroup;
+			children = (
+				53CC48301C8648070044A31B /* ReadMe.md */,
+				53B3C80516A8B6DC003E3A29 /* Classes */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = TokenTest;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53EE6D811CBD4BEF001EA5FD /* Info.plist */,
+				53EE6D7E1CBD4BE7001EA5FD /* Main.storyboard */,
+				53EE6D781CBD4BDF001EA5FD /* Credits.rtf */,
+				53EE6D7A1CBD4BDF001EA5FD /* InfoPlist.strings */,
+				535FAEA41CBC3CD300A2554C /* Tokens.entitlements */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		53B3C80516A8B6DC003E3A29 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				53EE6D671CBD4BBF001EA5FD /* AppDelegate.h */,
+				53EE6D681CBD4BBF001EA5FD /* AppDelegate.m */,
+				53EE6D691CBD4BBF001EA5FD /* CustomView.h */,
+				53EE6D6A1CBD4BBF001EA5FD /* CustomView.m */,
+				53EE6D6B1CBD4BBF001EA5FD /* main.m */,
+				53EE6D6C1CBD4BBF001EA5FD /* MyToken.h */,
+				53EE6D6D1CBD4BBF001EA5FD /* MyToken.m */,
+				53EE6D6E1CBD4BBF001EA5FD /* ViewController.h */,
+				53EE6D6F1CBD4BBF001EA5FD /* ViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Tokens */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Tokens" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tokens;
+			productInstallPath = "$(HOME)/Applications";
+			productName = TokenTest;
+			productReference = 8D1107320486CEB800E47090 /* Tokens.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				TargetAttributes = {
+					8D1107260486CEB800E47090 = {
+						DevelopmentTeam = 69XHTLCF36;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Tokens" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+				Base,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* TokenTest */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Tokens */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EE6D801CBD4BE7001EA5FD /* Main.storyboard in Resources */,
+				53EE6D7C1CBD4BDF001EA5FD /* Credits.rtf in Resources */,
+				53EE6D7D1CBD4BDF001EA5FD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EE6D721CBD4BBF001EA5FD /* AppDelegate.m in Sources */,
+				53EE6D741CBD4BBF001EA5FD /* main.m in Sources */,
+				53EE6D731CBD4BBF001EA5FD /* CustomView.m in Sources */,
+				53EE6D751CBD4BBF001EA5FD /* MyToken.m in Sources */,
+				53EE6D761CBD4BBF001EA5FD /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		53EE6D781CBD4BDF001EA5FD /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53EE6D791CBD4BDF001EA5FD /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		53EE6D7A1CBD4BDF001EA5FD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53EE6D7B1CBD4BDF001EA5FD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		53EE6D7E1CBD4BE7001EA5FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53EE6D7F1CBD4BE7001EA5FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = Tokens/Tokens.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 69XHTLCF36;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Tokens/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luci.tokenfield;
+				PRODUCT_NAME = Tokens;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = Tokens/Tokens.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 69XHTLCF36;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Tokens/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luci.tokenfield;
+				PRODUCT_NAME = Tokens;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Tokens" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Tokens" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
