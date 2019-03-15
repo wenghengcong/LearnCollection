@@ -1,0 +1,17 @@
+/*
+ Copyright (C) 2017 Apple Inc. All Rights Reserved.
+ See LICENSE.txt for this sample’s licensing information
+ 
+ Abstract:
+ Custom UITableViewCell for displaying photo information in the main table view.
+ */
+
+@import UIKit;
+
+@class CloudPhoto;
+
+@interface PhotoTableCell : UITableViewCell
+
+@property (nonatomic, strong) CloudPhoto *photo;
+
+@end

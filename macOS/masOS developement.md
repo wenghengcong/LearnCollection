@@ -66,11 +66,19 @@ raywenderlich https://www.raywenderlich.com/macos
 
 10. NSTokenField
 
-   https://www.cocoanetics.com/2013/05/tokenize-this/
+  https://www.cocoanetics.com/2013/05/tokenize-this/
 
-11. a
+11. NSArrayController
 
-12. a
+   [raywenderlich Cocoa Bindings on macOS](https://www.raywenderlich.com/921-cocoa-bindings-on-macos)
+
+   [Swift, Xcode 8.1, NSTableView, Bindings, and Array Controllers Oh My!](https://medium.com/@jamesktan/swift-xcode-8-1-nstableview-bindings-and-array-controllers-oh-my-c595623cae0d)
+
+12. View and window
+
+   https://www.raywenderlich.com/704-macos-view-controllers-tutorial
+
+   [Window Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)
 
 13. a
 
