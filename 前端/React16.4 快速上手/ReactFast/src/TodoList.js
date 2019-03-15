@@ -7,7 +7,7 @@ class TodoList extends Component {
     this.state = {
       list: [],
       inputValue: ''
-    }
+    };
     this.handleBtnClick = this.handleBtnClick.bind(this)
     this.handleInputChange = this.handleInputChange.bind(this)
     this.handleDelete = this.handleDelete.bind(this)

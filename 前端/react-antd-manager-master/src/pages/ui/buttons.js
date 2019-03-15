@@ -49,6 +49,7 @@ class Buttons extends React.Component{
               <Card title="按钮组" style={{marginBottom:10}}>
                     <Button.Group>
                         <Button type="primary" icon="left">返回</Button>
+                        <Button type="primary">1</Button>
                         <Button type="primary" icon="right">前进</Button>
                     </Button.Group>              
               </Card>
