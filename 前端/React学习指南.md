@@ -18,18 +18,42 @@
 
 ## React
 
-| 站点                  |                                                              |                  |
-| --------------------- | ------------------------------------------------------------ | ---------------- |
-| react官网             | https://reactjs.org                                          | 必备站点，最主要 |
-| react中文站点         | https://react.docschina.org                                  |                  |
-| React Runboob         | http://www.runoob.com/react/react-tutorial.html              |                  |
-| 阮一峰 Redux 入门教程 | [（一）](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html)   [（二）](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_two_async_operations.html)  [（三）](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_three_react-redux.html) |                  |
-| Flutter中文网         | https://flutterchina.club                                    |                  |
-| React Native中文      | https://reactnative.cn/                                      |                  |
-| React Native英文      | http://facebook.github.io/react-native/                      |                  |
-| React trainning       | https://reacttraining.com/react-router/                      |                  |
-| Less                  | https://less.bootcss.com/                                    |                  |
-| antd                  | [antd](https://ant.design/docs/react/introduce-cn)    [antd pro](https://pro.ant.design/docs/getting-started-cn) |                  |
+| 站点                   |                                                              |                  |
+| ---------------------- | ------------------------------------------------------------ | ---------------- |
+| react官网              | https://reactjs.org                                          | 必备站点，最主要 |
+| react中文站点          | https://react.docschina.org                                  |                  |
+| React Runboob          | http://www.runoob.com/react/react-tutorial.html              |                  |
+|                        |                                                              |                  |
+| Flutter中文网          | https://flutterchina.club                                    |                  |
+| React Native中文       | https://reactnative.cn/                                      |                  |
+| React Native英文       | http://facebook.github.io/react-native/                      |                  |
+| React router trainning | https://reacttraining.com/react-router/                      |                  |
+| Less                   | https://less.bootcss.com/                                    |                  |
+| antd                   | [antd](https://ant.design/docs/react/introduce-cn)    [antd pro](https://pro.ant.design/docs/getting-started-cn) |                  |
+
+
+
+## Redux
+
+|                                                              |                                                              |      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| 阮一峰 Redux 入门教程                                        | [（一）](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html)   [（二）](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_two_async_operations.html)  [（三）](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_three_react-redux.html) |      |
+| Redux官方视频                                                | https://egghead.io/courses/getting-started-with-redux        |      |
+| Redux官方文档                                                | https://redux.js.org/introduction/getting-started            |      |
+| React Redux Tutorial for Beginners: The Definitive Guide (2019) | https://www.valentinog.com/blog/redux/                       |      |
+
+
+
+### dva
+
+| 知识点                                                       |                                                         |                                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------- | ------------------------------------------------------------ |
+| dva                                                          |                                                         | https://github.com/dvajs/dva<br>指南：https://dvajs.com/guide<br>图解 https://dvajs.com/guide/fig-show.html#%E5%9B%BE%E8%A7%A3%E4%BA%8C-redux-%E8%A1%A8%E7%A4%BA%E6%B3%95 |
+| effect                                                       |                                                         | https://dvajs.com/guide/introduce-class.html#effect          |
+| umi                                                          |                                                         | https://umijs.org/                                           |
+| umi-dva                                                      | [demo](https://github.com/umijs/umi-dva-user-dashboard) | [demo解析](https://github.com/sorrycc/blog/issues/62)        |
+| [dva理论到实践——帮你扫清dva的知识盲点](https://www.jianshu.com/p/e184cd6d253c) |                                                         |                                                              |
+| [dva.js 知识导图](https://github.com/dvajs/dva-knowledgemap#reducer) |                                                         |                                                              |
 
 
 
@@ -69,10 +93,10 @@
 | --------------------------------------------------- | ------------------------------------------------------------ | --------------------------------- |
 | 诱人的 react 视频教程-基础篇                        | https://www.rails365.net/playlists/you-ren-de-react-shi-pin-jiao-cheng-ji-chu-pian | 1个半小时。已看。                 |
 | 慕课网：React16.4 快速上手                          | [视频地址](https://www.imooc.com/learn/1023)                 | 1个小时。已看，精简，流程。优秀。 |
-| 共享单车                                            | [视频地址](https://www.bilibili.com/video/av37428567/?p=15)       [笔记](https://github.com/lz109896/React?1552608077460)       [源码加笔记](https://github.com/wenshaofeng/bikeMs) |                                   |
+| 共享单车                                            | [项目演示](http://imoocms.51purse.com/#/home)  [视频地址](https://www.bilibili.com/video/av37428567/?p=15)       [笔记](https://github.com/lz109896/React?1552608077460)       [源码加笔记](https://github.com/wenshaofeng/bikeMs) |                                   |
 | React简书项目                                       | https://www.bilibili.com/video/av37670968<br>代码地址：https://github.com/CruxF/IMOOC/tree/master/React?1550110613898 | 待看。                            |
 | React教程_React router4.x Antd Flux入门实战视频教程 | https://www.bilibili.com/video/av38372336/?spm_id_from=333.788.videocard.1 |                                   |
-| Redux官方                                           | https://egghead.io/courses/getting-started-with-redux        |                                   |
+|                                                     |                                                              |                                   |
 | React 45讲-极客时间出品                             | https://www.bilibili.com/video/av39386115                    | 各种知识点串讲                    |
 |                                                     |                                                              |                                   |
 | YouTube搜索                                         | https://www.youtube.com/results?search_query=redux&sp=CAA%253D | 备用                              |
@@ -88,9 +112,9 @@
 | antd desgin pro                |                                                              | https://pro.ant.design/docs/getting-started-cn               |      |
 | redux                          |                                                              | 官网：https://redux.js.org/<br>中文 https://www.redux.org.cn/         https://cn.redux.js.org/<br>[Redux入门教程（快速上手）](https://segmentfault.com/a/1190000011474522) |      |
 | @connect                       |                                                              | https://www.jianshu.com/p/d07ccef9f4f0                       |      |
-| dva                            |                                                              | https://github.com/dvajs/dva<br>指南：https://dvajs.com/guide<br>图解 https://dvajs.com/guide/fig-show.html#%E5%9B%BE%E8%A7%A3%E4%BA%8C-redux-%E8%A1%A8%E7%A4%BA%E6%B3%95 |      |
+|                                |                                                              |                                                              |      |
 | umi                            |                                                              | https://umijs.org/guide<br>中文：https://umijs.org/zh/guide/ |      |
-| effect                         |                                                              | https://dvajs.com/guide/introduce-class.html#effect          |      |
+|                                |                                                              |                                                              |      |
 | …扩展运算符                    | **展开语法(Spread syntax),** 可以在函数调用/数组构造时, 将数组表达式或者string在语法层面展开；还可以在构造字面量对象时, 将对象表达式按key-value的方式展开。(**译者注**: 字面量一般指 `[1, 2, 3]` 或者 `{name: "mdn"}` 这种简洁的构造方式) | https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax#%E5%89%A9%E4%BD%99%E8%AF%AD%E6%B3%95%EF%BC%88%E5%89%A9%E4%BD%99%E5%8F%82%E6%95%B0%EF%BC%89 |      |
 | loadash                        |                                                              | https://www.html.cn/doc/lodash/                              |      |
 | state{list:list} 为state{list} | 如果state中，key和value同名，则可以省略一个。                |                                                              |      |
@@ -102,8 +126,22 @@
 | 组件生命周期                   | willMount请求网络，render                                    |                                                              |      |
 | fetch                          |                                                              | [React 快速上手 - 09 数据请求 fetch](https://segmentfault.com/a/1190000015049343) |      |
 | 更新state的写法                | 1.原生写法：...或者Object.assign<br>2.immer，新出的工具类<br>3.immutability-helper. |                                                              |      |
+| mock数据                       | easymock平台，基于mockjs规范，了解mockjs规范。               |                                                              |      |
+| http请求                       | [axios](https://github.com/axios/axios)                      |                                                              |      |
+| Loading处理                    |                                                              |                                                              |      |
+| 错误拦截                       |                                                              |                                                              |      |
 |                                |                                                              |                                                              |      |
 |                                |                                                              |                                                              |      |
+|                                |                                                              |                                                              |      |
+|                                |                                                              |                                                              |      |
+
+## antd
+
+| 知识点 | 简介                                                         | 相关 | 说明 |
+| ------ | ------------------------------------------------------------ | ---- | ---- |
+| render | render里面定义的变量，直接使用就行。但是如果定义在reder外面，就需要this.state.这种形式引用。 |      |      |
+|        |                                                              |      |      |
+|        |                                                              |      |      |
 
 
 

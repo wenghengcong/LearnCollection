@@ -80,11 +80,21 @@ raywenderlich https://www.raywenderlich.com/macos
 
    [Window Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)
 
-13. a
+13. 随系统启动
 
-14. a
+   https://theswiftdev.com/2017/10/27/how-to-launch-a-macos-app-at-login/
 
-15. a
+   https://medium.com/@hoishing/adding-login-items-for-macos-7d76458f6495
+
+14. NSTabView
+
+   https://kicsipixel.github.io/2018/nstabview/
+
+   https://developer.apple.com/documentation/appkit/nstabview
+
+15. 事件监听与响应
+
+   https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/EventOverview/EventObjectsTypes/EventObjectsTypes.html
 
 16. a
 
