@@ -10,6 +10,8 @@
 
 1. 安装多个Java版本，下载dmg直接安装。
 
+[下载地址](https://login.oracle.com/oam/server/obrareq.cgi?encquery%3DdcadjJeO8jBYjl8Jrdhfsui47q3oqhfTKrGIENNJNOkLjL%2FkheZK4m35e4dCm5jxPdRQapR%2FtPHjRBcyfb5sECpG1JZH7ZV1gQ7n7%2Fg3NZsRe8GhwQdnd8HOT4Dd2EkdAjwgBIp9kzafKc5PpI0ZrgWCcK2LB4svKnBSMGZny50aTkgbMt9%2Fg%2Fv7yLz6fcrra0OlTDGQrWEzXydEEoq5TIDSXCycgHTqFCvJ3REacaX0x17KooqeedMnCjUlozvkI%2BAmG14aomL%2FalQK2NYKLs7cEhDUBBglfAL0bLPM1vUEsqVHeoeZXmQIoARilVD8k9uJxz%2BQYbgqcFxJCtd4sFVj27CPtalaoa2looCwFOAKscEREhYqMIZebI6pGpfvb0ENHQgq1cdz%2B%2Bnd6YlUAMQeZSe55XMfqMqogaP%2BaqI%3D%20agentid%3Dedelivery-extprod%20ver%3D1%20crmethod%3D2%26cksum%3Dff179f78c1eb5fc3b0d7666e849420d33641c4b0&ECID-Context=1.005XOP%5EMbmd7a6KaETu1US00009900161P%3BkXjE)
+
 https://docs.oracle.com/javase/7/docs/webnotes/install/mac/mac-jdk.html  
 
 

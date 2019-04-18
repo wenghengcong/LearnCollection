@@ -94,7 +94,7 @@
 | 诱人的 react 视频教程-基础篇                        | https://www.rails365.net/playlists/you-ren-de-react-shi-pin-jiao-cheng-ji-chu-pian | 1个半小时。已看。                 |
 | 慕课网：React16.4 快速上手                          | [视频地址](https://www.imooc.com/learn/1023)                 | 1个小时。已看，精简，流程。优秀。 |
 | 共享单车                                            | [项目演示](http://imoocms.51purse.com/#/home)  [视频地址](https://www.bilibili.com/video/av37428567/?p=15)       [笔记](https://github.com/lz109896/React?1552608077460)       [源码加笔记](https://github.com/wenshaofeng/bikeMs) |                                   |
-| React简书项目                                       | https://www.bilibili.com/video/av37670968<br>代码地址：https://github.com/CruxF/IMOOC/tree/master/React?1550110613898 | 待看。                            |
+| React简书项目                                       | [视频地址](https://www.bilibili.com/video/av37670968)  [代码地址](https://github.com/CruxF/IMOOC/tree/master/React?1550110613898)： | 待看。                            |
 | React教程_React router4.x Antd Flux入门实战视频教程 | https://www.bilibili.com/video/av38372336/?spm_id_from=333.788.videocard.1 |                                   |
 |                                                     |                                                              |                                   |
 | React 45讲-极客时间出品                             | https://www.bilibili.com/video/av39386115                    | 各种知识点串讲                    |
@@ -130,18 +130,18 @@
 | http请求                       | [axios](https://github.com/axios/axios)                      |                                                              |      |
 | Loading处理                    |                                                              |                                                              |      |
 | 错误拦截                       |                                                              |                                                              |      |
-|                                |                                                              |                                                              |      |
-|                                |                                                              |                                                              |      |
-|                                |                                                              |                                                              |      |
+| ???                            | saveInputRef = input => this.input = input;                  |                                                              |      |
+| 表单提交Enter Press            | 1. [The Enter Key should Submit Forms, Stop Suppressing it](https://www.tjvantoll.com/2013/01/01/enter-should-submit-forms-stop-messing-with-that/)<br>2. [Press Enter to Submit 背后的那些事](http://david-chen-blog.logdown.com/posts/177766-how-forms-submit-when-pressing-enter) |                                                              |      |
+| React Ref                      | [React ref属性使用](https://www.jianshu.com/p/6868174b0b34)  |                                                              |      |
 |                                |                                                              |                                                              |      |
 
 ## antd
 
-| 知识点 | 简介                                                         | 相关 | 说明 |
-| ------ | ------------------------------------------------------------ | ---- | ---- |
-| render | render里面定义的变量，直接使用就行。但是如果定义在reder外面，就需要this.state.这种形式引用。 |      |      |
-|        |                                                              |      |      |
-|        |                                                              |      |      |
+| 知识点                  | 简介                                                         | 相关 | 说明 |
+| ----------------------- | ------------------------------------------------------------ | ---- | ---- |
+| render                  | render里面定义的变量，直接使用就行。但是如果定义在reder外面，就需要this.state.这种形式引用。 |      |      |
+| 基于umi的Ant Design介绍 | <https://blog.csdn.net/eunice_sytin/article/details/83542476> |      |      |
+|                         |                                                              |      |      |
 
 
 
