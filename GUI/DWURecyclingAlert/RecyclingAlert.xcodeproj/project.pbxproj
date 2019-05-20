@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5010B6E61B418DD600C77472 /* ExampleHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5010B6E51B418DD600C77472 /* ExampleHeaderFooterView.m */; };
+		50177D691B2C419E00795317 /* ExampleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 508DF4F21B2C0FD000361081 /* ExampleImage.m */; };
+		504D7C731B340E8800D7E105 /* android@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 504D7C721B340E8800D7E105 /* android@3x.png */; };
+		504D7C761B3411B600D7E105 /* ExampleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 504D7C751B3411B600D7E105 /* ExampleCollectionViewController.m */; };
+		504D7C791B3413DC00D7E105 /* ExampleItemGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 504D7C781B3413DC00D7E105 /* ExampleItemGenerator.m */; };
+		504D7C7C1B34175500D7E105 /* ExampleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 504D7C7B1B34175500D7E105 /* ExampleCollectionViewCell.m */; };
+		507A16C21B23EE3400B4A016 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A16C11B23EE3400B4A016 /* main.m */; };
+		507A16C51B23EE3400B4A016 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A16C41B23EE3400B4A016 /* AppDelegate.m */; };
+		507A16CB1B23EE3400B4A016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 507A16C91B23EE3400B4A016 /* Main.storyboard */; };
+		507A16CD1B23EE3400B4A016 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 507A16CC1B23EE3400B4A016 /* Images.xcassets */; };
+		507A16D01B23EE3400B4A016 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 507A16CE1B23EE3400B4A016 /* LaunchScreen.xib */; };
+		507A16DC1B23EE3400B4A016 /* RecyclingAlertTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A16DB1B23EE3400B4A016 /* RecyclingAlertTests.m */; };
+		507A16EC1B241EF400B4A016 /* ExampleDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A16EB1B241EF400B4A016 /* ExampleDataSource.m */; };
+		507A16ED1B241EF400B4A016 /* ExampleDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A16EB1B241EF400B4A016 /* ExampleDataSource.m */; };
+		507A16F01B241F0F00B4A016 /* ExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A16EF1B241F0F00B4A016 /* ExampleTableViewController.m */; };
+		507A16F11B241F0F00B4A016 /* ExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A16EF1B241F0F00B4A016 /* ExampleTableViewController.m */; };
+		507A16F41B241FC000B4A016 /* ExampleDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A16F31B241FC000B4A016 /* ExampleDelegate.m */; };
+		507A16F51B241FC000B4A016 /* ExampleDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A16F31B241FC000B4A016 /* ExampleDelegate.m */; };
+		507A16F81B2423DD00B4A016 /* ExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A16F71B2423DD00B4A016 /* ExampleCell.m */; };
+		507A16F91B2423DD00B4A016 /* ExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A16F71B2423DD00B4A016 /* ExampleCell.m */; };
+		507A16FC1B24242900B4A016 /* ExampleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A16FB1B24242900B4A016 /* ExampleItem.m */; };
+		507A16FD1B24242900B4A016 /* ExampleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 507A16FB1B24242900B4A016 /* ExampleItem.m */; };
+		508DF4F31B2C0FD000361081 /* ExampleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 508DF4F21B2C0FD000361081 /* ExampleImage.m */; };
+		508DF4F81B2C221100361081 /* apple_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 508DF4F71B2C221100361081 /* apple_logo@3x.png */; };
+		508E18DB1B3459A800F2D090 /* ExampleCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 508E18DA1B3459A800F2D090 /* ExampleCollectionViewLayout.m */; };
+		508E18DE1B347DF800F2D090 /* ExampleCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 508E18DD1B347DF800F2D090 /* ExampleCollectionViewDataSource.m */; };
+		508E18E11B3480B600F2D090 /* ExampleSimulatedWorkLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 508E18E01B3480B600F2D090 /* ExampleSimulatedWorkLoad.m */; };
+		5097A0561B42CB530039F87D /* ExampleRecycledViewWithDrawRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5097A0551B42CB530039F87D /* ExampleRecycledViewWithDrawRect.m */; };
+		5097A0591B42F1AC0039F87D /* ExampleCollectionViewHeaderFooterViewCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5097A0581B42F1AC0039F87D /* ExampleCollectionViewHeaderFooterViewCollectionReusableView.m */; };
+		50A5D6661B2463FA0058E134 /* DWURecyclingAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A5D6651B2463FA0058E134 /* DWURecyclingAlert.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		507A16D61B23EE3400B4A016 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 507A16B41B23EE3400B4A016 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 507A16BB1B23EE3400B4A016;
+			remoteInfo = RecyclingAlert;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5010B6E41B418DD600C77472 /* ExampleHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleHeaderFooterView.h; path = ExampleTableViewController/ExampleHeaderFooterView.h; sourceTree = "<group>"; };
+		5010B6E51B418DD600C77472 /* ExampleHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleHeaderFooterView.m; path = ExampleTableViewController/ExampleHeaderFooterView.m; sourceTree = "<group>"; };
+		504D7C721B340E8800D7E105 /* android@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "android@3x.png"; sourceTree = "<group>"; };
+		504D7C741B3411B600D7E105 /* ExampleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleCollectionViewController.h; path = ExampleTableViewController/ExampleCollectionViewController.h; sourceTree = "<group>"; };
+		504D7C751B3411B600D7E105 /* ExampleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleCollectionViewController.m; path = ExampleTableViewController/ExampleCollectionViewController.m; sourceTree = "<group>"; };
+		504D7C771B3413DC00D7E105 /* ExampleItemGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleItemGenerator.h; path = ExampleTableViewController/ExampleItemGenerator.h; sourceTree = "<group>"; };
+		504D7C781B3413DC00D7E105 /* ExampleItemGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleItemGenerator.m; path = ExampleTableViewController/ExampleItemGenerator.m; sourceTree = "<group>"; };
+		504D7C7A1B34175500D7E105 /* ExampleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleCollectionViewCell.h; path = ExampleTableViewController/ExampleCollectionViewCell.h; sourceTree = "<group>"; };
+		504D7C7B1B34175500D7E105 /* ExampleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleCollectionViewCell.m; path = ExampleTableViewController/ExampleCollectionViewCell.m; sourceTree = "<group>"; };
+		507A16BC1B23EE3400B4A016 /* RecyclingAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecyclingAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		507A16C01B23EE3400B4A016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		507A16C11B23EE3400B4A016 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		507A16C31B23EE3400B4A016 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		507A16C41B23EE3400B4A016 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		507A16CA1B23EE3400B4A016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		507A16CC1B23EE3400B4A016 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		507A16CF1B23EE3400B4A016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		507A16D51B23EE3400B4A016 /* RecyclingAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecyclingAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		507A16DA1B23EE3400B4A016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		507A16DB1B23EE3400B4A016 /* RecyclingAlertTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecyclingAlertTests.m; sourceTree = "<group>"; };
+		507A16EA1B241EF400B4A016 /* ExampleDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleDataSource.h; path = ExampleTableViewController/ExampleDataSource.h; sourceTree = "<group>"; };
+		507A16EB1B241EF400B4A016 /* ExampleDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleDataSource.m; path = ExampleTableViewController/ExampleDataSource.m; sourceTree = "<group>"; };
+		507A16EE1B241F0F00B4A016 /* ExampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleTableViewController.h; path = ExampleTableViewController/ExampleTableViewController.h; sourceTree = "<group>"; };
+		507A16EF1B241F0F00B4A016 /* ExampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleTableViewController.m; path = ExampleTableViewController/ExampleTableViewController.m; sourceTree = "<group>"; };
+		507A16F21B241FC000B4A016 /* ExampleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleDelegate.h; path = ExampleTableViewController/ExampleDelegate.h; sourceTree = "<group>"; };
+		507A16F31B241FC000B4A016 /* ExampleDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleDelegate.m; path = ExampleTableViewController/ExampleDelegate.m; sourceTree = "<group>"; };
+		507A16F61B2423DD00B4A016 /* ExampleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleCell.h; path = ExampleTableViewController/ExampleCell.h; sourceTree = "<group>"; };
+		507A16F71B2423DD00B4A016 /* ExampleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleCell.m; path = ExampleTableViewController/ExampleCell.m; sourceTree = "<group>"; };
+		507A16FA1B24242900B4A016 /* ExampleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleItem.h; path = ExampleTableViewController/ExampleItem.h; sourceTree = "<group>"; };
+		507A16FB1B24242900B4A016 /* ExampleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleItem.m; path = ExampleTableViewController/ExampleItem.m; sourceTree = "<group>"; };
+		508DF4F11B2C0FD000361081 /* ExampleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleImage.h; path = ExampleTableViewController/ExampleImage.h; sourceTree = "<group>"; };
+		508DF4F21B2C0FD000361081 /* ExampleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleImage.m; path = ExampleTableViewController/ExampleImage.m; sourceTree = "<group>"; };
+		508DF4F71B2C221100361081 /* apple_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple_logo@3x.png"; sourceTree = "<group>"; };
+		508E18D91B3459A800F2D090 /* ExampleCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleCollectionViewLayout.h; path = ExampleTableViewController/ExampleCollectionViewLayout.h; sourceTree = "<group>"; };
+		508E18DA1B3459A800F2D090 /* ExampleCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleCollectionViewLayout.m; path = ExampleTableViewController/ExampleCollectionViewLayout.m; sourceTree = "<group>"; };
+		508E18DC1B347DF800F2D090 /* ExampleCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleCollectionViewDataSource.h; path = ExampleTableViewController/ExampleCollectionViewDataSource.h; sourceTree = "<group>"; };
+		508E18DD1B347DF800F2D090 /* ExampleCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleCollectionViewDataSource.m; path = ExampleTableViewController/ExampleCollectionViewDataSource.m; sourceTree = "<group>"; };
+		508E18DF1B3480B600F2D090 /* ExampleSimulatedWorkLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleSimulatedWorkLoad.h; path = ExampleTableViewController/ExampleSimulatedWorkLoad.h; sourceTree = "<group>"; };
+		508E18E01B3480B600F2D090 /* ExampleSimulatedWorkLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleSimulatedWorkLoad.m; path = ExampleTableViewController/ExampleSimulatedWorkLoad.m; sourceTree = "<group>"; };
+		5097A0541B42CB530039F87D /* ExampleRecycledViewWithDrawRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleRecycledViewWithDrawRect.h; path = ExampleTableViewController/ExampleRecycledViewWithDrawRect.h; sourceTree = "<group>"; };
+		5097A0551B42CB530039F87D /* ExampleRecycledViewWithDrawRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleRecycledViewWithDrawRect.m; path = ExampleTableViewController/ExampleRecycledViewWithDrawRect.m; sourceTree = "<group>"; };
+		5097A0571B42F1AC0039F87D /* ExampleCollectionViewHeaderFooterViewCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleCollectionViewHeaderFooterViewCollectionReusableView.h; path = ExampleTableViewController/ExampleCollectionViewHeaderFooterViewCollectionReusableView.h; sourceTree = "<group>"; };
+		5097A0581B42F1AC0039F87D /* ExampleCollectionViewHeaderFooterViewCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleCollectionViewHeaderFooterViewCollectionReusableView.m; path = ExampleTableViewController/ExampleCollectionViewHeaderFooterViewCollectionReusableView.m; sourceTree = "<group>"; };
+		50A5D6651B2463FA0058E134 /* DWURecyclingAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DWURecyclingAlert.m; path = DWURecyclingAlert/DWURecyclingAlert.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		507A16B91B23EE3400B4A016 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		507A16D21B23EE3400B4A016 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		507A16B31B23EE3400B4A016 = {
+			isa = PBXGroup;
+			children = (
+				507A16BE1B23EE3400B4A016 /* RecyclingAlert */,
+				507A16D81B23EE3400B4A016 /* RecyclingAlertTests */,
+				507A16BD1B23EE3400B4A016 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		507A16BD1B23EE3400B4A016 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				507A16BC1B23EE3400B4A016 /* RecyclingAlert.app */,
+				507A16D51B23EE3400B4A016 /* RecyclingAlertTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		507A16BE1B23EE3400B4A016 /* RecyclingAlert */ = {
+			isa = PBXGroup;
+			children = (
+				50FC304E1BBA9C2300CE59C7 /* DWURecyclingAlert_CocoaPods */,
+				50A5D65C1B2440760058E134 /* DWURecyclingAlert */,
+				507A16E91B241E6200B4A016 /* ExampleTableViewController */,
+				507A16C31B23EE3400B4A016 /* AppDelegate.h */,
+				507A16C41B23EE3400B4A016 /* AppDelegate.m */,
+				507A16C91B23EE3400B4A016 /* Main.storyboard */,
+				507A16CC1B23EE3400B4A016 /* Images.xcassets */,
+				507A16CE1B23EE3400B4A016 /* LaunchScreen.xib */,
+				507A16BF1B23EE3400B4A016 /* Supporting Files */,
+			);
+			path = RecyclingAlert;
+			sourceTree = "<group>";
+		};
+		507A16BF1B23EE3400B4A016 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				507A16C01B23EE3400B4A016 /* Info.plist */,
+				507A16C11B23EE3400B4A016 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		507A16D81B23EE3400B4A016 /* RecyclingAlertTests */ = {
+			isa = PBXGroup;
+			children = (
+				507A16DB1B23EE3400B4A016 /* RecyclingAlertTests.m */,
+				507A16D91B23EE3400B4A016 /* Supporting Files */,
+			);
+			path = RecyclingAlertTests;
+			sourceTree = "<group>";
+		};
+		507A16D91B23EE3400B4A016 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				507A16DA1B23EE3400B4A016 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		507A16E91B241E6200B4A016 /* ExampleTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				504D7C721B340E8800D7E105 /* android@3x.png */,
+				508DF4F71B2C221100361081 /* apple_logo@3x.png */,
+				507A16EE1B241F0F00B4A016 /* ExampleTableViewController.h */,
+				507A16EF1B241F0F00B4A016 /* ExampleTableViewController.m */,
+				507A16EA1B241EF400B4A016 /* ExampleDataSource.h */,
+				507A16EB1B241EF400B4A016 /* ExampleDataSource.m */,
+				507A16F21B241FC000B4A016 /* ExampleDelegate.h */,
+				507A16F31B241FC000B4A016 /* ExampleDelegate.m */,
+				507A16F61B2423DD00B4A016 /* ExampleCell.h */,
+				507A16F71B2423DD00B4A016 /* ExampleCell.m */,
+				507A16FA1B24242900B4A016 /* ExampleItem.h */,
+				507A16FB1B24242900B4A016 /* ExampleItem.m */,
+				508DF4F11B2C0FD000361081 /* ExampleImage.h */,
+				508DF4F21B2C0FD000361081 /* ExampleImage.m */,
+				504D7C741B3411B600D7E105 /* ExampleCollectionViewController.h */,
+				504D7C751B3411B600D7E105 /* ExampleCollectionViewController.m */,
+				504D7C771B3413DC00D7E105 /* ExampleItemGenerator.h */,
+				504D7C781B3413DC00D7E105 /* ExampleItemGenerator.m */,
+				504D7C7A1B34175500D7E105 /* ExampleCollectionViewCell.h */,
+				504D7C7B1B34175500D7E105 /* ExampleCollectionViewCell.m */,
+				508E18D91B3459A800F2D090 /* ExampleCollectionViewLayout.h */,
+				508E18DA1B3459A800F2D090 /* ExampleCollectionViewLayout.m */,
+				508E18DC1B347DF800F2D090 /* ExampleCollectionViewDataSource.h */,
+				508E18DD1B347DF800F2D090 /* ExampleCollectionViewDataSource.m */,
+				508E18DF1B3480B600F2D090 /* ExampleSimulatedWorkLoad.h */,
+				508E18E01B3480B600F2D090 /* ExampleSimulatedWorkLoad.m */,
+				5010B6E41B418DD600C77472 /* ExampleHeaderFooterView.h */,
+				5010B6E51B418DD600C77472 /* ExampleHeaderFooterView.m */,
+				5097A0541B42CB530039F87D /* ExampleRecycledViewWithDrawRect.h */,
+				5097A0551B42CB530039F87D /* ExampleRecycledViewWithDrawRect.m */,
+				5097A0571B42F1AC0039F87D /* ExampleCollectionViewHeaderFooterViewCollectionReusableView.h */,
+				5097A0581B42F1AC0039F87D /* ExampleCollectionViewHeaderFooterViewCollectionReusableView.m */,
+			);
+			name = ExampleTableViewController;
+			sourceTree = "<group>";
+		};
+		50A5D65C1B2440760058E134 /* DWURecyclingAlert */ = {
+			isa = PBXGroup;
+			children = (
+				50A5D6651B2463FA0058E134 /* DWURecyclingAlert.m */,
+			);
+			name = DWURecyclingAlert;
+			sourceTree = "<group>";
+		};
+		50FC304E1BBA9C2300CE59C7 /* DWURecyclingAlert_CocoaPods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DWURecyclingAlert_CocoaPods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		507A16BB1B23EE3400B4A016 /* RecyclingAlert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 507A16DF1B23EE3400B4A016 /* Build configuration list for PBXNativeTarget "RecyclingAlert" */;
+			buildPhases = (
+				507A16B81B23EE3400B4A016 /* Sources */,
+				507A16B91B23EE3400B4A016 /* Frameworks */,
+				507A16BA1B23EE3400B4A016 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RecyclingAlert;
+			productName = RecyclingAlert;
+			productReference = 507A16BC1B23EE3400B4A016 /* RecyclingAlert.app */;
+			productType = "com.apple.product-type.application";
+		};
+		507A16D41B23EE3400B4A016 /* RecyclingAlertTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 507A16E21B23EE3400B4A016 /* Build configuration list for PBXNativeTarget "RecyclingAlertTests" */;
+			buildPhases = (
+				507A16D11B23EE3400B4A016 /* Sources */,
+				507A16D21B23EE3400B4A016 /* Frameworks */,
+				507A16D31B23EE3400B4A016 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				507A16D71B23EE3400B4A016 /* PBXTargetDependency */,
+			);
+			name = RecyclingAlertTests;
+			productName = RecyclingAlertTests;
+			productReference = 507A16D51B23EE3400B4A016 /* RecyclingAlertTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		507A16B41B23EE3400B4A016 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Di Wu";
+				TargetAttributes = {
+					507A16BB1B23EE3400B4A016 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					507A16D41B23EE3400B4A016 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 507A16BB1B23EE3400B4A016;
+					};
+				};
+			};
+			buildConfigurationList = 507A16B71B23EE3400B4A016 /* Build configuration list for PBXProject "RecyclingAlert" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 507A16B31B23EE3400B4A016;
+			productRefGroup = 507A16BD1B23EE3400B4A016 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				507A16BB1B23EE3400B4A016 /* RecyclingAlert */,
+				507A16D41B23EE3400B4A016 /* RecyclingAlertTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		507A16BA1B23EE3400B4A016 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				504D7C731B340E8800D7E105 /* android@3x.png in Resources */,
+				507A16CB1B23EE3400B4A016 /* Main.storyboard in Resources */,
+				508DF4F81B2C221100361081 /* apple_logo@3x.png in Resources */,
+				507A16D01B23EE3400B4A016 /* LaunchScreen.xib in Resources */,
+				507A16CD1B23EE3400B4A016 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		507A16D31B23EE3400B4A016 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		507A16B81B23EE3400B4A016 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				504D7C791B3413DC00D7E105 /* ExampleItemGenerator.m in Sources */,
+				507A16EC1B241EF400B4A016 /* ExampleDataSource.m in Sources */,
+				5097A0591B42F1AC0039F87D /* ExampleCollectionViewHeaderFooterViewCollectionReusableView.m in Sources */,
+				507A16C51B23EE3400B4A016 /* AppDelegate.m in Sources */,
+				5010B6E61B418DD600C77472 /* ExampleHeaderFooterView.m in Sources */,
+				507A16F81B2423DD00B4A016 /* ExampleCell.m in Sources */,
+				5097A0561B42CB530039F87D /* ExampleRecycledViewWithDrawRect.m in Sources */,
+				508E18E11B3480B600F2D090 /* ExampleSimulatedWorkLoad.m in Sources */,
+				504D7C761B3411B600D7E105 /* ExampleCollectionViewController.m in Sources */,
+				504D7C7C1B34175500D7E105 /* ExampleCollectionViewCell.m in Sources */,
+				508E18DB1B3459A800F2D090 /* ExampleCollectionViewLayout.m in Sources */,
+				507A16F01B241F0F00B4A016 /* ExampleTableViewController.m in Sources */,
+				507A16C21B23EE3400B4A016 /* main.m in Sources */,
+				507A16FC1B24242900B4A016 /* ExampleItem.m in Sources */,
+				50A5D6661B2463FA0058E134 /* DWURecyclingAlert.m in Sources */,
+				508DF4F31B2C0FD000361081 /* ExampleImage.m in Sources */,
+				508E18DE1B347DF800F2D090 /* ExampleCollectionViewDataSource.m in Sources */,
+				507A16F41B241FC000B4A016 /* ExampleDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		507A16D11B23EE3400B4A016 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50177D691B2C419E00795317 /* ExampleImage.m in Sources */,
+				507A16F11B241F0F00B4A016 /* ExampleTableViewController.m in Sources */,
+				507A16FD1B24242900B4A016 /* ExampleItem.m in Sources */,
+				507A16ED1B241EF400B4A016 /* ExampleDataSource.m in Sources */,
+				507A16F91B2423DD00B4A016 /* ExampleCell.m in Sources */,
+				507A16DC1B23EE3400B4A016 /* RecyclingAlertTests.m in Sources */,
+				507A16F51B241FC000B4A016 /* ExampleDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		507A16D71B23EE3400B4A016 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 507A16BB1B23EE3400B4A016 /* RecyclingAlert */;
+			targetProxy = 507A16D61B23EE3400B4A016 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		507A16C91B23EE3400B4A016 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				507A16CA1B23EE3400B4A016 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		507A16CE1B23EE3400B4A016 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				507A16CF1B23EE3400B4A016 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		507A16DD1B23EE3400B4A016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		507A16DE1B23EE3400B4A016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		507A16E01B23EE3400B4A016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RecyclingAlert/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		507A16E11B23EE3400B4A016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RecyclingAlert/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		507A16E31B23EE3400B4A016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RecyclingAlertTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecyclingAlert.app/RecyclingAlert";
+			};
+			name = Debug;
+		};
+		507A16E41B23EE3400B4A016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RecyclingAlertTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecyclingAlert.app/RecyclingAlert";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		507A16B71B23EE3400B4A016 /* Build configuration list for PBXProject "RecyclingAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				507A16DD1B23EE3400B4A016 /* Debug */,
+				507A16DE1B23EE3400B4A016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		507A16DF1B23EE3400B4A016 /* Build configuration list for PBXNativeTarget "RecyclingAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				507A16E01B23EE3400B4A016 /* Debug */,
+				507A16E11B23EE3400B4A016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		507A16E21B23EE3400B4A016 /* Build configuration list for PBXNativeTarget "RecyclingAlertTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				507A16E31B23EE3400B4A016 /* Debug */,
+				507A16E41B23EE3400B4A016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 507A16B41B23EE3400B4A016 /* Project object */;
+}

@@ -1,0 +1,14 @@
+PODS:
+  - JTCalendar (2.1.9)
+
+DEPENDENCIES:
+  - JTCalendar (from `..`)
+
+EXTERNAL SOURCES:
+  JTCalendar:
+    :path: ..
+
+SPEC CHECKSUMS:
+  JTCalendar: beb2f4c1b639bf6880f680b4858227acf83a049c
+
+COCOAPODS: 0.39.0

@@ -1,1 +1,0 @@
-../../../../../JTCalendar/JTCalendarSettings.h
