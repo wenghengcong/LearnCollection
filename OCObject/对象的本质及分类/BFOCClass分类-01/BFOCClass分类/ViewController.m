@@ -25,10 +25,10 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-//    [self testNSObject];
+    [self testNSObject];
 //    NSLog(@"----------------------");
 //    [self testBFPerson];
-    [self testMethod];
+//    [self testMethod];
 }
 
 
@@ -92,6 +92,7 @@
     // 将类对象当做参数传入，获得元类对象
     Class objectMetaClass1 = object_getClass(objectClass5);
     Class objectMetaClass2 = [[[NSObject class] class] class];
+    Class objectMetaClass3 = [[objectMetaClass1 class] class];
     BOOL result = class_isMetaClass([NSObject class]);
     NSLog(@"NSObject instance - %p %p",
           instance1,
@@ -105,11 +106,14 @@
           objectClass5,
           class_isMetaClass(objectClass3));
     
-    NSLog(@"NSObject meta class - %p %d \n %p %d",
+    NSLog(@"NSObject meta class - %p %d \n %p %d \n %p %d",
           objectMetaClass1,
           class_isMetaClass(objectMetaClass1),
           objectMetaClass2,
-          class_isMetaClass(objectMetaClass2));
+          class_isMetaClass(objectMetaClass2),
+          objectMetaClass3,
+          class_isMetaClass(objectMetaClass3)
+          );
 }
 
 - (void)testBFPerson
