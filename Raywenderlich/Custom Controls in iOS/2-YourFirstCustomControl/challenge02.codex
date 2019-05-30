@@ -1,0 +1,8 @@
+title: Custom Controls in iOS
+segments:
+  - kind: cover
+    path: frontmatter/cover.markdown
+  - kind: legal
+    path: frontmatter/legal.markdown
+  - kind: chapter
+    path: 2 - Your First Custom Control/Challenge/Challenge.md

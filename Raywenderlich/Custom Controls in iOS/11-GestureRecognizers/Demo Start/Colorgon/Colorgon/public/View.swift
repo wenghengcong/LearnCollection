@@ -1,0 +1,83 @@
+/*
+ * Copyright (c) 2017 Razeware LLC
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+
+import UIKit
+
+@IBDesignable
+public final class View: UIView {
+  public var handleColorSelection: ( (UIColor) -> Void )?
+  
+//MARK: fileprivate
+  fileprivate var unitCubeColor = UnitCube.whiteColor {
+    didSet {
+      _handleColorSelection()
+    }
+  }
+  
+//MARK: Gesture Recognizers
+  
+//MARK: init
+  required public init?(coder: NSCoder) {
+    super.init(coder: coder)
+    initPhase2()
+  }
+  
+  public override init(frame: CGRect) {
+    super.init(frame: frame)
+    initPhase2()
+  }
+  
+  private func initPhase2() {
+
+  }
+}
+
+//MARK: fileprivate
+private extension View {
+  var colorgonLayer: Layer {
+    return layer as! Layer
+  }
+
+  func _handleColorSelection() {
+    handleColorSelection?(
+      UIColor(
+        unitCubeColor: unitCubeColor,
+        value: 1
+      )
+    )
+  }
+  
+//MARK: Gesture Recognizers
+  
+}
+
+//MARK: UIView
+public extension View {
+  override static var layerClass: AnyClass {
+    return Layer.self
+  }
+  
+  override func prepareForInterfaceBuilder() {
+    colorgonLayer.setNeedsDisplay()
+  }
+}
