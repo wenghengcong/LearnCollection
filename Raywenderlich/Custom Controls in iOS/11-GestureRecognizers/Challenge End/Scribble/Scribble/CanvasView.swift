@@ -22,7 +22,7 @@
 
 import UIKit
 
-let π = CGFloat(M_PI)
+let π = CGFloat(Double.pi)
 
 @IBDesignable
 public final class CanvasView: UIImageView {
@@ -30,7 +30,7 @@ public final class CanvasView: UIImageView {
   // Parameters
   fileprivate let defaultLineWidth: CGFloat = 10
   fileprivate let forceSensitivity: CGFloat = 4.0
-  fileprivate let tiltThreshold = π/6  // 30º
+  fileprivate let tiltThreshold = π/6               // 30º
   fileprivate let minLineWidth: CGFloat = 5
   
   fileprivate var drawingImage: UIImage?

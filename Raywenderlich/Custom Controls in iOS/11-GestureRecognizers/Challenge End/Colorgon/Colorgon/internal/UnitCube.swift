@@ -25,7 +25,7 @@ import simd
 import QuartzCore
 
 enum UnitCube {
-  static let whiteColor = float3(1)
+    static let whiteColor = float3(repeating: 1)
   
   static func getColor(
     positionInView: CGPoint,
@@ -39,7 +39,7 @@ enum UnitCube {
       normalizedPositionInView =
         yFlippedPositionInView
           / float2( Float(viewSize.width), Float(viewSize.height) ),
-      position = 2 * normalizedPositionInView - float2(1)
+    position = 2 * normalizedPositionInView - float2(repeating: 1)
     
     
     if let redFacePosition = faces.red[position] {
