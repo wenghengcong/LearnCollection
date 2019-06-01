@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TbI-kr-VIz">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Book View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="BookViewController" customModule="RWBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HGA-Xb-0qP">
+                                <rect key="frame" x="20" y="32" width="560" height="171"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="w2t" translatesAutoresizingMaskIntoConstraints="NO" id="U64-sR-1VD">
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="171"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="U64-sR-1VD" secondAttribute="height" multiplier="266:344" id="hsA-Zx-PU5"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DX3-ty-Nfl">
+                                        <rect key="frame" x="142" y="0.0" width="418" height="65"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="watchOS 2 by Tutorials" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2cN-17-cJq" customClass="SizingLabel" customModule="RWBooks" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="418" height="26"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <color key="textColor" red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="by Ryan Nystrom, Scott Atkinson, Soheil Azarpour, Matthew Morey, Ben Morrow, Audrey Tam, Jack Wu" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YhB-qg-rnD" customClass="SizingLabel" customModule="RWBooks" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="36" width="418" height="29"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" red="0.44705882352941179" green="0.44705882352941179" blue="0.44705882352941179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWE-l1-N7w">
+                                <rect key="frame" x="0.0" y="213" width="600" height="387"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1CK-vs-60d">
+                                        <rect key="frame" x="0.0" y="20" width="600" height="337"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FrY-YO-eCw" customClass="StatView" customModule="RWBooks" customModuleProvider="target">
+                                                <rect key="frame" x="179" y="0.0" width="242" height="242"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="FrY-YO-eCw" secondAttribute="height" multiplier="1:1" id="v5X-bf-cfX"/>
+                                                </constraints>
+                                            </view>
+                                            <stepper opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="snP-Pr-6mj">
+                                                <rect key="frame" x="253" y="262" width="94" height="29"/>
+                                                <animations/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="stepperValueDidChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cHD-1l-PmW"/>
+                                                </connections>
+                                            </stepper>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWR-oF-eps">
+                                                <rect key="frame" x="252" y="311" width="97" height="26"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="1" green="0.3411764705882353" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <inset key="contentEdgeInsets" minX="30" minY="4" maxX="30" maxY="4"/>
+                                                <state key="normal" title="Done">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="SeI-ba-3gv" kind="unwind" unwindAction="unwindToProfileView:" id="0YE-39-Zm9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1CK-vs-60d" secondAttribute="bottom" constant="30" id="3rU-yx-aLf"/>
+                                    <constraint firstAttribute="trailing" secondItem="1CK-vs-60d" secondAttribute="trailing" id="i0K-Tl-qFU"/>
+                                    <constraint firstItem="1CK-vs-60d" firstAttribute="top" secondItem="aWE-l1-N7w" secondAttribute="top" constant="20" id="pMP-gx-wkG"/>
+                                    <constraint firstItem="1CK-vs-60d" firstAttribute="leading" secondItem="aWE-l1-N7w" secondAttribute="leading" id="vjl-d4-hUK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aWE-l1-N7w" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailing" id="4K2-Kl-FrV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HGA-Xb-0qP" secondAttribute="trailing" id="B6K-U2-fil"/>
+                            <constraint firstItem="HGA-Xb-0qP" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="1:3.5" id="G2A-Qh-M7x"/>
+                            <constraint firstItem="HGA-Xb-0qP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Igd-NY-IbV"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="aWE-l1-N7w" secondAttribute="bottom" id="RFy-UW-xVf"/>
+                            <constraint firstItem="aWE-l1-N7w" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="gXE-Bw-laF"/>
+                            <constraint firstItem="aWE-l1-N7w" firstAttribute="top" secondItem="HGA-Xb-0qP" secondAttribute="bottom" constant="10" id="jQz-8G-qhN"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="aWE-l1-N7w" secondAttribute="bottom" id="nkC-x6-nv0"/>
+                            <constraint firstItem="aWE-l1-N7w" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="2:3" id="t1F-p6-6o0"/>
+                            <constraint firstItem="HGA-Xb-0qP" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="12" id="y7m-Tz-LsJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="t1F-p6-6o0"/>
+                                <exclude reference="RFy-UW-xVf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="b7r-ax-qAy"/>
+                    <connections>
+                        <outlet property="bookAuthorsLabel" destination="YhB-qg-rnD" id="u34-sj-KQP"/>
+                        <outlet property="bookImageView" destination="U64-sR-1VD" id="75Z-xF-xTp"/>
+                        <outlet property="bookTitleLabel" destination="2cN-17-cJq" id="JJJ-DX-T1w"/>
+                        <outlet property="doneButton" destination="DWR-oF-eps" id="W1O-nH-pR9"/>
+                        <outlet property="statView" destination="FrY-YO-eCw" id="c9f-Qw-1yF"/>
+                        <outlet property="stepper" destination="snP-Pr-6mj" id="9gr-4G-m03"/>
+                        <outlet property="topView" destination="aWE-l1-N7w" id="83g-AR-v9f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <exit id="SeI-ba-3gv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1756" y="887"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="TVc-TU-eIL">
+            <objects>
+                <viewController title="Profile" id="TbI-kr-VIz" customClass="ProfileViewController" customModule="RWBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9l7-ra-akU"/>
+                        <viewControllerLayoutGuide type="bottom" id="cfe-BB-An8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PyC-Bw-MXg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="UIk-iz-n0f" customClass="AvatarView" customModule="RWBooks" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="260"/>
+                                <animations/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="imageAvatar" value="profileRW"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="avatarName" value="Ray Wenderlich"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zUZ-Xh-Qt9">
+                                <rect key="frame" x="176" y="276" width="248" height="104"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="11 FOLLOWING • 4 FOLLOWERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d80-jb-TIn">
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="28"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.44705882352941179" green="0.44705882352941179" blue="0.44705882352941179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7Z-U1-mce">
+                                        <rect key="frame" x="1" y="38" width="247" height="28"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="1" green="0.3411764705882353" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="91" minY="4" maxX="91" maxY="4"/>
+                                        <inset key="titleEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="FOLLOW">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="READING LIST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="laM-Bw-dha">
+                                        <rect key="frame" x="74" y="76" width="100" height="28"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.44705882352941179" green="0.44705882352941179" blue="0.44705882352941179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ODc-uh-4AW">
+                                <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mMS-Gc-v03">
+                                    <size key="itemSize" width="151" height="190"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookCell" id="jF5-qM-gtC" customClass="BookCell" customModule="RWBooks" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="5" width="151" height="190"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="151" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i9t" translatesAutoresizingMaskIntoConstraints="NO" id="HAR-gX-jDH">
+                                                    <rect key="frame" x="8" y="8" width="135" height="174"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="HAR-gX-jDH" secondAttribute="height" multiplier="45:58" id="wGj-zE-pwA"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstItem="HAR-gX-jDH" firstAttribute="bottom" secondItem="jF5-qM-gtC" secondAttribute="bottomMargin" id="Bq8-JT-gly"/>
+                                            <constraint firstItem="HAR-gX-jDH" firstAttribute="leading" secondItem="jF5-qM-gtC" secondAttribute="leadingMargin" id="OHM-CN-eLC"/>
+                                            <constraint firstItem="HAR-gX-jDH" firstAttribute="top" secondItem="jF5-qM-gtC" secondAttribute="topMargin" id="QZS-dD-4rJ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="HAR-gX-jDH" id="b4r-VW-nyq"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="TbI-kr-VIz" id="Hfa-NZ-hng"/>
+                                    <outlet property="delegate" destination="TbI-kr-VIz" id="dsp-Rj-Hej"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ODc-uh-4AW" secondAttribute="trailing" id="1QV-Sv-kfo"/>
+                            <constraint firstItem="cfe-BB-An8" firstAttribute="top" secondItem="ODc-uh-4AW" secondAttribute="bottom" id="2K2-Rp-5Eh"/>
+                            <constraint firstItem="ODc-uh-4AW" firstAttribute="leading" secondItem="PyC-Bw-MXg" secondAttribute="leading" id="EM5-wA-54g"/>
+                            <constraint firstAttribute="trailing" secondItem="UIk-iz-n0f" secondAttribute="trailing" id="TcV-HS-2ml"/>
+                            <constraint firstItem="UIk-iz-n0f" firstAttribute="leading" secondItem="PyC-Bw-MXg" secondAttribute="leading" id="Yj7-OM-z7d"/>
+                            <constraint firstItem="UIk-iz-n0f" firstAttribute="top" secondItem="9l7-ra-akU" secondAttribute="bottom" constant="-20" id="lIL-Uf-4Gh"/>
+                            <constraint firstItem="zUZ-Xh-Qt9" firstAttribute="centerY" secondItem="PyC-Bw-MXg" secondAttribute="centerY" constant="28" id="mJU-ca-ozg"/>
+                            <constraint firstItem="zUZ-Xh-Qt9" firstAttribute="centerX" secondItem="PyC-Bw-MXg" secondAttribute="centerX" id="ngd-J0-Pj4"/>
+                            <constraint firstItem="ODc-uh-4AW" firstAttribute="height" secondItem="PyC-Bw-MXg" secondAttribute="height" multiplier="1:3" id="ot1-Sa-bgX"/>
+                            <constraint firstItem="UIk-iz-n0f" firstAttribute="height" secondItem="PyC-Bw-MXg" secondAttribute="height" multiplier="1:2.5" constant="20" id="xe3-RX-0dV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="16I-Ie-OKr"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ODc-uh-4AW" id="WC8-QA-jEy"/>
+                        <outlet property="followButton" destination="T7Z-U1-mce" id="GS3-Yo-byL"/>
+                        <segue destination="vXZ-lx-hvc" kind="presentation" identifier="ShowBook" id="HyA-NS-BnH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oIn-sf-i9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1085" y="887"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="i9t" width="133" height="172"/>
+        <image name="profileRW" width="200" height="200"/>
+        <image name="w2t" width="133" height="172"/>
+    </resources>
+</document>
