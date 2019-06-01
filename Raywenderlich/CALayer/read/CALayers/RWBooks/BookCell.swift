@@ -22,14 +22,14 @@
 
 import UIKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class BookCell : UICollectionViewCell {
   
-    var window: UIWindow? 
-  
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        return true
+  @IBOutlet weak var imageView: UIImageView! {
+    didSet {
+      imageView.layer.shadowRadius = 4.0
+      imageView.layer.shadowOpacity = 0.5
+      imageView.layer.shadowOffset = CGSize.zero
     }
+  }
   
 }
-

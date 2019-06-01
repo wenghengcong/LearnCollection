@@ -20,16 +20,20 @@
 * THE SOFTWARE.
 */
 
+/*
+*
+* In stack views, multi line labels do not size correctly
+* This is a work-around
+*
+*/
+
 import UIKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class SizingLabel: UILabel {
   
-    var window: UIWindow? 
-  
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        return true
-    }
-  
-}
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    preferredMaxLayoutWidth = bounds.width - 1
+  }
 
+}
