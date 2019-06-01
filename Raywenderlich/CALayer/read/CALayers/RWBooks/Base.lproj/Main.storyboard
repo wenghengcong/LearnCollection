@@ -86,6 +86,7 @@
                                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="clickDone:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4wl-NW-jTN"/>
                                                     <segue destination="SeI-ba-3gv" kind="unwind" unwindAction="unwindToProfileView:" id="0YE-39-Zm9"/>
                                                 </connections>
                                             </button>

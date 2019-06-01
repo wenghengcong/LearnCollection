@@ -42,6 +42,7 @@ class StatView: UIView {
       configure()
     }
   }
+    
   let fgLayer = CAShapeLayer()
   @IBInspectable var fgColor: UIColor = UIColor.black {
     didSet {
@@ -65,9 +66,10 @@ class StatView: UIView {
     
     // Setup background layer
     bgLayer.lineWidth = 20.0
-    bgLayer.fillColor = nil
+    bgLayer.fillColor = UIColor.red.cgColor
     bgLayer.strokeEnd = 1
     layer.addSublayer(bgLayer)
+    // 进度圈
     fgLayer.lineWidth = 20.0
     fgLayer.fillColor = nil
     fgLayer.strokeEnd = 0
@@ -119,6 +121,8 @@ class StatView: UIView {
     
   }
   
+    
+  /// 动画
   private func animate() {
     percentLabel.text = String(format: "%.0f/%.0f", curValue, range)
 

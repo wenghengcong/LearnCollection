@@ -54,7 +54,11 @@ class BookViewController : UIViewController {
         stepper.maximumValue = Double(book.chaptersTotal)
     }
   
-  @IBAction func stepperValueDidChange(stepper: UIStepper) {
-    statView.curValue = CGFloat(stepper.value)
-  }
+    @IBAction func stepperValueDidChange(stepper: UIStepper) {
+        statView.curValue = CGFloat(stepper.value)
+    }
+    
+    @IBAction func clickDone(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
