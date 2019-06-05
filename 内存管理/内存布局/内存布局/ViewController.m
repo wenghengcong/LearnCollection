@@ -28,8 +28,20 @@ int b;      // 全局变量：未初始化
     NSString *str = @"123";     // 字符串常量
     NSObject *obj1 = [[NSObject alloc] init];       // 自动变量：对象变量
     NSObject *obj2 = [[NSObject alloc] init];
-    NSLog(@"\n&a=%p\n&b=%p\n&c=%p\n&d=%p\n&e=%p\n&f=%p\nstr=%p\nobj1=%p\nobj2=%p\n",
-          &a, &b, &c, &d, &e, &f, str, obj1, obj2);
+    
+    NSLog(@"全局变量-已初始化a:(%p) = %d", &a, a);
+    NSLog(@"全局变量-未初始化b:(%p) = %d", &b, b);
+    NSLog(@"静态变量-已初始化c:(%p) = %d", &c, c);
+    NSLog(@"静态变量-未初始化d:(%p) = %d", &d, d);
+
+    NSLog(@"自动变量-已初始化e:(%p) = %d", &e, e);
+    NSLog(@"自动变量-未初始化f:(%p) = %d", &f, f);
+
+    //堆上的地址，其实比栈地址更大。但在下图中则不是这样。下图描述的是一般性规则，但在不同的操作系统和编译期实现时，则各有不同，另外在堆中分配地址虚拟内存往往更大。
+    NSLog(@"字符串常量str:(%p) = %@", str, str);
+    NSLog(@"对象obj1:(%p) = %@", obj1, obj1);
+    NSLog(@"对象obj1:(%p) = %@", obj2, obj2);
+
 }
 /*
  iOS 真机下地址

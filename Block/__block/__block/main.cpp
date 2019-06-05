@@ -106,14 +106,18 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_d36a56_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%p %p",5};
 static void __Block_byref_id_object_copy_131(void *dst, void *src) {
  _Block_object_assign((char*)dst + 40, *(void * *) ((char*)src + 40), 131);
 }
 static void __Block_byref_id_object_dispose_131(void *src) {
-    _Block_object_dispose(*(void * *) ((char*)src + 40), 131);
+ _Block_object_dispose(*(void * *) ((char*)src + 40), 131);
 }
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_8030ba_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"age is %d",9};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_8030ba_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"person is %@",12};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_d36a56_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"malloc address: %p %p",21};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_d36a56_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"malloc age is %d",16};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_d36a56_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"person is %@",12};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_d36a56_mi_4 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"stack address: %p %p",20};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_d36a56_mi_5 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"stack age is %d",15};
 
 
 
@@ -362,37 +366,37 @@ typedef long unsigned int uintmax_t;
 static __inline__
 uint16_t
 _OSSwapInt16(
-    uint16_t data
-)
+ uint16_t data
+ )
 {
 
-  return (uint16_t)(data << 8 | data >> 8);
+ return (uint16_t)(data << 8 | data >> 8);
 }
 
 static __inline__
 uint32_t
 _OSSwapInt32(
-    uint32_t data
-)
+ uint32_t data
+ )
 {
 
-  data = __builtin_bswap32(data);
+ data = __builtin_bswap32(data);
 
 
 
 
 
-  return data;
+ return data;
 }
 
 static __inline__
 uint64_t
 _OSSwapInt64(
-    uint64_t data
-)
+ uint64_t data
+ )
 {
 
-    return __builtin_bswap64(data);
+ return __builtin_bswap64(data);
 }
 
 
@@ -400,48 +404,48 @@ _OSSwapInt64(
 static __inline__
 uint16_t
 OSReadSwapInt16(
-    const volatile void * base,
-    uintptr_t offset
-)
+ const volatile void * base,
+ uintptr_t offset
+ )
 {
-    uint16_t result;
+ uint16_t result;
 
-    result = *(volatile uint16_t *)((volatile uintptr_t)base + offset);
-    return _OSSwapInt16(result);
+ result = *(volatile uint16_t *)((volatile uintptr_t)base + offset);
+ return _OSSwapInt16(result);
 }
 
 static __inline__
 uint32_t
 OSReadSwapInt32(
-    const volatile void * base,
-    uintptr_t offset
-)
+ const volatile void * base,
+ uintptr_t offset
+ )
 {
-    uint32_t result;
+ uint32_t result;
 
-    result = *(volatile uint32_t *)((volatile uintptr_t)base + offset);
-    return _OSSwapInt32(result);
+ result = *(volatile uint32_t *)((volatile uintptr_t)base + offset);
+ return _OSSwapInt32(result);
 }
 
 static __inline__
 uint64_t
 OSReadSwapInt64(
-    const volatile void * base,
-    uintptr_t offset
-)
+ const volatile void * base,
+ uintptr_t offset
+ )
 {
-    volatile uint32_t * inp;
-    union ullc {
-        uint64_t ull;
-        uint32_t ul[2];
-    } outv;
+ volatile uint32_t * inp;
+ union ullc {
+  uint64_t ull;
+  uint32_t ul[2];
+ } outv;
 
-    inp = (volatile uint32_t *)((volatile uintptr_t)base + offset);
-    outv.ul[0] = inp[1];
-    outv.ul[1] = inp[0];
-    outv.ul[0] = _OSSwapInt32(outv.ul[0]);
-    outv.ul[1] = _OSSwapInt32(outv.ul[1]);
-    return outv.ull;
+ inp = (volatile uint32_t *)((volatile uintptr_t)base + offset);
+ outv.ul[0] = inp[1];
+ outv.ul[1] = inp[0];
+ outv.ul[0] = _OSSwapInt32(outv.ul[0]);
+ outv.ul[1] = _OSSwapInt32(outv.ul[1]);
+ return outv.ull;
 }
 
 
@@ -449,34 +453,34 @@ OSReadSwapInt64(
 static __inline__
 void
 OSWriteSwapInt16(
-    volatile void * base,
-    uintptr_t offset,
-    uint16_t data
-)
+ volatile void * base,
+ uintptr_t offset,
+ uint16_t data
+ )
 {
-    *(volatile uint16_t *)((volatile uintptr_t)base + offset) = _OSSwapInt16(data);
+ *(volatile uint16_t *)((volatile uintptr_t)base + offset) = _OSSwapInt16(data);
 }
 
 static __inline__
 void
 OSWriteSwapInt32(
-    volatile void * base,
-    uintptr_t offset,
-    uint32_t data
-)
+ volatile void * base,
+ uintptr_t offset,
+ uint32_t data
+ )
 {
-    *(volatile uint32_t *)((volatile uintptr_t)base + offset) = _OSSwapInt32(data);
+ *(volatile uint32_t *)((volatile uintptr_t)base + offset) = _OSSwapInt32(data);
 }
 
 static __inline__
 void
 OSWriteSwapInt64(
-    volatile void * base,
-    uintptr_t offset,
-    uint64_t data
-)
+ volatile void * base,
+ uintptr_t offset,
+ uint64_t data
+ )
 {
-    *(volatile uint64_t *)((volatile uintptr_t)base + offset) = _OSSwapInt64(data);
+ *(volatile uint64_t *)((volatile uintptr_t)base + offset) = _OSSwapInt64(data);
 }
 
 
@@ -529,17 +533,20 @@ typedef int32_t swblk_t;
 
 
 typedef __darwin_uid_t uid_t;
-static inline __int32_t major(__uint32_t _x)
+static inline __int32_t
+major(__uint32_t _x)
 {
  return (__int32_t)(((__uint32_t)_x >> 24) & 0xff);
 }
 
-static inline __int32_t minor(__uint32_t _x)
+static inline __int32_t
+minor(__uint32_t _x)
 {
  return (__int32_t)((_x) & 0xffffff);
 }
 
-static inline dev_t makedev(__uint32_t _major, __uint32_t _minor)
+static inline dev_t
+makedev(__uint32_t _major, __uint32_t _minor)
 {
  return (dev_t)(((_major) << 24) | (_minor));
 }
@@ -572,7 +579,7 @@ typedef struct fd_set {
 static inline int
 __darwin_fd_isset(int _n, const struct fd_set *_p)
 {
- return (_p->fds_bits[(unsigned long)_n/(sizeof(__int32_t) * 8)] & ((__int32_t)(((unsigned long)1)<<((unsigned long)_n % (sizeof(__int32_t) * 8)))));
+ return _p->fds_bits[(unsigned long)_n / (sizeof(__int32_t) * 8)] & ((__int32_t)(((unsigned long)1) << ((unsigned long)_n % (sizeof(__int32_t) * 8))));
 }
 
 
@@ -657,7 +664,6 @@ struct __darwin_arm_vfp_state
 {
  __uint32_t __r[64];
  __uint32_t __fpscr;
-
 };
 struct __darwin_arm_neon_state64
 {
@@ -785,7 +791,7 @@ typedef struct __siginfo {
 union __sigaction_u {
  void (*__sa_handler)(int);
  void (*__sa_sigaction)(int, struct __siginfo *,
-         void *);
+     void *);
 };
 
 
@@ -815,7 +821,7 @@ struct sigstack {
  int ss_onstack;
 };
 extern "C" {
-void (*signal(int, void (*)(int)))(int);
+    void(*signal(int, void (*)(int)))(int);
 }
 struct timeval
 {
@@ -976,7 +982,7 @@ struct rusage_info_v4 {
  uint64_t ri_cycles;
  uint64_t ri_billed_energy;
  uint64_t ri_serviced_energy;
-        uint64_t ri_interval_max_phys_footprint;
+ uint64_t ri_interval_max_phys_footprint;
 
  uint64_t ri_unused[1];
 };
@@ -1011,9 +1017,9 @@ union wait {
  struct {
 
   unsigned int w_Termsig:7,
-    w_Coredump:1,
-    w_Retcode:8,
-    w_Filler:16;
+      w_Coredump:1,
+      w_Retcode:8,
+      w_Filler:16;
 
 
 
@@ -1030,8 +1036,8 @@ union wait {
  struct {
 
   unsigned int w_Stopval:8,
-    w_Stopsig:8,
-    w_Filler:16;
+      w_Stopsig:8,
+      w_Filler:16;
 
 
 
@@ -3352,16 +3358,17 @@ extern void CFBitVectorSetAllBits(CFMutableBitVectorRef bv, CFBit value);
 
 }
 enum {
-    OSUnknownByteOrder,
-    OSLittleEndian,
-    OSBigEndian
+ OSUnknownByteOrder,
+ OSLittleEndian,
+ OSBigEndian
 };
 
 static __inline__
 int32_t
-OSHostByteOrder(void) {
+OSHostByteOrder(void)
+{
 
-    return OSLittleEndian;
+ return OSLittleEndian;
 
 
 
@@ -3371,31 +3378,31 @@ OSHostByteOrder(void) {
 static __inline__
 uint16_t
 _OSReadInt16(
-    const volatile void * base,
-    uintptr_t byteOffset
-)
+ const volatile void * base,
+ uintptr_t byteOffset
+ )
 {
-    return *(volatile uint16_t *)((uintptr_t)base + byteOffset);
+ return *(volatile uint16_t *)((uintptr_t)base + byteOffset);
 }
 
 static __inline__
 uint32_t
 _OSReadInt32(
-    const volatile void * base,
-    uintptr_t byteOffset
-)
+ const volatile void * base,
+ uintptr_t byteOffset
+ )
 {
-    return *(volatile uint32_t *)((uintptr_t)base + byteOffset);
+ return *(volatile uint32_t *)((uintptr_t)base + byteOffset);
 }
 
 static __inline__
 uint64_t
 _OSReadInt64(
-    const volatile void * base,
-    uintptr_t byteOffset
-)
+ const volatile void * base,
+ uintptr_t byteOffset
+ )
 {
-    return *(volatile uint64_t *)((uintptr_t)base + byteOffset);
+ return *(volatile uint64_t *)((uintptr_t)base + byteOffset);
 }
 
 
@@ -3403,34 +3410,34 @@ _OSReadInt64(
 static __inline__
 void
 _OSWriteInt16(
-    volatile void * base,
-    uintptr_t byteOffset,
-    uint16_t data
-)
+ volatile void * base,
+ uintptr_t byteOffset,
+ uint16_t data
+ )
 {
-    *(volatile uint16_t *)((uintptr_t)base + byteOffset) = data;
+ *(volatile uint16_t *)((uintptr_t)base + byteOffset) = data;
 }
 
 static __inline__
 void
 _OSWriteInt32(
-    volatile void * base,
-    uintptr_t byteOffset,
-    uint32_t data
-)
+ volatile void * base,
+ uintptr_t byteOffset,
+ uint32_t data
+ )
 {
-    *(volatile uint32_t *)((uintptr_t)base + byteOffset) = data;
+ *(volatile uint32_t *)((uintptr_t)base + byteOffset) = data;
 }
 
 static __inline__
 void
 _OSWriteInt64(
-    volatile void * base,
-    uintptr_t byteOffset,
-    uint64_t data
-)
+ volatile void * base,
+ uintptr_t byteOffset,
+ uint64_t data
+ )
 {
-    *(volatile uint64_t *)((uintptr_t)base + byteOffset) = data;
+ *(volatile uint64_t *)((uintptr_t)base + byteOffset) = data;
 }
 
 
@@ -6525,8 +6532,6 @@ typedef struct {
 } CFSocketContext;
 
 
-
-
 typedef int CFSocketNativeHandle;
 
 
@@ -6792,33 +6797,33 @@ extern "C" {
 
 
 int pselect(int, fd_set * , fd_set * ,
-  fd_set * , const struct timespec * ,
-  const sigset_t * )
+    fd_set * , const struct timespec * ,
+    const sigset_t * )
 
 
 
 
-  __asm("_" "pselect" )
+__asm("_" "pselect" )
 
 
 
 
-  ;
+;
 
 
 
 int select(int, fd_set * , fd_set * ,
-  fd_set * , struct timeval * )
+    fd_set * , struct timeval * )
 
 
 
 
-  __asm("_" "select" )
+__asm("_" "select" )
 
 
 
 
-  ;
+;
 
 }
 
@@ -6975,8 +6980,8 @@ struct flocktimeout {
  struct timespec timeout;
 };
 struct radvisory {
-       off_t ra_offset;
-       int ra_count;
+ off_t ra_offset;
+ int ra_count;
 };
 
 
@@ -7025,9 +7030,9 @@ typedef struct ftrimactivefile {
 
 
 typedef struct fbootstraptransfer {
-  off_t fbt_offset;
-  size_t fbt_length;
-  void *fbt_buffer;
+ off_t fbt_offset;
+ size_t fbt_length;
+ void *fbt_buffer;
 } fbootstraptransfer_t;
 #pragma pack(4)
 
@@ -7076,7 +7081,7 @@ int openx_np(const char *, int, filesec_t);
 
 
 
-int open_dprotected_np ( const char *, int, int, int, ...);
+int open_dprotected_np( const char *, int, int, int, ...);
 int flock(int, int);
 filesec_t filesec_init(void);
 filesec_t filesec_dup(filesec_t);
@@ -7693,91 +7698,83 @@ typedef unsigned int mach_msg_descriptor_type_t;
 
 #pragma pack(4)
 
-typedef struct
-{
-  natural_t pad1;
-  mach_msg_size_t pad2;
-  unsigned int pad3 : 24;
-  mach_msg_descriptor_type_t type : 8;
+typedef struct{
+ natural_t pad1;
+ mach_msg_size_t pad2;
+ unsigned int pad3 : 24;
+ mach_msg_descriptor_type_t type : 8;
 } mach_msg_type_descriptor_t;
 
-typedef struct
-{
-  mach_port_t name;
+typedef struct{
+ mach_port_t name;
 
-  mach_msg_size_t pad1;
-  unsigned int pad2 : 16;
-  mach_msg_type_name_t disposition : 8;
-  mach_msg_descriptor_type_t type : 8;
+ mach_msg_size_t pad1;
+ unsigned int pad2 : 16;
+ mach_msg_type_name_t disposition : 8;
+ mach_msg_descriptor_type_t type : 8;
 } mach_msg_port_descriptor_t;
 
-typedef struct
-{
-  uint32_t address;
-  mach_msg_size_t size;
-  boolean_t deallocate: 8;
-  mach_msg_copy_options_t copy: 8;
-  unsigned int pad1: 8;
-  mach_msg_descriptor_type_t type: 8;
+typedef struct{
+ uint32_t address;
+ mach_msg_size_t size;
+ boolean_t deallocate: 8;
+ mach_msg_copy_options_t copy: 8;
+ unsigned int pad1: 8;
+ mach_msg_descriptor_type_t type: 8;
 } mach_msg_ool_descriptor32_t;
 
-typedef struct
-{
-  uint64_t address;
-  boolean_t deallocate: 8;
-  mach_msg_copy_options_t copy: 8;
-  unsigned int pad1: 8;
-  mach_msg_descriptor_type_t type: 8;
-  mach_msg_size_t size;
+typedef struct{
+ uint64_t address;
+ boolean_t deallocate: 8;
+ mach_msg_copy_options_t copy: 8;
+ unsigned int pad1: 8;
+ mach_msg_descriptor_type_t type: 8;
+ mach_msg_size_t size;
 } mach_msg_ool_descriptor64_t;
 
-typedef struct
-{
-  void* address;
+typedef struct{
+ void* address;
 
 
 
-  boolean_t deallocate: 8;
-  mach_msg_copy_options_t copy: 8;
-  unsigned int pad1: 8;
-  mach_msg_descriptor_type_t type: 8;
+ boolean_t deallocate: 8;
+ mach_msg_copy_options_t copy: 8;
+ unsigned int pad1: 8;
+ mach_msg_descriptor_type_t type: 8;
 
-  mach_msg_size_t size;
+ mach_msg_size_t size;
 
 } mach_msg_ool_descriptor_t;
 
-typedef struct
-{
-  uint32_t address;
-  mach_msg_size_t count;
-  boolean_t deallocate: 8;
-  mach_msg_copy_options_t copy: 8;
-  mach_msg_type_name_t disposition : 8;
-  mach_msg_descriptor_type_t type : 8;
+typedef struct{
+ uint32_t address;
+ mach_msg_size_t count;
+ boolean_t deallocate: 8;
+ mach_msg_copy_options_t copy: 8;
+ mach_msg_type_name_t disposition : 8;
+ mach_msg_descriptor_type_t type : 8;
 } mach_msg_ool_ports_descriptor32_t;
 
-typedef struct
-{
-  uint64_t address;
-  boolean_t deallocate: 8;
-  mach_msg_copy_options_t copy: 8;
-  mach_msg_type_name_t disposition : 8;
-  mach_msg_descriptor_type_t type : 8;
-  mach_msg_size_t count;
+typedef struct{
+ uint64_t address;
+ boolean_t deallocate: 8;
+ mach_msg_copy_options_t copy: 8;
+ mach_msg_type_name_t disposition : 8;
+ mach_msg_descriptor_type_t type : 8;
+ mach_msg_size_t count;
 } mach_msg_ool_ports_descriptor64_t;
 
-typedef struct
-{
-  void* address;
+typedef struct{
+ void* address;
 
 
 
-  boolean_t deallocate: 8;
-  mach_msg_copy_options_t copy: 8;
-  mach_msg_type_name_t disposition : 8;
-  mach_msg_descriptor_type_t type : 8;
+ boolean_t deallocate: 8;
+ mach_msg_copy_options_t copy: 8;
+ mach_msg_type_name_t disposition : 8;
+ mach_msg_descriptor_type_t type : 8;
 
-  mach_msg_size_t count;
+ mach_msg_size_t count;
 
 } mach_msg_ool_ports_descriptor_t;
 
@@ -7786,39 +7783,35 @@ typedef struct
 
 
 
-typedef union
-{
-  mach_msg_port_descriptor_t port;
-  mach_msg_ool_descriptor_t out_of_line;
-  mach_msg_ool_ports_descriptor_t ool_ports;
-  mach_msg_type_descriptor_t type;
+typedef union{
+ mach_msg_port_descriptor_t port;
+ mach_msg_ool_descriptor_t out_of_line;
+ mach_msg_ool_ports_descriptor_t ool_ports;
+ mach_msg_type_descriptor_t type;
 } mach_msg_descriptor_t;
 
-typedef struct
-{
-        mach_msg_size_t msgh_descriptor_count;
+typedef struct{
+ mach_msg_size_t msgh_descriptor_count;
 } mach_msg_body_t;
 
 
 
 
-typedef struct
-{
-  mach_msg_bits_t msgh_bits;
-  mach_msg_size_t msgh_size;
-  mach_port_t msgh_remote_port;
-  mach_port_t msgh_local_port;
-  mach_port_name_t msgh_voucher_port;
-  mach_msg_id_t msgh_id;
+typedef struct{
+ mach_msg_bits_t msgh_bits;
+ mach_msg_size_t msgh_size;
+ mach_port_t msgh_remote_port;
+ mach_port_t msgh_local_port;
+ mach_port_name_t msgh_voucher_port;
+ mach_msg_id_t msgh_id;
 } mach_msg_header_t;
 
 
 
 
-typedef struct
-{
-        mach_msg_header_t header;
-        mach_msg_body_t body;
+typedef struct{
+ mach_msg_header_t header;
+ mach_msg_body_t body;
 } mach_msg_base_t;
 
 typedef unsigned int mach_msg_trailer_type_t;
@@ -7828,59 +7821,51 @@ typedef unsigned int mach_msg_trailer_type_t;
 typedef unsigned int mach_msg_trailer_size_t;
 typedef char *mach_msg_trailer_info_t;
 
-typedef struct
-{
-  mach_msg_trailer_type_t msgh_trailer_type;
-  mach_msg_trailer_size_t msgh_trailer_size;
+typedef struct{
+ mach_msg_trailer_type_t msgh_trailer_type;
+ mach_msg_trailer_size_t msgh_trailer_size;
 } mach_msg_trailer_t;
-typedef struct
-{
-  mach_msg_trailer_type_t msgh_trailer_type;
-  mach_msg_trailer_size_t msgh_trailer_size;
-  mach_port_seqno_t msgh_seqno;
+typedef struct{
+ mach_msg_trailer_type_t msgh_trailer_type;
+ mach_msg_trailer_size_t msgh_trailer_size;
+ mach_port_seqno_t msgh_seqno;
 } mach_msg_seqno_trailer_t;
 
-typedef struct
-{
-  unsigned int val[2];
+typedef struct{
+ unsigned int val[2];
 } security_token_t;
 
-typedef struct
-{
-  mach_msg_trailer_type_t msgh_trailer_type;
-  mach_msg_trailer_size_t msgh_trailer_size;
-  mach_port_seqno_t msgh_seqno;
-  security_token_t msgh_sender;
+typedef struct{
+ mach_msg_trailer_type_t msgh_trailer_type;
+ mach_msg_trailer_size_t msgh_trailer_size;
+ mach_port_seqno_t msgh_seqno;
+ security_token_t msgh_sender;
 } mach_msg_security_trailer_t;
-typedef struct
-{
-  unsigned int val[8];
+typedef struct{
+ unsigned int val[8];
 } audit_token_t;
 
-typedef struct
-{
-  mach_msg_trailer_type_t msgh_trailer_type;
-  mach_msg_trailer_size_t msgh_trailer_size;
-  mach_port_seqno_t msgh_seqno;
-  security_token_t msgh_sender;
-  audit_token_t msgh_audit;
+typedef struct{
+ mach_msg_trailer_type_t msgh_trailer_type;
+ mach_msg_trailer_size_t msgh_trailer_size;
+ mach_port_seqno_t msgh_seqno;
+ security_token_t msgh_sender;
+ audit_token_t msgh_audit;
 } mach_msg_audit_trailer_t;
 
-typedef struct
-{
-  mach_msg_trailer_type_t msgh_trailer_type;
-  mach_msg_trailer_size_t msgh_trailer_size;
-  mach_port_seqno_t msgh_seqno;
-  security_token_t msgh_sender;
-  audit_token_t msgh_audit;
-  mach_port_context_t msgh_context;
+typedef struct{
+ mach_msg_trailer_type_t msgh_trailer_type;
+ mach_msg_trailer_size_t msgh_trailer_size;
+ mach_port_seqno_t msgh_seqno;
+ security_token_t msgh_sender;
+ audit_token_t msgh_audit;
+ mach_port_context_t msgh_context;
 } mach_msg_context_trailer_t;
 
 
 
-typedef struct
-{
-  mach_port_name_t sender;
+typedef struct{
+ mach_port_name_t sender;
 } msg_labels_t;
 
 
@@ -7888,16 +7873,15 @@ typedef struct
 
 
 
-typedef struct
-{
-  mach_msg_trailer_type_t msgh_trailer_type;
-  mach_msg_trailer_size_t msgh_trailer_size;
-  mach_port_seqno_t msgh_seqno;
-  security_token_t msgh_sender;
-  audit_token_t msgh_audit;
-  mach_port_context_t msgh_context;
-  int msgh_ad;
-  msg_labels_t msgh_labels;
+typedef struct{
+ mach_msg_trailer_type_t msgh_trailer_type;
+ mach_msg_trailer_size_t msgh_trailer_size;
+ mach_port_seqno_t msgh_seqno;
+ security_token_t msgh_sender;
+ audit_token_t msgh_audit;
+ mach_port_context_t msgh_context;
+ int msgh_ad;
+ msg_labels_t msgh_labels;
 } mach_msg_mac_trailer_t;
 typedef mach_msg_mac_trailer_t mach_msg_max_trailer_t;
 typedef mach_msg_security_trailer_t mach_msg_format_0_trailer_t;
@@ -7915,21 +7899,18 @@ extern audit_token_t KERNEL_AUDIT_TOKEN;
 
 typedef integer_t mach_msg_options_t;
 
-typedef struct
-{
-  mach_msg_header_t header;
+typedef struct{
+ mach_msg_header_t header;
 } mach_msg_empty_send_t;
 
-typedef struct
-{
-  mach_msg_header_t header;
-  mach_msg_trailer_t trailer;
+typedef struct{
+ mach_msg_header_t header;
+ mach_msg_trailer_t trailer;
 } mach_msg_empty_rcv_t;
 
-typedef union
-{
-  mach_msg_empty_send_t send;
-  mach_msg_empty_rcv_t rcv;
+typedef union{
+ mach_msg_empty_send_t send;
+ mach_msg_empty_rcv_t rcv;
 } mach_msg_empty_t;
 
 #pragma pack()
@@ -7940,24 +7921,24 @@ typedef kern_return_t mach_msg_return_t;
 extern "C" {
 __attribute__((availability(watchos,unavailable))) __attribute__((availability(tvos,unavailable)))
 extern mach_msg_return_t mach_msg_overwrite(
-     mach_msg_header_t *msg,
-     mach_msg_option_t option,
-     mach_msg_size_t send_size,
-     mach_msg_size_t rcv_size,
-     mach_port_name_t rcv_name,
-     mach_msg_timeout_t timeout,
-     mach_port_name_t notify,
-     mach_msg_header_t *rcv_msg,
-     mach_msg_size_t rcv_limit);
+ mach_msg_header_t *msg,
+ mach_msg_option_t option,
+ mach_msg_size_t send_size,
+ mach_msg_size_t rcv_size,
+ mach_port_name_t rcv_name,
+ mach_msg_timeout_t timeout,
+ mach_port_name_t notify,
+ mach_msg_header_t *rcv_msg,
+ mach_msg_size_t rcv_limit);
 __attribute__((availability(watchos,unavailable))) __attribute__((availability(tvos,unavailable)))
 extern mach_msg_return_t mach_msg(
-     mach_msg_header_t *msg,
-     mach_msg_option_t option,
-     mach_msg_size_t send_size,
-     mach_msg_size_t rcv_size,
-     mach_port_name_t rcv_name,
-     mach_msg_timeout_t timeout,
-     mach_port_name_t notify);
+ mach_msg_header_t *msg,
+ mach_msg_option_t option,
+ mach_msg_size_t send_size,
+ mach_msg_size_t rcv_size,
+ mach_port_name_t rcv_name,
+ mach_msg_timeout_t timeout,
+ mach_port_name_t notify);
 
 
 
@@ -7967,7 +7948,7 @@ extern mach_msg_return_t mach_msg(
 
 __attribute__((availability(watchos,unavailable))) __attribute__((availability(tvos,unavailable)))
 extern kern_return_t mach_voucher_deallocate(
-     mach_port_name_t voucher);
+ mach_port_name_t voucher);
 
 
 }
@@ -9839,8 +9820,8 @@ struct kauth_identity_extlookup {
  ntsid_t el_gsid;
  u_int32_t el_gsid_valid;
  u_int32_t el_member_valid;
-  u_int32_t el_sup_grp_cnt;
-  gid_t el_sup_groups[16];
+ u_int32_t el_sup_grp_cnt;
+ gid_t el_sup_groups[16];
 };
 
 struct kauth_cache_sizes {
@@ -9854,7 +9835,6 @@ struct kauth_ace {
  guid_t ace_applicable;
  u_int32_t ace_flags;
  kauth_ace_rights_t ace_rights;
-
 
 
 
@@ -11783,6 +11763,7 @@ extern "C" NSExceptionName const NSParseErrorException;
 enum {
     NSProprietaryStringEncoding = 65536
 };
+__attribute__((availability(swift, unavailable, message="Use String or NSString instead.")))
 
 #ifndef _REWRITER_typedef_NSSimpleCString
 #define _REWRITER_typedef_NSSimpleCString
@@ -11800,6 +11781,7 @@ struct NSSimpleCString_IMPL {
 /* @end */
 
 
+__attribute__((availability(swift, unavailable, message="Use String or NSString instead.")))
 
 #ifndef _REWRITER_typedef_NSConstantString
 #define _REWRITER_typedef_NSConstantString
@@ -11869,8 +11851,6 @@ struct NSDictionary_IMPL {
 // - (NSEnumerator<KeyType> *)keyEnumerator;
 // - (instancetype)init __attribute__((objc_designated_initializer));
 
-
-
 // - (instancetype)initWithObjects:(const ObjectType _Nonnull [_Nullable])objects forKeys:(const KeyType <NSCopying> _Nonnull [_Nullable])keys count:(NSUInteger)cnt __attribute__((objc_designated_initializer));
 
 // - (nullable instancetype)initWithCoder:(NSCoder *)aDecoder __attribute__((objc_designated_initializer));
@@ -11932,8 +11912,6 @@ struct NSDictionary_IMPL {
 
 // + (instancetype)dictionary;
 // + (instancetype)dictionaryWithObject:(ObjectType)object forKey:(KeyType <NSCopying>)key;
-
-
 
 // + (instancetype)dictionaryWithObjects:(const ObjectType _Nonnull [_Nullable])objects forKeys:(const KeyType <NSCopying> _Nonnull [_Nullable])keys count:(NSUInteger)cnt;
 
@@ -19894,7 +19872,7 @@ struct NSKeyedArchiver_IMPL {
 // - (instancetype)init __attribute__((availability(macosx,introduced=10.12,deprecated=10.14,message="Use -initRequiringSecureCoding: instead"))) __attribute__((availability(ios,introduced=10.0,deprecated=12.0,message="Use -initRequiringSecureCoding: instead"))) __attribute__((availability(watchos,introduced=3.0,deprecated=5.0,message="Use -initRequiringSecureCoding: instead"))) __attribute__((availability(tvos,introduced=10.0,deprecated=12.0,message="Use -initRequiringSecureCoding: instead")));
 // - (instancetype)initForWritingWithMutableData:(NSMutableData *)data __attribute__((availability(macosx,introduced=10.2,deprecated=10.14,message="Use -initRequiringSecureCoding: instead"))) __attribute__((availability(ios,introduced=2.0,deprecated=12.0,message="Use -initRequiringSecureCoding: instead"))) __attribute__((availability(watchos,introduced=2.0,deprecated=5.0,message="Use -initRequiringSecureCoding: instead"))) __attribute__((availability(tvos,introduced=9.0,deprecated=12.0,message="Use -initRequiringSecureCoding: instead")));
 
-// + (NSData *)archivedDataWithRootObject:(id)rootObject __attribute__((availability(macosx,introduced=10.2,deprecated=10.14,message="Use +archivedDataWithRootObject:requiringSecureCoding:error: instead"))) __attribute__((availability(ios,introduced=2.0,deprecated=12.0,message="Use +archivedDataWithRootObject:requiringSecureCoding:error: instead"))) __attribute__((availability(watchos,introduced=2.0,deprecated=5.0,message="Use +archivedDataWithRootObject:requiringSecureCoding:error: instead"))) __attribute__((availability(tvos,introduced=9.0,deprecated=12.0,message="Use +archivedDataWithRootObject:requiringSecureCoding:error: instead")));
+// + (NSData *)archivedDataWithRootObject:(id)rootObject __attribute__((availability(macosx,introduced=10.11,deprecated=10.14,message="Use +archivedDataWithRootObject:requiringSecureCoding:error: instead"))) __attribute__((availability(ios,introduced=2.0,deprecated=12.0,message="Use +archivedDataWithRootObject:requiringSecureCoding:error: instead"))) __attribute__((availability(watchos,introduced=2.0,deprecated=5.0,message="Use +archivedDataWithRootObject:requiringSecureCoding:error: instead"))) __attribute__((availability(tvos,introduced=9.0,deprecated=12.0,message="Use +archivedDataWithRootObject:requiringSecureCoding:error: instead")));
 // + (BOOL)archiveRootObject:(id)rootObject toFile:(NSString *)path __attribute__((availability(macosx,introduced=10.2,deprecated=10.14,message="Use +archivedDataWithRootObject:requiringSecureCoding:error: instead"))) __attribute__((availability(ios,introduced=2.0,deprecated=12.0,message="Use +archivedDataWithRootObject:requiringSecureCoding:error: instead"))) __attribute__((availability(watchos,introduced=2.0,deprecated=5.0,message="Use +archivedDataWithRootObject:requiringSecureCoding:error: instead"))) __attribute__((availability(tvos,introduced=9.0,deprecated=12.0,message="Use +archivedDataWithRootObject:requiringSecureCoding:error: instead")));
 
 // @property (nullable, assign) id <NSKeyedArchiverDelegate> delegate;
@@ -24256,6 +24234,8 @@ CFDictionaryRef SecTrustCopyResult(SecTrustRef trust)
     __attribute__((availability(ios,introduced=7.0)));
 OSStatus SecTrustSetOCSPResponse(SecTrustRef trust, CFTypeRef _Nullable responseData)
     __attribute__((availability(ios,introduced=7.0)));
+OSStatus SecTrustSetSignedCertificateTimestamps(SecTrustRef trust, CFArrayRef _Nullable sctArray)
+    __attribute__((availability(macos,introduced=10.14.2))) __attribute__((availability(ios,introduced=12.1.1))) __attribute__((availability(tvos,introduced=12.1.1))) __attribute__((availability(watchos,introduced=5.1.1)));
 #pragma clang assume_nonnull end
 }
 extern "C" {
@@ -26797,6 +26777,14 @@ extern const CFStringRef kCFNetworkProxiesProxyAutoDiscoveryEnable __attribute__
 
 
 }
+
+
+
+
+
+
+
+
 // @class NSString;
 #ifndef _REWRITER_typedef_NSString
 #define _REWRITER_typedef_NSString
@@ -27989,7 +27977,7 @@ typedef pid_t au_asid_t;
 typedef u_int16_t au_event_t;
 typedef u_int16_t au_emod_t;
 typedef u_int32_t au_class_t;
-typedef u_int64_t au_asflgs_t __attribute__ ((aligned (8)));
+typedef u_int64_t au_asflgs_t __attribute__ ((aligned(8)));
 typedef unsigned char au_ctlmode_t;
 
 struct au_tid {
@@ -28128,10 +28116,10 @@ int setauid(const au_id_t *);
 int getaudit_addr(struct auditinfo_addr *, int);
 int setaudit_addr(const struct auditinfo_addr *, int);
 int getaudit(struct auditinfo *)
-  __attribute__((availability(ios,introduced=2.0,deprecated=6.0)));
+__attribute__((availability(ios,introduced=2.0,deprecated=6.0)));
 
 int setaudit(const struct auditinfo *)
-  __attribute__((availability(ios,introduced=2.0,deprecated=6.0)));
+__attribute__((availability(ios,introduced=2.0,deprecated=6.0)));
 mach_port_name_t audit_session_self(void);
 au_asid_t audit_session_join(mach_port_name_t port);
 int audit_session_port(au_asid_t asid, mach_port_name_t *portname);
@@ -32722,18 +32710,13 @@ static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
 
             (age->__forwarding->age) = 30;
             (person->__forwarding->person) = ((BFPerson *(*)(id, SEL))(void *)objc_msgSend)((id)((BFPerson *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("BFPerson"), sel_registerName("alloc")), sel_registerName("init"));
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_8030ba_mi_0, (age->__forwarding->age));
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_8030ba_mi_1, (person->__forwarding->person));
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_d36a56_mi_1, &(age->__forwarding->age), (person->__forwarding->person));
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_d36a56_mi_2, (age->__forwarding->age));
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_d36a56_mi_3, (person->__forwarding->person));
         }
-static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {
-    _Block_object_assign((void*)&dst->age, (void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);
-    _Block_object_assign((void*)&dst->person, (void*)src->person, 8/*BLOCK_FIELD_IS_BYREF*/);
-}
+static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {_Block_object_assign((void*)&dst->age, (void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);_Block_object_assign((void*)&dst->person, (void*)src->person, 8/*BLOCK_FIELD_IS_BYREF*/);}
 
-static void __main_block_dispose_0(struct __main_block_impl_0*src) {
-    _Block_object_dispose((void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);
-    _Block_object_dispose((void*)src->person, 8/*BLOCK_FIELD_IS_BYREF*/);
-}
+static void __main_block_dispose_0(struct __main_block_impl_0*src) {_Block_object_dispose((void*)src->age, 8/*BLOCK_FIELD_IS_BYREF*/);_Block_object_dispose((void*)src->person, 8/*BLOCK_FIELD_IS_BYREF*/);}
 
 static struct __main_block_desc_0 {
   size_t reserved;
@@ -32743,11 +32726,18 @@ static struct __main_block_desc_0 {
 } __main_block_desc_0_DATA = { 0, sizeof(struct __main_block_impl_0), __main_block_copy_0, __main_block_dispose_0};
 int main(int argc, const char * argv[]) {
     /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
+         int good = 10;
+         BFPerson *person2 = ((BFPerson *(*)(id, SEL))(void *)objc_msgSend)((id)((BFPerson *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("BFPerson"), sel_registerName("alloc")), sel_registerName("init"));
+         NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_d36a56_mi_0, &good, person2);
+
+
         __attribute__((__blocks__(byref))) __Block_byref_age_0 age = {(void*)0,(__Block_byref_age_0 *)&age, 0, sizeof(__Block_byref_age_0), 20};
         __attribute__((__blocks__(byref))) __Block_byref_person_1 person = {(void*)0,(__Block_byref_person_1 *)&person, 33554432, sizeof(__Block_byref_person_1), __Block_byref_id_object_copy_131, __Block_byref_id_object_dispose_131, ((BFPerson *(*)(id, SEL))(void *)objc_msgSend)((id)((BFPerson *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("BFPerson"), sel_registerName("alloc")), sel_registerName("init"))};
 
         void(*block)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, (__Block_byref_age_0 *)&age, (__Block_byref_person_1 *)&person, 570425344));
         ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_d36a56_mi_4, &(age.__forwarding->age), (person.__forwarding->person));
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_vx_b9xvt9pn7rnfbdlljj6tyqc40000gn_T_main_d36a56_mi_5, (age.__forwarding->age));
     }
     return 0;
 }

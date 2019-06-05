@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tNR-uz-kej">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Samples Table View Controller-->
+        <scene sceneID="GUb-X7-Ja8">
+            <objects>
+                <tableViewController id="tNR-uz-kej" customClass="SamplesTableViewController" customModule="Portfolio" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="400" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rzj-x0-PZg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="RWLightGray"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="sampleCell" id="Zvk-D0-7FZ" customClass="SamplesTableViewCell" customModule="Portfolio" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="400"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zvk-D0-7FZ" id="vpc-wl-YqN">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XgD-Wh-0AC">
+                                            <rect key="frame" x="16" y="18" width="343" height="364"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="XgD-Wh-0AC" secondAttribute="height" multiplier="49:52" id="ewY-qs-LZG"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="XgD-Wh-0AC" firstAttribute="centerY" secondItem="vpc-wl-YqN" secondAttribute="centerY" id="6m0-Zj-iFj"/>
+                                        <constraint firstItem="XgD-Wh-0AC" firstAttribute="height" secondItem="vpc-wl-YqN" secondAttribute="height" multiplier="1:1.1" id="7Y0-UH-ta7"/>
+                                        <constraint firstItem="XgD-Wh-0AC" firstAttribute="centerX" secondItem="vpc-wl-YqN" secondAttribute="centerX" id="7jV-EQ-fYf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="sampleImageView" destination="XgD-Wh-0AC" id="zLV-Lg-kNw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tNR-uz-kej" id="Zsu-oz-TDa"/>
+                            <outlet property="delegate" destination="tNR-uz-kej" id="hlS-BR-iHI"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8lm-Yu-2r4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152.80000000000001" y="168.6656671664168"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="RWLightGray">
+            <color red="0.82300001382827759" green="0.8190000057220459" blue="0.82800000905990601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

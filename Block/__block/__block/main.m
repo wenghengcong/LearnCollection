@@ -67,7 +67,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%@ %@", [block class], [block1 class]);
         */
         
-        /*
+        
          //查看堆栈的大概地址
          int good = 10;
          BFPerson *person2 = [[BFPerson alloc] init];
@@ -87,9 +87,10 @@ int main(int argc, const char * argv[]) {
         block();
         NSLog(@"stack address: %p %p", &age, person);
         NSLog(@"stack age is %d", age);
-        */
+        
         
         //测试block对__block变量的本质
+        /*
         __block int age = 20;
         __block BFPerson *person = [[BFPerson alloc] init];
         
@@ -100,7 +101,7 @@ int main(int argc, const char * argv[]) {
             NSLog(@"person is %@", person);
         };
         block();
-        
+        */
         
         /* 测试__block __weak
          只要强引用一旦离开作用域，Block内部为弱引用，之后访问就会为null

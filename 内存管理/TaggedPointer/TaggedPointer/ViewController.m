@@ -43,8 +43,9 @@ BOOL isTaggedPointer(id pointer)
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self taggedPointerMemory];
-    [self taggedPointer];
-    [self stringType];
+//    [self taggedPointer];
+//    [self stringType];
+    [self testTaggedPointer];
 }
 
 - (void)stringType
@@ -165,12 +166,14 @@ BOOL isTaggedPointer(id pointer)
 {
     // 下面代码会崩溃，会有多个线程去访问setter，可能导致多次release
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
-
+    NSLock *lock = [[NSLock alloc] init];
     for (int i = 0; i < 1000; i++) {
         dispatch_async(queue, ^{
             // 加锁
+//            [lock lock];
             self.name = [NSString stringWithFormat:@"abcdefghijk"];
             // 解锁
+//            [lock unlock];
         });
     }
     
