@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n0U-0n-C5V">
+                                <rect key="frame" x="16" y="20" width="382" height="656"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cqx-Mt-wRm">
+                                <rect key="frame" x="16" y="687" width="382" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="6SH-hQ-IzC"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="iOS"/>
+                                    <segment title="Android"/>
+                                    <segment title="Unity"/>
+                                </segments>
+                                <connections>
+                                    <action selector="tappedSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="qrg-fm-os2"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n0U-0n-C5V" secondAttribute="trailing" constant="16" id="6aL-Rf-L5Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cqx-Mt-wRm" secondAttribute="bottom" constant="21" id="BUS-7d-NMw"/>
+                            <constraint firstItem="n0U-0n-C5V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Buc-Rp-Vyu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cqx-Mt-wRm" secondAttribute="trailing" constant="16" id="Qu4-Yv-mBN"/>
+                            <constraint firstItem="n0U-0n-C5V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="i3K-8M-W33"/>
+                            <constraint firstItem="cqx-Mt-wRm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="swA-Tn-LTI"/>
+                            <constraint firstItem="cqx-Mt-wRm" firstAttribute="top" secondItem="n0U-0n-C5V" secondAttribute="bottom" priority="750" constant="11" id="vrz-Zx-t98"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="n0U-0n-C5V" id="02u-En-Gx2"/>
+                        <outlet property="segmentedControl" destination="cqx-Mt-wRm" id="nd7-j6-ZoG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-534" y="120"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dqk-2q-n0t">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Flickr Table View Controller-->
+        <scene sceneID="sb7-bh-J61">
+            <objects>
+                <tableViewController id="lwc-Jz-e9Z" customClass="FlickrTableViewController" customModule="FlickrImages" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ebA-IY-luJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FlickrCell" id="Tx0-aN-sZ5">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tx0-aN-sZ5" id="s6l-0S-G6q">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="A3H-XG-YYv" kind="show" identifier="PhotoSegue" id="DPw-Qe-uRD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lwc-Jz-e9Z" id="xWL-F7-HAn"/>
+                            <outlet property="delegate" destination="lwc-Jz-e9Z" id="WUU-ig-3HG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="kUr-Q7-Y06"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fsF-Aa-b3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.2" y="223.53823088455775"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="6Rp-VS-pmu">
+            <objects>
+                <viewController id="A3H-XG-YYv" customClass="PhotoViewController" customModule="FlickrImages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ihX-bc-U3N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VBF-4N-rDy">
+                                <rect key="frame" x="16" y="64" width="343" height="583"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3Rn-fE-SNF" firstAttribute="trailing" secondItem="VBF-4N-rDy" secondAttribute="trailing" constant="16" id="JgO-su-h6O"/>
+                            <constraint firstItem="VBF-4N-rDy" firstAttribute="top" secondItem="3Rn-fE-SNF" secondAttribute="top" id="PlV-ov-FuG"/>
+                            <constraint firstItem="VBF-4N-rDy" firstAttribute="leading" secondItem="3Rn-fE-SNF" secondAttribute="leading" constant="16" id="VEL-Ad-Pb9"/>
+                            <constraint firstItem="3Rn-fE-SNF" firstAttribute="bottom" secondItem="VBF-4N-rDy" secondAttribute="bottom" constant="20" id="ZMQ-gI-aXr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Rn-fE-SNF"/>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="VBF-4N-rDy" id="ayR-Db-2Oi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QPM-y4-ZJQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828" y="228.93553223388307"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Yh-KC-cDW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dqk-2q-n0t" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LNb-W0-1US">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lwc-Jz-e9Z" kind="relationship" relationship="rootViewController" id="9Li-vW-fIb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ag-1U-vuG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="223.53823088455775"/>
+        </scene>
+    </scenes>
+</document>
