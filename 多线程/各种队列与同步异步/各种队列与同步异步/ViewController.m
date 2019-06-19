@@ -142,7 +142,6 @@
 - (void)syncOperationsOnConcurrentThread {
     dispatch_queue_t q = dispatch_queue_create("concurrent",DISPATCH_QUEUE_CONCURRENT);
     NSLog(@"------------Start------------");
-    dispatch_queue_t seriq = dispatch_queue_create("serial", DISPATCH_QUEUE_SERIAL);
     for (int i = 0; i < 10; ++i) {
         // 同步任务顺序执行
         dispatch_sync(q, ^{

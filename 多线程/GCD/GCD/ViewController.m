@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self interview03];
 }
 
 // dispatch_sync和dispatch_async用来控制是否要开启新的线程
