@@ -72,8 +72,7 @@ static NSMutableArray *_loadInfoArray;
                     
                 }
                 CFAbsoluteTime time2 =CFAbsoluteTimeGetCurrent();
-                
-                NSLog(@"%@ Load time:%f",className,  (time2 - time1) * 1000);
+                NSLog(@"class: %@  time:%f",className,  (time2 - time1) * 1000);
             }
         }
     }
