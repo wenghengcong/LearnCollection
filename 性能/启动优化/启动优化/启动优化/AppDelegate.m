@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HOMethodMonitor.h"
+#import "SMLagMonitor.h"
 
 @interface AppDelegate ()<HOMethodMonitorDelegate>
 
@@ -18,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //这里是做卡顿监测
+    [[SMLagMonitor shareInstance] beginMonitor];
+    
     [HOMethodMonitor shareInstance].delegate = self;
     [HOMethodMonitor shareInstance].minTimeCost = 0;
     [[HOMethodMonitor shareInstance] start];

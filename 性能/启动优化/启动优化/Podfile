@@ -18,4 +18,11 @@ target '启动优化' do
   pod 'MJRefresh'
   pod 'ChameleonFramework'
   pod 'Masonry'
+  pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+  pod 'SDWebImage'
+  pod 'Masonry'
+  pod 'MJRefresh'
+  pod 'AFNetworking'
+  pod 'DTCoreText'
+  pod 'ReactiveCocoa', '=2.3'
 end

@@ -22,9 +22,13 @@
     button.layer.borderColor = [UIColor redColor].CGColor;
     button.layer.borderWidth = 1;
     button.frame = CGRectMake(100, 100, 80, 40);
-    [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
 }
 
+- (void)buttonAction
+{
+    NSLog(@"button click");
+}
 
 @end

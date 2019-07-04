@@ -12,6 +12,21 @@
 		5E67B59222CE393100962579 /* HOMethodInvocationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B59122CE393100962579 /* HOMethodInvocationEntity.m */; };
 		5E67B59522CE393E00962579 /* HOMethodMonitorCore.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B59422CE393E00962579 /* HOMethodMonitorCore.c */; };
 		5E67B59822CE395500962579 /* HOMethodMonitorUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B59722CE395500962579 /* HOMethodMonitorUtils.c */; };
+		5E67B61E22CE3E2100962579 /* SMCallStackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B60322CE3E2100962579 /* SMCallStackModel.m */; };
+		5E67B61F22CE3E2100962579 /* SMLagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B60622CE3E2100962579 /* SMLagButton.m */; };
+		5E67B62022CE3E2100962579 /* SMLagDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B60722CE3E2100962579 /* SMLagDB.m */; };
+		5E67B62122CE3E2100962579 /* SMCPUMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B60922CE3E2100962579 /* SMCPUMonitor.m */; };
+		5E67B62222CE3E2100962579 /* SMCallTraceTimeCostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B60E22CE3E2100962579 /* SMCallTraceTimeCostModel.m */; };
+		5E67B62322CE3E2100962579 /* SMLagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B61122CE3E2100962579 /* SMLagMonitor.m */; };
+		5E67B62422CE3E2100962579 /* SMCallTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B61222CE3E2100962579 /* SMCallTrace.m */; };
+		5E67B62522CE3E2100962579 /* SMStackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B61422CE3E2100962579 /* SMStackCell.m */; };
+		5E67B62622CE3E2100962579 /* SMStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B61522CE3E2100962579 /* SMStackViewController.m */; };
+		5E67B62722CE3E2100962579 /* SMCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B61622CE3E2100962579 /* SMCallStack.m */; };
+		5E67B62822CE3E2100962579 /* SMClsCallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B61922CE3E2100962579 /* SMClsCallCell.m */; };
+		5E67B62922CE3E2100962579 /* SMCallTraceCore.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B61A22CE3E2100962579 /* SMCallTraceCore.c */; };
+		5E67B62A22CE3E2100962579 /* SMCallLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B61B22CE3E2100962579 /* SMCallLib.m */; };
+		5E67B62B22CE3E2100962579 /* SMClsCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B61D22CE3E2100962579 /* SMClsCallViewController.m */; };
+		5E67B62E22CE459100962579 /* BLStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B62D22CE459100962579 /* BLStopwatch.m */; };
 		5EE415A422CDE1A000617380 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE415A322CDE1A000617380 /* AppDelegate.m */; };
 		5EE415A722CDE1A000617380 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE415A622CDE1A000617380 /* ViewController.m */; };
 		5EE415AA22CDE1A000617380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE415A822CDE1A000617380 /* Main.storyboard */; };
@@ -38,6 +53,36 @@
 		5E67B59422CE393E00962579 /* HOMethodMonitorCore.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HOMethodMonitorCore.c; sourceTree = "<group>"; };
 		5E67B59622CE395500962579 /* HOMethodMonitorUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HOMethodMonitorUtils.h; sourceTree = "<group>"; };
 		5E67B59722CE395500962579 /* HOMethodMonitorUtils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HOMethodMonitorUtils.c; sourceTree = "<group>"; };
+		5E67B60222CE3E2100962579 /* SMStackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStackCell.h; sourceTree = "<group>"; };
+		5E67B60322CE3E2100962579 /* SMCallStackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCallStackModel.m; sourceTree = "<group>"; };
+		5E67B60422CE3E2100962579 /* SMCallTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCallTrace.h; sourceTree = "<group>"; };
+		5E67B60522CE3E2100962579 /* SMLagMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLagMonitor.h; sourceTree = "<group>"; };
+		5E67B60622CE3E2100962579 /* SMLagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLagButton.m; sourceTree = "<group>"; };
+		5E67B60722CE3E2100962579 /* SMLagDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLagDB.m; sourceTree = "<group>"; };
+		5E67B60822CE3E2100962579 /* SMCallStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCallStack.h; sourceTree = "<group>"; };
+		5E67B60922CE3E2100962579 /* SMCPUMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCPUMonitor.m; sourceTree = "<group>"; };
+		5E67B60A22CE3E2100962579 /* SMStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStackViewController.h; sourceTree = "<group>"; };
+		5E67B60B22CE3E2100962579 /* SMCallTraceCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCallTraceCore.h; sourceTree = "<group>"; };
+		5E67B60C22CE3E2100962579 /* SMClsCallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMClsCallCell.h; sourceTree = "<group>"; };
+		5E67B60D22CE3E2100962579 /* SMClsCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMClsCallViewController.h; sourceTree = "<group>"; };
+		5E67B60E22CE3E2100962579 /* SMCallTraceTimeCostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCallTraceTimeCostModel.m; sourceTree = "<group>"; };
+		5E67B60F22CE3E2100962579 /* SMCallLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCallLib.h; sourceTree = "<group>"; };
+		5E67B61022CE3E2100962579 /* SMLagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLagButton.h; sourceTree = "<group>"; };
+		5E67B61122CE3E2100962579 /* SMLagMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLagMonitor.m; sourceTree = "<group>"; };
+		5E67B61222CE3E2100962579 /* SMCallTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCallTrace.m; sourceTree = "<group>"; };
+		5E67B61322CE3E2100962579 /* SMCallStackModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCallStackModel.h; sourceTree = "<group>"; };
+		5E67B61422CE3E2100962579 /* SMStackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStackCell.m; sourceTree = "<group>"; };
+		5E67B61522CE3E2100962579 /* SMStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStackViewController.m; sourceTree = "<group>"; };
+		5E67B61622CE3E2100962579 /* SMCallStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCallStack.m; sourceTree = "<group>"; };
+		5E67B61722CE3E2100962579 /* SMCPUMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCPUMonitor.h; sourceTree = "<group>"; };
+		5E67B61822CE3E2100962579 /* SMLagDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLagDB.h; sourceTree = "<group>"; };
+		5E67B61922CE3E2100962579 /* SMClsCallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMClsCallCell.m; sourceTree = "<group>"; };
+		5E67B61A22CE3E2100962579 /* SMCallTraceCore.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SMCallTraceCore.c; sourceTree = "<group>"; };
+		5E67B61B22CE3E2100962579 /* SMCallLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCallLib.m; sourceTree = "<group>"; };
+		5E67B61C22CE3E2100962579 /* SMCallTraceTimeCostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCallTraceTimeCostModel.h; sourceTree = "<group>"; };
+		5E67B61D22CE3E2100962579 /* SMClsCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMClsCallViewController.m; sourceTree = "<group>"; };
+		5E67B62C22CE459000962579 /* BLStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLStopwatch.h; sourceTree = "<group>"; };
+		5E67B62D22CE459100962579 /* BLStopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLStopwatch.m; sourceTree = "<group>"; };
 		5EE4159F22CDE1A000617380 /* 启动优化.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "启动优化.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE415A222CDE1A000617380 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EE415A322CDE1A000617380 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,6 +148,41 @@
 			path = HOMethodMonitor;
 			sourceTree = "<group>";
 		};
+		5E67B60122CE3E2100962579 /* SMLagMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				5E67B60222CE3E2100962579 /* SMStackCell.h */,
+				5E67B61422CE3E2100962579 /* SMStackCell.m */,
+				5E67B60422CE3E2100962579 /* SMCallTrace.h */,
+				5E67B61222CE3E2100962579 /* SMCallTrace.m */,
+				5E67B60522CE3E2100962579 /* SMLagMonitor.h */,
+				5E67B60622CE3E2100962579 /* SMLagButton.m */,
+				5E67B61822CE3E2100962579 /* SMLagDB.h */,
+				5E67B60722CE3E2100962579 /* SMLagDB.m */,
+				5E67B60822CE3E2100962579 /* SMCallStack.h */,
+				5E67B61622CE3E2100962579 /* SMCallStack.m */,
+				5E67B61722CE3E2100962579 /* SMCPUMonitor.h */,
+				5E67B60922CE3E2100962579 /* SMCPUMonitor.m */,
+				5E67B60C22CE3E2100962579 /* SMClsCallCell.h */,
+				5E67B61922CE3E2100962579 /* SMClsCallCell.m */,
+				5E67B60F22CE3E2100962579 /* SMCallLib.h */,
+				5E67B61B22CE3E2100962579 /* SMCallLib.m */,
+				5E67B61022CE3E2100962579 /* SMLagButton.h */,
+				5E67B61122CE3E2100962579 /* SMLagMonitor.m */,
+				5E67B60322CE3E2100962579 /* SMCallStackModel.m */,
+				5E67B61322CE3E2100962579 /* SMCallStackModel.h */,
+				5E67B60A22CE3E2100962579 /* SMStackViewController.h */,
+				5E67B61522CE3E2100962579 /* SMStackViewController.m */,
+				5E67B60B22CE3E2100962579 /* SMCallTraceCore.h */,
+				5E67B61A22CE3E2100962579 /* SMCallTraceCore.c */,
+				5E67B61C22CE3E2100962579 /* SMCallTraceTimeCostModel.h */,
+				5E67B60E22CE3E2100962579 /* SMCallTraceTimeCostModel.m */,
+				5E67B61D22CE3E2100962579 /* SMClsCallViewController.m */,
+				5E67B60D22CE3E2100962579 /* SMClsCallViewController.h */,
+			);
+			path = SMLagMonitor;
+			sourceTree = "<group>";
+		};
 		5EE4159622CDE1A000617380 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +204,7 @@
 		5EE415A122CDE1A000617380 /* 启动优化 */ = {
 			isa = PBXGroup;
 			children = (
+				5E67B60122CE3E2100962579 /* SMLagMonitor */,
 				5E67B58C22CE389E00962579 /* HOMethodMonitor */,
 				5EE415E422CE042F00617380 /* Tool */,
 				5EE415D122CE027E00617380 /* Load */,
@@ -162,6 +243,8 @@
 		5EE415E422CE042F00617380 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				5E67B62C22CE459000962579 /* BLStopwatch.h */,
+				5E67B62D22CE459100962579 /* BLStopwatch.m */,
 				5EE415E522CE057200617380 /* HOAPMLoadMonitor.h */,
 				5EE415E622CE057200617380 /* HOAPMLoadMonitor.m */,
 			);
@@ -289,20 +372,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E67B62922CE3E2100962579 /* SMCallTraceCore.c in Sources */,
+				5E67B62422CE3E2100962579 /* SMCallTrace.m in Sources */,
 				5EE415A722CDE1A000617380 /* ViewController.m in Sources */,
 				5EE415B222CDE1A000617380 /* main.m in Sources */,
 				5E67B59822CE395500962579 /* HOMethodMonitorUtils.c in Sources */,
 				5EE415E722CE057200617380 /* HOAPMLoadMonitor.m in Sources */,
+				5E67B61E22CE3E2100962579 /* SMCallStackModel.m in Sources */,
 				5EE415E322CE027E00617380 /* FirstLoad.m in Sources */,
+				5E67B62022CE3E2100962579 /* SMLagDB.m in Sources */,
+				5E67B62B22CE3E2100962579 /* SMClsCallViewController.m in Sources */,
+				5E67B62122CE3E2100962579 /* SMCPUMonitor.m in Sources */,
 				5E67B59222CE393100962579 /* HOMethodInvocationEntity.m in Sources */,
 				5E67B58F22CE38C300962579 /* HOMethodMonitor.m in Sources */,
+				5E67B62222CE3E2100962579 /* SMCallTraceTimeCostModel.m in Sources */,
+				5E67B61F22CE3E2100962579 /* SMLagButton.m in Sources */,
 				5EE415A422CDE1A000617380 /* AppDelegate.m in Sources */,
+				5E67B62522CE3E2100962579 /* SMStackCell.m in Sources */,
 				5EE415E022CE027E00617380 /* BFStudent.m in Sources */,
+				5E67B62E22CE459100962579 /* BLStopwatch.m in Sources */,
 				5EE415E222CE027E00617380 /* BFPerson.m in Sources */,
+				5E67B62A22CE3E2100962579 /* SMCallLib.m in Sources */,
 				5EE415DF22CE027E00617380 /* BFStudent+CatLoad.m in Sources */,
+				5E67B62722CE3E2100962579 /* SMCallStack.m in Sources */,
 				5EE415DE22CE027E00617380 /* BFPerson+CatLoad.m in Sources */,
+				5E67B62322CE3E2100962579 /* SMLagMonitor.m in Sources */,
 				5EE415E122CE027E00617380 /* SecondLoad.m in Sources */,
+				5E67B62622CE3E2100962579 /* SMStackViewController.m in Sources */,
 				5E67B59522CE393E00962579 /* HOMethodMonitorCore.c in Sources */,
+				5E67B62822CE3E2100962579 /* SMClsCallCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,6 +17,23 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
+  - DTCoreText (1.6.21):
+    - DTCoreText/Core (= 1.6.21)
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTCoreText/Core (1.6.21):
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTFoundation/Core (1.7.13)
+  - DTFoundation/DTAnimatedGIF (1.7.13)
+  - DTFoundation/DTHTMLParser (1.7.13):
+    - DTFoundation/Core
+  - DTFoundation/UIKit (1.7.13):
+    - DTFoundation/Core
   - fishhook (0.2)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
@@ -26,6 +43,14 @@ PODS:
   - MJRefresh (3.2.0)
   - MMKV (1.0.22)
   - pop (1.0.12)
+  - ReactiveCocoa (2.3):
+    - ReactiveCocoa/UI (= 2.3)
+  - ReactiveCocoa/Core (2.3):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3)
+  - ReactiveCocoa/UI (2.3):
+    - ReactiveCocoa/Core
+  - Reveal-iOS-SDK (1.6.2)
   - SDWebImage (5.0.6):
     - SDWebImage/Core (= 5.0.6)
   - SDWebImage/Core (5.0.6)
@@ -35,6 +60,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - ChameleonFramework
+  - DTCoreText
   - fishhook
   - FMDB
   - Masonry
@@ -42,6 +68,8 @@ DEPENDENCIES:
   - MJRefresh
   - MMKV
   - pop
+  - ReactiveCocoa (= 2.3)
+  - Reveal-iOS-SDK
   - SDWebImage
   - YYCache
   - YYModel
@@ -50,6 +78,8 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - ChameleonFramework
+    - DTCoreText
+    - DTFoundation
     - fishhook
     - FMDB
     - Masonry
@@ -57,6 +87,8 @@ SPEC REPOS:
     - MJRefresh
     - MMKV
     - pop
+    - ReactiveCocoa
+    - Reveal-iOS-SDK
     - SDWebImage
     - YYCache
     - YYModel
@@ -64,6 +96,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  DTCoreText: e5d688cffc9f6a61eddd1a4f94e2046851230de3
+  DTFoundation: f03be9fd786f11e505bb8fc44e2a3732bf0917df
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -71,10 +105,12 @@ SPEC CHECKSUMS:
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   MMKV: 99b05c376c0eb412b468ba1d3e6813502edeaa24
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  ReactiveCocoa: 81ee2fb7df2dfc6bd52b5d70473662195e20ca7d
+  Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: bc17f6d3d2490dfce3188ce837e8e7b7bfab4be6
+PODFILE CHECKSUM: ad22e12ebf9ea6b28bd11ba9c71ec0cac57f0f91
 
 COCOAPODS: 1.5.2
