@@ -25,9 +25,9 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
 //    [self.person testCopy];
-//    [self.person testBlockWithStrong];
+    [self.person testBlockWithStrong];
 //    [self.person testStackBlockInMRC];
-    [self testBlockType];
+//    [self testBlockType];
 //    [self testMemory];
 }
 /* ----------------------------------*/
