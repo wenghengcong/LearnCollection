@@ -1,19 +1,19 @@
 //
-//  BFStudent.m
+//  BFPerson.m
 //  启动优化
 //
 //  Created by Hunt on 2019/7/4.
 //  Copyright © 2019 WengHengcong. All rights reserved.
 //
 
-#import "BFStudent.h"
+#import "BFPerson.h"
 
-@implementation BFStudent
+@implementation BFPerson
 
 + (void)load
 {
-    NSLog(@"BFStudent(subclass of BFPerson) +load");
-    usleep(1000 * 25);
+    NSLog(@"BFPerson +load");
+    usleep(1000 * 10 * 105);
 }
 
 @end

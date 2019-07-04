@@ -7,7 +7,6 @@
 //
 
 #include "HOMethodMonitorCore.h"
-
 #include <fishhook.h>
 
 #include <stdio.h>
@@ -25,6 +24,7 @@
 #include <pthread.h>
 
 
+#if __aarch64__
 static inline uint64_t currentTime(void);
 
 static unsigned long _min_time_cost = 1000;  /// ms
@@ -204,4 +204,4 @@ static inline uint64_t currentTime() {
     gettimeofday(&now, NULL);
     return (now.tv_sec % 100) * 1000000 + now.tv_usec;
 }
-
+#endif

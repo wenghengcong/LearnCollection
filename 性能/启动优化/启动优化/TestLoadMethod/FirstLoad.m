@@ -13,7 +13,7 @@
 + (void)load
 {
     NSLog(@"First +load");
-    usleep(1000 * 35);
+    usleep(1000 * 20 * 90);
 }
 
 @end

@@ -28,7 +28,6 @@ static NSMutableArray *_loadInfoArray;
     
     _loadInfoArray = [[NSMutableArray alloc] init];
     
-    CFAbsoluteTime time1 =CFAbsoluteTimeGetCurrent();
     
     int imageCount = (int)_dyld_image_count();
     
@@ -44,6 +43,8 @@ static NSMutableArray *_loadInfoArray;
             classes = objc_copyClassNamesForImage(path, &count);
             
             for (int i = 0; i < count; i++) {
+                CFAbsoluteTime time1 = CFAbsoluteTimeGetCurrent();
+
                 NSString *className = [NSString stringWithCString:classes[i] encoding:NSUTF8StringEncoding];
                 if (![className isEqualToString:@""] && className) {
                     Class class = object_getClass(NSClassFromString(className));
@@ -70,13 +71,14 @@ static NSMutableArray *_loadInfoArray;
                     }
                     
                 }
+                CFAbsoluteTime time2 =CFAbsoluteTimeGetCurrent();
+                
+                NSLog(@"%@ Load time:%f",className,  (time2 - time1) * 1000);
             }
         }
     }
     
-    CFAbsoluteTime time2 =CFAbsoluteTimeGetCurrent();
-    
-     NSLog(@"Hook Time:%f",(time2 - time1) * 1000);
+
 }
 
 + (void)HOAPM_Load {
