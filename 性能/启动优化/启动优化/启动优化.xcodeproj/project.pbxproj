@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		44F086887044AC1E8FB88D0B /* libPods-启动优化.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 093DBA7987A203B71FDA9348 /* libPods-启动优化.a */; };
+		5E67B58F22CE38C300962579 /* HOMethodMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B58E22CE38C300962579 /* HOMethodMonitor.m */; };
+		5E67B59222CE393100962579 /* HOMethodInvocationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B59122CE393100962579 /* HOMethodInvocationEntity.m */; };
+		5E67B59522CE393E00962579 /* HOMethodMonitorCore.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B59422CE393E00962579 /* HOMethodMonitorCore.c */; };
+		5E67B59822CE395500962579 /* HOMethodMonitorUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E67B59722CE395500962579 /* HOMethodMonitorUtils.c */; };
 		5EE415A422CDE1A000617380 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE415A322CDE1A000617380 /* AppDelegate.m */; };
 		5EE415A722CDE1A000617380 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE415A622CDE1A000617380 /* ViewController.m */; };
 		5EE415AA22CDE1A000617380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE415A822CDE1A000617380 /* Main.storyboard */; };
@@ -26,6 +30,14 @@
 /* Begin PBXFileReference section */
 		093DBA7987A203B71FDA9348 /* libPods-启动优化.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-启动优化.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A89BC697E7DC343F8A1976 /* Pods-启动优化.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-启动优化.release.xcconfig"; path = "Pods/Target Support Files/Pods-启动优化/Pods-启动优化.release.xcconfig"; sourceTree = "<group>"; };
+		5E67B58D22CE38C300962579 /* HOMethodMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HOMethodMonitor.h; sourceTree = "<group>"; };
+		5E67B58E22CE38C300962579 /* HOMethodMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HOMethodMonitor.m; sourceTree = "<group>"; };
+		5E67B59022CE393100962579 /* HOMethodInvocationEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HOMethodInvocationEntity.h; sourceTree = "<group>"; };
+		5E67B59122CE393100962579 /* HOMethodInvocationEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HOMethodInvocationEntity.m; sourceTree = "<group>"; };
+		5E67B59322CE393E00962579 /* HOMethodMonitorCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HOMethodMonitorCore.h; sourceTree = "<group>"; };
+		5E67B59422CE393E00962579 /* HOMethodMonitorCore.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HOMethodMonitorCore.c; sourceTree = "<group>"; };
+		5E67B59622CE395500962579 /* HOMethodMonitorUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HOMethodMonitorUtils.h; sourceTree = "<group>"; };
+		5E67B59722CE395500962579 /* HOMethodMonitorUtils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HOMethodMonitorUtils.c; sourceTree = "<group>"; };
 		5EE4159F22CDE1A000617380 /* 启动优化.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "启动优化.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE415A222CDE1A000617380 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5EE415A322CDE1A000617380 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -76,6 +88,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5E67B58C22CE389E00962579 /* HOMethodMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				5E67B58D22CE38C300962579 /* HOMethodMonitor.h */,
+				5E67B58E22CE38C300962579 /* HOMethodMonitor.m */,
+				5E67B59022CE393100962579 /* HOMethodInvocationEntity.h */,
+				5E67B59122CE393100962579 /* HOMethodInvocationEntity.m */,
+				5E67B59322CE393E00962579 /* HOMethodMonitorCore.h */,
+				5E67B59422CE393E00962579 /* HOMethodMonitorCore.c */,
+				5E67B59622CE395500962579 /* HOMethodMonitorUtils.h */,
+				5E67B59722CE395500962579 /* HOMethodMonitorUtils.c */,
+			);
+			path = HOMethodMonitor;
+			sourceTree = "<group>";
+		};
 		5EE4159622CDE1A000617380 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +124,7 @@
 		5EE415A122CDE1A000617380 /* 启动优化 */ = {
 			isa = PBXGroup;
 			children = (
+				5E67B58C22CE389E00962579 /* HOMethodMonitor */,
 				5EE415E422CE042F00617380 /* Tool */,
 				5EE415D122CE027E00617380 /* Load */,
 				5EE415A222CDE1A000617380 /* AppDelegate.h */,
@@ -263,14 +291,18 @@
 			files = (
 				5EE415A722CDE1A000617380 /* ViewController.m in Sources */,
 				5EE415B222CDE1A000617380 /* main.m in Sources */,
+				5E67B59822CE395500962579 /* HOMethodMonitorUtils.c in Sources */,
 				5EE415E722CE057200617380 /* HOAPMLoadMonitor.m in Sources */,
 				5EE415E322CE027E00617380 /* FirstLoad.m in Sources */,
+				5E67B59222CE393100962579 /* HOMethodInvocationEntity.m in Sources */,
+				5E67B58F22CE38C300962579 /* HOMethodMonitor.m in Sources */,
 				5EE415A422CDE1A000617380 /* AppDelegate.m in Sources */,
 				5EE415E022CE027E00617380 /* BFStudent.m in Sources */,
 				5EE415E222CE027E00617380 /* BFPerson.m in Sources */,
 				5EE415DF22CE027E00617380 /* BFStudent+CatLoad.m in Sources */,
 				5EE415DE22CE027E00617380 /* BFPerson+CatLoad.m in Sources */,
 				5EE415E122CE027E00617380 /* SecondLoad.m in Sources */,
+				5E67B59522CE393E00962579 /* HOMethodMonitorCore.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

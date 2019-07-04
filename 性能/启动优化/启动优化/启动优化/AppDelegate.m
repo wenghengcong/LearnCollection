@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "ESMethodMonitor.h"
+#import "HOMethodMonitor.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<HOMethodMonitorDelegate>
 
 @end
 
@@ -18,13 +18,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [ESMethodMonitor shareInstance].delegate = self;
-    [ESMethodMonitor shareInstance].minTimeCost = 0;
-    [[ESMethodMonitor shareInstance] start];
+    [HOMethodMonitor shareInstance].delegate = self;
+    [HOMethodMonitor shareInstance].minTimeCost = 0;
+    [[HOMethodMonitor shareInstance] start];
     
     return YES;
 }
 
+- (BOOL)methodMonitor:(HOMethodMonitor *)mehtodMonitor ignoreInvocation:(HOMethodInvocationEntity *)invocation
+{
+    return YES;
+}
+
+- (void)methodMonitor:(HOMethodMonitor *)methodMonitor recordInvocation:(HOMethodInvocationEntity *)invocation
+{
+    NSLog(@"\n%@", invocation.stack);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
