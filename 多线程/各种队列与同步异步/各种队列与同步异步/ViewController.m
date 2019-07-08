@@ -16,8 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self asyncOperationsOnSerialThread];
+    [self asyncOperationsOnGloabThread];
 }
+
+//- (void)testLog
+//{
+//    NSLog(@"2");
+//}
+//
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+//{
+//    NSThread *thread = [[NSThread alloc] initWithBlock:^{
+//        NSLog(@"1");
+//    }];
+//    [thread start];
+//    [self performSelector:@selector(testLog) onThread:thread withObject:nil waitUntilDone:YES];
+//}
 
 /**
  主队列-同步：崩溃
