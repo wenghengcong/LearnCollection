@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E3EC2AA22D32F6C00522D45 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3EC2A922D32F6C00522D45 /* UserManager.m */; };
 		5E52FF6821D6E43F003EAD65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E52FF6721D6E43F003EAD65 /* AppDelegate.m */; };
 		5E52FF6B21D6E43F003EAD65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E52FF6A21D6E43F003EAD65 /* ViewController.m */; };
 		5E52FF6E21D6E43F003EAD65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E52FF6C21D6E43F003EAD65 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E3EC2A822D32F6C00522D45 /* UserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		5E3EC2A922D32F6C00522D45 /* UserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		5E52FF6321D6E43F003EAD65 /* 读写安全.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "读写安全.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E52FF6621D6E43F003EAD65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E52FF6721D6E43F003EAD65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				5E52FF6721D6E43F003EAD65 /* AppDelegate.m */,
 				5E52FF6921D6E43F003EAD65 /* ViewController.h */,
 				5E52FF6A21D6E43F003EAD65 /* ViewController.m */,
+				5E3EC2A822D32F6C00522D45 /* UserManager.h */,
+				5E3EC2A922D32F6C00522D45 /* UserManager.m */,
 				5E52FF6C21D6E43F003EAD65 /* Main.storyboard */,
 				5E52FF6F21D6E43F003EAD65 /* Assets.xcassets */,
 				5E52FF7121D6E43F003EAD65 /* LaunchScreen.storyboard */,
@@ -143,6 +148,7 @@
 			files = (
 				5E52FF6B21D6E43F003EAD65 /* ViewController.m in Sources */,
 				5E52FF7621D6E43F003EAD65 /* main.m in Sources */,
+				5E3EC2AA22D32F6C00522D45 /* UserManager.m in Sources */,
 				5E52FF6821D6E43F003EAD65 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

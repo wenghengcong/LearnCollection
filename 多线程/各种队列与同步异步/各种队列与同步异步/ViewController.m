@@ -112,8 +112,7 @@
 /**
  串行队列-同步
  1.主线程执行syncOperationsOnSerialThread；
- 2.将任务1同步提交到一个串行队列"serial"，队列"serial"，分配新线程执行任务1，由于是同步，需要等待执行完；
-   （由于优化，同步任务会直接调度在主线程完成）
+ 2.将任务1同步提交到一个串行队列"serial"，队列"serial"，由于同步任务不会创建新线程，所以在主线程执行任务1，由于是同步，需要等待执行完；
  3.任务1执行完，回到主线程继续执行syncOperationsOnSerialThread。
  */
 - (void)syncOperationsOnSerialThread {

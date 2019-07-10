@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S34-Sc-yG1">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="O3I-y9-5qZ">
+            <objects>
+                <navigationController id="S34-Sc-yG1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N1f-QT-3It">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ftK-0P-Zv1" kind="relationship" relationship="rootViewController" id="OZA-XY-s1D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2CE-zs-RAn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-867" y="120"/>
+        </scene>
+        <!--NSTImer实践-->
+        <scene sceneID="hc7-D2-K1g">
+            <objects>
+                <tableViewController id="ftK-0P-Zv1" customClass="FIrstTableController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Aff-N3-zub">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HPm-VU-EDh">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HPm-VU-EDh" id="XYd-ht-2AU">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="wDr-Wy-SKr" kind="show" id="tru-Hd-yhz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ftK-0P-Zv1" id="IfF-Bn-oYB"/>
+                            <outlet property="delegate" destination="ftK-0P-Zv1" id="cli-ix-4Qx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="NSTImer实践" id="dtl-oL-pFu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2q-ve-MOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="120"/>
+        </scene>
+        <!--Sec View Controller-->
+        <scene sceneID="70j-Et-sOF">
+            <objects>
+                <viewController id="wDr-Wy-SKr" customClass="SecViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="psh-iM-JCn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bu-wu-9jN">
+                                <rect key="frame" x="93" y="406.5" width="228" height="137"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="228" id="N0r-b8-NZZ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="137" id="Qhc-aD-uIo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="79u-3J-gVz" kind="show" id="zTj-yb-JkQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9bu-wu-9jN" firstAttribute="centerX" secondItem="Wo3-6z-0jZ" secondAttribute="centerX" id="BSh-1N-be9"/>
+                            <constraint firstItem="9bu-wu-9jN" firstAttribute="centerY" secondItem="Wo3-6z-0jZ" secondAttribute="centerY" id="aRK-rw-QfY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wo3-6z-0jZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zA0-bf-zxR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957" y="120"/>
+        </scene>
+        <!--Thrid View Controller-->
+        <scene sceneID="cmj-nD-d73">
+            <objects>
+                <viewController id="79u-3J-gVz" customClass="ThridViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mCK-rh-9ze">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fv8-j3-Tc6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kmz-L7-NjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="120"/>
+        </scene>
+    </scenes>
+</document>
