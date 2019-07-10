@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5E3EC2DD22D5970A00522D45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3EC2DC22D5970A00522D45 /* AppDelegate.m */; };
-		5E3EC2E022D5970A00522D45 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3EC2DF22D5970A00522D45 /* ViewController.m */; };
 		5E3EC2E322D5970A00522D45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E3EC2E122D5970A00522D45 /* Main.storyboard */; };
 		5E3EC2E522D5970B00522D45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E3EC2E422D5970B00522D45 /* Assets.xcassets */; };
 		5E3EC2E822D5970B00522D45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E3EC2E622D5970B00522D45 /* LaunchScreen.storyboard */; };
@@ -24,8 +23,6 @@
 		5E3EC2D822D5970A00522D45 /* NSTimerBestPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSTimerBestPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E3EC2DB22D5970A00522D45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E3EC2DC22D5970A00522D45 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5E3EC2DE22D5970A00522D45 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5E3EC2DF22D5970A00522D45 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5E3EC2E222D5970A00522D45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E3EC2E422D5970B00522D45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E3EC2E722D5970B00522D45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,8 +73,6 @@
 				5E3EC31A22D5C0C500522D45 /* Method */,
 				5E3EC2DB22D5970A00522D45 /* AppDelegate.h */,
 				5E3EC2DC22D5970A00522D45 /* AppDelegate.m */,
-				5E3EC2DE22D5970A00522D45 /* ViewController.h */,
-				5E3EC2DF22D5970A00522D45 /* ViewController.m */,
 				5E3EC32122D5CBC400522D45 /* FIrstTableController.h */,
 				5E3EC32222D5CBC400522D45 /* FIrstTableController.m */,
 				5E3EC2F122D597A900522D45 /* SecViewController.h */,
@@ -177,7 +172,6 @@
 				5E3EC2F622D597F400522D45 /* ThridViewController.m in Sources */,
 				5E3EC2F322D597A900522D45 /* SecViewController.m in Sources */,
 				5E3EC32022D5C3C400522D45 /* NSTimer+Block.m in Sources */,
-				5E3EC2E022D5970A00522D45 /* ViewController.m in Sources */,
 				5E3EC2EB22D5970B00522D45 /* main.m in Sources */,
 				5E3EC32322D5CBC400522D45 /* FIrstTableController.m in Sources */,
 				5E3EC31D22D5C2AC00522D45 /* BFWeakProxy.m in Sources */,

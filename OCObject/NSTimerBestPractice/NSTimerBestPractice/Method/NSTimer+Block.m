@@ -11,16 +11,16 @@
 
 @implementation NSTimer (Block)
 
-+(id)scheduledTimerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(void (^)())inBlock repeats:(BOOL)inRepeats
++(instancetype)scheduledTimerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(void (^)(void))inBlock repeats:(BOOL)inRepeats
 {
-    void (^block)() = [inBlock copy];
+    void (^block)(void) = [inBlock copy];
     id ret = [self scheduledTimerWithTimeInterval:inTimeInterval target:self selector:@selector(ho_p_ExecuteBlock:) userInfo:block repeats:inRepeats];
     return ret;
 }
 
-+(id)timerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(void (^)())inBlock repeats:(BOOL)inRepeats
++(instancetype)timerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(void (^)(void))inBlock repeats:(BOOL)inRepeats
 {
-    void (^block)() = [inBlock copy];
+    void (^block)(void) = [inBlock copy];
     id ret = [self timerWithTimeInterval:inTimeInterval target:self selector:@selector(ho_p_ExecuteBlock:) userInfo:block repeats:inRepeats];
     return ret;
 }
@@ -29,7 +29,7 @@
 {
     if([inTimer userInfo])
         {
-        void (^block)() = (void (^)())[inTimer userInfo];
+        void (^block)(void) = (void (^)(void))[inTimer userInfo];
         block();
         }
 }
