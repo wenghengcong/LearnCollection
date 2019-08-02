@@ -139,6 +139,32 @@
 //        //为变量赋值
 //        [anInvocation getReturnValue:buffer];
     }
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        //case1: 替换实例方法
+        Class selfClass = [self class];
+        //case2: 替换类方法
+//        Class selfClass = object_getClass([self class]);
+        
+        //源方法的SEL和Method
+        SEL oriSEL = @selector(viewWillAppear:);
+        Method oriMethod = class_getInstanceMethod(selfClass, oriSEL);
+        
+        //交换方法的SEL和Method
+        SEL cusSEL = @selector(customViewWillApper:);
+        Method cusMethod = class_getInstanceMethod(selfClass, cusSEL);
+        
+        //先尝试給源方法添加实现，这里是为了避免源方法没有实现的情况
+        BOOL addSucc = class_addMethod(selfClass, oriSEL, method_getImplementation(cusMethod), method_getTypeEncoding(cusMethod));
+        if (addSucc) {
+            //添加成功：将源方法的实现替换到交换方法的实现
+            class_replaceMethod(selfClass, cusSEL, method_getImplementation(oriMethod), method_getTypeEncoding(oriMethod));
+        }else {
+            //添加失败：说明源方法已经有实现，直接将两个方法的实现交换即可
+            method_exchangeImplementations(oriMethod, cusMethod);
+        }
+    });
 }
 
 @end

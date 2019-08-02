@@ -14,11 +14,11 @@
 {
     NSLog(@"+[BFPerson load]--Wrok Cat");
 }
-//
-//+ (void)initialize
-//{
-//    NSLog(@"+[BFPerson initialize]--Wrok Cat");
-//}
+
++ (void)initialize
+{
+    NSLog(@"+[BFPerson initialize]--Wrok Cat");
+}
 
 
 - (void)work

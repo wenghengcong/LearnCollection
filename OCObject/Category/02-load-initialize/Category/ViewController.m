@@ -35,7 +35,8 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    
+    BFPerson *person = [[BFPerson alloc] init];
+    [person test];
 }
 
 @end

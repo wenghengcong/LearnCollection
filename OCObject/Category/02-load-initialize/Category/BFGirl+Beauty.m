@@ -10,14 +10,14 @@
 
 @implementation BFGirl (Beauty)
 
-//+ (void)load
-//{
-//    NSLog(@"+[BFGirl load]--Beauty Cat");
-//}
-//
-//+ (void)initialize
-//{
-//    NSLog(@"+[BFGirl initialize]--Beauty Cat");
-//}
++ (void)load
+{
+    NSLog(@"+[BFGirl load]--Beauty Cat");
+}
+
++ (void)initialize
+{
+    NSLog(@"+[BFGirl initialize]--Beauty Cat");
+}
 
 @end

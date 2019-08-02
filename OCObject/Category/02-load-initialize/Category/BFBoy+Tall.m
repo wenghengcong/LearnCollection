@@ -15,9 +15,9 @@
     NSLog(@"+[BFBoy load]--Tall Cat");
 }
 
-//+ (void)initialize
-//{
-//    NSLog(@"+[BFBoy initialize]--Tall Cat");
-//}
++ (void)initialize
+{
+    NSLog(@"+[BFBoy initialize]--Tall Cat");
+}
 
 @end

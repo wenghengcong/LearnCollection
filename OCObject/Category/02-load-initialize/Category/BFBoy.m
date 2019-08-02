@@ -15,9 +15,9 @@
     NSLog(@"+[BFBoy load]");
 }
 
-//+ (void)initialize
-//{
-//    NSLog(@"+[BFBoy initialize]");
-//}
++ (void)initialize
+{
+    NSLog(@"+[BFBoy initialize]");
+}
 
 @end

@@ -15,6 +15,9 @@
 @public
     int _age;
     int _male;
+    
+@private
+    double salary;
 }
 @property (nonatomic, assign) double height;
 @end

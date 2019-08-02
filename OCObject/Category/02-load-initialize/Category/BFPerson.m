@@ -15,13 +15,13 @@
     NSLog(@"+[BFPerson load]");
 }
 
-//+ (void)initialize
-//{
-//    NSLog(@"+[BFPerson initialize]");
-//}
-//
-//- (void)test
-//{
-//    NSLog(@"-[BFPerson test]");
-//}
++ (void)initialize
+{
+    NSLog(@"+[BFPerson initialize]");
+}
+
+- (void)test
+{
+    NSLog(@"-[BFPerson test]");
+}
 @end

@@ -10,15 +10,15 @@
 
 @implementation BFGirl
 
-//+ (void)load
-//{
-//    NSLog(@"+[BFGirl load]");
-//}
-//
-//+ (void)initialize
-//{
-//    NSLog(@"+[BFGirl initialize]");
-//}
++ (void)load
+{
+    NSLog(@"+[BFGirl load]");
+}
+
++ (void)initialize
+{
+    NSLog(@"+[BFGirl initialize]");
+}
 
 
 @end

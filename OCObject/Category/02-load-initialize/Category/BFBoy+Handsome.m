@@ -15,9 +15,9 @@
     NSLog(@"+[BFBoy load]--Handsome Cat");
 }
 
-//+ (void)initialize
-//{
-//    NSLog(@"+[BFBoy initialize]--Handsome Cat");
-//}
++ (void)initialize
+{
+    NSLog(@"+[BFBoy initialize]--Handsome Cat");
+}
 
 @end

@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-FOUNDATION_EXPORT double MSWeakTimerVersionNumber;
-FOUNDATION_EXPORT const unsigned char MSWeakTimerVersionString[];
+FOUNDATION_EXPORT double HOWeakTimerVersionNumber;
+FOUNDATION_EXPORT const unsigned char HOWeakTimerVersionString[];
 
 
 NS_ASSUME_NONNULL_BEGIN

@@ -8,6 +8,13 @@
 
 #import "BFStudent.h"
 
+@interface BFStudent()
+{
+    NSString *idCard;
+}
+
+@end
+
 @implementation BFStudent
 
 - (nonnull id)copyWithZone:(nullable NSZone *)zone {

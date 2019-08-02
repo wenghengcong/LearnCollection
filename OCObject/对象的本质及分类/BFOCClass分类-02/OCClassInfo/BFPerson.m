@@ -8,6 +8,13 @@
 
 #import "BFPerson.h"
 
+@interface BFPerson()
+{
+    double salary;
+}
+
+@end
+
 @implementation BFPerson
 
 + (void)personClassMethod
