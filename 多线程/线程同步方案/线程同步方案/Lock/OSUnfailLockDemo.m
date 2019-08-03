@@ -37,13 +37,10 @@
     return self;
 }
 
-// 死锁：永远拿不到锁
 - (void)__saleTicket
 {
     os_unfair_lock_lock(&_ticketLock);
-    
     [super __saleTicket];
-    
     os_unfair_lock_unlock(&_ticketLock);
 }
 

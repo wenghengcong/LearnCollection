@@ -31,7 +31,6 @@
     return self;
 }
 
-// 死锁：永远拿不到锁
 - (void)__saleTicket
 {
     [self.ticketLock lock];
@@ -42,18 +41,14 @@
 - (void)__saveMoney
 {
     [self.moneyLock lock];
-    
     [super __saveMoney];
-    
     [self.moneyLock unlock];
 }
 
 - (void)__drawMoney
 {
     [self.moneyLock lock];
-    
     [super __drawMoney];
-    
     [self.moneyLock unlock];
 }
 

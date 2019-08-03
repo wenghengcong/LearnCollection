@@ -23,7 +23,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self interview_question_6];
+    [self interview_question_7];
 }
 
 - (void)interview_question_1
@@ -121,5 +121,29 @@
     NSLog(@"2");
 }
 
+- (void)interview_question_7
+{
+//    dispatch_queue_t queue = dispatch_queue_create("com.nemo.ConcurrentDispatchQueue", DISPATCH_QUEUE_CONCURRENT);
+//    dispatch_async(queue, ^{
+//        [self testA];
+//    });
+    
+    NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(testA) object:nil];
+    [thread start];
+}
+
+- (void)testA
+{
+    NSLog(@"%d-%@", [NSThread isMainThread], [NSThread currentThread]);
+    NSLog(@"1");
+    [self testB];
+    NSLog(@"2");
+}
+
+- (void)testB
+{
+    NSLog(@"%d-%@", [NSThread isMainThread], [NSThread currentThread]);
+    NSLog(@"3");
+}
 
 @end
