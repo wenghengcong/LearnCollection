@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self asyncOperationsOnGloabThread];
+    [self syncOperationsOnConcurrentThread];
 }
 
 //- (void)testLog
@@ -153,7 +153,7 @@
  4.执行完任务1后，继续执行syncOperationsOnConcurrentThread。
  */
 - (void)syncOperationsOnConcurrentThread {
-    dispatch_queue_t q = dispatch_queue_create("concurrent",DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t q = dispatch_queue_create("concurrent", DISPATCH_QUEUE_CONCURRENT);
     NSLog(@"------------Start------------");
     for (int i = 0; i < 10; ++i) {
         // 同步任务顺序执行
