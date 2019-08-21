@@ -1,0 +1,46 @@
+PODS:
+  - CRToast (0.0.9)
+  - EVCloudKitDao (3.5.1):
+    - EVReflection/CloudKit
+  - EVReflection/CloudKit (5.6.1):
+    - EVReflection/Core
+  - EVReflection/Core (5.6.1)
+  - JSQMessagesViewController (7.3.5):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
+  - SwiftLocation (3.2.3):
+    - SwiftyJSON (~> 4.0.0-alpha.1)
+  - SwiftyJSON (4.0.0)
+  - UIImage-Resize (1.0.1)
+  - UzysAssetsPickerController (0.9.9)
+  - VIPhotoView (0.1)
+
+DEPENDENCIES:
+  - CRToast
+  - EVCloudKitDao (from `./`)
+  - EVReflection/CloudKit
+  - JSQMessagesViewController
+  - SwiftLocation
+  - UIImage-Resize
+  - UzysAssetsPickerController
+  - VIPhotoView
+
+EXTERNAL SOURCES:
+  EVCloudKitDao:
+    :path: ./
+
+SPEC CHECKSUMS:
+  CRToast: 5a78c22b921c5ed3487488af605bc403a9c92fed
+  EVCloudKitDao: 153da4f81e8615b3e004cfe408e1bd28dd953802
+  EVReflection: d05ebbafc851b7a4cd3d625182662463a5819ab8
+  JSQMessagesViewController: 6587f56aedbcb150a8ba1d968e1ef58b1bc758b7
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  UIImage-Resize: fa776860f10e6900bbaf53a73e494bdceaaccc77
+  UzysAssetsPickerController: 47c27bd96955467925f3d4d80b1e2e8aaeff766d
+  VIPhotoView: bdc0cf8ddadda754b451869bd3a919e8eb5c11ab
+
+PODFILE CHECKSUM: 802654b43f9d50db77cbd50f60af97e5020f6f5a
+
+COCOAPODS: 1.4.0

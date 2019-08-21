@@ -1,0 +1,14 @@
+{
+  "name": "cloudkit-s2s",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "install-cloudkit-js": "curl https://cdn.apple-cloudkit.com/ck/1/cloudkit.js > src/cloudkit.js"
+  },
+  "author": "iCell",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^1.7.3"
+  }
+}

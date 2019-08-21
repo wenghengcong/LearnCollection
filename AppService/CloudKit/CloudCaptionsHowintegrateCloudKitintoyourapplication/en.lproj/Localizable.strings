@@ -1,0 +1,37 @@
+/* Title for button opens up camera to take photo */
+"CameraButton" = "Take Photo";
+
+/* Title of alert controller that lets user compose a post */
+"ComposeAlertControllerTitle" = "How do you want to get your photo?";
+
+/* Alert dismiss button string */
+"DismissError" = "Okay";
+
+/* Title of alert notifying of error */
+"ErrorTitle" = "Error";
+
+/* Error message when a full size isn't loaded from thumbnail */
+"FetchFullFromThumbErrorMessage" = "We couldn't fetch the full size thumbnail you tried to select, try again";
+
+/* Error message, not logged in */
+"NotAuthenticatedErrorMessage" = "You must be logged in to iCloud in order to post";
+
+/* Title for button that subscribes to updates when it is pressed */
+"SubscribeButton" = "Subscribe";
+
+/* Title for button that loads thumbnails from CloudKit */
+"ThumbnailButton" = "Select from CloudKit";
+
+/* Error message when a thumbnail isn't loaded */
+"ThumbnailErrorMessage" = "We couldn't fetch one or more of the thumbnails";
+
+/* Title for button that unsubscribes to updates when it is pressed */
+"UnsubscribeButton" = "Unsubscribe";
+
+/* Title for button that opens photo library to select photo */
+"UploadButton" = "Upload Photo";
+
+/* Non recoverable upload failed error */
+"UploadFailedErrorMessage" = "Unrecoverable error with the upload, check console logs";
+
+

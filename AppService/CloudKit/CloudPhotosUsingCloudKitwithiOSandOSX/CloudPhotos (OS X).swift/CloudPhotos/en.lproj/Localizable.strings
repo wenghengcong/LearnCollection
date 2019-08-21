@@ -1,0 +1,34 @@
+// titles
+"OK Button Title" = "OK";
+"Cancel Button Title" = "Cancel";
+"Untitled Title" = "Untitled";
+
+"Confirm Delete" = "Are you sure you want to delete \"%@\"?";
+"Confirm Delete Detail" = "Deleted photos cannot be restored.";
+
+"Confirm Delete Image" = "Are you sure you want to delete the image?";
+"Confirm Delete Image Detail" = "The removed image cannot be restored.";
+
+// alerts
+"Removal alert message not logged in" = "Error Deleting Photo";
+"Removal alert detail message not logged in" = "You are not logged in, unable to delete.";
+
+"Unable to change photo message" = "Unable to change photo.";
+
+// notifications
+"Photo Added Notif Message" = "Photo \"%@\" was added by %@.";
+"Photo Changed Notif Message" = "Photo \"%@\" was changed by %@.";
+"Photo Removed Notif Message" = "Photo \"%@\" was removed by %@.";
+
+"Unknown User Name" = "Unknown User";
+"Undetermined Login Name" = "Undetermined";
+
+"Photo Generic Changed Notif Message" = "Photo \"%@\" was changed by another user.";
+
+"Location Unavailable" = "(Unavailable)";
+
+// CKSubscription message
+"Notif alert body" = "A photo was added, changed or removed.";
+
+// Searching
+"Search Prefix" = "Search ";

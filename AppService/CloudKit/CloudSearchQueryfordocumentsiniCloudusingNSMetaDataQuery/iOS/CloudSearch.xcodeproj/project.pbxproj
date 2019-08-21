@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		530F2F641BF68D410014254E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530F2F621BF68D410014254E /* LaunchScreen.storyboard */; };
+		532909C41AE81CF300EFD5C2 /* AAPLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 532909C11AE81CF300EFD5C2 /* AAPLAppDelegate.m */; };
+		532909C51AE81CF300EFD5C2 /* AAPLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532909C31AE81CF300EFD5C2 /* AAPLTableViewController.m */; };
+		532909C81AE81D8500EFD5C2 /* AAPLCloudDocumentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 532909C71AE81D8500EFD5C2 /* AAPLCloudDocumentsController.m */; };
+		536B4A951AEEB48F00ACE4AE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 536B4A931AEEB48F00ACE4AE /* Localizable.strings */; };
+		5393AB331AE816F6006612A4 /* AAPLFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5393AB321AE816F6006612A4 /* AAPLFilterViewController.m */; };
+		53D6CA1F1AD7059500F05766 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D6CA1E1AD7059500F05766 /* Images.xcassets */; };
+		53D6CA291AD705C300F05766 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D6CA241AD705C300F05766 /* main.m */; };
+		53D6CA2D1AD7060A00F05766 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D6CA2B1AD7060A00F05766 /* Main.storyboard */; };
+		53E79A121BFA6C7400F82B08 /* HTML Document.html in Resources */ = {isa = PBXBuildFile; fileRef = 53E79A0A1BFA6C7400F82B08 /* HTML Document.html */; };
+		53E79A131BFA6C7400F82B08 /* Image Document.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 53E79A0B1BFA6C7400F82B08 /* Image Document.jpg */; };
+		53E79A141BFA6C7400F82B08 /* PDF Document.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 53E79A0C1BFA6C7400F82B08 /* PDF Document.pdf */; };
+		53E79A151BFA6C7400F82B08 /* Text Document1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 53E79A0D1BFA6C7400F82B08 /* Text Document1.txt */; };
+		53E79A161BFA6C7400F82B08 /* Text Document2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 53E79A0E1BFA6C7400F82B08 /* Text Document2.txt */; };
+		53E79A171BFA6C7400F82B08 /* Text Document3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 53E79A0F1BFA6C7400F82B08 /* Text Document3.txt */; };
+		53E79A181BFA6C7400F82B08 /* Text Document4.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 53E79A101BFA6C7400F82B08 /* Text Document4.rtf */; };
+		53E79A191BFA6C7400F82B08 /* Video.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 53E79A111BFA6C7400F82B08 /* Video.m4v */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D6058910D05DD3D006BFB54 /* CloudSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		530F2F631BF68D410014254E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CloudSearch/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		532909C01AE81CF300EFD5C2 /* AAPLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAPLAppDelegate.h; path = CloudSearch/AAPLAppDelegate.h; sourceTree = "<group>"; };
+		532909C11AE81CF300EFD5C2 /* AAPLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAPLAppDelegate.m; path = CloudSearch/AAPLAppDelegate.m; sourceTree = "<group>"; };
+		532909C21AE81CF300EFD5C2 /* AAPLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAPLTableViewController.h; path = CloudSearch/AAPLTableViewController.h; sourceTree = "<group>"; };
+		532909C31AE81CF300EFD5C2 /* AAPLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAPLTableViewController.m; path = CloudSearch/AAPLTableViewController.m; sourceTree = "<group>"; };
+		532909C61AE81D8500EFD5C2 /* AAPLCloudDocumentsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCloudDocumentsController.h; sourceTree = "<group>"; };
+		532909C71AE81D8500EFD5C2 /* AAPLCloudDocumentsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCloudDocumentsController.m; sourceTree = "<group>"; };
+		533BCC631AE048D900183312 /* CloudSearch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = CloudSearch.entitlements; path = CloudSearch/CloudSearch.entitlements; sourceTree = "<group>"; };
+		536B4A941AEEB48F00ACE4AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = CloudSearch/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5393AB311AE816F6006612A4 /* AAPLFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAPLFilterViewController.h; path = CloudSearch/AAPLFilterViewController.h; sourceTree = "<group>"; };
+		5393AB321AE816F6006612A4 /* AAPLFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAPLFilterViewController.m; path = CloudSearch/AAPLFilterViewController.m; sourceTree = "<group>"; };
+		53D6CA1E1AD7059500F05766 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CloudSearch/Images.xcassets; sourceTree = "<group>"; };
+		53D6CA201AD705A800F05766 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CloudSearch/Info.plist; sourceTree = "<group>"; };
+		53D6CA241AD705C300F05766 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CloudSearch/main.m; sourceTree = "<group>"; };
+		53D6CA2E1AD7067D00F05766 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CloudSearch/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		53E79A0A1BFA6C7400F82B08 /* HTML Document.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "HTML Document.html"; path = "../Shared/SampleDocs/HTML Document.html"; sourceTree = "<group>"; };
+		53E79A0B1BFA6C7400F82B08 /* Image Document.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Image Document.jpg"; path = "../Shared/SampleDocs/Image Document.jpg"; sourceTree = "<group>"; };
+		53E79A0C1BFA6C7400F82B08 /* PDF Document.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "PDF Document.pdf"; path = "../Shared/SampleDocs/PDF Document.pdf"; sourceTree = "<group>"; };
+		53E79A0D1BFA6C7400F82B08 /* Text Document1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Text Document1.txt"; path = "../Shared/SampleDocs/Text Document1.txt"; sourceTree = "<group>"; };
+		53E79A0E1BFA6C7400F82B08 /* Text Document2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Text Document2.txt"; path = "../Shared/SampleDocs/Text Document2.txt"; sourceTree = "<group>"; };
+		53E79A0F1BFA6C7400F82B08 /* Text Document3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Text Document3.txt"; path = "../Shared/SampleDocs/Text Document3.txt"; sourceTree = "<group>"; };
+		53E79A101BFA6C7400F82B08 /* Text Document4.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = "Text Document4.rtf"; path = "../Shared/SampleDocs/Text Document4.rtf"; sourceTree = "<group>"; };
+		53E79A111BFA6C7400F82B08 /* Video.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = Video.m4v; path = ../Shared/SampleDocs/Video.m4v; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* CloudSearch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				533BCC631AE048D900183312 /* CloudSearch.entitlements */,
+				53AF8AEC0D9C50B700726DBA /* Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53E79A091BFA6C6B00F82B08 /* SampleDocs */,
+				53D6CA2B1AD7060A00F05766 /* Main.storyboard */,
+				530F2F621BF68D410014254E /* LaunchScreen.storyboard */,
+				53D6CA201AD705A800F05766 /* Info.plist */,
+				536B4A931AEEB48F00ACE4AE /* Localizable.strings */,
+				53D6CA1E1AD7059500F05766 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		53AF8AEC0D9C50B700726DBA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				53D6CA241AD705C300F05766 /* main.m */,
+				532909C01AE81CF300EFD5C2 /* AAPLAppDelegate.h */,
+				532909C11AE81CF300EFD5C2 /* AAPLAppDelegate.m */,
+				532909C21AE81CF300EFD5C2 /* AAPLTableViewController.h */,
+				532909C31AE81CF300EFD5C2 /* AAPLTableViewController.m */,
+				5393AB311AE816F6006612A4 /* AAPLFilterViewController.h */,
+				5393AB321AE816F6006612A4 /* AAPLFilterViewController.m */,
+				53D6CA3C1AD7090300F05766 /* Shared */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		53D6CA3C1AD7090300F05766 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				532909C61AE81D8500EFD5C2 /* AAPLCloudDocumentsController.h */,
+				532909C71AE81D8500EFD5C2 /* AAPLCloudDocumentsController.m */,
+			);
+			name = Shared;
+			path = ../Shared;
+			sourceTree = "<group>";
+		};
+		53E79A091BFA6C6B00F82B08 /* SampleDocs */ = {
+			isa = PBXGroup;
+			children = (
+				53E79A0A1BFA6C7400F82B08 /* HTML Document.html */,
+				53E79A0B1BFA6C7400F82B08 /* Image Document.jpg */,
+				53E79A0C1BFA6C7400F82B08 /* PDF Document.pdf */,
+				53E79A0D1BFA6C7400F82B08 /* Text Document1.txt */,
+				53E79A0E1BFA6C7400F82B08 /* Text Document2.txt */,
+				53E79A0F1BFA6C7400F82B08 /* Text Document3.txt */,
+				53E79A101BFA6C7400F82B08 /* Text Document4.rtf */,
+				53E79A111BFA6C7400F82B08 /* Video.m4v */,
+			);
+			name = SampleDocs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* CloudSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CloudSearch" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				5385DCFF1C7CDD570035FA5E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloudSearch;
+			productName = IBTest;
+			productReference = 1D6058910D05DD3D006BFB54 /* CloudSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CloudSearch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+				Base,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* CloudSearch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				530F2F641BF68D410014254E /* LaunchScreen.storyboard in Resources */,
+				53D6CA2D1AD7060A00F05766 /* Main.storyboard in Resources */,
+				536B4A951AEEB48F00ACE4AE /* Localizable.strings in Resources */,
+				53E79A171BFA6C7400F82B08 /* Text Document3.txt in Resources */,
+				53E79A161BFA6C7400F82B08 /* Text Document2.txt in Resources */,
+				53E79A191BFA6C7400F82B08 /* Video.m4v in Resources */,
+				53E79A131BFA6C7400F82B08 /* Image Document.jpg in Resources */,
+				53E79A181BFA6C7400F82B08 /* Text Document4.rtf in Resources */,
+				53E79A141BFA6C7400F82B08 /* PDF Document.pdf in Resources */,
+				53E79A151BFA6C7400F82B08 /* Text Document1.txt in Resources */,
+				53D6CA1F1AD7059500F05766 /* Images.xcassets in Resources */,
+				53E79A121BFA6C7400F82B08 /* HTML Document.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5385DCFF1C7CDD570035FA5E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BUNDLE_IDENTIFIER=$(/usr/libexec/PlistBuddy -c \"Print CFBundleIdentifier\" \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Info.plist\")\n\nif [[ $BUNDLE_IDENTIFIER == com.example.* ]]\nthen\necho \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Info.plist:1: error: Change your bundle identifier to use your own CloudKit container\"\nexit -1\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53D6CA291AD705C300F05766 /* main.m in Sources */,
+				5393AB331AE816F6006612A4 /* AAPLFilterViewController.m in Sources */,
+				532909C51AE81CF300EFD5C2 /* AAPLTableViewController.m in Sources */,
+				532909C41AE81CF300EFD5C2 /* AAPLAppDelegate.m in Sources */,
+				532909C81AE81D8500EFD5C2 /* AAPLCloudDocumentsController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		530F2F621BF68D410014254E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				530F2F631BF68D410014254E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		536B4A931AEEB48F00ACE4AE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				536B4A941AEEB48F00ACE4AE /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		53D6CA2B1AD7060A00F05766 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53D6CA2E1AD7067D00F05766 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = CloudSearch/CloudSearch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				INFOPLIST_FILE = CloudSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.cloudsearch";
+				PRODUCT_NAME = CloudSearch;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = CloudSearch/CloudSearch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				INFOPLIST_FILE = CloudSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.cloudsearch";
+				PRODUCT_NAME = CloudSearch;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CloudSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CloudSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

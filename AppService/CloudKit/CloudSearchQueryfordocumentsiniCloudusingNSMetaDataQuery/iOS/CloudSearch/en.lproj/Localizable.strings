@@ -1,0 +1,17 @@
+// errors
+"Search_Failed" = "Failed to start the search for documents in iCloud.";
+
+"Cancel_Button_Title" = "Cancel";
+
+// log out alert
+"Logged_Out_Message" = "You have been using iCloud, and it has now become unavailable.";
+"Logged_Out_Message_Explain" = "Please check your network connection and make sure you are signed in.";
+"OK_Button_Title" = "OK";
+
+// ask upload alert
+"Ask_Upload" = "There are no documents found in iCloud. Would you like to upload some default documents?";
+"Ask_Upload_Explain" = "These uploaded documents will be used for searching.";
+
+// not logged in
+"Not_Logged_In" = "You are not logged into iCloud or iCloud Drive is turned off.";
+"Not_Logged_In_Explain" = "Please use Settings, iCloud settings to log into iCloud and turn on iCloud Drive.";
