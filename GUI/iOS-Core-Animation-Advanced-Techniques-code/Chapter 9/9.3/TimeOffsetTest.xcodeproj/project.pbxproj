@@ -153,11 +153,11 @@
 			};
 			buildConfigurationList = 01F7242916BEBAF400DB1F0E /* Build configuration list for PBXProject "TimeOffsetTest" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = 01F7242516BEBAF400DB1F0E;
 			productRefGroup = 01F7242F16BEBAF400DB1F0E /* Products */;

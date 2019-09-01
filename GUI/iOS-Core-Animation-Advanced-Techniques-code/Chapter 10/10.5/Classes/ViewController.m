@@ -8,7 +8,7 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface ViewController ()
+@interface ViewController ()<CAAnimationDelegate>
 
 @property (nonatomic, weak) IBOutlet UIImageView *hourHand;
 @property (nonatomic, weak) IBOutlet UIImageView *minuteHand;
@@ -36,7 +36,7 @@
                                                  repeats:YES];
     
     //set initial hand positions
-    [self updateHandsAnimated:NO];
+    [self updateHandsAnimated: NO];
 }
 
 - (void)tick
@@ -47,8 +47,8 @@
 - (void)updateHandsAnimated:(BOOL)animated
 {
     //convert time to hours, minutes and seconds
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSUInteger units = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSUInteger units = NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
     NSDateComponents *components = [calendar components:units fromDate:[NSDate date]];
     
     //calculate hour hand angle

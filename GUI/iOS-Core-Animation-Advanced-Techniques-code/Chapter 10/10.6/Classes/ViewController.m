@@ -8,7 +8,7 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface ViewController ()
+@interface ViewController ()<CAAnimationDelegate>
 
 @property (nonatomic, weak) IBOutlet UIView *containerView;
 @property (nonatomic, strong) UIImageView *ballView;
