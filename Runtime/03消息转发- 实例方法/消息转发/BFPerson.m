@@ -104,8 +104,9 @@
         [anInvocation getReturnValue:&ret];
         NSLog(@"invoke return value: %@", ret);
     } else if (selector == @selector(learnALot)) {
+        [anInvocation invokeWithTarget:[[BFGirl alloc] init]];
+        
         //3. storng类型，如NSArray，会直接崩溃，如下代码
-//        [anInvocation invokeWithTarget:[[BFGirl alloc] init]];
 //        NSArray *ret = [NSArray array];
 //        [anInvocation getReturnValue:&ret]; //ret指向的对象被销毁
 //        NSLog(@"invoke return value: %@", ret);
@@ -121,8 +122,8 @@
         
         //解决以上崩溃，就是需要避免ARC时对象没有retain导致的崩溃。所以，只要将对象赋值给
         //__autoreleasing、__weak、__unsafe_unretained
-//        __weak NSArray* tempResultSet;
-//        [anInvocation getReturnValue:&tempResultSet];
+        __weak NSArray* tempResultSet;
+        [anInvocation getReturnValue:&tempResultSet];
 //        NSArray *ret = tempResultSet;
 //        NSLog(@"invoke return value: %@", ret);
         
@@ -131,13 +132,13 @@
 //        NSString *resultSet = (__bridge NSString *)tempResultSet;
 //        NSLog(@"invoke return value: %@", resultSet);
 
-        //返回值长度
-//        NSMethodSignature *sig= [[BFBoy class] instanceMethodSignatureForSelector:@selector(learn:)];
-//        NSUInteger length = [sig methodReturnLength];
-//        //根据长度申请内存
-//        void *buffer = (void *)malloc(length);
-//        //为变量赋值
-//        [anInvocation getReturnValue:buffer];
+//        返回值长度
+        NSMethodSignature *sig= [[BFBoy class] instanceMethodSignatureForSelector:@selector(learn:)];
+        NSUInteger length = [sig methodReturnLength];
+        //根据长度申请内存
+        void *buffer = (void *)malloc(length);
+        //为变量赋值
+        [anInvocation getReturnValue:buffer];
     }
     
     static dispatch_once_t onceToken;

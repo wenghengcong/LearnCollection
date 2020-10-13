@@ -186,8 +186,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E01522521AD665D00A16620 /* BFPerson+Work.m in Sources */,
 				5ED835CA21B126E600456059 /* BFBoy+Tall.m in Sources */,
+				5E01522521AD665D00A16620 /* BFPerson+Work.m in Sources */,
 				5ED835C421B126A700456059 /* BFBoy.m in Sources */,
 				5ED835C721B126AD00456059 /* BFGirl.m in Sources */,
 				5ED835CD21B126F200456059 /* BFBoy+Handsome.m in Sources */,

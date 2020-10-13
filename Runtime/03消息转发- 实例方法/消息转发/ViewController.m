@@ -25,8 +25,8 @@
     BFPerson *person = [[BFPerson alloc] init];
     NSLog(@"person is %@-%p", person, person);
     
-//    [person eat];               //测试消息转发流程
-//    [person eat:@"apple"];      //测试消息转发参数
+    [person eat];               //测试消息转发流程
+    [person eat:@"apple"];      //测试消息转发参数
     
 //    int num = [person learnedNum];
     [person learn:@"english"];

@@ -125,7 +125,7 @@ typedef struct {
     CFStringRef	(*copyDescription)(const void *info);
     Boolean	(*equal)(const void *info1, const void *info2);
     CFHashCode	(*hash)(const void *info);
-#if (TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)) || (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
+#if (TARGET_OS_MAC && !(TARGET_OS_EMsBEDDED || TARGET_OS_IPHONE)) || (TARGET_OS_EMBEDDED || TARGET_OS_IPHONE)
     mach_port_t	(*getPort)(void *info);
     void *	(*perform)(void *msg, CFIndex size, CFAllocatorRef allocator, void *info);
 #else

@@ -37,7 +37,7 @@
     [anInvocation invoke];
     
     //同样可以转发给BFBoy实例对象
-//    BFBoy *boy = [[BFBoy alloc] init];;
+//    BFBoy *boy = [[BFBoy alloc] init];
 //    anInvocation.target = boy;
 //    [anInvocation invoke];
 }
