@@ -1,1 +1,0 @@
-{ data: { img: function({ _req, Mock }) { return _req.body.fileName + "_" + Mock.mock("@image") }}}
