@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "elegantpages",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ThasianX/ElegantPages",
+      "state" : {
+        "revision" : "47d166799f2313ad9e47c9c22687021d396d940f",
+        "version" : "1.4.1"
+      }
+    }
+  ],
+  "version" : 2
+}
