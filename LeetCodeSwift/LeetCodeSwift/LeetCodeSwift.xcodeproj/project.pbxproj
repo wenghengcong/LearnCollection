@@ -26,6 +26,9 @@
 		5E3D955B230502FD0090DB06 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3D955A230502FD0090DB06 /* TreeNode.swift */; };
 		5E51C10122FCFF50006C5B1B /* E_013_RomanToInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E51C10022FCFF50006C5B1B /* E_013_RomanToInt.swift */; };
 		5E93D3062BA8333300AE427B /* E_027_RemoveElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E93D3052BA8333300AE427B /* E_027_RemoveElement.swift */; };
+		5E93D3092BA9871500AE427B /* E_977_SortedSquares.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E93D3082BA9871500AE427B /* E_977_SortedSquares.swift */; };
+		5E93D30B2BAAB73700AE427B /* E_209_MinSubArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E93D30A2BAAB73700AE427B /* E_209_MinSubArray.swift */; };
+		5E93D30D2BAAC3BF00AE427B /* E_059_GenerateMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E93D30C2BAAC3BE00AE427B /* E_059_GenerateMatrix.swift */; };
 		5EA7792C2314056200717BF6 /* E_202_HappyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA7792B2314056200717BF6 /* E_202_HappyNumber.swift */; };
 		5EA7792E23140D3B00717BF6 /* E_136_SingleNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA7792D23140D3B00717BF6 /* E_136_SingleNumber.swift */; };
 		5EA7793023140F6700717BF6 /* E_198_Rob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA7792F23140F6700717BF6 /* E_198_Rob.swift */; };
@@ -73,6 +76,9 @@
 		5E3D955A230502FD0090DB06 /* TreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 		5E51C10022FCFF50006C5B1B /* E_013_RomanToInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_013_RomanToInt.swift; sourceTree = "<group>"; };
 		5E93D3052BA8333300AE427B /* E_027_RemoveElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_027_RemoveElement.swift; sourceTree = "<group>"; };
+		5E93D3082BA9871500AE427B /* E_977_SortedSquares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_977_SortedSquares.swift; sourceTree = "<group>"; };
+		5E93D30A2BAAB73700AE427B /* E_209_MinSubArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_209_MinSubArray.swift; sourceTree = "<group>"; };
+		5E93D30C2BAAC3BE00AE427B /* E_059_GenerateMatrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_059_GenerateMatrix.swift; sourceTree = "<group>"; };
 		5EA7792B2314056200717BF6 /* E_202_HappyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_202_HappyNumber.swift; sourceTree = "<group>"; };
 		5EA7792D23140D3B00717BF6 /* E_136_SingleNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_136_SingleNumber.swift; sourceTree = "<group>"; };
 		5EA7792F23140F6700717BF6 /* E_198_Rob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_198_Rob.swift; sourceTree = "<group>"; };
@@ -121,6 +127,14 @@
 			path = Structure;
 			sourceTree = "<group>";
 		};
+		5E93D3072BA986ED00AE427B /* 0901-1000 */ = {
+			isa = PBXGroup;
+			children = (
+				5E93D3082BA9871500AE427B /* E_977_SortedSquares.swift */,
+			);
+			path = "0901-1000";
+			sourceTree = "<group>";
+		};
 		5EC39A4622F98F3B005DD359 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +164,7 @@
 				5EDE35ED24BE713300F4CB53 /* 0401-0500 */,
 				5EDE35EF24BE714700F4CB53 /* 0601-0700 */,
 				5EDE35EE24BE713F00F4CB53 /* 0501-0600 */,
+				5E93D3072BA986ED00AE427B /* 0901-1000 */,
 				5EC39A7422F98F4B005DD359 /* Supporting Files */,
 			);
 			path = LeetCodeSwift;
@@ -189,11 +204,12 @@
 				5E3D9522230197160090DB06 /* E_020_BracketsisValid.swift */,
 				5E3D9526230257560090DB06 /* E_021_MergeTwoLists.swift */,
 				5E3D952823026A170090DB06 /* E_026_RemoveDuplicates.swift */,
+				5E93D3052BA8333300AE427B /* E_027_RemoveElement.swift */,
 				419B29752303735A008EB8E4 /* E_069_SquareOfX.swift */,
 				5E3D953F2303947B0090DB06 /* E_070_ClimbStairs.swift */,
 				5E3D95532304EC550090DB06 /* E_066_PlusOne.swift */,
 				5E3D95562304F8460090DB06 /* E_088_MergeTowArray.swift */,
-				5E93D3052BA8333300AE427B /* E_027_RemoveElement.swift */,
+				5E93D30C2BAAC3BE00AE427B /* E_059_GenerateMatrix.swift */,
 			);
 			path = "0001-0100";
 			sourceTree = "<group>";
@@ -219,6 +235,7 @@
 				5EF77434230C1FCE00EFCE2C /* E_268_MissingNumber.swift */,
 				5EF77436230C2E2400EFCE2C /* E_242_IsAnagram.swift */,
 				5E076F23230F5CE1002FF51C /* E_237_DeleteListNode.swift */,
+				5E93D30A2BAAB73700AE427B /* E_209_MinSubArray.swift */,
 			);
 			path = "0201-0300";
 			sourceTree = "<group>";
@@ -375,11 +392,14 @@
 				5E51C10122FCFF50006C5B1B /* E_013_RomanToInt.swift in Sources */,
 				5E3D95572304F8460090DB06 /* E_088_MergeTowArray.swift in Sources */,
 				5E076F26230F5E79002FF51C /* E_344_ReverseString.swift in Sources */,
+				5E93D30D2BAAC3BF00AE427B /* E_059_GenerateMatrix.swift in Sources */,
 				5E3D95402303947B0090DB06 /* E_070_ClimbStairs.swift in Sources */,
+				5E93D30B2BAAB73700AE427B /* E_209_MinSubArray.swift in Sources */,
 				5EF77435230C1FCE00EFCE2C /* E_268_MissingNumber.swift in Sources */,
 				5EC39A5522F98F3B005DD359 /* FirstViewController.swift in Sources */,
 				5E3D95542304EC550090DB06 /* E_066_PlusOne.swift in Sources */,
 				5E20EE9924BE4DE900E725A6 /* M_120_TriangleMinimumTotal.swift in Sources */,
+				5E93D3092BA9871500AE427B /* E_977_SortedSquares.swift in Sources */,
 				5E076F22230F5367002FF51C /* E_206_ReverseList.swift in Sources */,
 				419B29762303735A008EB8E4 /* E_069_SquareOfX.swift in Sources */,
 			);
@@ -588,6 +608,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69XHTLCF36;
 				INFOPLIST_FILE = LeetCodeSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -609,6 +630,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69XHTLCF36;
 				INFOPLIST_FILE = LeetCodeSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

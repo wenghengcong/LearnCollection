@@ -141,5 +141,10 @@ class LeetCodeSwiftTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func test059() {
+        let matrix = E_059_GenerateMatrix.generateMatrix(3)
+        XCTAssertEqual(matrix, [[1,2,3],[8,9,4],[7,6,5]])
+    }
 
 }
