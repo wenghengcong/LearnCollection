@@ -1,4 +1,6 @@
 node_modules/
 *.xcuserstate
 *.xcuserdatad
-Icon
+Icon
+.gitignore
+**/.DS_Store
