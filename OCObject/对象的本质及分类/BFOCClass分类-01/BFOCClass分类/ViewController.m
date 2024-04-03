@@ -27,8 +27,8 @@
 {
     [self testNSObject];
 //    NSLog(@"----------------------");
-//    [self testBFPerson];
-//    [self testMethod];
+    [self testBFPerson];
+    [self testMethod];
 }
 
 
@@ -154,9 +154,6 @@
           class_isMetaClass(personMetaClass1),
           personMetaClass2,
           class_isMetaClass(personMetaClass2));
-
-
-    
     NSLog(@"================================");
 }
 

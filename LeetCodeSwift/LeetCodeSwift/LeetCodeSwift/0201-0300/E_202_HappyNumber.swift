@@ -14,8 +14,6 @@ import Foundation
 /// 然后重复这个过程直到这个数变为 1，也可能是无限循环但始终变不到 1。
 /// 如果可以变为 1，那么这个数就是快乐数。
 class E_202_HappyNumber {
-    
-    
     /// 将每次计算的元素放进集合，如果有循环就能判断出来
     /// - Parameter n: <#n description#>
     class func isHappy(_ n: Int) -> Bool {

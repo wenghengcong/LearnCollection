@@ -95,7 +95,6 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding);
 - (instancetype)initWithIvar:(Ivar)ivar;
 @end
 
-
 /**
  Method information.
  */
