@@ -147,4 +147,24 @@ class LeetCodeSwiftTests: XCTestCase {
         XCTAssertEqual(matrix, [[1,2,3],[8,9,4],[7,6,5]])
     }
 
+    func test_203() {
+        let l1_7 = ListNode(6), l1_6 = ListNode(5, l1_7), l1_5 = ListNode(4, l1_6)
+        let l1_4 = ListNode(3, l1_5), l1_3 = ListNode(6, l1_4), l1_2 = ListNode(2, l1_3), l1_1 = ListNode(1, l1_2)
+        let l1_remove = 6
+        l1_1.printAllNode()
+        let l1_newHead = E_203_RemoveElements.removeElements_2(l1_1, l1_remove)
+        l1_newHead?.printAllNode()
+        
+        let l2_4 = ListNode(7), l2_3 = ListNode(7, l2_4), l2_2 = ListNode(7, l2_3), l2_1 = ListNode(7, l2_2)
+        let l2_remove = 7
+        l2_1.printAllNode()
+        let l2_newHead = E_203_RemoveElements.removeElements_2(l2_1, l2_remove)
+        l2_newHead?.printAllNode()
+
+        let l3_4 = ListNode(4), l3_3 = ListNode(2, l3_4), l3_2 = ListNode(4, l3_3), l3_1 = ListNode(1, l3_2)
+        let l3_remove = 1
+        l3_1.printAllNode()
+        let l3_newHead = E_203_RemoveElements.removeElements_2(l3_1, l3_remove)
+        l3_newHead?.printAllNode()
+    }
 }
