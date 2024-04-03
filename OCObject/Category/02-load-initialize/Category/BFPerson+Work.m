@@ -12,23 +12,23 @@
 
 + (void)load
 {
-    NSLog(@"+[BFPerson load]--Wrok Cat");
+    NSLog(@"+[BFPerson load]--Work Cat");
 }
 
 + (void)initialize
 {
-    NSLog(@"+[BFPerson initialize]--Wrok Cat");
+    NSLog(@"+[BFPerson initialize]--Work Cat");
 }
 
 
 - (void)work
 {
-    NSLog(@"-[BFPerson work]--Wrok Cat");
+    NSLog(@"-[BFPerson work]--Work Cat");
 }
 
 + (void)workIn:(NSString *)city
 {
-    NSLog(@"+[BFPerson workIn:]--Wrok Cat");
+    NSLog(@"+[BFPerson workIn:]--Work Cat");
 }
 
 - (void)test
