@@ -8,7 +8,8 @@
 
 import Foundation
 
-public class ListNode {
+public class ListNode: CustomStringConvertible {
+
     public var val: Int
     public var next: ListNode?
     
@@ -22,18 +23,24 @@ public class ListNode {
         self.next = next;
     }
     
-    public func printAllNode() {
-        var nodesStr = "\(self.val)"
+
+    public var description: String {
+        var nodesStr = "head->\(self.val)"
         var nextNode = self.next
         while nextNode != nil {
             let nextVal = nextNode!.val
-            nodesStr = nodesStr + "-\(nextVal)"
+            nodesStr = nodesStr + "->\(nextVal)"
             nextNode = nextNode?.next
         }
         if nodesStr.isEmpty {
             nodesStr = "[]"
         }
-        print("nodes: \(nodesStr)")
+        nodesStr = "linklist: \(nodesStr)"
+        return nodesStr
+    }
+
+    public func printAllNode() {
+        print(description)
     }
 }
 
