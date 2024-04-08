@@ -42,6 +42,7 @@ class E_206_ReverseList {
     func reverseList2(_ head: ListNode?) -> ListNode? {
         return reverse(pre: nil, cur: head)
     }
+    
     func reverse(pre: ListNode?, cur: ListNode?) -> ListNode? {
         if cur == nil {
             return pre

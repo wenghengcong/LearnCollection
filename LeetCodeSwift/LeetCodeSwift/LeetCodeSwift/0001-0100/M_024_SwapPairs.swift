@@ -27,11 +27,11 @@ class M_024_SwapPairs {
         dummyHead.next = head
         
         // 如果原来节点顺序是：cur-1-2-3，交换后应该是cur-2-1-3
-        // cur.next = 2,2.next=1,1.next=3 三个步骤
+        // cur.next = 2, 2.next=1, 1.next=3 三个步骤
         var cur:ListNode? = dummyHead
         while cur?.next != nil && cur?.next?.next != nil {
             // 注意此处的判空条件，因为cur是在两个交换节点的前一个位置
-            // 所以，如果需要较好，那么cur.next和cur.next.next必须非空
+            // 所以，如果需要交换，那么cur.next和cur.next.next必须非空
             let first = cur?.next       // cur后的第一个节点
             let sec = cur?.next?.next   // cur后的第二个节点
             let third = cur?.next?.next?.next    // cur后的第三个节点
@@ -39,7 +39,7 @@ class M_024_SwapPairs {
             cur?.next = sec
             sec?.next = first
             first?.next = third
-            cur = cur?.next?.next
+            cur = cur?.next?.next   // cur移动两位，准备下一轮交换
         }
         return dummyHead.next
     }
