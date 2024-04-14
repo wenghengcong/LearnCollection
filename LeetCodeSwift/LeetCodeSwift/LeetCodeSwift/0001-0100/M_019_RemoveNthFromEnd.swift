@@ -20,7 +20,7 @@ class M_019_RemoveNthFromEnd {
                 return head
             }
             // 虚拟头结点方便删除头结点的特殊情况
-            var dummyHead = ListNode(-1)
+            let dummyHead = ListNode(-1)
             dummyHead.next = head
 
             var slow: ListNode? = dummyHead

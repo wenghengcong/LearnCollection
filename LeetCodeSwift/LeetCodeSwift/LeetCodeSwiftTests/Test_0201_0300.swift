@@ -62,6 +62,15 @@ final class Test_0201_0300: XCTestCase {
         l3_newHead?.printAllNode()
     }
 
+    func test_242() {
+        let s = "anagram", t = "nagaram"
+        let s1 = "rat", t1 = "car"
+        let res = E_242_IsAnagram.isAnagram2(s, t)
+        let res1 = E_242_IsAnagram.isAnagram2(s1, t1)
+        XCTAssert(res == true)
+        XCTAssert(res1 == false)
+    }
+
     func test_268() {
         //        var nums = [9,6,4,2,3,5,7,0,1]
         //        MoveZeroes.moveZeroes(&nums)

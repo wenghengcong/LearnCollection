@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -59,6 +59,7 @@
 		BAC0DD582BBE5161002644F5 /* M_019_RemoveNthFromEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0DD572BBE5161002644F5 /* M_019_RemoveNthFromEnd.swift */; };
 		BAC0DD5A2BBE7DC6002644F5 /* E_160_GetIntersectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0DD592BBE7DC6002644F5 /* E_160_GetIntersectionNode.swift */; };
 		BAC0DD5C2BC13CEE002644F5 /* M_142_DetectCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0DD5B2BC13CEE002644F5 /* M_142_DetectCycle.swift */; };
+		BAC0DD5F2BCBECF4002644F5 /* E_1002_CommonChars.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0DD5E2BCBECF4002644F5 /* E_1002_CommonChars.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		BAC0DD572BBE5161002644F5 /* M_019_RemoveNthFromEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_019_RemoveNthFromEnd.swift; sourceTree = "<group>"; };
 		BAC0DD592BBE7DC6002644F5 /* E_160_GetIntersectionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_160_GetIntersectionNode.swift; sourceTree = "<group>"; };
 		BAC0DD5B2BC13CEE002644F5 /* M_142_DetectCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_142_DetectCycle.swift; sourceTree = "<group>"; };
+		BAC0DD5E2BCBECF4002644F5 /* E_1002_CommonChars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_1002_CommonChars.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				5EDE35EE24BE713F00F4CB53 /* 0501-0600 */,
 				5E85F9022BBBE1B300383379 /* 0700-0800 */,
 				5E93D3072BA986ED00AE427B /* 0901-1000 */,
+				BAC0DD5D2BCBECD8002644F5 /* 1000-2000 */,
 				5EC39A7422F98F4B005DD359 /* Supporting Files */,
 			);
 			path = LeetCodeSwift;
@@ -323,6 +326,14 @@
 			path = "0601-0700";
 			sourceTree = "<group>";
 		};
+		BAC0DD5D2BCBECD8002644F5 /* 1000-2000 */ = {
+			isa = PBXGroup;
+			children = (
+				BAC0DD5E2BCBECF4002644F5 /* E_1002_CommonChars.swift */,
+			);
+			path = "1000-2000";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,8 +378,9 @@
 		5EC39A4722F98F3B005DD359 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1530;
 				ORGANIZATIONNAME = LuCi;
 				TargetAttributes = {
 					5EC39A4E22F98F3B005DD359 = {
@@ -441,6 +453,7 @@
 				5E3D9523230197160090DB06 /* E_020_BracketsisValid.swift in Sources */,
 				5E3D952923026A170090DB06 /* E_026_RemoveDuplicates.swift in Sources */,
 				5EC64E2622FD23820063ED6F /* E_014_LongestCommonPrefix.swift in Sources */,
+				BAC0DD5F2BCBECF4002644F5 /* E_1002_CommonChars.swift in Sources */,
 				BAC0DD5A2BBE7DC6002644F5 /* E_160_GetIntersectionNode.swift in Sources */,
 				5E3C653822FC417300392CB5 /* E_007_ReverseInteger.swift in Sources */,
 				5E3D9559230502CB0090DB06 /* E_104_TreeMaxDepth.swift in Sources */,
@@ -551,6 +564,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -613,6 +627,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
