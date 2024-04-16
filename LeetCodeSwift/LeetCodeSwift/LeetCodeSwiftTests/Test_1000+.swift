@@ -1,15 +1,15 @@
 //
-//  Test_0401_0500.swift
+//  Test_1000+.swift
 //  LeetCodeSwiftTests
 //
-//  Created by Nemo on 2024/4/4.
+//  Created by Nemo on 2024/4/16.
 //  Copyright © 2024 LuCi. All rights reserved.
 //
 
 import XCTest
 @testable import LeetCodeSwift
 
-final class Test_0401_0500: XCTestCase {
+final class Test_1000_: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -33,15 +33,10 @@ final class Test_0401_0500: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
-    func test_454() {
-        let nums1 = [1,2], nums2 = [-2,-1], nums3 = [-1,2], nums4 = [0,2]
-        let res = M_454_FourSumCount().fourSumCount(nums1, nums2, nums3, nums4)
-        print("res: \(res)")
-        
-        let nums1_1 = [0], nums2_1 = [0], nums3_1 = [0], nums4_1 = [0]
-        let res_1 = M_454_FourSumCount().fourSumCount(nums1_1, nums2_1, nums3_1, nums4_1)
-        print("res: \(res_1)")
-    }
 
+    func test_1002() {
+        let words = ["bella","label","roller"]
+        let res = E_1002_CommonChars.commonChars(words)
+        print(res)
+    }
 }

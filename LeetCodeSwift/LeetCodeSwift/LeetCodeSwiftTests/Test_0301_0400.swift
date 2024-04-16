@@ -34,4 +34,11 @@ final class Test_0301_0400: XCTestCase {
         }
     }
 
+    func test_349()  {
+        let res = E_349_Intersection().intersection([1,2,2,1], [2,2])
+        print("res: \(res)")
+        
+        let res2 = E_349_Intersection().intersection([4,9,5], [9,4,9,8,4])
+        print("res: \(res2)")
+    }
 }

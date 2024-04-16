@@ -32,6 +32,10 @@
 		5E93D3092BA9871500AE427B /* E_977_SortedSquares.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E93D3082BA9871500AE427B /* E_977_SortedSquares.swift */; };
 		5E93D30B2BAAB73700AE427B /* E_209_MinSubArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E93D30A2BAAB73700AE427B /* E_209_MinSubArray.swift */; };
 		5E93D30D2BAAC3BF00AE427B /* E_059_GenerateMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E93D30C2BAAC3BE00AE427B /* E_059_GenerateMatrix.swift */; };
+		5E9996C32BCE5B7B00B8A299 /* Test_1000+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9996C22BCE5B7B00B8A299 /* Test_1000+.swift */; };
+		5E9996C52BCE644E00B8A299 /* E_349_Intersection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9996C42BCE644E00B8A299 /* E_349_Intersection.swift */; };
+		5E9996C72BCE804900B8A299 /* M_454_FourSumCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9996C62BCE804900B8A299 /* M_454_FourSumCount.swift */; };
+		5E9996C92BCE937B00B8A299 /* E_383_CanConstruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9996C82BCE937B00B8A299 /* E_383_CanConstruct.swift */; };
 		5EA7792C2314056200717BF6 /* E_202_HappyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA7792B2314056200717BF6 /* E_202_HappyNumber.swift */; };
 		5EA7792E23140D3B00717BF6 /* E_136_SingleNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA7792D23140D3B00717BF6 /* E_136_SingleNumber.swift */; };
 		5EA7793023140F6700717BF6 /* E_198_Rob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA7792F23140F6700717BF6 /* E_198_Rob.swift */; };
@@ -98,6 +102,10 @@
 		5E93D3082BA9871500AE427B /* E_977_SortedSquares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_977_SortedSquares.swift; sourceTree = "<group>"; };
 		5E93D30A2BAAB73700AE427B /* E_209_MinSubArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_209_MinSubArray.swift; sourceTree = "<group>"; };
 		5E93D30C2BAAC3BE00AE427B /* E_059_GenerateMatrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_059_GenerateMatrix.swift; sourceTree = "<group>"; };
+		5E9996C22BCE5B7B00B8A299 /* Test_1000+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Test_1000+.swift"; sourceTree = "<group>"; };
+		5E9996C42BCE644E00B8A299 /* E_349_Intersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_349_Intersection.swift; sourceTree = "<group>"; };
+		5E9996C62BCE804900B8A299 /* M_454_FourSumCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = M_454_FourSumCount.swift; path = "LeetCodeSwift/0401-0500/M_454_FourSumCount.swift"; sourceTree = SOURCE_ROOT; };
+		5E9996C82BCE937B00B8A299 /* E_383_CanConstruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_383_CanConstruct.swift; sourceTree = "<group>"; };
 		5EA7792B2314056200717BF6 /* E_202_HappyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_202_HappyNumber.swift; sourceTree = "<group>"; };
 		5EA7792D23140D3B00717BF6 /* E_136_SingleNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_136_SingleNumber.swift; sourceTree = "<group>"; };
 		5EA7792F23140F6700717BF6 /* E_198_Rob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_198_Rob.swift; sourceTree = "<group>"; };
@@ -226,6 +234,7 @@
 				BAC0DD512BBE27E3002644F5 /* Test_0701_0800.swift */,
 				BAC0DD532BBE27EB002644F5 /* Test_0801_0900.swift */,
 				BAC0DD552BBE27F3002644F5 /* Test_0901_1000.swift */,
+				5E9996C22BCE5B7B00B8A299 /* Test_1000+.swift */,
 				5EC39A6B22F98F3C005DD359 /* Info.plist */,
 			);
 			path = LeetCodeSwiftTests;
@@ -300,6 +309,8 @@
 			isa = PBXGroup;
 			children = (
 				5E076F25230F5E79002FF51C /* E_344_ReverseString.swift */,
+				5E9996C42BCE644E00B8A299 /* E_349_Intersection.swift */,
+				5E9996C82BCE937B00B8A299 /* E_383_CanConstruct.swift */,
 			);
 			path = "0301-0400";
 			sourceTree = "<group>";
@@ -307,6 +318,7 @@
 		5EDE35ED24BE713300F4CB53 /* 0401-0500 */ = {
 			isa = PBXGroup;
 			children = (
+				5E9996C62BCE804900B8A299 /* M_454_FourSumCount.swift */,
 			);
 			path = "0401-0500";
 			sourceTree = "<group>";
@@ -437,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EC39A5722F98F3B005DD359 /* SecondViewController.swift in Sources */,
+				5E9996C92BCE937B00B8A299 /* E_383_CanConstruct.swift in Sources */,
 				5EF77437230C2E2400EFCE2C /* E_242_IsAnagram.swift in Sources */,
 				5EA7792C2314056200717BF6 /* E_202_HappyNumber.swift in Sources */,
 				BAC0DD5C2BC13CEE002644F5 /* M_142_DetectCycle.swift in Sources */,
@@ -450,6 +463,7 @@
 				5E076F20230F4548002FF51C /* E_125_IsPalindrome.swift in Sources */,
 				5EC39A7622F98F89005DD359 /* E_001_TwoSum.swift in Sources */,
 				5E93D3062BA8333300AE427B /* E_027_RemoveElement.swift in Sources */,
+				5E9996C72BCE804900B8A299 /* M_454_FourSumCount.swift in Sources */,
 				5E3D9523230197160090DB06 /* E_020_BracketsisValid.swift in Sources */,
 				5E3D952923026A170090DB06 /* E_026_RemoveDuplicates.swift in Sources */,
 				5EC64E2622FD23820063ED6F /* E_014_LongestCommonPrefix.swift in Sources */,
@@ -465,6 +479,7 @@
 				5E3D95572304F8460090DB06 /* E_088_MergeTowArray.swift in Sources */,
 				5E85F9062BBD5F8200383379 /* M_024_SwapPairs.swift in Sources */,
 				5E076F26230F5E79002FF51C /* E_344_ReverseString.swift in Sources */,
+				5E9996C52BCE644E00B8A299 /* E_349_Intersection.swift in Sources */,
 				5E93D30D2BAAC3BF00AE427B /* E_059_GenerateMatrix.swift in Sources */,
 				5E3D95402303947B0090DB06 /* E_070_ClimbStairs.swift in Sources */,
 				5E93D30B2BAAB73700AE427B /* E_209_MinSubArray.swift in Sources */,
@@ -488,6 +503,7 @@
 				BAC0DD462BBE15EB002644F5 /* Test_0001_0100.swift in Sources */,
 				BAC0DD4A2BBE2784002644F5 /* Test_0301_0400.swift in Sources */,
 				BAC0DD502BBE27DC002644F5 /* Test_0601_0700.swift in Sources */,
+				5E9996C32BCE5B7B00B8A299 /* Test_1000+.swift in Sources */,
 				BAC0DD4C2BBE278D002644F5 /* Test_0401_0500.swift in Sources */,
 				5E20EE9B24BE51E700E725A6 /* Test_0101_0200.swift in Sources */,
 				BAC0DD482BBE2777002644F5 /* Test_0201_0300.swift in Sources */,
