@@ -15,7 +15,7 @@ class E_242_IsAnagram {
     /// 哈希表
     class func isAnagram(_ s: String, _ t: String) -> Bool {
         if s.count != t.count {
-               return false
+            return false
         }
         var count: [Int] = [Int].init(repeating: 0, count: 128)
         for cha: Character in s {
