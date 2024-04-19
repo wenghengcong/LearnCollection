@@ -1,2 +1,0 @@
-# LeetCodeSwift
-LeetCode by Swift
