@@ -16,6 +16,7 @@
 #define force_inline __inline__ __attribute__((always_inline))
 
 /// Foundation Class Type
+/// Foundation 的基础类型
 typedef NS_ENUM (NSUInteger, YYEncodingNSType) {
     YYEncodingTypeNSUnknown = 0,
     YYEncodingTypeNSString,
@@ -117,10 +118,11 @@ static force_inline NSNumber *YYNSNumberCreateFromID(__unsafe_unretained id valu
             return num;
         }
         if ([(NSString *)value rangeOfCharacterFromSet:dot].location != NSNotFound) {
-            const char *cstring = ((NSString *)value).UTF8String;
+            // 如果是包含.的浮点数
+            const char *cstring = ((NSString *)value).UTF8String;   // 转为c字符串
             if (!cstring) return nil;
-            double num = atof(cstring);
-            if (isnan(num) || isinf(num)) return nil;
+            double num = atof(cstring); // 将字符串转为double浮点数
+            if (isnan(num) || isinf(num)) return nil;   // 如果不是数字（isnan）或者不是正负无穷（isinf）
             return @(num);
         } else {
             const char *cstring = ((NSString *)value).UTF8String;
@@ -132,6 +134,7 @@ static force_inline NSNumber *YYNSNumberCreateFromID(__unsafe_unretained id valu
 }
 
 /// Parse string to date.
+/// 将if/else或者switch 转为数组进行查表，性能提升！
 static force_inline NSDate *YYNSDateFromString(__unsafe_unretained NSString *string) {
     typedef NSDate* (^YYNSDateParseBlock)(NSString *string);
     #define kParserNum 34
@@ -244,7 +247,7 @@ static force_inline NSDate *YYNSDateFromString(__unsafe_unretained NSString *str
 
 
 /// Get the 'NSBlock' class.
-static force_inline Class YYNSBlockClass() {
+static force_inline Class YYNSBlockClass(void) {
     static Class cls;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -258,7 +261,6 @@ static force_inline Class YYNSBlockClass() {
 }
 
 
-
 /**
  Get the ISO date formatter.
  
@@ -269,7 +271,7 @@ static force_inline Class YYNSBlockClass() {
  
  length: 20/24/25
  */
-static force_inline NSDateFormatter *YYISODateFormatter() {
+static force_inline NSDateFormatter *YYISODateFormatter(void) {
     static NSDateFormatter *formatter = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -527,8 +529,8 @@ static force_inline id YYValueForMultiKeys(__unsafe_unretained NSDictionary *dic
     while (curClassInfo && curClassInfo.superCls != nil) { // recursive parse super class, but ignore root class (NSObject/NSProxy)
         for (YYClassPropertyInfo *propertyInfo in curClassInfo.propertyInfos.allValues) {
             if (!propertyInfo.name) continue;
-            if (blacklist && [blacklist containsObject:propertyInfo.name]) continue;
-            if (whitelist && ![whitelist containsObject:propertyInfo.name]) continue;
+            if (blacklist && [blacklist containsObject:propertyInfo.name]) continue;    // 黑名单包含跳过
+            if (whitelist && ![whitelist containsObject:propertyInfo.name]) continue;   // 白名单没有包含，跳过
             _YYModelPropertyMeta *meta = [_YYModelPropertyMeta metaWithClassInfo:classInfo
                                                                     propertyInfo:propertyInfo
                                                                          generic:genericMapper[propertyInfo.name]];
@@ -773,6 +775,7 @@ static force_inline void ModelSetNumberToProperty(__unsafe_unretained id model,
 }
 
 /**
+ 具体设置函数
  Set value to model with a property meta.
  
  @discussion Caller should hold strong reference to the parameters before this function returns.
@@ -1062,9 +1065,9 @@ static void ModelSetValueForProperty(__unsafe_unretained id model,
                 
             case YYEncodingTypeBlock: {
                 if (isNull) {
-                    ((void (*)(id, SEL, void (^)()))(void *) objc_msgSend)((id)model, meta->_setter, (void (^)())NULL);
+                    ((void (*)(id, SEL, void (^)(void)))(void *) objc_msgSend)((id)model, meta->_setter, (void (^)(void))NULL);
                 } else if ([value isKindOfClass:YYNSBlockClass()]) {
-                    ((void (*)(id, SEL, void (^)()))(void *) objc_msgSend)((id)model, meta->_setter, (void (^)())value);
+                    ((void (*)(id, SEL, void (^)(void)))(void *) objc_msgSend)((id)model, meta->_setter, (void (^)(void))value);
                 }
             } break;
                 
@@ -1147,7 +1150,7 @@ static void ModelSetWithPropertyMetaArrayFunction(const void *_propertyMeta, voi
     
     if (value) {
         __unsafe_unretained id model = (__bridge id)(context->model);
-        ModelSetValueForProperty(model, value, propertyMeta);
+        ModelSetValueForProperty(model, value, propertyMeta);   // 真正的设值
     }
 }
 
@@ -1449,9 +1452,10 @@ static NSString *ModelDescription(NSObject *model) {
     return dic;
 }
 
+/// 入口
 + (instancetype)modelWithJSON:(id)json {
-    NSDictionary *dic = [self _yy_dictionaryWithJSON:json];
-    return [self modelWithDictionary:dic];
+    NSDictionary *dic = [self _yy_dictionaryWithJSON:json]; // 1. json 转 Dictionary
+    return [self modelWithDictionary:dic];  // 2. dictionary 转 model
 }
 
 + (instancetype)modelWithDictionary:(NSDictionary *)dictionary {
@@ -1486,6 +1490,7 @@ static NSString *ModelDescription(NSObject *model) {
         if (![dic isKindOfClass:[NSDictionary class]]) return NO;
     }
     
+    // 需要在CFArrayApplyFunction函数中传递的上下文
     ModelSetContext context = {0};
     context.modelMeta = (__bridge void *)(modelMeta);
     context.model = (__bridge void *)(self);
