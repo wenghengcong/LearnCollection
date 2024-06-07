@@ -1,0 +1,6 @@
+framework module SDWebImage {
+  umbrella header "SDWebImage-Core-MapKit-macOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

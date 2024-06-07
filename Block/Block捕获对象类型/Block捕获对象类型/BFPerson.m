@@ -13,7 +13,7 @@
 - (void)dealloc
 {
 //    [super dealloc];       //MRC下打开，ARC下注释
-    NSLog(@"BFPerson delloc");
+    NSLog(@"BFPerson dealloc");
 }
 
 @end
