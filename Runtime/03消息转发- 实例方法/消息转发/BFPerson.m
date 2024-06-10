@@ -12,8 +12,6 @@
 #import <objc/runtime.h>
 
 @implementation BFPerson
-
-
 /**
  1.未实现备援接收者
  */
@@ -33,7 +31,7 @@
         return signature;
     } else if (aSelector == @selector(eat:)) {
 //        return [NSMethodSignature signatureWithObjCTypes:"v@:@"];
-        // 以这种方式返回，注意不要使得BFBoy继承与BFPerson，否则假如BFBoy未实现methodSignatureForSelector，
+        // 以这种方式返回，注意不要使得BFBoy继承于BFPerson，否则假如BFBoy未实现methodSignatureForSelector，
         // 就会调用父类的methodSignatureForSelector，也就是本方法，会无限循环执行
         NSMethodSignature *signature = [[BFBoy alloc] methodSignatureForSelector:@selector(eat:)];
         return signature;

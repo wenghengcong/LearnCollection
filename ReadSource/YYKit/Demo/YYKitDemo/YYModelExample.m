@@ -21,7 +21,7 @@
 @implementation YYBook
 @end
 
-static void SimpleObjectExample() {
+static void SimpleObjectExample(void) {
     YYBook *book = [YYBook modelWithJSON:@"     \
     {                                           \
        \"name\": \"Harry Potter\",              \
@@ -56,7 +56,7 @@ static void SimpleObjectExample() {
 @implementation YYRepo
 @end
 
-static void NestObjectExample() {
+static void NestObjectExample(void) {
     YYRepo *repo = [YYRepo modelWithJSON:@"         \
     {                                               \
         \"rid\": 123456789,                         \
@@ -100,7 +100,7 @@ static void NestObjectExample() {
 }
 @end
 
-static void ContainerObjectExample() {
+static void ContainerObjectExample(void) {
     YYAlbum *album = [YYAlbum modelWithJSON:@"          \
     {                                                   \
     \"name\" : \"Happy Birthday\",                      \
@@ -151,7 +151,7 @@ static void ContainerObjectExample() {
 }
 @end
 
-static void CustomMapperExample() {
+static void CustomMapperExample(void) {
     YYMessage *message = [YYMessage modelWithJSON:@"{\"i\":\"2000000001\",\"c\":\"Hello\",\"t\":\"1437237598000\"}"];
     NSString *messageJSON = [message modelToJSONString];
     NSLog(@"Book: %@", messageJSON);
@@ -176,7 +176,7 @@ static void CustomMapperExample() {
 - (BOOL)isEqual:(id)object { return [self modelIsEqual:object]; }
 @end
 
-static void CodingCopyingHashEqualExample() {
+static void CodingCopyingHashEqualExample(void) {
     YYShadow *shadow = [YYShadow new];
     shadow.name = @"Test";
     shadow.size = CGSizeMake(10, 0);
