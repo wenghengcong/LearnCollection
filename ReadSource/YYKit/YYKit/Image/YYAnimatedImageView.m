@@ -224,6 +224,8 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
     return nil;
 }
 
+
+/// 当前图片的type，是否是highlighted，非highlighted下优先查看animationImages
 - (YYAnimatedImageType)currentImageType {
     YYAnimatedImageType curType = YYAnimatedImageTypeNone;
     if (self.highlighted) {
@@ -263,6 +265,7 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
             hasContentsRect = [((UIImage<YYAnimatedImage> *) newVisibleImage) respondsToSelector:@selector(animatedImageContentsRectAtIndex:)];
         }
     }
+    // 图片本身未实现animatedImageContentsRectAtIndex:，但是 _curImageHasContentsRect = YES
     if (!hasContentsRect && _curImageHasContentsRect) {
         if (!CGRectEqualToRect(self.layer.contentsRect, CGRectMake(0, 0, 1, 1)) ) {
             [CATransaction begin];

@@ -358,7 +358,8 @@ YYSYNTH_DUMMY_CLASS(NSString_YYAdd)
     if (self.length == 0 || [self hasSuffix:@"/"]) return 1;
     NSString *name = self.stringByDeletingPathExtension;
     __block CGFloat scale = 1;
-    [name enumerateRegexMatches:@"@[0-9]+\\.?[0-9]*x$" options:NSRegularExpressionAnchorsMatchLines usingBlock: ^(NSString *match, NSRange matchRange, BOOL *stop) {
+    // 匹配 @2.5x,@1x,@3.x中的2.5、1、3
+    [name enumerateRegexMatches:@"@[0-9]+\\.?[0-9]*x$"       options:NSRegularExpressionAnchorsMatchLines usingBlock: ^(NSString *match, NSRange matchRange, BOOL *stop) {
         scale = [match substringWithRange:NSMakeRange(1, match.length - 2)].doubleValue;
     }];
     return scale;

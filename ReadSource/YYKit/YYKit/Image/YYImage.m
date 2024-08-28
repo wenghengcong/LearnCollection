@@ -16,7 +16,7 @@
 @implementation YYImage {
     YYImageDecoder *_decoder;
     NSArray *_preloadedFrames;
-    dispatch_semaphore_t _preloadedLock;
+    dispatch_semaphore_t _preloadedLock;        // 性能高于互斥锁，但是一旦有等待，性能下降会比较快
     NSUInteger _bytesPerFrame;
 }
 
@@ -31,8 +31,9 @@
     
     // If no extension, guess by system supported (same as UIImage).
     NSArray *exts = ext.length > 0 ? @[ext] : @[@"", @"png", @"jpeg", @"jpg", @"gif", @"webp", @"apng"];
-    NSArray *scales = [NSBundle preferredScales];
+    NSArray *scales = [NSBundle preferredScales];   // 根据屏幕找到优先选用的倍率
     for (int s = 0; s < scales.count; s++) {
+        // 遍历图片文件后缀+倍率，寻找图片
         scale = ((NSNumber *)scales[s]).floatValue;
         NSString *scaledName = [res stringByAppendingNameScale:scale];
         for (NSString *e in exts) {
@@ -82,10 +83,10 @@
         self = [self initWithCGImage:image.CGImage scale:decoder.scale orientation:image.imageOrientation];
         if (!self) return nil;
         _animatedImageType = decoder.type;
-        if (decoder.frameCount > 1) {
+        if (decoder.frameCount > 1) {   // 多帧图像
             _decoder = decoder;
-            _bytesPerFrame = CGImageGetBytesPerRow(image.CGImage) * CGImageGetHeight(image.CGImage);
-            _animatedImageMemorySize = _bytesPerFrame * decoder.frameCount;
+            _bytesPerFrame = CGImageGetBytesPerRow(image.CGImage) * CGImageGetHeight(image.CGImage);    // 一帧大小
+            _animatedImageMemorySize = _bytesPerFrame * decoder.frameCount; // 总内存大小，这里认为每帧大小一致。图像格式和大小决定了一帧的大小
         }
         self.isDecodedForDisplay = YES;
     }
@@ -99,6 +100,7 @@
 - (void)setPreloadAllAnimatedImageFrames:(BOOL)preloadAllAnimatedImageFrames {
     if (_preloadAllAnimatedImageFrames != preloadAllAnimatedImageFrames) {
         if (preloadAllAnimatedImageFrames && _decoder.frameCount > 0) {
+            // 预加载且多帧
             NSMutableArray *frames = [NSMutableArray new];
             for (NSUInteger i = 0, max = _decoder.frameCount; i < max; i++) {
                 UIImage *img = [self animatedImageFrameAtIndex:i];

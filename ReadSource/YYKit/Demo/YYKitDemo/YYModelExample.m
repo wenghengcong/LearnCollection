@@ -69,6 +69,19 @@ static void NestObjectExample(void) {
     }"];
     NSString *repoJSON = [repo modelToJSONString];
     NSLog(@"Repo: %@", repoJSON);
+    
+    YYRepo *repo2 = [[YYRepo class] modelWithJSON:@"         \
+    {                                               \
+        \"rid\": 23,                         \
+        \"name\": \"YYKit\",                        \
+        \"createTime\" : \"2011-06-09T06:24:26Z\",  \
+        \"owner\": {                                \
+            \"uid\" : 989898,                       \
+            \"name\" : \"ibireme\"                  \
+        } \
+    }"];
+    NSString *repoJSON2 = [repo2 modelToJSONString];
+    NSLog(@"Repo 2: %@", repoJSON2);
 }
 
 

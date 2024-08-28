@@ -22,7 +22,7 @@
 static const int extended_data_key;
 
 /// Free disk space in bytes.
-static int64_t _YYDiskSpaceFree() {
+static int64_t _YYDiskSpaceFree(void) {
     NSError *error = nil;
     NSDictionary *attrs = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:&error];
     if (error) return -1;
@@ -36,7 +36,7 @@ static int64_t _YYDiskSpaceFree() {
 static NSMapTable *_globalInstances;
 static dispatch_semaphore_t _globalInstancesLock;
 
-static void _YYDiskCacheInitGlobal() {
+static void _YYDiskCacheInitGlobal(void) {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _globalInstancesLock = dispatch_semaphore_create(1);
@@ -60,8 +60,6 @@ static void _YYDiskCacheSetGlobal(YYDiskCache *cache) {
     [_globalInstances setObject:cache forKey:cache.path];
     dispatch_semaphore_signal(_globalInstancesLock);
 }
-
-
 
 @implementation YYDiskCache {
     YYKVStorage *_kv;

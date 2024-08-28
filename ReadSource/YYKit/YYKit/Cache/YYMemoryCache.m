@@ -20,11 +20,11 @@
 #endif
 
 #ifdef YYDispatchQueuePool_h
-static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
+static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue(void) {
     return YYDispatchQueueGetForQOS(NSQualityOfServiceUtility);
 }
 #else
-static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
+static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue(void) {
     return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
 }
 #endif
@@ -104,9 +104,9 @@ static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
     _totalCost += node->_cost;
     _totalCount++;
     if (_head) {
-        node->_next = _head;
-        _head->_prev = node;
-        _head = node;
+        node->_next = _head;    // node插入到current head前
+        _head->_prev = node;    // current head的prev指向新的node
+        _head = node;           // new head = node
     } else {
         _head = _tail = node;
     }
@@ -115,13 +115,18 @@ static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
 - (void)bringNodeToHead:(_YYLinkedMapNode *)node {
     if (_head == node) return;
     
-    if (_tail == node) {
+    // 删除当前结点node
+    if (_tail == node) {    // 如果移动的node是tail，那么需要将tail重新指定未current tail的prev
         _tail = node->_prev;
         _tail->_next = nil;
-    } else {
+    } else {    // 如果移动的node是在链表中的其他node，那么相当于删除当前的node
+        // 也就是当前node的prev结点的next是当前node的next
+        // 当前node的next结点的prev是当前node的prev
         node->_next->_prev = node->_prev;
         node->_prev->_next = node->_next;
     }
+    
+    // 将node变成头结点
     node->_next = _head;
     node->_prev = nil;
     _head->_prev = node;
@@ -134,13 +139,14 @@ static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
     _totalCount--;
     if (node->_next) node->_next->_prev = node->_prev;
     if (node->_prev) node->_prev->_next = node->_next;
+    // 注意这个逻辑
     if (_head == node) _head = node->_next;
     if (_tail == node) _tail = node->_prev;
 }
 
 - (_YYLinkedMapNode *)removeTailNode {
     if (!_tail) return nil;
-    _YYLinkedMapNode *tail = _tail;
+    _YYLinkedMapNode *tail = _tail; // 保留移除的tail
     CFDictionaryRemoveValue(_dic, (__bridge const void *)(_tail->_key));
     _totalCost -= _tail->_cost;
     _totalCount--;
@@ -162,6 +168,7 @@ static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
         CFMutableDictionaryRef holder = _dic;
         _dic = CFDictionaryCreateMutable(CFAllocatorGetDefault(), 0, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
         
+        // ！！！特别重要，将原来的dic在后台延迟释放
         if (_releaseAsynchronously) {
             dispatch_queue_t queue = _releaseOnMainThread ? dispatch_get_main_queue() : YYMemoryCacheGetReleaseQueue();
             dispatch_async(queue, ^{
@@ -228,9 +235,12 @@ static inline dispatch_queue_t YYMemoryCacheGetReleaseQueue() {
             }
             pthread_mutex_unlock(&_lock);
         } else {
+            //usleep(10 * 1000)在这里的作用是为了在无法立即获取所需锁的情况下，避免线程无休止地进行昂贵的忙等待，
+            //而是给予系统短暂的休息时间，这对于减少CPU占用、提高程序效率和响应速度是非常有帮助的。
             usleep(10 * 1000); //10 ms
         }
     }
+    // 延迟释放
     if (holder.count) {
         dispatch_queue_t queue = _lru->_releaseOnMainThread ? dispatch_get_main_queue() : YYMemoryCacheGetReleaseQueue();
         dispatch_async(queue, ^{

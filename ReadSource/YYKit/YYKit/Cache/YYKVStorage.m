@@ -736,15 +736,16 @@ static NSString *const kTrashDirectoryName = @"trash";
         if (![self _fileWriteWithName:filename data:value]) {
             return NO;
         }
-        if (![self _dbSaveWithKey:key value:value fileName:filename extendedData:extendedData]) {
+        if (![self _dbSaveWithKey:key value:value fileName:filename extendedData:extendedData]) {   // 存db失败，删除本地文件
             [self _fileDeleteWithName:filename];
             return NO;
         }
         return YES;
     } else {
-        if (_type != YYKVStorageTypeSQLite) {
+        // 文件名为空，原意不想用文件存储，即用db存储
+        if (_type != YYKVStorageTypeSQLite) {   // type却不是db，如果有对应的filename，删除对应文件存储
             NSString *filename = [self _dbGetFilenameWithKey:key];
-            if (filename) {
+            if (filename) { // db文件名获取成功，
                 [self _fileDeleteWithName:filename];
             }
         }
