@@ -41,10 +41,23 @@
     
     // 往RunLoop里面添加Source\Timer\Observer
     [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
-    [[NSRunLoop currentRunLoop] run];
-    
+    [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+
     NSLog(@"%s ----end----", __func__);
 }
 
+- (void)stopThread {
+    if (!self.thread) return;
+    
+    [self performSelector:@selector(stopRunLoop) onThread:self.thread withObject:nil waitUntilDone:NO];
+}
+
+- (void)stopRunLoop {
+    CFRunLoopStop(CFRunLoopGetCurrent());
+}
+
+- (void)clearThread {
+    self.thread = nil;
+}
 
 @end

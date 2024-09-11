@@ -28,9 +28,6 @@ typedef void (^BFPermenantThreadTask)(void);
  结束线程
  */
 - (void)stop;
-
-
-
 @end
 
 NS_ASSUME_NONNULL_END
