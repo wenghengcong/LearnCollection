@@ -416,6 +416,10 @@ static void _YYDiskCacheSetGlobal(YYDiskCache *cache) {
     return (NSData *)objc_getAssociatedObject(object, &extended_data_key);
 }
 
+/// 扩展数据
+/// - Parameters:
+///   - extendedData: 扩展数据
+///   - object: 对象
 + (void)setExtendedData:(NSData *)extendedData toObject:(id)object {
     if (!object) return;
     objc_setAssociatedObject(object, &extended_data_key, extendedData, OBJC_ASSOCIATION_RETAIN_NONATOMIC);

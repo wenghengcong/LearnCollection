@@ -42,7 +42,7 @@ static BOOL YYCGImageLastPixelFilled(CGImageRef image) {
 }
 
 /// Returns JPEG SOS (Start Of Scan) Marker
-static NSData *JPEGSOSMarker() {
+static NSData *JPEGSOSMarker(void) {
     // "Start Of Scan" Marker
     static NSData *marker = nil;
     static dispatch_once_t onceToken;
@@ -57,7 +57,7 @@ static NSData *JPEGSOSMarker() {
 static NSMutableSet *URLBlacklist;
 static dispatch_semaphore_t URLBlacklistLock;
 
-static void URLBlacklistInit() {
+static void URLBlacklistInit(void) {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         URLBlacklist = [NSMutableSet new];
@@ -248,6 +248,7 @@ static void URLInBlackListAdd(NSURL *url) {
         if (_cache &&
             !(_options & YYWebImageOptionUseNSURLCache) &&
             !(_options & YYWebImageOptionRefreshImageCache)) {
+            // 设置直接从memory cache读
             UIImage *image = [_cache getImageForKey:_cacheKey withType:YYImageCacheTypeMemory];
             if (image) {
                 [_lock lock];
@@ -258,6 +259,8 @@ static void URLInBlackListAdd(NSURL *url) {
                 [_lock unlock];
                 return;
             }
+            
+            // 从磁盘获取，注意YYWebImageOptionIgnoreDiskCache 是 ignore，所以要取非
             if (!(_options & YYWebImageOptionIgnoreDiskCache)) {
                 __weak typeof(self) _self = self;
                 dispatch_async([self.class _imageQueue], ^{
@@ -282,6 +285,7 @@ static void URLInBlackListAdd(NSURL *url) {
 - (void)_startRequest:(id)object {
     if ([self isCancelled]) return;
     @autoreleasepool {
+        // 如果屏蔽失败的url
         if ((_options & YYWebImageOptionIgnoreFailedURL) && URLBlackListContains(_request.URL)) {
             NSError *error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorFileDoesNotExist userInfo:@{ NSLocalizedDescriptionKey : @"Failed to load URL, blacklisted." }];
             [_lock lock];
@@ -670,7 +674,7 @@ static void URLInBlackListAdd(NSURL *url) {
 #pragma mark - Override NSOperation
 
 - (void)start {
-    @autoreleasepool {
+    @autoreleasepool { // 将整个任务封装在一个自动释放池中，确保任务完成时，所有的临时对象都能被释放，减少内存占用。
         [_lock lock];
         self.started = YES;
         if ([self isCancelled]) {

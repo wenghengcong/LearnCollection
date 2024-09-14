@@ -46,12 +46,14 @@ static inline dispatch_queue_t YYImageCacheDecodeQueue() {
 
 @implementation YYImageCache
 
+/// 估算算每张图片UIImage的内存
+/// - Parameter image: 图片对象
 - (NSUInteger)imageCost:(UIImage *)image {
     CGImageRef cgImage = image.CGImage;
     if (!cgImage) return 1;
     CGFloat height = CGImageGetHeight(cgImage);
     size_t bytesPerRow = CGImageGetBytesPerRow(cgImage);
-    NSUInteger cost = bytesPerRow * height;
+    NSUInteger cost = bytesPerRow * height; // 图片的总内存占用 = 每行的字节数 * 高度
     if (cost == 0) cost = 1;
     return cost;
 }
@@ -64,10 +66,15 @@ static inline dispatch_queue_t YYImageCacheDecodeQueue() {
     }
     if (scale <= 0) scale = [UIScreen mainScreen].scale;
     UIImage *image;
+    
+    // 是否允许处理动图
     if (_allowAnimatedImage) {
+        // 允许动画图片时，使用 YYImage 初始化
         image = [[YYImage alloc] initWithData:data scale:scale];
+        // 如果需要解码为显示，调用解码方法
         if (_decodeForDisplay) image = [image imageByDecoded];
     } else {
+        // 不允许动画图片时，使用 YYImageDecoder 进行解码，提取第一帧
         YYImageDecoder *decoder = [YYImageDecoder decoderWithData:data scale:scale];
         image = [decoder frameAtIndex:0 decodeForDisplay:_decodeForDisplay].image;
     }
@@ -119,7 +126,11 @@ static inline dispatch_queue_t YYImageCacheDecodeQueue() {
     [self setImage:image imageData:nil forKey:key withType:YYImageCacheTypeAll];
 }
 
-- (void)setImage:(UIImage *)image imageData:(NSData *)imageData forKey:(NSString *)key withType:(YYImageCacheType)type {
+/// 缓存的核心方法
+- (void)setImage:(UIImage *)image
+       imageData:(NSData *)imageData
+          forKey:(NSString *)key
+        withType:(YYImageCacheType)type {
     if (!key || (image == nil && imageData.length == 0)) return;
     
     __weak typeof(self) _self = self;

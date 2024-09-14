@@ -75,6 +75,7 @@
         operation.credential = [NSURLCredential credentialWithUser:_username password:_password persistence:NSURLCredentialPersistenceForSession];
     }
     if (operation) {
+        // _queue 可能会在多个线程中同时被访问和修改。如果直接在 if (_queue) 中访问 _queue，可能在执行判断时，它的值发生了变化，导致逻辑出错或产生意外行为。通过将 _queue 赋值给局部变量 queue，可以确保在当前方法执行期间，这个局部变量持有的是一个稳定的值，不会被其他线程修改
         NSOperationQueue *queue = _queue;
         if (queue) {
             [queue addOperation:operation];
