@@ -864,6 +864,13 @@ fail:
     return NO;
 }
 
+/*
+ 解码核心：将CGImageRef数据转化为位图数据：
+ 函数根据传入的decodeForDisplay参数分为两种不同的解码逻辑：
+    • 如果decodeForDisplay为YES，函数将重新渲染图像到一个新的位图上下文中，适合用于显示（会处理预乘Alpha等情况）。
+    • 如果decodeForDisplay为NO，函数直接复制原始图像的数据，不改变格式或重新绘制。
+ 这种机制在某些需要提高图像解码效率的情况下非常有用。例如，如果你想预先解码图像以提高后续显示时的性能，这种方法可以避免在主线程上解码图像带来的性能瓶颈。
+ */
 CGImageRef YYCGImageCreateDecodedCopy(CGImageRef imageRef, BOOL decodeForDisplay) {
     if (!imageRef) return NULL;
     size_t width = CGImageGetWidth(imageRef);
@@ -871,6 +878,12 @@ CGImageRef YYCGImageCreateDecodedCopy(CGImageRef imageRef, BOOL decodeForDisplay
     if (width == 0 || height == 0) return NULL;
     
     if (decodeForDisplay) { //decode with redraw (may lose some precision)
+        /*
+         图像重新绘制：函数创建一个新的 CGContextRef 位图上下文，将图像解码并绘制到该上下文中。绘制过程会应用一些图形库的默认行为，例如预乘 Alpha 通道等。
+             •预乘 Alpha：如果图像包含透明度（Alpha 通道），会采用预乘 Alpha（premultiplied alpha）的方法。这个处理方式通常在显示图像时效率更高，因为它减少了每次渲染时对透明度的额外计算。
+             •优化显示性能：这种解码方式类似于使用 UIGraphicsBeginImageContext() 或 UIView 的 drawRect: 方法。因为图像已经被预先解码为适合显示的格式，所以当后续需要在视图或图层中渲染时，渲染效率会提高，避免了在主线程上进行昂贵的解码操作。
+         */
+        
         CGImageAlphaInfo alphaInfo = CGImageGetAlphaInfo(imageRef) & kCGBitmapAlphaInfoMask;
         BOOL hasAlpha = NO;
         if (alphaInfo == kCGImageAlphaPremultipliedLast ||
@@ -891,6 +904,10 @@ CGImageRef YYCGImageCreateDecodedCopy(CGImageRef imageRef, BOOL decodeForDisplay
         return newImage;
         
     } else {
+        /*
+         • 保留原始格式：图像的数据和格式保持原样，不进行重新绘制。图像的 Alpha 通道不会被预乘，且其他图像属性（如色彩空间、位图信息等）完全保留。
+         • 避免重新渲染：这种方式避免了创建上下文和重新渲染的开销，图像数据直接被复制出来，没有被显示优化处理。
+         */
         CGColorSpaceRef space = CGImageGetColorSpace(imageRef);
         size_t bitsPerComponent = CGImageGetBitsPerComponent(imageRef);
         size_t bitsPerPixel = CGImageGetBitsPerPixel(imageRef);
@@ -1561,6 +1578,11 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
     return result;
 }
 
+
+/// 图片解码
+/// - Parameters:
+///   - index: 索引
+///   - decodeForDisplay: 是否需要显示
 - (YYImageFrame *)frameAtIndex:(NSUInteger)index decodeForDisplay:(BOOL)decodeForDisplay {
     YYImageFrame *result = nil;
     pthread_mutex_lock(&_lock);
@@ -1629,7 +1651,7 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
         extendToCanvas = YES;
     }
     
-    if (!_needBlend) {
+    if (!_needBlend) {// 无需混合处理的帧
         CGImageRef imageRef = [self _newUnblendedImageAtIndex:index extendToCanvas:extendToCanvas decoded:&decoded];
         if (!imageRef) return nil;
         if (decodeForDisplay && !decoded) {
@@ -1648,14 +1670,18 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
         return frame;
     }
     
-    // blend
+    // blend 需要混合处理的帧
     if (![self _createBlendContextIfNeeded]) return nil;
     CGImageRef imageRef = NULL;
     
     if (_blendFrameIndex + 1 == frame.index) {
+        // 检查当前帧的索引是否与上一个帧的索引连续（_blendFrameIndex + 1 == frame.index）。
+        // 如果是，调用 _newBlendedImageWithFrame:frame 获取混合后的图像。
         imageRef = [self _newBlendedImageWithFrame:frame];
         _blendFrameIndex = index;
     } else { // should draw canvas from previous frame
+        // 如果帧不连续或无法直接混合，清空当前的混合上下文画布，然后从 blendFromIndex
+        // 开始逐帧绘制直到当前帧。这些帧可能包含不同的混合模式，因此需要一帧帧地进行处理。
         _blendFrameIndex = NSNotFound;
         CGContextClearRect(_blendCanvas, CGRectMake(0, 0, _width, _height));
         
@@ -1936,6 +1962,15 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
     dispatch_semaphore_signal(_framesLock);
 }
 
+/*
+ 渐进式解码主要逻辑大致如下：
+
+ 使用CGImageSourceCreateIncremental(NULL)创建空图片源。
+ 使用CGImageSourceUpdateData()更新图片源
+ 使用CGImageSourceCreateImageAtIndex()创建图片
+
+ 渐进式解压可以在下载图片的过程中进行解压、显示，达到网页上显示图片的效果，体验不错。
+ */
 - (void)_updateSourceImageIO {
     _width = 0;
     _height = 0;
@@ -2405,6 +2440,7 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
     }
 }
 
+/// CGImageDestinationRef 提供了一种灵活且强大的方式来创建和写入图像文件。
 - (CGImageDestinationRef)_newImageDestination:(id)dest imageCount:(NSUInteger)count CF_RETURNS_RETAINED {
     if (!dest) return nil;
     CGImageDestinationRef destination = NULL;
@@ -2446,8 +2482,12 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
                         CFRelease(rotated);
                     }
                 }
+                /// 使用 CGImageDestinationAddImage 方法将 CGImageRef 对象添加到 CGImageDestinationRef 中。
                 if (image.CGImage) CGImageDestinationAddImage(destination, ((UIImage *)imageSrc).CGImage, (CFDictionaryRef)frameProperty);
             } else if ([imageSrc isKindOfClass:[NSURL class]]) {
+                /*
+                 CGImageDestinationAddImageFromSource 是 Core Graphics 框架中的一个函数，用于从 CGImageSourceRef 中直接添加图像到 CGImageDestinationRef。当需要从一个源文件中读取图像并将其写入到另一个目标文件时，可以避免显式地创建 CGImageRef 对象，从而提高效率。
+                 */
                 CGImageSourceRef source = CGImageSourceCreateWithURL((CFURLRef)imageSrc, NULL);
                 if (source) {
                     CGImageDestinationAddImageFromSource(destination, source, 0, (CFDictionaryRef)frameProperty);

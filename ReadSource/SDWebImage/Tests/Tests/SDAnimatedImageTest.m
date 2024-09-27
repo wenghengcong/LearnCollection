@@ -325,7 +325,7 @@ static BOOL _isCalled;
 - (void)test23AnimatedImageViewCategoryProgressive {
     XCTestExpectation *expectation = [self expectationWithDescription:@"test SDAnimatedImageView view category progressive"];
     SDAnimatedImageView *imageView = [SDAnimatedImageView new];
-    NSURL *testURL = [NSURL URLWithString:kTestGIFURL];
+    NSURL *testURL = [NSURL URLWithString:@"https://media.giphy.com/media/UEsrLdv7ugRTq/giphy.gif"];
     [SDImageCache.sharedImageCache removeImageFromMemoryForKey:testURL.absoluteString];
     [SDImageCache.sharedImageCache removeImageFromDiskForKey:testURL.absoluteString];
     [imageView sd_setImageWithURL:testURL placeholderImage:nil options:SDWebImageProgressiveLoad progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
@@ -352,13 +352,19 @@ static BOOL _isCalled;
 - (void)test24AnimatedImageViewCategoryDiskCache {
     XCTestExpectation *expectation = [self expectationWithDescription:@"test SDAnimatedImageView view category disk cache"];
     SDAnimatedImageView *imageView = [SDAnimatedImageView new];
-    NSURL *testURL = [NSURL URLWithString:kTestGIFURL];
-    [SDImageCache.sharedImageCache removeImageFromMemoryForKey:testURL.absoluteString];
+    NSURL *testURL = [NSURL URLWithString:@"https://foobar.non-exists.org/bizbuz.gif"];
+    NSString *testKey = testURL.absoluteString;
+    [SDImageCache.sharedImageCache removeImageFromMemoryForKey:testKey];
+    [SDImageCache.sharedImageCache removeImageFromDiskForKey:testKey];
+    NSData *imageData = [self testGIFData];
+    [SDImageCache.sharedImageCache storeImageDataToDisk:imageData forKey:testKey];
     [imageView sd_setImageWithURL:testURL placeholderImage:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         expect(error).to.beNil();
         expect(image).notTo.beNil();
         expect(cacheType).equal(SDImageCacheTypeDisk);
         expect([image isKindOfClass:[SDAnimatedImage class]]).beTruthy();
+        [SDImageCache.sharedImageCache removeImageFromMemoryForKey:testKey];
+        [SDImageCache.sharedImageCache removeImageFromDiskForKey:testKey];
         [expectation fulfill];
     }];
     [self waitForExpectationsWithCommonTimeout];
@@ -785,6 +791,22 @@ static BOOL _isCalled;
     }
 }
 #endif
+
+- (void)test37AnimatedImageWithStaticDataBehavior {
+    UIImage *image = [[SDAnimatedImage alloc] initWithData:[self testJPEGData]];
+    // UIImage+Metadata.h
+    expect(image).notTo.beNil();
+    expect(image.sd_isAnimated).beFalsy();
+    expect(image.sd_imageFormat).equal(SDImageFormatJPEG);
+    expect(image.sd_imageFrameCount).equal(1);
+    expect(image.sd_imageLoopCount).equal(0);
+    // SDImageCoderHelper.h
+    UIImage *decodedImage = [SDImageCoderHelper decodedImageWithImage:image policy:SDImageForceDecodePolicyAutomatic];
+    expect(decodedImage).notTo.equal(image);
+    // SDWebImageDefine.h
+    UIImage *scaledImage = SDScaledImageForScaleFactor(2.0, image);
+    expect(scaledImage).notTo.equal(image);
+}
 
 #pragma mark - Helper
 

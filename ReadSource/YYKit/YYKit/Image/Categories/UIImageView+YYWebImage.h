@@ -29,8 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Current image URL.
  
- @discussion Set a new value to this property will cancel the previous request 
- operation and create a new request operation to fetch image. Set nil to clear 
+ @discussion Set a new value to this property will cancel the previous request
+ operation and create a new request operation to fetch image. Set nil to clear
  the image and image URL.
  */
 @property (nullable, nonatomic, strong) NSURL *imageURL;
@@ -60,9 +60,9 @@ NS_ASSUME_NONNULL_BEGIN
  @param completion  The block invoked (on main thread) when image request completed.
  */
 - (void)setImageWithURL:(nullable NSURL *)imageURL
-               placeholder:(nullable UIImage *)placeholder
-                   options:(YYWebImageOptions)options
-                completion:(nullable YYWebImageCompletionBlock)completion;
+            placeholder:(nullable UIImage *)placeholder
+                options:(YYWebImageOptions)options
+             completion:(nullable YYWebImageCompletionBlock)completion;
 
 /**
  Set the view's `image` with a specified URL.
@@ -75,11 +75,11 @@ NS_ASSUME_NONNULL_BEGIN
  @param completion  The block invoked (on main thread) when image request completed.
  */
 - (void)setImageWithURL:(nullable NSURL *)imageURL
-               placeholder:(nullable UIImage *)placeholder
-                   options:(YYWebImageOptions)options
-                  progress:(nullable YYWebImageProgressBlock)progress
-                 transform:(nullable YYWebImageTransformBlock)transform
-                completion:(nullable YYWebImageCompletionBlock)completion;
+            placeholder:(nullable UIImage *)placeholder
+                options:(YYWebImageOptions)options
+               progress:(nullable YYWebImageProgressBlock)progress
+              transform:(nullable YYWebImageTransformBlock)transform
+             completion:(nullable YYWebImageCompletionBlock)completion;
 
 /**
  Set the view's `image` with a specified URL.
@@ -93,12 +93,12 @@ NS_ASSUME_NONNULL_BEGIN
  @param completion  The block invoked (on main thread) when image request completed.
  */
 - (void)setImageWithURL:(nullable NSURL *)imageURL
-               placeholder:(nullable UIImage *)placeholder
-                   options:(YYWebImageOptions)options
-                   manager:(nullable YYWebImageManager *)manager
-                  progress:(nullable YYWebImageProgressBlock)progress
-                 transform:(nullable YYWebImageTransformBlock)transform
-                completion:(nullable YYWebImageCompletionBlock)completion;
+            placeholder:(nullable UIImage *)placeholder
+                options:(YYWebImageOptions)options
+                manager:(nullable YYWebImageManager *)manager
+               progress:(nullable YYWebImageProgressBlock)progress
+              transform:(nullable YYWebImageTransformBlock)transform
+             completion:(nullable YYWebImageCompletionBlock)completion;
 
 /**
  Cancel the current image request.
@@ -143,9 +143,9 @@ NS_ASSUME_NONNULL_BEGIN
  @param completion  The block invoked (on main thread) when image request completed.
  */
 - (void)setHighlightedImageWithURL:(nullable NSURL *)imageURL
-                          placeholder:(nullable UIImage *)placeholder
-                              options:(YYWebImageOptions)options
-                           completion:(nullable YYWebImageCompletionBlock)completion;
+                       placeholder:(nullable UIImage *)placeholder
+                           options:(YYWebImageOptions)options
+                        completion:(nullable YYWebImageCompletionBlock)completion;
 
 /**
  Set the view's `highlightedImage` with a specified URL.
@@ -158,11 +158,11 @@ NS_ASSUME_NONNULL_BEGIN
  @param completion  The block invoked (on main thread) when image request completed.
  */
 - (void)setHighlightedImageWithURL:(nullable NSURL *)imageURL
-                          placeholder:(nullable UIImage *)placeholder
-                              options:(YYWebImageOptions)options
-                             progress:(nullable YYWebImageProgressBlock)progress
-                            transform:(nullable YYWebImageTransformBlock)transform
-                           completion:(nullable YYWebImageCompletionBlock)completion;
+                       placeholder:(nullable UIImage *)placeholder
+                           options:(YYWebImageOptions)options
+                          progress:(nullable YYWebImageProgressBlock)progress
+                         transform:(nullable YYWebImageTransformBlock)transform
+                        completion:(nullable YYWebImageCompletionBlock)completion;
 
 /**
  Set the view's `highlightedImage` with a specified URL.
@@ -176,12 +176,12 @@ NS_ASSUME_NONNULL_BEGIN
  @param completion  The block invoked (on main thread) when image request completed.
  */
 - (void)setHighlightedImageWithURL:(nullable NSURL *)imageURL
-                          placeholder:(nullable UIImage *)placeholder
-                              options:(YYWebImageOptions)options
-                              manager:(nullable YYWebImageManager *)manager
-                             progress:(nullable YYWebImageProgressBlock)progress
-                            transform:(nullable YYWebImageTransformBlock)transform
-                           completion:(nullable YYWebImageCompletionBlock)completion;
+                       placeholder:(nullable UIImage *)placeholder
+                           options:(YYWebImageOptions)options
+                           manager:(nullable YYWebImageManager *)manager
+                          progress:(nullable YYWebImageProgressBlock)progress
+                         transform:(nullable YYWebImageTransformBlock)transform
+                        completion:(nullable YYWebImageCompletionBlock)completion;
 
 /**
  Cancel the current highlighed image request.

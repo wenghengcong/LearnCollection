@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name = 'SDWebImage'
-  s.version = '5.19.1'
+  s.version = '5.19.7'
 
   s.osx.deployment_target = '10.11'
   s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
-  # s.visionos.deployment_target = "1.0"
+  s.visionos.deployment_target = "1.0"
 
   s.license = 'MIT'
   s.summary = 'Asynchronous image downloader with cache support with an UIImageView category.'
@@ -35,16 +35,16 @@ Pod::Spec.new do |s|
   s.subspec 'Core' do |core|
     core.source_files = 'SDWebImage/Core/*.{h,m}', 'WebImage/SDWebImage.h', 'SDWebImage/Private/*.{h,m}'
     core.private_header_files = 'SDWebImage/Private/*.h'
+    core.resource_bundles = {'SDWebImage' => ['WebImage/PrivacyInfo.xcprivacy']}
   end
 
   s.subspec 'MapKit' do |mk|
     mk.osx.deployment_target = '10.11'
     mk.ios.deployment_target = '9.0'
     mk.tvos.deployment_target = '9.0'
-    # mk.visionos.deployment_target = "1.0"
+    mk.visionos.deployment_target = "1.0"
     mk.source_files = 'SDWebImageMapKit/MapKit/*.{h,m}'
     mk.framework = 'MapKit'
     mk.dependency 'SDWebImage/Core'
   end
-  s.resource_bundles = {'SDWebImage' => ['WebImage/PrivacyInfo.xcprivacy']}
 end

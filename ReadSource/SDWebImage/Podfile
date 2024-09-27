@@ -10,10 +10,10 @@ def watch_example_pods
   pod 'SDWebImageWebPCoder', :git => 'https://github.com/SDWebImage/SDWebImageWebPCoder.git', :branch => 'master'
 end
 
-# def vision_example_pods
-#   pod 'SDWebImage/MapKit', :path => './'
-#   pod 'SDWebImageSwiftUI', :git => 'https://github.com/SDWebImage/SDWebImageSwiftUI.git', :branch => 'master'
-# end
+def vision_example_pods
+  pod 'SDWebImage/MapKit', :path => './'
+  pod 'SDWebImageSwiftUI', :git => 'https://github.com/SDWebImage/SDWebImageSwiftUI.git', :branch => 'master'
+end
 
 def all_test_pods
   pod 'SDWebImage/MapKit', :path => './'
@@ -51,11 +51,11 @@ target 'SDWebImage Watch Demo Extension' do
   watch_example_pods
 end
 
-# target 'SDWebImage Vision Demo' do
-#   project example_project_path
-#   platform :visionos, '1.0'
-#   vision_example_pods
-# end
+target 'SDWebImage Vision Demo' do
+  project example_project_path
+  platform :visionos, '1.0'
+  vision_example_pods
+end
 
 # Test Project
 target 'Tests iOS' do
@@ -76,11 +76,11 @@ target 'Tests TV' do
   all_test_pods
 end
 
-# target 'Tests Vision' do
-#   project test_project_path
-#   platform :visionos, '1.0'
-#   all_test_pods
-# end
+target 'Tests Vision' do
+  project test_project_path
+  platform :visionos, '1.0'
+  all_test_pods
+end
 
 # Inject macro during SDWebImage Demo and Tests
 post_install do |installer_representation|

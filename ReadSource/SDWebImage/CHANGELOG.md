@@ -1,3 +1,60 @@
+## [5.19.7 - 5.19 fix, on Sep 22th, 2024](https://github.com/rs/SDWebImage/releases/tag/5.19.7)
+See [all tickets marked for the 5.19.7 release](https://github.com/SDWebImage/SDWebImage/milestone/139)
+
+### Fixes
+- Fix the thumbnail decoding on JPEG which contains EXIF orientation, use the new way to workaround JFIF bug #3743
+- Fix the crash when some special urls cause the cache path return nil and crash #3740
+- Fix the issue that some URL which has percent-encoding with \0 will cause nil cache path #3744
+
+## [5.19.6 - Thumbnail performance, on Sep 7th, 2024](https://github.com/rs/SDWebImage/releases/tag/5.19.6)
+See [all tickets marked for the 5.19.5 release](https://github.com/SDWebImage/SDWebImage/milestone/138)
+
+### Performance
+- Use the better way to detect lazy/non-lazy CGImage. Only do force decoding for lazy image (avoid thumbnail image been decoded twice) #3736
+
+### Fixes
+- Remove the unused code for iOS 10 polyfill #3735
+
+## [5.19.5 - Swift 6 Compatible, on Jul 24th, 2024](https://github.com/rs/SDWebImage/releases/tag/5.19.5)
+See [all tickets marked for the 5.19.5 release](https://github.com/SDWebImage/SDWebImage/milestone/137)
+
+### Fixes
+- Fix our HEIC coder to encode timed image sequences instead of non-timed image gallery for HEIC encoding #3727
+- - If you have use case to encode static multi-frame HEIC image, use ImageIO directly. SDWebImage currenly always assume multi-frame image to be animated.
+
+### Project
+- Use the new macro from Swift compiler and SDK to mark the UIImage/UIImageView subclass matching what they designed to be #3731
+- - This solve the Xcode 16 Beta issue when trun on Swift 6 mode with strict concurrency.
+
+### Tests
+- Try to re-enable the HEIC encoding test and visionOS xctest #3728
+
+## [5.19.4 - 5.19 Patch, on Jul 1st, 2024](https://github.com/rs/SDWebImage/releases/tag/5.19.4)
+See [all tickets marked for the 5.19.4 release](https://github.com/SDWebImage/SDWebImage/milestone/136)
+
+### Fixes
+- Fix the issue that SDAnimatedImage breaks the vector on macOS #3724
+
+## [5.19.3 - 5.19 Patch, on May 30th, 2024](https://github.com/rs/SDWebImage/releases/tag/5.19.3)
+See [all tickets marked for the 5.19.3 release](https://github.com/SDWebImage/SDWebImage/milestone/135)
+
+### Fixes
+- Fix the detection of SVGImageRep on macOS AppKit #3716
+
+## [5.19.2 - Canonical Binary XCFramework, on Mar 26th, 2024](https://github.com/rs/SDWebImage/releases/tag/5.19.2)
+See [all tickets marked for the 5.19.2 release](https://github.com/SDWebImage/SDWebImage/milestone/134)
+
+### Fixes
+- Fix some regression when SDAnimatedImage created with static format like JPEG #3708
+- Fix that colorSpaceGetDeviceRGB cache the color space even when active display changed #3712
+
+### Project
+- Added GitHub action to release XCFramework which is self-signed #3711 #3709
+- - This is the canonical release of binary framework. Import [certifacate](https://github.com/SDWebImage/SDWebImage/blob/master/Certificate/SDWebImage%20Signing%20Certificate.cer) and verify the [public key](https://github.com/SDWebImage/SDWebImage/blob/master/Certificate/SDWebImage%20Signing%20Certificate.pem) when you download the binary framework from unknown sources to avoid supply chain attack.
+- - For Carthage user who build its own SDWebImage binary framwork, you must sign yourself.
+- - See more in https://developer.apple.com/documentation/Xcode/verifying-the-origin-of-your-xcframeworks
+- Fix CocoaPods resource bundle when using only `SDWebImage/Core`
+
 ## [5.19.1 - 5.9 Patch, on Mar 26th, 2024](https://github.com/rs/SDWebImage/releases/tag/5.19.1)
 See [all tickets marked for the 5.19.1 release](https://github.com/SDWebImage/SDWebImage/milestone/133)
 

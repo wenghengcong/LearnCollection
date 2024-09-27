@@ -21,5 +21,5 @@ Pod::Spec.new do |spec|
   spec.osx.deployment_target = '10.11'
   spec.tvos.deployment_target = '9.0'
   spec.watchos.deployment_target = '2.0'
-  # spec.visionos.deployment_target = '1.0'
+  spec.visionos.deployment_target = '1.0'
 end
