@@ -169,9 +169,7 @@
 		6B181A1B265757ED00BD06B3 /* TestAnimatedImageMemory.webp in Resources */ = {isa = PBXBuildFile; fileRef = 6B181A1A265757ED00BD06B3 /* TestAnimatedImageMemory.webp */; };
 		6BC1C20F270F0193003FFAB1 /* TestAnimatedImageMemory.webp in Resources */ = {isa = PBXBuildFile; fileRef = 6B181A1A265757ED00BD06B3 /* TestAnimatedImageMemory.webp */; };
 		6BC1C210270F073A003FFAB1 /* TestAnimatedImageMemory.webp in Resources */ = {isa = PBXBuildFile; fileRef = 6B181A1A265757ED00BD06B3 /* TestAnimatedImageMemory.webp */; };
-		6FD27F0B29D57A4AACB56EA8 /* Pods_Tests_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B18D772CFF936546772B836 /* Pods_Tests_TV.framework */; };
 		8C71262F36B4B9A4EA9BD000 /* Pods_Tests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD978FDEC70C6C3978DA4D56 /* Pods_Tests_iOS.framework */; };
-		97A6B676B89A44368345A1A0 /* Pods_Tests_Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A356608C341F465A482F0D7B /* Pods_Tests_Vision.framework */; };
 		B77B223649B05D013FE6E310 /* Pods_Tests_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61030057F379B8F1D44EBF88 /* Pods_Tests_Mac.framework */; };
 		DA248D57195472AA00390AB0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA248D56195472AA00390AB0 /* XCTest.framework */; };
 		DA248D59195472AA00390AB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA248D58195472AA00390AB0 /* Foundation.framework */; };
@@ -236,15 +234,10 @@
 		43828A441DA67F9900000E62 /* TestImageLarge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TestImageLarge.jpg; sourceTree = "<group>"; };
 		4835C04148C737D0FC50EF87 /* Pods-Tests Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests Mac.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Tests Mac/Pods-Tests Mac.release.xcconfig"; sourceTree = "<group>"; };
 		4DCBA1DEFE6C68C4A83C9B9E /* Pods-Tests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests iOS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Tests iOS/Pods-Tests iOS.release.xcconfig"; sourceTree = "<group>"; };
-		5B0011ED58CC9998E68ECCE3 /* Pods-Tests TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests TV.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Tests TV/Pods-Tests TV.debug.xcconfig"; sourceTree = "<group>"; };
-		5B18D772CFF936546772B836 /* Pods_Tests_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F7F38AC1AE2A77A00B0E330 /* TestImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TestImage.jpg; sourceTree = "<group>"; };
 		61030057F379B8F1D44EBF88 /* Pods_Tests_Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6700DBD9C45B00AB5F77472A /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6B181A1A265757ED00BD06B3 /* TestAnimatedImageMemory.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = TestAnimatedImageMemory.webp; sourceTree = "<group>"; };
-		6CB13D7A081654B2E4018F53 /* Pods-Tests TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests TV.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Tests TV/Pods-Tests TV.release.xcconfig"; sourceTree = "<group>"; };
-		91BF87534CBFBD8B623FCB53 /* Pods-Tests Vision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests Vision.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Tests Vision/Pods-Tests Vision.release.xcconfig"; sourceTree = "<group>"; };
-		A356608C341F465A482F0D7B /* Pods_Tests_Vision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_Vision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6C6328775701B5AAEEF4FF /* Pods-Tests Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests Mac.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Tests Mac/Pods-Tests Mac.debug.xcconfig"; sourceTree = "<group>"; };
 		D80C63148416AADCBDD7FABA /* Pods-Tests iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests iOS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Tests iOS/Pods-Tests iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DA248D53195472AA00390AB0 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,7 +252,6 @@
 		EADD19E9219915E300804BB0 /* Module-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Module-Release.xcconfig"; sourceTree = "<group>"; };
 		EADD19EC219915E300804BB0 /* Module-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Module-Debug.xcconfig"; sourceTree = "<group>"; };
 		EADD19EE219915E300804BB0 /* Module-Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Module-Shared.xcconfig"; sourceTree = "<group>"; };
-		FBF6247C616460B91BF8C188 /* Pods-Tests Vision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests Vision.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Tests Vision/Pods-Tests Vision.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,7 +259,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97A6B676B89A44368345A1A0 /* Pods_Tests_Vision.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +266,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FD27F0B29D57A4AACB56EA8 /* Pods_Tests_TV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,12 +298,8 @@
 				6700DBD9C45B00AB5F77472A /* Pods-Tests.release.xcconfig */,
 				BC6C6328775701B5AAEEF4FF /* Pods-Tests Mac.debug.xcconfig */,
 				4835C04148C737D0FC50EF87 /* Pods-Tests Mac.release.xcconfig */,
-				5B0011ED58CC9998E68ECCE3 /* Pods-Tests TV.debug.xcconfig */,
-				6CB13D7A081654B2E4018F53 /* Pods-Tests TV.release.xcconfig */,
 				D80C63148416AADCBDD7FABA /* Pods-Tests iOS.debug.xcconfig */,
 				4DCBA1DEFE6C68C4A83C9B9E /* Pods-Tests iOS.release.xcconfig */,
-				FBF6247C616460B91BF8C188 /* Pods-Tests Vision.debug.xcconfig */,
-				91BF87534CBFBD8B623FCB53 /* Pods-Tests Vision.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -404,9 +390,7 @@
 				DA248D58195472AA00390AB0 /* Foundation.framework */,
 				DA248D5A195472AA00390AB0 /* UIKit.framework */,
 				61030057F379B8F1D44EBF88 /* Pods_Tests_Mac.framework */,
-				5B18D772CFF936546772B836 /* Pods_Tests_TV.framework */,
 				DD978FDEC70C6C3978DA4D56 /* Pods_Tests_iOS.framework */,
-				A356608C341F465A482F0D7B /* Pods_Tests_Vision.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -474,11 +458,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32464A8F2B7B0FF2006BE70E /* Build configuration list for PBXNativeTarget "Tests Vision" */;
 			buildPhases = (
-				16AFAEFC9D9B9B933D4D324D /* [CP] Check Pods Manifest.lock */,
 				32464A852B7B0FF2006BE70E /* Sources */,
 				32464A862B7B0FF2006BE70E /* Frameworks */,
 				32464A872B7B0FF2006BE70E /* Resources */,
-				E5421880D8024D66B726F168 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -493,11 +475,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 329922312365D9A100EAFD97 /* Build configuration list for PBXNativeTarget "Tests TV" */;
 			buildPhases = (
-				C5CC63AFA1303DA4F45B1B0E /* [CP] Check Pods Manifest.lock */,
 				329922262365D9A100EAFD97 /* Sources */,
 				329922272365D9A100EAFD97 /* Frameworks */,
 				329922282365D9A100EAFD97 /* Resources */,
-				9A0B0CDE809B6AE68AF1A996 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -742,7 +722,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tests iOS/Pods-Tests iOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage-Core-MapKit-iOS/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage-iOS/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Expecta-iOS/Expecta.framework",
 				"${BUILT_PRODUCTS_DIR}/KVOController-iOS/KVOController.framework",
 			);
@@ -755,28 +735,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tests iOS/Pods-Tests iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		16AFAEFC9D9B9B933D4D324D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Tests Vision-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3742A83C8569610075078F4D /* [CP] Check Pods Manifest.lock */ = {
@@ -797,50 +755,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9A0B0CDE809B6AE68AF1A996 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tests TV/Pods-Tests TV-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage-Core-MapKit-tvOS/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Expecta-tvOS/Expecta.framework",
-				"${BUILT_PRODUCTS_DIR}/KVOController-tvOS/KVOController.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tests TV/Pods-Tests TV-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C5CC63AFA1303DA4F45B1B0E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Tests TV-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D95ECCCFAAD9FCC01EA4D3CE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -848,7 +762,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tests Mac/Pods-Tests Mac-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage-Core-MapKit-macOS/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage-macOS/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Expecta-macOS/Expecta.framework",
 				"${BUILT_PRODUCTS_DIR}/KVOController-macOS/KVOController.framework",
 			);
@@ -861,28 +775,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tests Mac/Pods-Tests Mac-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E5421880D8024D66B726F168 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tests Vision/Pods-Tests Vision-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage-Core-MapKit-visionOS/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Expecta-visionOS/Expecta.framework",
-				"${BUILT_PRODUCTS_DIR}/KVOController-visionOS/KVOController.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tests Vision/Pods-Tests Vision-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -989,7 +881,6 @@
 /* Begin XCBuildConfiguration section */
 		32464A8D2B7B0FF2006BE70E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBF6247C616460B91BF8C188 /* Pods-Tests Vision.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1058,7 +949,6 @@
 		};
 		32464A8E2B7B0FF2006BE70E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91BF87534CBFBD8B623FCB53 /* Pods-Tests Vision.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1121,7 +1011,6 @@
 		};
 		3299222F2365D9A100EAFD97 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B0011ED58CC9998E68ECCE3 /* Pods-Tests TV.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Tests TV/Info.plist";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -1135,7 +1024,6 @@
 		};
 		329922302365D9A100EAFD97 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CB13D7A081654B2E4018F53 /* Pods-Tests TV.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Tests TV/Info.plist";
 				MTL_ENABLE_DEBUG_INFO = NO;
